@@ -1,0 +1,113 @@
+@charset "utf-8";
+/* CSS Document */
+.drawer {
+	position: fixed;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	width: 90%;
+	background-color: #2a2a2a;
+	z-index: 1000;
+	-webkit-transform: translateX( -100% );
+	transform: translateX( -100% );
+	-webkit-transition: all 0.5s;
+	transition: all 0.5s;
+}
+
+@media (max-width: 999px) {
+
+.drawer-on {
+	display: block;
+	-webkit-transform: translateX( calc(0%) );
+	transform: translateX( calc(0%) );
+}
+.drawer-x {
+	height: 30px;
+	font-size: 20px;
+	text-align: right;
+	border-bottom: 1px solid #151515;
+}
+.btn-x {
+	width: 30px;
+	height: inherit;
+	color: #999;
+	line-height: 35px;
+	display: inline-block;
+	cursor: pointer;
+	text-align: center;
+}
+.drawer-header {
+	height: 70px;
+	background-color: #000;
+	border-top: 1px solid #363636;
+}
+.drawer-h {
+	height: 25px;
+	float: left;
+	text-align: center;
+	background-repeat: no-repeat;
+	background-position: center 10px;
+	padding-top: 45px;
+	border-left: 1px solid #333;
+	color: #888;
+	font-size: 12px;
+}
+.drawer-h.a {
+	width: 68px;
+	background-image: url(../images/lnb_top_icon01.gif);
+	background-size: 24px;
+	border-left: none;
+}
+.drawer-h.b {
+	width: 68px;
+	background-image: url(../images/lnb_top_icon02.gif);
+	background-size: 28px;
+}
+.drawer-h.c {
+	width: 115px;
+	background-image: url(../images/lnb_top_icon03.gif);
+	background-size: 30px auto;
+}
+.drawer-p {
+	font-size: 16px;
+    color: #999;
+    line-height: 69px;
+	padding-left: 15px;
+	border-bottom: 1px solid #151515;
+    border-top: 1px solid #363636;
+}
+.drawer-p:hover {
+	color: #fffc00;
+	-webkit-transition: all 1s;
+	transition: all 0.5s;	
+}
+
+.drawer-board {
+	background-color: #000;
+	color: #888;
+	font-size: 11px;
+}
+.drawer-b {
+	height: 46px;
+	line-height: 46px;
+	padding-left: 15px;
+	border-bottom: 1px solid #151515;
+    border-top: 1px solid #363636;
+}
+.drawer-b:hover {
+	color: #fff;
+	font-weight: bold;
+	-webkit-transition: all 1s;
+	transition: all 0.5s;	
+}
+.drawer-logo {
+	height: 84px;
+    border-top: 1px solid #363636;
+	text-align: center;
+}
+.drawer-logo img {
+	width: 211px;
+	margin-top: 18px;
+	display: inline-block;
+}
+}

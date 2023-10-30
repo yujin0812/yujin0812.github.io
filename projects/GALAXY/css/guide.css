@@ -1,0 +1,133 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+.section-guide {
+	max-width: 1540px;
+	height: auto;
+	overflow: hidden;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.guide-top {
+	height: 180px;
+	padding-top: 90px;
+}
+.guide-h {
+	font-size: 28px;
+    color: #444;
+}
+.guide-p {
+	font-size: 14px;
+    color: #999;
+    margin-top: 10px;
+}
+
+.guide-page {
+	width: 100%;
+	background-color: #fff;
+	padding: 120px 0 70px 0;
+}
+.icon-title {
+	position: absolute;
+	top: -81px;
+	left: 0;
+    width: 100%;
+}
+.icon-title img {
+	width: 162px;
+}
+
+
+
+.guide-content {
+	width: 1000px;
+	height: auto;
+	overflow: hidden;
+	margin: 0 auto;
+	padding: 0 8px;	
+}
+.guide-tab-wrap {
+	height: 42px;	
+}
+.guide-tab {
+	float: left;
+	width: auto;
+	height: 42px;
+	padding: 0 30px;
+	border: 1px solid #e1e1e1;
+	border-left: none;
+	font-size: 13px;
+	color: #888;
+	line-height: 40px;
+	cursor: pointer;
+}
+.guidetab-sel { color: #666; font-weight: 600; }
+.guide-tab:first-child { border-left: 1px solid #e1e1e1; }
+
+.guide-tview-wrap {
+	width: 1000px;
+	height: 500px;
+}
+.guide-tview {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: auto;
+	height: auto;
+	overflow: hidden;
+	margin-top: 20px;
+	opacity: 0;
+	-webkit-transition: all 0.5s;
+	transition: all 0.5s;
+}
+.guide-tview-sel {
+	opacity: 1;
+}
+
+.guide-list-top {
+	height: 234px;
+	margin-bottom: 10px;
+}
+.guide-list-bottom {
+	height: 235px;
+}
+.guide-list-a {
+	float: left;
+	width: calc(33.33% - 10px);
+	height: 214px;
+	margin-right: 10px;
+}
+.guide-list-a:last-child {
+	margin-right: none;	
+}
+.guide-list-b {
+	float: left;
+	width: calc(33.33% - 10px);
+	height: 214px;
+	margin-right: 10px;
+}
+.guide-list-title {
+	height: 55px;
+	padding: 0 75px 0 20px;
+	line-height: 55px;
+	color: #fff;
+	background-color: #b3aad1;
+	background-image: url(../images/btn_guide_list_close.gif);
+	background-repeat: no-repeat;
+	background-position: right;
+	cursor: pointer;
+}
+
+.guide-list-content {
+	height: 139px;
+    padding: 20px;
+    border: 1px solid #e1e1e1;
+    text-align: left;
+    border-top: none;
+	color: #666;
+	font-size: 13px;	
+}
+
+

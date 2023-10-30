@@ -1,0 +1,27 @@
+@charset "utf-8";
+/* CSS Document */
+
+footer {
+	margin: 0 auto;
+	background-image: url(../images/footer_visual.jpg);
+	background-repeat: no-repeat;
+	background-position: center bottom -100px;
+	background-size: 1600px auto;
+	padding-top: 352px;
+    padding-bottom: 30px;
+}
+
+.footer-logo {
+	position: absolute;
+	top: 312px;
+	left: 50%;
+	margin-left: -48px;
+	width: 96px;
+}
+.footer_add {
+	font-size: 10px;
+	text-align: center;
+	font-size: 11px;
+    color: #a1a4a8;
+    line-height: 16px;
+}

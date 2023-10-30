@@ -1,0 +1,29 @@
+@charset "utf-8";
+/* CSS Document */
+
+body { margin: 0; background-color: #eaeef1; }
+div, nav, section, header, footer { position: relative; }
+img { vertical-align: top; width: 100%; }
+a { text-decoration: none; color: inherit; display: block;}
+* { font-family: 'Spoqa Han Sans', 'Spoqa Han Sans JP', 'Sans-serif'; }
+
+.purple-btn-wrap {
+	display: inline-block;
+	text-align: center;
+}
+.purple-btn {
+	background-color: #9c5788;
+	border-radius: 5px;
+	padding: 0 31px;
+	text-align: center;
+	line-height: 60px;
+    font-size: 18px;
+    color: #fff;
+	cursor: pointer;
+}
+select::-ms-expand {
+	display: none;
+}
+select {
+	-webkit-appearance: none;
+}

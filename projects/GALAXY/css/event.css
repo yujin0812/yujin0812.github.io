@@ -1,0 +1,49 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+.event {
+	max-width: 1540px;
+	margin: 0 auto;
+	height: auto;
+	overflow: hidden;
+	text-align: center;
+}
+
+.event-top {
+	height: 180px;
+	padding-top: 90px;
+}
+.event-h {
+	font-size: 28px;
+    color: #444;
+}
+.event-p {
+	font-size: 14px;
+    color: #999;
+    margin-top: 10px;
+}
+
+.event-page {
+	width: 100%;
+	background-color: #fff;
+	padding: 120px 0 70px 0;
+}
+.icon-title {
+	position: absolute;
+	top: -81px;
+	left: 0;
+    width: 100%;
+}
+.icon-title img {
+	width: 162px;
+}
+.event-content {
+	max-width: 960px;
+	margin: 0 auto;
+	margin-top: 50px;
+	margin-bottom: 50px;
+}
+.event-content img {
+	width: 100%;
+}
