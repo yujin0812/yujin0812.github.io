@@ -1,0 +1,55 @@
+.xans-board-inquiryform .title h3 { margin:50px 0 7px; color:#444; font-size:12px; }
+.xans-board-inquiryform .required { margin:0 0 10px; text-align:right; }
+
+/* product */
+.xans-board-inquiryhead { position:relative; min-height:130px; margin:0 0 20px; padding:15px 20px; border:5px solid #e8e8e8; }
+.xans-board-inquiryhead .prdThumb { position:absolute; }
+.xans-board-inquiryhead .prdThumb img { width:90px; height:130px; border:1px solid #d5d5d5; }
+.xans-board-inquiryhead .prdInfo { padding:0 0 0 115px; }
+.xans-board-inquiryhead .prdInfo h3 { margin:17px 0 5px; font-size:14px; color:#2e2e2e; }
+.xans-board-inquiryhead .prdInfo .price { font-size:14px; font-weight:bold; color:#008bcc; }
+.xans-board-inquiryhead .prdInfo .button { margin:19px 0 0 0; padding:13px 0 0 0; border-top:1px solid #e8e8e8; }
+.xans-board-inquiryhead .prdInfo > img { vertical-align:middle; margin:0 0 0 1px; }
+
+/* write */
+.xans-board-inquiryform .boardWrite table { table-layout:fixed; border:1px solid #d7d5d5; line-height:180%; }
+.xans-board-inquiryform .boardWrite th { width:110px; padding:10px 0 8px 20px; border-top:1px solid #e8e8e8; border-right:1px solid #e8e8e8; background-color:#fbfafa; text-align:left; font-weight:normal; vertical-align:middle; }
+.xans-board-inquiryform .boardWrite td { width:auto; padding:10px 0 8px 10px; border-top:1px solid #e8e8e8; }
+.xans-board-inquiryform .boardWrite tr:first-child th,
+.xans-board-inquiryform .boardWrite tr:first-child td { border-top:none; }
+.xans-board-inquiryform .boardWrite td img { vertical-align:middle; }
+.xans-board-inquiryform .boardWrite a { text-decoration:none; }
+.xans-board-inquiryform .boardWrite input,
+.xans-board-inquiryform .boardWrite textarea { padding:2px 2px 2px 4px; border:1px solid #d9d9d9; color:#202020; }
+.xans-board-inquiryform .boardWrite select { height:22px; margin:0 4px 0 0; }
+.xans-board-inquiryform .boardWrite #bi_inquire_subject { width:390px; height:14px; padding:3px; }
+.xans-board-inquiryform .boardWrite #bi_inquirer_name,
+.xans-board-inquiryform .boardWrite #bi_inquirer_company_name { height:14px; padding:3px; }
+.xans-board-inquiryform .boardWrite #bi_inquirer_email { width:280px; height:14px; padding:3px; }
+.xans-board-inquiryform .boardWrite #bi_zipcode1,
+.xans-board-inquiryform .boardWrite #bi_zipcode2 { width:40px; height:14px; padding:3px; }
+.xans-board-inquiryform .boardWrite #bi_zipcode1 { width:65px; }
+.xans-board-inquiryform .boardWrite #bi_inquirer_addr1,
+.xans-board-inquiryform .boardWrite #bi_inquirer_addr2 { width:280px; height:14px; margin:5px 0 0; padding:3px; }
+.xans-board-inquiryform .boardWrite #bi_inquirer_phone2,
+.xans-board-inquiryform .boardWrite #bi_inquirer_phone3 { width:50px; margin:0 4px; height:14px; padding:3px; }
+.xans-board-inquiryform .boardWrite #bi_inquirer_phone2 { width:90px; }
+.xans-board-inquiryform .boardWrite img { vertical-align:middle; }
+.xans-board-inquiryform .boardWrite input[type=radio],
+.xans-board-inquiryform .boardWrite input[type=checkbox] { border:0; width:13px; height:13px; margin:0 3px 0 0; background:none; vertical-align:middle; }
+.xans-board-inquiryform .boardWrite label { padding:0 20px 0 0; }
+.xans-board-inquiryform .boardWrite span.grid { margin:0 0 0 10px; }
+.xans-board-inquiryform .boardWrite p.grid { margin:5px 0 0; font-size:11px; color:#757575; vertical-align:middle; }
+.xans-board-inquiryform .boardWrite td.write { width:100%; padding:0; }
+.xans-board-inquiryform .boardWrite td.write table { table-layout:auto; border:0; }
+.xans-board-inquiryform .boardWrite td.write table th,
+.xans-board-inquiryform .boardWrite td.write table td { width:auto; padding:0; border:0; line-height:normal; }
+
+.xans-board-inquiryform .boardWrite td.quantity span { display:inline-block; position:relative; vertical-align:middle; }
+.xans-board-inquiryform .boardWrite td.quantity input { width:33px; height:23px; padding:0 5px; line-height:23px; border:1px solid #e9e9e9; border-top:1px solid #c5c5c5; border-left:1px solid #c5c5c5; *margin-top:-1px; }
+.xans-board-inquiryform .boardWrite td.quantity .up { position:absolute; left:48px; top:0; }
+.xans-board-inquiryform .boardWrite td.quantity .down { position:absolute; left:48px; top:12px; }
+
+.xans-board-inquiryform .btnArea { overflow:hidden; margin:20px 0 50px; text-align:right; font-size:1%; line-height:1%; }
+.xans-board-inquiryform .btnArea img { cursor:pointer; margin:0 1px 0 0; }
+.xans-board-inquiryform .btnArea span.left { float:left; margin:0 0 0 3px; }

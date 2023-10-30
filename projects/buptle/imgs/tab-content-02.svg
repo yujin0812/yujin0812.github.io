@@ -1,0 +1,118 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="752" height="320" viewBox="0 0 752 320">
+    <defs>
+        <circle id="b" cx="576" cy="66" r="40"/>
+        <filter id="a" width="136.2%" height="136.2%" x="-18.1%" y="-15.6%" filterUnits="objectBoundingBox">
+            <feOffset dy="2" in="SourceAlpha" result="shadowOffsetOuter1"/>
+            <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="4.5"/>
+            <feColorMatrix in="shadowBlurOuter1" values="0 0 0 0 0.465718609 0 0 0 0 0.50760974 0 0 0 0 0.802762681 0 0 0 0.142210145 0"/>
+        </filter>
+        <circle id="d" cx="688" cy="261" r="40"/>
+        <filter id="c" width="136.2%" height="136.2%" x="-18.1%" y="-15.6%" filterUnits="objectBoundingBox">
+            <feOffset dy="2" in="SourceAlpha" result="shadowOffsetOuter1"/>
+            <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="4.5"/>
+            <feColorMatrix in="shadowBlurOuter1" values="0 0 0 0 0.465718609 0 0 0 0 0.50760974 0 0 0 0 0.802762681 0 0 0 0.142210145 0"/>
+        </filter>
+        <circle id="f" cx="355" cy="66" r="40"/>
+        <filter id="e" width="136.2%" height="136.2%" x="-18.1%" y="-15.6%" filterUnits="objectBoundingBox">
+            <feOffset dy="2" in="SourceAlpha" result="shadowOffsetOuter1"/>
+            <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="4.5"/>
+            <feColorMatrix in="shadowBlurOuter1" values="0 0 0 0 0.465718609 0 0 0 0 0.50760974 0 0 0 0 0.802762681 0 0 0 0.142210145 0"/>
+        </filter>
+        <circle id="h" cx="796" cy="118" r="40"/>
+        <filter id="g" width="136.2%" height="136.2%" x="-18.1%" y="-15.6%" filterUnits="objectBoundingBox">
+            <feOffset dy="2" in="SourceAlpha" result="shadowOffsetOuter1"/>
+            <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="4.5"/>
+            <feColorMatrix in="shadowBlurOuter1" values="0 0 0 0 0.465718609 0 0 0 0 0.50760974 0 0 0 0 0.802762681 0 0 0 0.142210145 0"/>
+        </filter>
+        <circle id="j" cx="689" cy="262" r="52"/>
+        <filter id="i" width="127.9%" height="127.9%" x="-13.9%" y="-12%" filterUnits="objectBoundingBox">
+            <feOffset dy="2" in="SourceAlpha" result="shadowOffsetOuter1"/>
+            <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="4.5"/>
+            <feColorMatrix in="shadowBlurOuter1" values="0 0 0 0 0.465718609 0 0 0 0 0.50760974 0 0 0 0 0.802762681 0 0 0 0.142210145 0"/>
+        </filter>
+        <circle id="l" cx="468" cy="261" r="40"/>
+        <filter id="k" width="136.2%" height="136.2%" x="-18.1%" y="-15.6%" filterUnits="objectBoundingBox">
+            <feOffset dy="2" in="SourceAlpha" result="shadowOffsetOuter1"/>
+            <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="4.5"/>
+            <feColorMatrix in="shadowBlurOuter1" values="0 0 0 0 0.465718609 0 0 0 0 0.50760974 0 0 0 0 0.802762681 0 0 0 0.142210145 0"/>
+        </filter>
+        <circle id="n" cx="248" cy="261" r="40"/>
+        <filter id="m" width="136.2%" height="136.2%" x="-18.1%" y="-15.6%" filterUnits="objectBoundingBox">
+            <feOffset dy="2" in="SourceAlpha" result="shadowOffsetOuter1"/>
+            <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="4.5"/>
+            <feColorMatrix in="shadowBlurOuter1" values="0 0 0 0 0.465718609 0 0 0 0 0.50760974 0 0 0 0 0.802762681 0 0 0 0.142210145 0"/>
+        </filter>
+        <circle id="p" cx="133" cy="66" r="40"/>
+        <filter id="o" width="136.2%" height="136.2%" x="-18.1%" y="-15.6%" filterUnits="objectBoundingBox">
+            <feOffset dy="2" in="SourceAlpha" result="shadowOffsetOuter1"/>
+            <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="4.5"/>
+            <feColorMatrix in="shadowBlurOuter1" values="0 0 0 0 0.465718609 0 0 0 0 0.50760974 0 0 0 0 0.802762681 0 0 0 0.142210145 0"/>
+        </filter>
+    </defs>
+    <g fill="none" fill-rule="evenodd" transform="translate(-93 -19)">
+        <rect width="794" height="200" x="14" y="64" stroke="#F6F7FF" stroke-width="8" rx="100"/>
+        <path fill="#FFF" d="M64 247h144v25H64z"/>
+        <text fill="#000" font-family="NotoSansCJKkr-DemiLight, Noto Sans CJK KR" font-size="13" font-weight="300" letter-spacing="-1">
+            <tspan x="321.171" y="127">법무팀 검토중</tspan>
+        </text>
+        <text fill="#000" font-family="NotoSansCJKkr-DemiLight, Noto Sans CJK KR" font-size="13" font-weight="300" letter-spacing="-1">
+            <tspan x="542.17" y="127">사업부 협의중</tspan>
+        </text>
+        <text fill="#000" font-family="NotoSansCJKkr-DemiLight, Noto Sans CJK KR" font-size="13" font-weight="300" letter-spacing="-1">
+            <tspan x="768.15" y="179">승인 대기중</tspan>
+        </text>
+        <text fill="#000" font-family="NotoSansCJKkr-Bold, Noto Sans CJK KR" font-size="15" font-weight="bold" letter-spacing="-1.154">
+            <tspan x="670.031" y="337">날인중</tspan>
+        </text>
+        <text fill="#000" font-family="NotoSansCJKkr-DemiLight, Noto Sans CJK KR" font-size="13" font-weight="300" letter-spacing="-1">
+            <tspan x="440.151" y="322">회수 대기중</tspan>
+        </text>
+        <text fill="#000" font-family="NotoSansCJKkr-DemiLight, Noto Sans CJK KR" font-size="13" font-weight="300" letter-spacing="-1">
+            <tspan x="237.04" y="322">완료</tspan>
+        </text>
+        <use fill="#000" filter="url(#a)" xlink:href="#b"/>
+        <use fill="#F9A51A" xlink:href="#b"/>
+        <use fill="#000" filter="url(#c)" xlink:href="#d"/>
+        <use fill="#FFF" xlink:href="#d"/>
+        <use fill="#000" filter="url(#e)" xlink:href="#f"/>
+        <use fill="#F9A51A" xlink:href="#f"/>
+        <use fill="#000" filter="url(#g)" xlink:href="#h"/>
+        <use fill="#F9A51A" xlink:href="#h"/>
+        <use fill="#000" filter="url(#i)" xlink:href="#j"/>
+        <use fill="#F9A51A" xlink:href="#j"/>
+        <use fill="#000" filter="url(#k)" xlink:href="#l"/>
+        <use fill="#FFF" xlink:href="#l"/>
+        <use fill="#000" filter="url(#m)" xlink:href="#n"/>
+        <use fill="#FFF" xlink:href="#n"/>
+        <path fill="#FFF" d="M0 37h112v244H0z"/>
+        <path fill="#CFDAEC" fill-rule="nonzero" d="M244.361 265.773l-4.77-4.665-1.591 1.555 6.361 6.22 13.63-13.328-1.59-1.555z"/>
+        <g fill="#FFF" fill-rule="nonzero">
+            <path d="M588.268 60.436h-2.247v10.131h2.247a.728.728 0 0 0 .732-.724V61.16c0-.4-.328-.724-.732-.724zM564.732 60.436a.728.728 0 0 0-.732.724v8.683c0 .4.328.724.732.724h2.247v-10.13h-2.247zM575.94 61.16c-.558 0-1.06.307-1.31.8l-2.23 4.407c.374.161.769.243 1.172.243a2.916 2.916 0 0 0 2.619-1.603l.482-.953h1.418c.385 0 .763.155 1.035.424l5.43 5.365V61.16h-8.615z"/>
+            <path d="M578.09 65.502h-.511l-.043.083c-.692 1.367-2.04 2.332-3.583 2.457-1.134.092-1.92-.23-2.852-.65a.724.724 0 0 1-.358-.986l2.577-5.093a2.934 2.934 0 0 1 2.62-1.6h3.161c.203-.444.329-.93.329-1.448 0-.4-.328-.723-.733-.723h-5.686a2.2 2.2 0 0 0-1.966 1.2l-.655 1.294a.734.734 0 0 1-.655.4h-1.292v10.131h3.36l2.074 2.05a2.191 2.191 0 0 0 2.215.535l6.255-1.943c.374-.104.69-.307.946-.567l-5.202-5.14z"/>
+        </g>
+        <g fill="#FFF" fill-rule="nonzero">
+            <path d="M803.072 111.395v-1.917c.527-.316.886-.897.886-1.568v-.455a.45.45 0 0 0-.443-.455h-15.072a.45.45 0 0 0-.443.455v.455c0 .671.36 1.252.887 1.568v1.917c0 1.804.748 3.53 2.054 4.736l1.94 1.793-1.94 1.793a6.459 6.459 0 0 0-2.054 4.736v1.917a1.823 1.823 0 0 0-.887 1.568v.455a.45.45 0 0 0 .443.455h15.072a.45.45 0 0 0 .443-.455v-.455c0-.672-.359-1.252-.886-1.568v-1.917c0-1.804-.749-3.53-2.055-4.736l-1.94-1.793 1.94-1.793a6.459 6.459 0 0 0 2.055-4.736zm-3.24 3.383l-2.673 2.47a.92.92 0 0 0-.293.676.92.92 0 0 0 .293.676l2.672 2.47a4.615 4.615 0 0 1 1.468 3.383v1.664h-1.109l-3.856-5.28a.451.451 0 0 0-.71 0l-3.856 5.28h-1.108v-1.664c0-1.288.535-2.522 1.467-3.383l2.672-2.47a.92.92 0 0 0 .294-.676.92.92 0 0 0-.294-.677l-2.672-2.469a4.615 4.615 0 0 1-1.467-3.383v-1.664h10.639v1.664a4.615 4.615 0 0 1-1.468 3.383z"/>
+            <path d="M799.035 113.372h-6.112a.443.443 0 0 0-.405.271.464.464 0 0 0 .077.49l3.087 2.924a.435.435 0 0 0 .595 0l3.086-2.924a.464.464 0 0 0 .077-.49.443.443 0 0 0-.405-.27z"/>
+        </g>
+        <g fill="#FFF" fill-rule="nonzero">
+            <path d="M366.376 73.665l-4.983-4.983c-.027-.026-.058-.045-.086-.07a9.43 9.43 0 1 0-2.695 2.695c.025.028.043.06.07.086l4.983 4.983a1.917 1.917 0 0 0 2.71-2.711zM353.43 69.59a6.161 6.161 0 1 1 0-12.322 6.161 6.161 0 0 1 0 12.322z"/>
+        </g>
+        <g fill="#FFF" fill-rule="nonzero">
+            <path d="M701.954 268.629h-8.882c-.798-2.996 2.267-9.39 2.267-9.39a8.4 8.4 0 0 0 .818-3.647c0-4.193-2.982-7.592-6.661-7.592-3.68 0-6.662 3.4-6.662 7.593 0 1.322.297 2.564.819 3.647h-.001s3.065 6.393 2.267 9.39h-8.881v6.203h24.916v-6.204zM678.694 275.801h21.603v1.416h-21.603z"/>
+        </g>
+        <text fill="#000" font-family="NotoSansCJKkr-DemiLight, Noto Sans CJK KR" font-size="13" font-weight="300" letter-spacing="-1">
+            <tspan x="104.15" y="127">초안 작성</tspan> <tspan x="149.889" y="127">중</tspan>
+        </text>
+        <g>
+            <use fill="#000" filter="url(#o)" xlink:href="#p"/>
+            <use fill="#F9A51A" xlink:href="#p"/>
+        </g>
+        <g fill="#FFF" fill-rule="nonzero">
+            <path d="M138.385 56.5h-10.77v-3h3.209A2.31 2.31 0 0 1 133 52a2.31 2.31 0 0 1 2.176 1.5h3.209v3z"/>
+            <path d="M139.923 53.5V58h-13.846v-4.5H123v24.1h20V53.5z"/>
+        </g>
+        <g fill="#CFDAEC" fill-rule="nonzero">
+            <path d="M466.838 254.567l-1.666-2.334H458V269.9h20v-15.333h-11.162zM468 267.176l-3.138-3.138.943-.943 1.528 1.529v-5.057h1.334v5.057l1.528-1.529.943.943-3.138 3.138zm9.333-10.276h-8.828l-1.19-1.667h10.018v1.667z"/>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,298 @@
+<!DOCTYPE HTML5>
+<html>
+<head>
+<meta charset="utf-8" />
+
+<title>거래소</title>
+<!-- GOOGLE FONTS -->
+<link href="http://fonts.googleapis.com/earlyaccess/notosanskr.css" rel="stylesheet">
+<link href="http://fonts.googleapis.com/earlyaccess/nanumgothic.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Titillium+Web:300,400,500,700" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
+
+<!-- STYLE CSS -->
+<link href="hycon/css/index.css" rel="stylesheet" type="text/css">
+<link href="hycon/css/media.css" rel="stylesheet" type="text/css">
+<link href="hycon/css/reset.css" rel="stylesheet" type="text/css">
+<!-- WOW STYLE CSS -->
+<link href="hycon/css/animate.min.css" rel="stylesheet" />
+<!-- SCRIPT -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="hycon/scripts/main.js"></script>
+<!-- WOW SCRIPT -->
+<script src="hycon/scripts/wow.min.js"></script>
+<script>
+	new WOW().init();
+</script>
+</head>
+
+<body>
+    <header>
+        <div class="header">
+            <div class="header-inner">
+                <div class="header-logo">
+                    <a href="index.html"><img src="hycon/imgs/header_logo.png" /></a>
+                </div>
+                <div class="header-menu">
+                    <ul class="gnb">
+                        <li class="gnb-list gnb-list-sel">
+                            <a href="index.html">홈</a>
+                        </li>
+                        <li class="gnb-list">
+                            <a href="transaction-list.html">거래</a>
+                        </li>
+                        <li class="gnb-list">
+                            <a href="chart.html">차트</a>
+                            <div class="drop-menu">
+                                <a href="faq.html">FAQ</a>
+                                <a href="notice.html">공지사항</a>
+                                <a href="contact.html">1:1문의</a>
+                                <a href="information.html">이용안내</a>
+                            </div>
+                        </li>
+                        <li class="gnb-list">
+                            <a href="wallet.html">지갑</a>
+                        </li>
+                        <li class="gnb-list">
+                            <a href="">고객지원</a>
+                            <div class="drop-menu">
+                                <a href="faq.html">FAQ</a>
+                                <a href="notice.html">공지사항</a>
+                                <a href="contact.html">1:1문의</a>
+                                <a href="information.html">이용안내</a>
+                            </div>
+                        </li>
+                    </ul>
+                    <ul class="header-login">
+                        <li class="hd-user"><p>LEE DONG JU</p></li>
+                        <li class="hd-mypage"><a href="mypage.html"></a></li>
+                        <li class="hd-logout"><a href="index.html"></a></li>
+                        <li class="hd-language">
+                            <select class="hd-select" id="language" name="language" onchange="i18next.changeLanguage(this.value);">	
+                                <option class="selop" value="ko">KOR</option>
+                                <option class="selop" value="ko">EN</option>
+                            </select>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="coin-info-wrap">
+          <div class="coin-info-inner">
+              <div class="coin-info">
+                  <p class="coininfo-p1">총합</p>
+                  <select class="coin-info-select">
+                      <option value="">10,215원</option>
+                      <option value="">10,215원</option>
+                  </select>
+              </div>
+              <div class="coin-info">
+                  <p class="coininfo-p1">KRW</p>
+                  <p class="coininfo-p2">0.00000000</p>
+              </div>
+              <div class="coin-info">
+                  <p class="coininfo-p1">BTC</p>
+                  <p class="coininfo-p2">0.00000000</p>
+              </div>
+              <div class="coin-info">
+                  <p class="coininfo-p1">ETH</p>
+                  <p class="coininfo-p2">0.00000000</p>
+              </div>
+              <div class="coin-info">
+                  <p class="coininfo-p1">ETC</p>
+                  <p class="coininfo-p2">0.00000000</p>
+              </div>
+              <div class="coin-info">
+                  <p class="coininfo-p1">LTC</p>
+                  <p class="coininfo-p2">0.00000000</p>
+              </div>
+              <div class="coin-info">
+                  <p class="coininfo-p1">ZEC</p>
+                  <p class="coininfo-p2">0.00000000</p>
+              </div>
+          </div>
+        </div>
+    </header>
+    
+    <div class="noise-body">
+      <section class="main-section">
+          <div class="transaction-nav-wrap">
+              <nav class="transaction-tab"><!-- This page -> addClass 'transaction-tab-sel', else removeClass this -->
+                  <a href="transaction-list.html" class="transaction-nav nav1">거래 내역</a>
+                  <a href="transaction.html" class="transaction-nav transaction-tab-sel">BTC</a>
+                  <a href="#" class="transaction-nav">ETH</a>
+                  <a href="#" class="transaction-nav">ETC</a>
+                  <a href="#" class="transaction-nav">LTC</a>
+                  <a href="#" class="transaction-nav">ZEC</a>
+              </nav>
+          </div>
+          <h1 class="sub-h1">시장현황</h1>
+          <div class="transaction-wrap">
+              <div class="transaction-box">
+                  <table class="transaction-table">
+                    <thead>
+                        <tr>
+                            <th>구매/판매</th>
+                            <th>1비트코인 당 가격</th>
+                            <th>비트코인 수량</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="tr-sell">
+                            <td class="td-sell">판매(6)</td>
+                            <td class="td-sell">12312</td>
+                            <td class="td-sell">
+                               0.12<span class="span-td">0000</span>
+                            </td>
+                        </tr>
+                        <tr class="tr-sell">
+                            <td class="td-sell">판매(5)</td>
+                            <td class="td-sell">12312</td>
+                            <td class="td-sell">
+                               0.12<span class="span-td">0000</span>
+                            </td>
+                        </tr>
+                        <tr class="tr-sell">
+                            <td class="td-sell">판매(4)</td>
+                            <td class="td-sell">12312</td>
+                            <td class="td-sell">
+                               0.12<span class="span-td">0000</span>
+                            </td>
+                        </tr>
+                        <tr class="tr-sell">
+                            <td class="td-sell">판매(3)</td>
+                            <td class="td-sell">12312</td>
+                            <td class="td-sell">
+                               0.12<span class="span-td">0000</span>
+                            </td>
+                        </tr>
+                        <tr class="tr-sell">
+                            <td class="td-sell">판매(2)</td>
+                            <td class="td-sell">12312</td>
+                            <td class="td-sell">
+                               0.12<span class="span-td">0000</span>
+                            </td>
+                        </tr>
+                        <tr class="tr-sell">
+                            <td class="td-sell">판매(1)</td>
+                            <td class="td-sell">12312</td>
+                            <td class="td-sell">
+                               0.12<span class="span-td">0000</span>
+                            </td>
+                        </tr>
+                        <tr class="tr-buy">
+                            <td class="td-buy">구매(1)</td>
+                            <td class="td-buy">12312</td>
+                            <td class="td-buy">
+                               0.12<span class="span-td">0000</span>
+                            </td>
+                        </tr>
+                        <tr class="tr-buy">
+                            <td class="td-buy">구매(2)</td>
+                            <td class="td-buy">12312</td>
+                            <td class="td-buy">
+                               0.12<span class="span-td">0000</span>
+                            </td>
+                        </tr>
+                        <tr class="tr-buy">
+                            <td class="td-buy">구매(3)</td>
+                            <td class="td-buy">12312</td>
+                            <td class="td-buy">
+                               0.12<span class="span-td">0000</span>
+                            </td>
+                        </tr>
+                        <tr class="tr-buy">
+                            <td class="td-buy">구매(4)</td>
+                            <td class="td-buy">12312</td>
+                            <td class="td-buy">
+                               0.12<span class="span-td">0000</span>
+                            </td>
+                        </tr>
+                        <tr class="tr-buy">
+                            <td class="td-buy">구매(5)</td>
+                            <td class="td-buy">12312</td>
+                            <td class="td-buy">
+                               0.12<span class="span-td">0000</span>
+                            </td>
+                        </tr>
+                        <tr class="tr-buy">
+                            <td class="td-buy">구매(6)</td>
+                            <td class="td-buy">12312</td>
+                            <td class="td-buy">
+                               0.12<span class="span-td">0000</span>
+                            </td>
+                        </tr>
+                    </tbody>
+                  </table>
+              </div>
+              <div class="transaction-box t-wrap2 border shadow">
+                  <div class="transaction-btn-wrap">
+                      <button class="transaction-btn btn-buy btn-buy-sel">구매</button> <!-- This page -> addClass 'btn-buy-sel', else removeClass this -->
+                      <button class="transaction-btn btn-sell">판매</button> <!-- This page -> addClass 'btn-sell-sel', else removeClass this -->
+                  </div>
+                  <div class="transaction-view-wrap">
+                      <div class="transaction-view-btn">
+                          <button class="transaction-select-btn">25&#37;</button>
+                          <button class="transaction-select-btn">50&#37;</button>
+                          <button class="transaction-select-btn">75&#37;</button>
+                          <button class="transaction-select-btn">MAX</button>
+                      </div>
+                      <div class="transaction-input-wrap">
+                          <div class="transaction-lavel">주문수량</div>
+                          <div class="transaction-right"><input class="transaction-input"></div>
+                      </div>
+                      <div class="transaction-input-wrap">
+                          <div class="transaction-lavel">주문가격</div>
+                          <div class="transaction-right"><input class="transaction-input"></div>
+                      </div>
+                  </div>
+                  <button class="request-btn">구매신청</button>
+              </div>
+          </div>
+      </section>
+    </div>
+           
+    <footer>
+        <ul class="footer-inner">
+            <li class="footer-news">
+                <img class="footer-icon1" src="hycon/imgs/icon_1.png" />
+                <p class="footer-p1">NEWS</p>
+                <div class="footnews">
+                    <p class="footnews1"><a href="#">new notice new notice</a></p>
+                    <p class="footnews2">June 27,2017</p>
+                </div>
+                <div class="footnews">
+                    <p class="footnews1"><a href="#">new notice new notice new notice new notice</a></p>
+                    <p class="footnews2">June 27,2017</p>
+                </div>
+            </li>
+            <li class="footer-contact">
+                <img class="footer-icon2" src="hycon/imgs/icon_2.png" />
+                <p class="footer-p1">CONTACT US</p>
+                <p class="footer-p2">
+                    (주)써트온<br />
+                    서울 강남구 도산대로 207 성도발당 7층<br />
+                    대표 김승기 박경옥<br />
+                    사업자등록번호 000-00-00000<br />
+                    사업자등록번호확인<br />
+                    통신판매업신고번호 제2016-서울강남-000000호<br />
+                    contact@certon.co.kr
+                </p>
+            </li>
+            <li class="footer-customer">
+                <img class="footer-icon3" src="hycon/imgs/icon_3.png" />
+                <p class="footer-p1">CUSTOMER CENTER</p>
+                <p class="footer-p2">
+                월요일-금요일 9:30am - 16:30pm<br />
+                고객센터 0000-0000
+                </p>
+            </li>
+        </ul>
+        <div class="footer-bottom">Dashboard©company inc, 2017. All rights reserved.
+</div>
+    </footer>
+
+    <div class="top" id="toTop"><i class="fa fa-angle-double-up fa-5x"></i></div>
+</body>
+</html>
+ 

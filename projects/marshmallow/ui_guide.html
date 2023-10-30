@@ -1,0 +1,289 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title></title>
+<!-- STYLE CSS -->
+<link href="css/reset.css" rel="stylesheet" type="text/css">
+<link href="css/application.css" rel="stylesheet" type="text/css">
+<link href="css/main.css" rel="stylesheet" type="text/css">
+<!--<link href="css/style.css" rel="stylesheet" type="text/css">-->
+<!-- SCRIPT -->
+<script src="scripts/jquery-3.4.1.min.js"></script>
+<script src="scripts/jquery.nice-select.min.js"></script>
+<script src="scripts/main.js"></script>
+</head>
+<body>
+<div class="ui_content">
+    <section>
+        <h1>color</h1>
+        <div class="ui_group">
+            <h2 class="ui_h2">black</h2>
+            <ul class="ui_list ui_fl">
+            <li>
+                <div class="color_box">
+                    <div class="color_view" style="background: #000000;"></div>
+                    <div class="color_name">#000000</div>
+                </div>
+            </li>
+            <li>
+                <div class="color_box">
+                    <div class="color_view" style="background: #585858;"></div>
+                    <div class="color_name">#585858</div>
+                </div>
+            </li>
+            <li>
+                <div class="color_box">
+                    <div class="color_view" style="background: #a8aab7;"></div>
+                    <div class="color_name">#a8aab7</div>
+                </div>
+            </li>
+            <li>
+                <div class="color_box">
+                    <div class="color_view" style="background: #b4b4b4;"></div>
+                    <div class="color_name">#b4b4b4</div>
+                </div>
+            </li>
+            <li>
+                <div class="color_box">
+                    <div class="color_view" style="background: #cccccc;"></div>
+                    <div class="color_name">#cccccc</div>
+                </div>
+            </li>
+            </ul>
+        </div>
+    </section>
+    <section>
+        <h1>style</h1>
+        <div class="ui_group">
+            <h2 class="ui_h2">checkbox &amp; radio</h2>
+            <ul class="ui_list ui_fl">
+            <li>
+                <input type="checkbox" id="checkbox">
+                <label for="checkbox">아아</label>
+            </li>
+            <li>
+                <input type="radio" id="radio">
+                <label for="radio">아아</label>
+            </li>
+            <!--
+            <li>
+                <input type="checkbox" id="checkbo_disabled" disabled>
+                <label for="checkbo_disabled">아아</label>
+            </li>
+            <li>
+                <input type="radio" id="radio_disabled" disabled>
+                <label for="radio_disabled">아아</label>
+            </li>
+            <li>
+                <input type="checkbox" id="checkbo_disabled" disabled checked>
+                <label for="checkbo_disabled">아아</label>
+            </li>
+            <li>
+                <input type="radio" id="radio_disabled" disabled checked>
+                <label for="radio_disabled">아아</label>
+            </li>
+            -->
+            </ul>
+        </div>
+        <div class="ui_group">
+            <h2 class="ui_h2">input</h2>
+            <ul class="ui_list ui_fl">
+            <li>
+                <input type="text">
+            </li>
+            <li>
+                <input type="text" class="input_s">
+            </li>
+            <li>
+                <input type="text" class="input_search">
+            </li>
+            <li>
+                <input type="text" class="input_search input_s">
+            </li>
+            <li>
+                <div class="input_search_wrap">
+                    <input type="text" class="input_search">
+                    <button class="btn__p">검색</button>
+                </div>
+            </li>
+            <li>
+                <select>
+                    <option>select</option>
+                </select>
+            </li>
+            <li>
+                <div class="form_wrap">
+                    <select>
+                        <option>select</option>
+                    </select>
+                </div>
+            </li>
+            </ul>
+            <ul class="ui_list">
+                <li>
+                    <div class="form_wrap">
+                        <label class="label b">파일첨부</label>
+                        <!-- dropzone -->
+                        <div id="dropzone1">
+                            <form class="dropzone needsclick dz-clickable" id="demo-upload" action="/upload">
+                                <p class="drop_p dz-message tc">마우스로 파일을 끌어오세요.<br>업로드 가능 확장자 파일 hwp, docx, doc, pdf</p>
+                            </form>
+                        </div>
+                        <!-- //dropzone -->
+                        <ul class="attach_list">
+                            <li>근로계약서_김응보.pdf</li>
+                            <li>근로계약서_김응보.pdf</li>
+                            <li>근로계약서_김응보.pdf</li>
+                            <li>근로계약서_김응보.pdf</li>
+                            <li>근로계약서_김응보.pdf</li>
+                            <li>근로계약서_김응보.pdf</li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <section>
+        <h1>button</h1>
+        <div class="ui_group">
+            <h2 class="ui_h2">button style</h2>
+            <ul class="ui_list">
+            <li>
+                <button class="btn__p lg">primary</button>
+                <button class="btn__p">primary</button>
+                <button class="btn__p m">primary</button>
+                <button class="btn__p xs">primary</button>
+                <button class="btn__p xs min">primary primary</button>
+                <button class="btn__p btn_s">primary</button>
+            </li>
+            <li>
+                <button class="btn__g lg">gray</button>
+                <button class="btn__g">gray</button>
+                <button class="btn__g m">gray</button>
+                <button class="btn__g xs">gray</button>
+                <button class="btn__g xs min">gray gray</button>
+                <button class="btn__g btn_s">gray</button>
+            </li>
+            <li>
+                <button class="btn__f lg">white</button>
+                <button class="btn__f">white</button>
+                <button class="btn__f m">white</button>
+                <button class="btn__f xs">white</button>
+                <button class="btn__f xs min">white white</button>
+                <button class="btn__f btn_s">white</button>
+            </li>
+            </ul>
+            <ul class="ui_list">
+            <li>
+                <div class="btn_wrap mar_top40">
+                    <div class="fl">
+                        <div class="btn__f itm01">임시저장</div>
+                        <div class="btn__f itm02">미리보기</div>
+                    </div>
+                    <div class="fr">
+                        <div class="btn__cancel">이전</div>
+                        <div class="btn__active">다음</div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="btn_wrap mar_top30 tr">
+                    <div class="btn__cancel">취소</div>
+                    <div class="btn__active">확인</div>
+                </div>
+            </li>
+            <li>
+                <div class="btn_wrap mar_top50">
+                    <div class="fl">
+                        <div class="btn__f itm04">다운로드</div>
+                        <div class="btn__f itm05">이메일발송</div>
+                    </div>
+                    <div class="fr">
+                        <div class="btn__cancel">취소</div>
+                        <div class="btn__active">수정</div>
+                    </div>
+                </div>
+            </li>
+            </ul>
+        </div>
+    </section>
+</div>
+</body>
+<style>
+    section:last-child {
+        margin-bottom: 150px;
+    }
+    h1, h2 {
+        text-transform: uppercase;
+    }
+    h1:not(.section_h1) {
+        height: 30px;
+        margin-top: 140px;
+        border-left: 4px solid #000;
+        padding-left: 16px;
+        font-size: 30px;
+        font-weight: 400;
+        line-height: 1;
+        letter-spacing: normal;
+    }
+    h2.ui_h2 {
+        margin-top: 52px;
+        margin-bottom: 50px;
+        padding-bottom: 17px;
+        border-bottom: 1px solid #ece9f1;
+        font-size: 20px;
+        font-weight: normal;
+        line-height: 1.5;
+        letter-spacing: normal;
+        color: #1a051d;
+    }
+    .ui_content {
+        max-width: 1120px;
+        margin: 0 auto;
+    }
+    .ui_list {
+        clear: both;
+    }
+    .ui_list>li {
+        margin-bottom: 30px;
+    }
+    .ui_fl:after {
+        content: "";
+        clear: both;
+        display: block;
+    }
+    .ui_fl>li {
+        float: left;
+        margin-left: 25px;
+        margin-right: 25px;
+    }
+    .color_box {
+        width: 160px;
+        height: 190px;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 7px 64px 0 rgba(0, 0, 0, 0.03);
+        background-color: #ffffff;
+    }
+    .color_box .color_view {
+        height: 140px;
+    }
+    .color_box .color_name {
+        height: 50px;
+        line-height: 50px;
+        text-align: center;
+    }
+    .tooltip {
+        white-space: pre;
+    }
+    .ui_p_list {
+        margin-bottom: 55px;
+    }
+    .ui_p_list>p {
+        float: left;
+        margin-right: 20px;
+    }
+</style>
+</html>

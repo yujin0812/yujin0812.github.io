@@ -1,0 +1,153 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>파파트리</title>
+<link href="css/common.css" rel="stylesheet" type="text/css">
+<link href="css/index.css" rel="stylesheet" type="text/css">
+<link href="css/media.css" rel="stylesheet" type="text/css">
+<link href='https://fonts.googleapis.com/css?family=Arimo:400,700' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/earlyaccess/nanumgothic.css'>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="scripts/main.js"></script>
+</head>
+ 
+<body>
+<header>
+<header>
+	<div class="header-inner">
+    	<div class="header-login">
+        	<div class="hd-login-wrap">
+            	<div class="hd-login"><a href="login.html">로그인</a></div>
+                <div class="hd-login"><a href="join.html">회원가입</a></div>
+                <div class="hd-login"><a href="#">블로그</a></div>
+            </div>
+        </div>
+        <div class="header-logo-wrap">
+            <div class="minheader-ham">
+                <div class="btn-ham"></div>
+                <div class="btn-ham"></div>
+                <div class="btn-ham"></div>
+            </div>
+        	<div class="header-logo"><a href="index.html"><img src="images/main_logo.png" /></a></div>
+            <div class="header-menu">
+        	<a href="brand.html"><div class="gnb">PAPATREE STORY</div></a>
+        	<a href="product1.html"><div class="gnb">PRODUCT</div></a>
+        	<a href="review.html"><div class="gnb">REVIEW</div></a>
+            <a href="notice.html"><div class="gnb">NOTICE</div></a>
+        </div>
+        </div>
+    </div><!--header-inner-->
+</header>
+
+<div class="drawer-popup">
+<div class="drawer">
+    <div class="drawer-xbtn"><img src="images/x_btn.png" /></div>
+    <div class="drawer-body">
+        <div class="drawer-header">
+            <a href="login.html">로그인</a>
+            <a href="join.html">회원가입</a>
+        </div>
+        <div class="nav-list">
+            <a href="brand.html">BRAND</a>
+            <a href="product1.html">PRODUCT</a>
+            <a href="review.html">REVIEW</a>
+            <div class="list2">
+               <div class="list-line"></div>
+                <a href="notice.html">NOTICE</a>
+                <a href="faq.html">FAQ</a>
+                <a href="notice.html">Q&amp;A</a>
+            </div>
+        </div>
+    </div><!--drawer-body-->
+</div><!--drawer-->
+</div><!--drawer-popup-->
+
+<section class="login-section">
+	<div class="join-title">JOIN</div>
+    
+    <div class="join-table-wrap">
+    <table class="join-table">
+    	<colgroup>
+            <col width="20%"/>
+            <col width="80%"/>
+		</colgroup>
+        <tr>
+        	<td class="join-th">아이디</td>
+            <td class="join-td" colspan="3">
+                <div class="join-id"><input class="input-join id-check" name="query" /></div>
+                <a href="#"><div class="check-btn">중복확인</div></a>
+            </td>
+        </tr>
+        <tr>
+        	<td class="join-th">비밀번호</td>
+            <td class="join-td">
+            	<input class="input-join" name="query" />
+            </td>
+		</tr>
+        <tr>
+            <td class="join-th">비밀번호 확인</td>
+            <td class="join-td">
+            	<input class="input-join" name="query" />
+            </td>
+        </tr>
+        <tr>
+        	<td class="join-th">이름</td>
+            <td class="join-td" colspan="3">
+            	<input class="input-join" name="query" />
+            </td>
+        </tr>
+        <tr>
+        	<td class="join-th">연락처</td>
+            <td class="join-td" colspan="3">
+            	<input class="join-number" name="query" />
+                <div class="phone-bar">-</div>
+                <input class="join-number" name="query" />
+                <div class="phone-bar">-</div>
+                <input class="join-number" name="query" />
+            </td>
+        </tr>
+        <tr>
+            <td class="join-th th02">이메일</td>
+            <td class="join-td" colspan="3">
+            	<input class="join-mail" name="query" />
+                <div class="phone-bar">@</div>
+                <input class="join-mail" name="query" />
+                <select class="accordion-email" name="emailsel" onchange="setEmail()">
+                    <option value="">직접입력</option>
+                    <option value="naver.com">naver.com</option>
+                    <option value="nate.com">nate.com</option>
+                    <option value="gmail.com">gmail.com</option>
+                    <option value="hanmail.net">hanmail.net</option>
+                    <option value="hotmail.com">hotmail.com</option>
+                    <option value="yahoo.co.kr">yahoo.co.kr</option>
+                </select>
+            </td>
+        </tr>
+	</table>
+    </div>
+    <div class="joinpage-btn"><a href="#">회원가입</a></div>
+</section>
+
+<footer>
+	<div class="footer-top">
+        <div class="footer-sns"><a href="#"><img src="images/facebook_logo.png" /></a></div>
+        <div class="footer-sns"><a href="#"><img src="images/blog_logo.png" /></a></div>
+        <div class="footer-sns"><a href="#"><img src="images/instagram_logo.png" /></a></div>
+    </div>
+    <div class="footer-inner">
+        <div class="footer-logo"><img src="images/footer_logo.png" /></div>
+        <div class="footer-text">
+            <p class="footer-tex1"><span class="ft-span1">Tel</span> 02&#45;468&#45;6862</p>
+            <p class="footer-tex1"><span class="ft-span1">Fax</span> 031&#45;696&#45;6862</p>
+            <p class="footer-tex1"><span class="ft-span1">E-mail</span> sjcmc@sjcmc.kr</p>
+            <p class="footer-tex2">서울 송파구 법원로 127 문정대명벨리온 1303호</p>
+            <p class="footer-tex3">Copyright © 2016 SJ TECH SYSTEM. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>
+ 

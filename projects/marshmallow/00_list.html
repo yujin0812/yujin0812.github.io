@@ -1,0 +1,667 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title></title>
+<!-- STYLE CSS -->
+<link href="css/reset.css" rel="stylesheet" type="text/css">
+<link href="css/application.css" rel="stylesheet" type="text/css">
+<link href="css/main.css" rel="stylesheet" type="text/css">
+<!-- SCRIPT -->
+<script src="scripts/jquery-3.4.1.min.js"></script>
+<script src="scripts/jquery.nice-select.min.js"></script>
+<script src="scripts/main.js"></script>
+</head>
+
+<body>
+<!-- wrap -->
+<div id="wrap">
+    <!-- header -->
+    <header id="header">
+        <div class="section clearfix">
+            <!-- logo -->
+            <a class="logo" href="index.html"><img src="http://www.legalinsight.kr/_img/comn/logo_marshmallow.png" alt="마시멜로로고"></a>
+            <div class="header_menu">
+                <!-- gnb -->
+                <ul class="gnb">
+                    <li class="active"><a href="index.html">marshmallaw</a></li>
+                    <li><a href="how.html">HOW</a></li>
+                    <li><a href="notice.html">NOTICE</a></li>
+                    <li><a href="news.html">NEWS</a></li>
+                    <li><a href="qna.html">Q&amp;A</a></li>
+                    <!-- login -->
+                    <li><a href="mypage.html">MYPAGE</a></li>
+                </ul>
+                <!-- login display: none -->
+                <a class="btn__hd_menu">Login</a>
+            </div>
+            <div class="ham"><div class="ham_line"></div></div>
+        </div>
+    </header>
+    <!-- //header -->
+
+    <!-- section_list00 -->
+    <div class="section_list00">
+        <div class="dvs__2">
+            <h1>리스트</h1>
+            <ul class="list00">
+                <li><a href="00_ui_guide.html" target="_blank">UI Guide</a></li>
+                <li><a href="index.html" target="_blank">메인</a></li>
+                <li><a href="01_contractfor_chinese.html" target="_blank">중국인을 위한 계약서</a></li>
+                <li><a href="02_contract_analysis.html" target="_blank">계약서 분석</a></li>
+                <li><a href="03_contract_view.html" target="_blank">계약서 분석_계약서 뷰</a></li>
+                <li><a href="04_mypage1_myhistory.html" target="_blank">마이페이지</a></li>
+                <li><a href="05_administrative_trial.html" target="_blank">행정심판소송</a></li>
+                <li><a href="06_complaint.html" target="_blank">고소장 작성</a></li>
+                <li><a href="07_contract_form.html" target="_blank">계약서 작성</a></li>
+                <li><a href="08_news.html" target="_blank">NEWS</a></li>
+                <li><a href="09_notice.html" target="_blank">notice</a></li>
+                
+                <li><a href="10_company_introduction.html" target="_blank">회사소개</a></li>
+                <li><a href="10_company_location.html" target="_blank">오시는길</a></li>
+                <li><a href="10_company_terms1.html" target="_blank">이용약관</a></li>
+                <li><a href="10_company_terms2.html" target="_blank">개인정보취급방침</a></li>
+                <li><a href="10_disclaimer_notice.html" target="_blank">면책공고</a></li>
+            </ul>
+        </div>
+        <div class="dvs__2">
+            <h1>모달</h1>
+            <ul class="list00">
+                <li><button class="btn__f xs" data-modal="modal1">이메일 발송</button></li>
+                <li><button class="btn__f xs min" data-modal="contractAnalysisReport">계약서 분석 리포트</button></li>
+                <li><button class="btn__f xs min" data-modal="modal3">계약 당사자</button></li>
+                
+                <!-- 회원가입 -->
+                <li><button class="btn__f xs min" data-modal="modalJoin">회원가입</button></li>
+                <li><button class="btn__f xs min" data-modal="modalLogin">로그인</button></li>
+                <li><button class="btn__f xs min" data-modal="modalJoinFindId">아이디 찾기</button></li>
+                <li><button class="btn__f xs min" data-modal="modalJoinFindPw">비밀번호 찾기</button></li>
+                <li><button class="btn__f xs min" data-modal="modalJoinCmpl">회원가입 완료</button></li>
+                <li><button class="btn__f xs min" data-modal="modalEmailAthn">이메일 인증</button></li>
+                <li><button class="btn__f xs min" data-modal="modalTerms">이용약관</button></li>
+            </ul>
+        </div>
+    </div>
+    <!-- //section_list00 -->
+
+
+    <!-- ============ 모달 공용 ============ -->
+    <!-- 모달: 이메일 발송 -->
+    <!-- modal_fixed -->
+    <div class="modal_fixed" id="modal1">
+        <div class="dis_table">
+            <div class="dis_cell">
+                <!--
+                modal_fixed > dis_table > dis_cell 공용
+                modal_section은 모달창 사이즈에 따라 class 추가
+                -->
+                
+                <!-- modal_section -->
+                <section class="modal_section">
+                    <div class="modal_content tc">
+                        <p class="tc">이메일 주소를 입력하세요.</p>
+                        <div class="mar20">
+                            <input type="text" placeholder="emailadress@gmail.com" class="tc txt_s">
+                        </div>
+                        <a class="btn__p m">이메일 발송</a>
+                    </div>
+                </section>
+                <!-- //modal_section -->
+
+            </div>
+        </div>
+    </div>
+    <!-- //modal_fixed -->
+
+    <!-- 모달: 계약서 분석 리포트 -->
+    <!-- modal_fixed -->
+    <!-- 주석 ID 변경: contractAnalysisReport -->
+    <div class="modal_fixed" id="contractAnalysisReport">
+        <div class="dis_table">
+            <div class="dis_cell">
+
+                <!-- modal_section -->
+                <section class="modal_section lg">
+                    <!-- modal_content -->
+                    <div class="modal_content">
+                        <div class="flex_type">
+                            <p class=" tit02 b">[계약서 분석 리포트]</p>
+                            <p class="">출력시간: 2020.09.17.18:00</p>
+                        </div>
+                        <div class="mar_ver4 lh2">
+                            <b>① 의뢰일시 : </b>2020.09.17 18:45:00<br>
+                            <b>② 제목 : </b>웹서비스 개발 연구요원 정규직 계약서 검토건<br>
+                            <b>③ 원본 계약서 파일명 : </b>근로계약서_김응보.PDF<br>
+                            <b>④ 분류 : </b> 근로계약서<br>
+                            <b>⑤ 설명 : </b> &#60;계약서 유형 경의&#62; 값을 가져옴 _ 사용자와 근로자 간의 근로의 제공 및 이에 대한 임금 등 지급에 관한 계약서<br>
+                            <b>⑥ 계약서 요약</b><br>
+                            [1. 사용자] : <br>
+                            [2. 근로자] : <br>
+                            [3. 채용형태] : <br>
+                            [4. 근로기간] : <br>
+                            <b>⑦ 주요 계약 내용 : </b><br>
+                            <b>⑧ 리스크 분석 결과 </b>
+                            <div class="percent_wrap">
+                                <p class="txt01 b">90%</p>
+                                <div class="percent">
+                                    <div class="percent_itm"></div>
+                                </div>
+                            </div>
+                            <div class="mar_top10 depth1">
+                                <b>- [리스크정도]</b> 전체분석조항(10), 누락조항(5), 독소조항(3)<br>
+                                - [독소 조항] 제 1조 계약기간의 만료일에 대하여 기재 되어 있지 않음<br>
+                                - [누락 조항] (표준계약서 대비) 제 2조 업무 내용에 대한 기재 누락<br>
+                                - [변호사 추천] 계약기간 종료일에 대하여 기재를 필요로 함
+                                <p class="depth2 txt_s txt_g2 mar6">근로기준법에서 요구하는 내용을 모두 기재해야 함. 근로계약관계에서 근로계약서를 작성하지 아니하는 경우 사업주에 대한 형사처벌(주로 벌금형) 대상임</p>
+                                <b>- [관련 법령/판례정보]</b><br>
+                                <p class="depth2 txt_s txt_g2 mar_top6">근로기준법 **조 **항 관련 내용</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- btn_wrap -->
+                    <div class="btn_wrap bor_top tc">
+                        <div class="btn__p btn_lg">출력하기</div>
+                    </div>
+                </section>
+                <!-- //modal_section -->
+            </div>
+        </div>
+    </div>
+    <!-- //modal_fixed -->
+
+    <!-- 모달: 계약 당사자 -->
+    <!-- modal_fixed -->
+    <div class="modal_fixed" id="modal3">
+        <div class="dis_table">
+            <div class="dis_cell">
+
+                <!-- modal_section -->
+                <section class="modal_section m">
+                    <!-- modal_content -->
+                    <div class="modal_content">
+                        <label class="b mar_btm">계약 당사자를 선택해주세요</label>
+                        <!-- ==================== 변경 ==================== -->
+                        <!-- 3개일 때: clearfix_3 -->
+                        <ul class="form_line_ul clearfix_3">
+                            <li class="dvs__">
+                                <input type="radio" id="radio">
+                                <label for="radio">수신인<p class="txt_s">(임대인/임차인/발주인/공급인)</p></label>
+                            </li>
+                            <li class="dvs__">
+                                <input type="radio" id="radio">
+                                <label for="radio">입주인<p class="txt_s">(임대인/임차인/발주인/공급인)</p></label>
+                            </li>
+                            <li class="dvs__">
+                                <input type="radio" id="radio">
+                                <label for="radio">입회인<p class="txt_s">(임대인/임차인/발주인/공급인)</p></label>
+                            </li>
+                        </ul>
+                        <!-- 2개일 때: clearfix_2 -->
+                        <ul class="form_line_ul clearfix_2">
+                            <li class="dvs__2">
+                                <input type="radio" id="radio">
+                                <label for="radio">수신인<p class="txt_s">(임대인/임차인/발주인/공급인)</p></label>
+                            </li>
+                            <li class="dvs__2">
+                                <input type="radio" id="radio">
+                                <label for="radio">입주인<p class="txt_s">(임대인/임차인/발주인/공급인)</p></label>
+                            </li>
+                        </ul>
+                        <!-- ==================== //변경 ==================== -->
+                        
+                        <label class="b mar_btm mar_top40">선택하신 계약서를 확인해주세요.</label>
+                        <div class="form_line_ul">
+                            <li>
+                                <input type="radio" id="radio">
+                                <label for="radio">"임대차계약서"가 맞습니다.</label>
+                            </li>
+                        </div>
+                    </div>
+                    <!-- btn_wrap -->
+                    <div class="btn_wrap bor_top mar_top30 tr">
+                        <div class="btn__cancel m">취소</div>
+                        <div class="btn__active m">다음</div>
+                    </div>
+                    
+                </section>
+                <!-- //modal_section -->
+            </div>
+        </div>
+    </div>
+    <!-- //modal_fixed -->
+    
+
+    <!-- 모달: 회원가입 -->
+    <!-- modal_fixed -->
+    <div class="modal_fixed" id="modalJoin">
+        <div class="dis_table">
+            <div class="dis_cell">
+
+                <!-- modal_section -->
+                <section class="modal_section s">
+
+                    <!-- modal_hd -->
+                    <div class="modal_hd bor_btm">
+                        <p>회원가입</p>
+                    </div>
+                    <!-- modal_content -->
+                    <div class="modal_content">
+                        <label class="b mar_btm txt_s">기본정보 입력</label>
+                        <ul class="join_input_wrap mar_btm_li">
+                            <li class="join_itm_email">
+                                <input type="email" class="input_s" placeholder="아이디 (이메일주소 입력)">
+                            </li>
+                            <li class="join_itm_pw">
+                                <input type="password" class="input_s" placeholder="비밀번호 (6~12자리 영문,숫자로 생성가능)">
+                            </li>
+                            <li class="join_itm_pw">
+                                <input type="password" class="input_s" placeholder="비밀번호 확인">
+                            </li>
+                            <li class="join_itm_user">
+                                <input type="text" class="input_s" placeholder="이름">
+                            </li>
+                        </ul>
+                        <div class="mar_top">
+                            <label class="b mar_btm txt_s">기본정보 입력</label>
+                            <div class="btn__dark s wide">휴대폰번호 본인인증 요청</div>
+                        </div>
+                        <div class="pad20 bor_top mar_top20">
+                            <ul class="modal_terms_check_list clearfix_ul mar_btm_li">
+                                <li>
+                                    <div class="fl">
+                                        <input type="checkbox" id="checkbox1">
+                                        <label for="checkbox1" class="txt_s">이용약관에 동의합니다. (필수)</label>
+                                    </div>
+                                    <div class="fr">
+                                        <div class="btn_terms txt_xs" data-modal="modalTerms">자세히보기</div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="fl">
+                                        <input type="checkbox" id="">
+                                        <label for="" class="txt_s">개인정보취급방침에 동의합니다. (필수)</label>
+                                    </div>
+                                    <div class="fr">
+                                        <div class="btn_terms txt_xs" data-modal="modalTerms">자세히보기</div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="fl">
+                                        <input type="checkbox" id="">
+                                        <label for="" class="txt_s">개인정보 제 3자 제공에 동의합니다. (필수)</label>
+                                    </div>
+                                    <div class="fr">
+                                        <div class="btn_terms txt_xs" data-modal="modalTerms">자세히보기</div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="fl">
+                                        <input type="checkbox" id="">
+                                        <label for="" class="txt_s">이벤트 등 프로모션 메일 알림 수신 (선택)</label>
+                                    </div>
+                                    <div class="fr">
+                                        <div class="btn_terms txt_xs" data-modal="modalTerms">자세히보기</div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="fl">
+                                        <input type="checkbox" id="">
+                                        <label for="" class="txt_s">모두 동의하기</label>
+                                    </div>
+                                    <div class="fr">
+                                        <div class="btn_terms txt_xs" data-modal="modalTerms">자세히보기</div>
+                                    </div>
+                                </li>
+                            </ul>
+                            <div class="mar_top20">
+                                <div class="btn__p s wide">회원가입</div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <!-- //modal_content -->
+                    
+                    <!-- btn_f_wrap -->
+                    <!-- 주석 class 추가: btn_f_wrap -->
+                    <div class="btn_f_wrap pad_top10 bor_top tr">
+                        <label class="dis_inb lh36 txt_s">이미 회원이신가요?</label>
+                        <div class="btn__f xs txt_s">로그인</div>
+                    </div>
+                    
+                </section>
+                <!-- //modal_section -->
+            </div>
+        </div>
+    </div>
+    <!-- //modal_fixed -->
+    
+
+    <!-- 모달: 로그인 -->
+    <!-- modal_fixed -->
+    <div class="modal_fixed" id="modalLogin">
+        <div class="dis_table">
+            <div class="dis_cell">
+
+                <!-- modal_section -->
+                <section class="modal_section s">
+
+                    <!-- modal_hd -->
+                    <div class="modal_hd bor_btm">
+                        <p>로그인</p>
+                    </div>
+                    <!-- modal_content -->
+                    <div class="modal_content">
+                        <label class="b mar_btm txt_s">기본정보 입력</label>
+                        <!-- join_input_wrap -->
+                        <ul class="join_input_wrap mar_btm_li">
+                            <li class="join_itm_email">
+                                <input type="text" class="input_s" placeholder="아이디 (이메일주소 입력)">
+                            </li>
+                            <li class="join_itm_pw">
+                                <input type="password" class="input_s" placeholder="비밀번호">
+                            </li>
+                        </ul>
+                        
+                        <!-- checkbox -->
+                        <div class="tr mar_top10">
+                            <input type="checkbox" id="">
+                            <label for="" class="txt_s">아이디 기억하기</label>
+                        </div>
+
+                        <!-- btn_social_login -->
+                        <ul class="btn_social_login mar_btm_li mar_top20">
+                            <li><div class="btn__weChat s wide">WeChat Login</div></li>
+                            <li><div class="btn__kakao s wide">Kakao Login</div></li>
+                            <li><div class="btn__facebook s wide">Facebook Login</div></li>
+                        </ul>
+                    </div>
+                    <!-- //modal_content -->
+                    
+                    <!-- 주석 class 추가: btn_f_wrap / class 삭제 -->
+                    <div class="btn_f_wrap pad_top10 bor_top mar_top20">                    
+                        <!-- 주석 구조 변경: clearfix_r15 추가 -->
+                        <div class="clearfix_r15">
+                            <div class="dvs__2">
+                                <label class="dis_inb lh36 txt_s">아직 회원이 아니신가요?</label>
+                                <div class="btn__f xs txt_s">회원가입</div>
+                            </div>
+                            <div class="dvs__2">
+                                <label class="dis_inb lh36 txt_s">ID/PW를 잊어버리셨나요?</label>
+                                <div class="btn__f xs txt_s">ID/PW 찾기</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </section>
+                <!-- //modal_section -->
+            </div>
+        </div>
+    </div>
+    <!-- //modal_fixed -->
+    
+
+    <!-- 모달: 아이디 찾기 -->
+    <!-- modal_fixed -->
+    <div class="modal_fixed" id="modalJoinFindId">
+        <div class="dis_table">
+            <div class="dis_cell">
+
+                <!-- modal_section -->
+                <section class="modal_section s">
+
+                    <!-- modal_hd -->
+                    <div class="modal_hd bor_btm">
+                        <p>아이디 찾기</p>
+                    </div>
+                    <!-- modal_content -->
+                    <div class="modal_content">
+
+                        <!-- join_input_wrap -->
+                        <ul class="join_input_wrap mar_btm_li">
+                            <li class="join_itm_user">
+                                <input type="text" class="input_s" placeholder="이름">
+                            </li>
+                            <li class="join_itm_mobile">
+                                <input type="number" class="input_s" placeholder="휴대폰번호 (번호만 입력)">
+                            </li>
+                        </ul>
+                        
+                        <!-- btn -->
+                        <div class="mar_top">
+                            <div class="btn__dark s wide">아이디 찾기</div>
+                        </div>
+
+                    </div>
+                    <!-- //modal_content -->
+
+                </section>
+                <!-- //modal_section -->
+            </div>
+        </div>
+    </div>
+    <!-- //modal_fixed -->
+
+   
+    <!-- 모달: 비밀번호 찾기 -->
+    <!-- modal_fixed -->
+    <div class="modal_fixed" id="modalJoinFindPw">
+        <div class="dis_table">
+            <div class="dis_cell">
+
+                <!-- modal_section -->
+                <section class="modal_section s">
+
+                    <!-- modal_hd -->
+                    <div class="modal_hd bor_btm">
+                        <p>비밀번호 찾기</p>
+                    </div>
+                    <!-- modal_content -->
+                    <div class="modal_content">
+
+                        <!-- join_input_wrap -->
+                        <ul class="join_input_wrap mar_btm_li">
+                            <li class="join_itm_user">
+                                <input type="text" class="input_s" placeholder="이름">
+                            </li>
+                            <li class="join_itm_email">
+                                <input type="email" class="input_s" placeholder="아이디 (이메일주소 입력)">
+                            </li>
+                        </ul>
+                        
+                        <!-- btn -->
+                        <div class="mar_top">
+                            <div class="btn__dark s wide">비밀번호 찾기</div>
+                        </div>
+
+                    </div>
+                    <!-- //modal_content -->
+
+                </section>
+                <!-- //modal_section -->
+            </div>
+        </div>
+    </div>
+    <!-- //modal_fixed -->
+
+   
+    <!-- 모달: 이메일 인증 -->
+    <!-- modal_fixed -->
+    <div class="modal_fixed" id="modalEmailAthn">
+        <div class="dis_table">
+            <div class="dis_cell">
+
+                <!-- modal_section -->
+                <section class="modal_section s tc">
+
+                    <!-- modal_hd -->
+                    <div class="modal_hd bor_btm">
+                        <p>이메일 인증</p>
+                    </div>
+                    
+                    <!-- modal_content -->
+                    <div class="modal_content txt_s">
+                        <div class="icon_email_img mar30">
+                            <img src="./imgs/join/img_message.svg">
+                        </div>
+                        <div>
+                            <p>이메일이 발송되었습니다.</p>
+                            <p class="txt_g4 mar_top6">이메일 내부 링크를 클릭하여 인증을 완료해주세요.</p>
+                        </div>
+                    </div>
+                    <!-- //modal_content -->
+                    
+                    <!-- btn -->
+                    <div class="clearfix_5 mar_top30">
+                        <div class="dvs__2">
+                            <div class="btn__p s wide">로그인</div>
+                        </div>
+                        <div class="dvs__2">
+                            <div class="btn__dark s wide">메인페이지</div>
+                        </div>
+                    </div>
+
+                </section>
+                <!-- //modal_section -->
+            </div>
+        </div>
+    </div>
+    <!-- //modal_fixed -->
+
+   
+    <!-- 모달: 회원가입 완료 -->
+    <!-- modal_fixed -->
+    <div class="modal_fixed" id="modalJoinCmpl">
+        <div class="dis_table">
+            <div class="dis_cell">
+
+                <!-- modal_section -->
+                <section class="modal_section s tc">
+
+                    <!-- modal_hd -->
+                    <div class="modal_hd bor_btm">
+                        <p>회원가입 완료</p>
+                    </div>
+                    
+                    <!-- modal_content -->
+                    <div class="modal_content txt_s">
+                        <div class="icon_email_img mar30">
+                            <img src="./imgs/join/img_join.svg">
+                        </div>
+                        <div>
+                            <p>LEGAL INSIGHT 회원가입이 완료되었습니다.</p>
+                            <p class="txt_g4 mar_top6">이제 회원님도 Legal Insight 서비스를 이용하실 수 있습니다.<br>앞으로 최고의 품질과 서비스로 보답하겠습니다.</p>
+                        </div>
+                    </div>
+                    <!-- //modal_content -->
+                    
+                    <!-- btn -->
+                    <div class="clearfix_5 mar_top30">
+                        <div class="dvs__2">
+                            <div class="btn__p s wide">로그인</div>
+                        </div>
+                        <div class="dvs__2">
+                            <div class="btn__dark s wide">메인페이지</div>
+                        </div>
+                    </div>
+
+                </section>
+                <!-- //modal_section -->
+            </div>
+        </div>
+    </div>
+    <!-- //modal_fixed -->
+    
+   
+    <!-- 모달: 이용약관 -->
+    <!-- modal_fixed -->
+    <div class="modal_fixed" id="modalTerms">
+        <div class="dis_table">
+            <div class="dis_cell">
+
+                <!-- modal_section -->
+                <section class="modal_section ml">
+
+                    <!-- modal_hd -->
+                    <div class="modal_hd bor_btm mar_btm20">
+                        <p>이용약관 (해당 약관에 맞는 타이틀로 변경하여 사용)</p>
+                    </div>
+                    
+                    <!-- modal_content -->
+                    <div class="modal_content txt_s">
+                        <div class="modal_terms_box">
+                            <p>
+                                이용약관에 해당하는 내용이 들어오게 됩니다.
+                            </p>
+                        </div>
+                    </div>
+                    <!-- //modal_content -->
+                    
+                    <!-- btn -->
+                    <div class="pad20 tr">
+                        <div class="btn__p s">동의함</div>
+                    </div>
+
+                </section>
+                <!-- //modal_section -->
+            </div>
+        </div>
+    </div>
+    <!-- //modal_fixed -->
+    
+
+</div>
+<!-- //wrap -->
+</body>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.section_list00 {
+    max-width: 1200px;
+    margin: auto;
+    padding: 50px;
+}
+.section_list00 h1 {
+    padding-left: 16px;
+    margin-bottom: 50px;
+    border-left: 4px solid #000;
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 1;
+}
+.section_list::after,
+a::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+.dvs__2 {
+    float: left;
+    display: inline-block;
+    width: 50%;
+    vertical-align: top;
+}
+dvs__3 {
+    float: left;
+    display: inline-block;
+    width: 33.3333%;
+    vertical-align: top;
+}
+.list00>li {
+    margin-bottom: 10px;
+}
+.list00>li a {
+    display: inline-block;
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.15s;
+}
+.list00>li a:hover {
+    color: #666;
+}
+</style>
+</html>

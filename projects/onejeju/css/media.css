@@ -1,0 +1,366 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+
+@media (max-width: 999px) {
+
+    
+/* ---------------------------- header ---------------------------- */
+    header {
+        position: relative;
+        top: 0;
+        border-bottom: 1px solid #e8e8e8;
+        padding: 0px;
+        height: 60px;
+    }
+    .hd-login-wrap { display: none; }
+    .header-gnb { display: none; }
+
+    .header-inner {
+        width: 100%;
+        margin: 0 0px;
+        height: 60px;
+    }
+    .header-logo-wrap { width: 100%; left: 0px; }
+    .minheader-ham { display: block; }
+    .header-logo {
+        position: absolute;
+        top: -20px;
+        left: 25px;
+        width: 50px;
+    }
+
+
+    /* 카테고리 */
+    .section-category { padding-bottom: 10px;}
+    .category-image { display: none; }
+    .categoryimg-title { display: none; }
+    .main-gray { padding-top: 70px; padding-bottom:  40px; background-color: #fff; }
+    .gray-button { height: 7px; }
+    .section-category a { margin-right: 5.5%;}
+    .category-bg {
+        width: 55px;
+        height: 55px;
+        background-size: 100%;
+        background-position: 0 -55px;
+        background-repeat: no-repeat;
+        display: inline-block;
+        overflow: hidden;
+    }
+
+    /* ---------------------------- footer ---------------------------- */
+
+    footer { margin-top: 60px; }
+    footer h1 {
+        color: #47cade;
+        font-size: 18px;
+        font-weight: bold;
+    }
+
+
+    /* ----------------------------  메인-슬라이더 ---------------------------- */
+
+    
+    .main-section { display: none; }
+    .main1 { padding: 0 3%; }
+    .main1 h1 {
+        margin-top: 80px;
+        margin-bottom: 30px;
+        font-size: 24px;
+        color: #47cade;
+        font-weight: bold;
+    }
+    .main1 p {
+        font-size: 16px;
+        line-height: 28px;
+    }
+    
+    .main2-h h2 { font-size: 24px; }
+    .main2-h h3 { font-size: 18px; margin-top: 15px; }
+    
+    .main2 {
+        width: 100%;
+        padding: 0 3%;
+        margin-top: 80px;
+    }
+    .main2-left { width: 100%; padding-top: 88%; margin: 0 0 3% 0; }
+    .main2-right { width: 100%; padding-top: 88%; margin: 0; }
+    
+    
+    .main3 {
+        margin-top: 80px;
+        margin-bottom: 30px;
+        padding: 0 1.5%;
+    }
+    .main3-title { font-size: 18px; margin-bottom: 45px; }
+
+    .jejucafe {
+        float: left;
+        width: 47%;
+        margin: 1.5% 1.5%;
+    }
+
+    /* ---------------------------- 로그인 ---------------------------- */
+    .login-section { margin-top: 20px; }
+    .login-wrap {
+        width: 100%;
+        margin-top: 30px;
+        margin-bottom: 10px;
+    }
+    .join-title { font-size: 30px; margin-top: 40px; margin-bottom: 0px; line-height: 40px; }
+    .login-text { margin-top: 60px; margin-bottom: 60px; }
+    /*로그인-인풋*/
+    .input-login { width: 100%; font-size: 18px; }
+
+    /* 아이디 비밀번호 찾기 */
+    .login-find { width: 100%; margin-top: 15px; }
+    .login-find a { height: 50px; line-height: 50px; }
+
+    /* 아직 회원이 아니신가요 */
+    .join-p { margin-top: 50px; margin-bottom: 20px; }
+
+    /* ---------------------------- 회원가입 ---------------------------- */
+
+    .find-title {
+        margin-top: 95px;
+        margin-bottom: 60px;
+        font-size: 40px;
+    }
+    .join-table { width: 100%; margin-top: 40px; }
+    .join-th { width: 26%; padding: 6px 0; padding-right: 5px; }
+
+    /* 회원가입 아이디 중복확인 */
+    .join-id { margin-right: 90px; }
+    .check-btn { position: absolute; top: 8px; right: 0; height: 40px; line-height: 40px; }
+
+    /*find id,pw 테이블 css 추가*/
+    .join-th.th02 { height: 50px; }
+    .join-table2 { margin-top: 60px; margin-bottom: 45px; }
+    .join-table2 td { height: 30px; }
+
+    /*input */
+    .input-join { width: 100%; height: 40px; }
+    .join-number { width: 28%; height: 40px; }
+    .phone-bar { float: left; width: 8%; margin: 0px; font-size: 14px; line-height: 40px; text-align: center; }
+    .join-mail { width: 46%; height: 40px; }
+    .accordion-email { width: 100%; height: 40px; margin-top: 15px; margin-left: 0px; background-position: 96% 50%; }
+
+    /*회원가입 테이블의 width값 조정*/
+    .join-box {
+        width: 100%;
+        height: 40px;
+    }
+
+
+
+
+    /* 컬렉션1 장점 */
+
+
+    .collection-box {
+        width: 100%;
+        margin-left: 0px;
+        margin-bottom: 40px;
+    }
+    .collection-head {
+        -wekit-transition: all 0.5s;
+        transition: all 0.5s;
+    }
+    .collection-box .text {
+        height: auto;
+        overflow: hidden;
+        margin: auto;
+        color: #666;
+        padding: 25px 10px;
+        -wekit-transition: all 0.5s;
+        transition: all 0.5s;
+    }
+
+    .collection-card { 
+        width: 47%;
+        margin: 1.5%;
+        padding: 3%;
+        -wekit-transition: all 0.5s;
+        transition: all 0.5s;
+    }
+
+    .collection-box .text p  { margin: 0px; line-height: 22px; letter-spacing: 0; }
+    .text-p { margin: 0; }
+    .text-p p { display: inline; margin: 0; }
+    .collection-card:last-child { clear: left; }
+
+
+
+
+    /* ---------------------------- 게시판 ---------------------------- */
+    
+    .board-section { margin-top: 40px; }
+    .read-section-write { height: 350px; }
+    
+    .read-wrap { padding-bottom: 28px; } /* 게시판 테이블 마지막 border */
+    .read-section { padding: 20px 0; }
+    .read-section p { /* 꾸밈용 삭제 */ margin: 20px 0; }
+
+    .board-box .subject { float: none; padding-top: 20px; }
+    .board-box .info { float: none; padding-top: 10px; }
+    .board-box .info p { font-size: 13px; height: 13px; line-height: 13px; }
+    /*글쓰기 섹션(contents)*/
+    .write-subject { height: 40px; }
+    .read-head { height: 80px; line-height: 80px; }
+    /*게시판 첨부파일*/
+    .attach-head { padding-left: 0px; }
+    .input-find-file { width: 220px; }
+    
+
+    /* 포토 게시판 */
+    .photo-section { padding: 0 5px; } /* 20 - (photo-box 패딩값 재조정) */
+    .photo-title { font-size: 35px; margin-top: 80px; margin-bottom: 80px; }
+    .photo-content { margin: 0 10px; }
+    .photo-box {
+        width: 50%;
+        padding:  0 10px;
+        margin-bottom: 25px;
+    }
+    .photo-sub { height: 18px; margin-top: 12px; }
+    .photo-sub a {
+        font-size: 14px;
+        line-height: 18px;
+    }
+    .photo-date { font-size: 12px; }
+    .section-category { margin-bottom: 20px; }
+    
+    
+    /* 게시판 */
+    
+    .list-btn a { margin-top: 40px; }
+    .list-btn .list-btn-input { margin-top: 40px; }
+    .thumnail-image {
+        width: 18%;
+	    margin: 0.55%;
+        padding-top: 17%;
+    }
+    .collection-circle-wrap { 
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+    
+    /* 댓글 */
+    .comment-page { /* 댓글 페이지 */
+        padding: 45px 0;
+        margin-top: 0px;
+    }
+    .comment-page .p { padding-bottom: 20px; }
+    
+    .comment-top { height: 30px; margin: 8px 0; }
+    .comment-left { height: 30px; }
+    .comment-witer { font-size: 13.5px; line-height: 30px; }
+    .comment-date { font-size: 12.5px; line-height: 30px; }
+    .comment-btn { font-size: 12.5px; margin-top: 6px; }
+    .comment-section { 
+        margin-bottom: 10px;
+        font-size: 13.5px;
+        line-height: 16px;
+    }
+
+    /* 댓글 등록하기 창 */
+    .board-comment { height: 100px; margin-top: 0px; }
+    .comment-text-wrap {
+        margin-right: 110px;
+        padding-left: 15px;
+        font-size: 14px;
+    }
+
+    .comment-contents { /* 댓글입력란 textarea */
+        width: 100%;
+        height: 70px;
+        margin: 15px 0px;
+        padding: 10px;
+        border: 1px solid #e8e8e8;
+        border-radius: 5px;
+    }
+    .comment-write-btn { /* 댓글 등록하기 버튼 */
+        top: 15px;
+        right: 15px;
+        width: 80px; 
+        height: 70px; 
+        font-size: 14px; 
+        line-height: 70px;
+    }
+} /* media max-width: 999px */
+
+
+
+
+@media (max-width: 640px) {
+    .main1 { text-align: left; }
+    .main1 h1 { text-align: center; }
+    .main1 p {
+        font-size: 15px;
+        display: inline;
+    }
+    .main2-h h2 { font-size: 20px; }
+    .main2-h h3 { font-size: 16px; margin-top: 10px; }
+    
+    .jejucafe {
+        float: left;
+        width: 94%;
+        margin: 5% 3%;
+    }
+     /*search*/
+    .float-wrap { width: 100%; }
+    .select-search {
+        width: 35%;
+        padding: 0 10px;
+        margin-right: 5%;
+    }
+    .search-wrap { width: 60%; }
+    
+    .jeju-story { margin-top: 40px; }
+    .story-box { margin: 5% 3.3%; }
+    .story-title { margin-bottom: 5%; }
+
+    .story-text {
+        color: #7f7f7f;
+        letter-spacing: 0;
+    }
+    .main-gray { padding-top: 35px; padding-bottom: 30px;  }
+
+}
+
+@media (max-width: 380px) {
+    
+    
+    .main2-h h2 { font-size: 16px; }
+    .main2-h h3 { font-size: 13px; margin-top: 10px; }
+    
+    
+    .login-text { font-size: 21px; }
+     /*게시판 첨부파일*/
+    .attach-head { padding: 0; padding-left: 0px; }
+    .attach-section { padding: 0; }
+    .input-find-file { width: 170px; }
+    .collection-card { 
+        width: 100%;
+        margin: 0;
+        margin-bottom: 20px;
+        padding: 3%;
+        -wekit-transition: all 0.5s;
+        transition: all 0.5s;
+    }
+    
+    .thumnail-image {
+        width: 22.5%;
+	    margin: 0.6%;
+        padding-top: 21%;
+    }
+
+    /*회원가입 버튼, 찾기 페이지 공통사용*/
+    .joinpage-btn a { width: 100%; margin-top: 10px; }
+    
+    /* 제주스토리 내부텍스트 */
+    .story-text { line-height: 20px; }
+    
+    
+    #toTop { right: 5px; bottom: 5px; }
+}

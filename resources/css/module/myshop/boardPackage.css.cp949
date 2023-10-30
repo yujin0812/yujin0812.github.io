@@ -1,0 +1,15 @@
+.xans-myshop-boardlisthead { margin:0 0 10px; }
+
+.xans-myshop-boardlist { margin:0 0 10px; }
+.xans-myshop-boardlist table { border:1px solid #d7d5d5; color:#353535; font-size:12px; line-height:140%;}
+.xans-myshop-boardlist table th { padding:12px 0 10px; border-right:1px solid #e3e3e3; background:#fbfafa; font-weight:normal; }
+.xans-myshop-boardlist table td { padding:6px 3px 4px; height:32px; border-top:1px solid #e3e3e3; border-right:1px solid #e3e3e3; text-align:center; vertical-align:middle; }
+.xans-myshop-boardlist table th:last-child,
+.xans-myshop-boardlist table td:last-child { border-right:none; }
+.xans-myshop-boardlist table a,
+.xans-myshop-boardlist table a:hover { color:#000; }
+.xans-myshop-boardlist table .subject { word-break:break-all; text-align:left; padding-left:8px; }
+.xans-myshop-boardlist table .subject img { vertical-align:middle; margin:0 1px; }
+.xans-myshop-boardlist table .txtLess { color:#939393; font-size:11px; }
+.xans-myshop-boardlist table .category a { color:#7ca6d8; }
+.xans-myshop-boardlist table tbody.notice .subject { font-weight:bold; }

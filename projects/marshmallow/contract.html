@@ -1,0 +1,267 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title></title>
+<!-- STYLE CSS -->
+<link href="css/reset.css" rel="stylesheet" type="text/css">
+<link href="css/application.css" rel="stylesheet" type="text/css">
+<link href="css/main.css" rel="stylesheet" type="text/css">
+<!--<link href="css/style.css" rel="stylesheet" type="text/css">-->
+<!-- SCRIPT -->
+<script src="scripts/jquery-3.4.1.min.js"></script>
+<script src="scripts/jquery.nice-select.min.js"></script>
+<script src="scripts/main.js"></script>
+</head>
+<body>
+<!-- wrap -->
+<div id="wrap">
+    <!-- header -->
+    <header id="header">
+        <div class="section clearfix">
+            <!-- logo -->
+            <a class="logo" href="ui_guide.html"><img src="" alt="마시멜로로고"></a>
+            <div class="header_menu">
+                <!-- gnb -->
+                <ul class="gnb">
+                    <li class="active"><a href="index.html">marshmallaw</a></li>
+                    <li><a href="how.html">HOW</a></li>
+                    <li><a href="notice.html">NOTICE</a></li>
+                    <li><a href="news.html">NEWS</a></li>
+                    <li><a href="qna.html">Q&amp;A</a></li>
+                </ul>
+                <a class="btn__hd_menu">Login</a>
+            </div>
+        </div>
+    </header>
+    <!-- //header -->
+    
+    <!-- content -->
+    <div class="content">
+        <section class="section section1">
+            <h1 class="h1">중국인을 위한 한국어 계약서 작성</h1>
+            <h2 class="h2">관련 서브 타이틀 내용이 필요합니다</h2>
+            <div class="content_area">
+                <div class="tab_wrap step_wrap">
+                    <ul class="tabs step_hd">
+                        <li class="tab active">
+                            <p class="tit01">STEP 01</p>
+                            <p class="h2">주의사항</p>
+                        </li>
+                        <li class="tab">
+                            <p class="tit01">STEP 02</p>
+                            <p class="h2">계약서 선택</p>
+                        </li>
+                        <li class="tab">
+                            <p class="tit01">STEP 03</p>
+                            <p class="h2">세부내용 입력</p>
+                        </li>
+                        <li class="tab">
+                            <p class="tit01">STEP 04</p>
+                            <p class="h2">신청내용 확인</p>
+                        </li>
+                        <li class="tab">
+                            <p class="tit01">STEP 05</p>
+                            <p class="h2">프리뷰</p>
+                        </li>
+                    </ul>
+                    <ul class="tviews step_content">
+                        <!-- tview -->
+                        <li class="tview active">
+                            <div class="cont_box">
+                                <p class="txt_l">리걸인사이트는 이용약관에 따라 어떠한 이유에서든<br>이용자가 작성하는 계약서의 형식과 내용에 대한 책임이 없음을 알려드립니다.</p>
+                            </div>
+                            <div class="tr mar_top20">
+                                <input type="checkbox" id="checkbox">
+                                <label for="checkbox">위 내용을 모두 확인하였으며 이에 동의합니다.</label>
+                            </div>
+                            <div class="btn_wrap tr mar_top40">
+                                <div class="btn__cancel">이전</div>
+                                <div class="btn__active">다음</div>
+                            </div>
+                        </li>
+                        <!-- //tview -->
+                        <!-- tview -->
+                        <li class="tview">
+                            <!-- 계약서 선택1 -->
+                            <div class="cont_box">
+                                <ul class="clearfix_itm mar_r_last">
+                                    <li class="circle_num_itm active">1</li>
+                                    <li class="circle_num_itm">2</li>
+                                </ul>
+                                <p class="txt01 mar_ver1 icon_check_p">어떤 계약서를 작성하시려 하나요?</p>
+                                <p class="txt_g2 b mar_btm10">어떤 계약서를 작성하시려는지 적어주세요</p>
+                                <div class="input_w596">
+                                    <input type="text" class="input">
+                                </div>
+                                <p class="txt_g2 mar_ver1">예시 1 ) 웹기반 서비스회사 직원입니다. UI나 알고리즘 관련한 기술을 외부 전문업체에 위탁하여 개발하려는 계약을 체결하려고 합니다. <br>이런 경우 계약서를 어떻게 써야 저희가 원하는 기술개발도 보증하고, 분쟁도 막을 수 있을지 부탁드립니다.</p>
+                                <p class="txt_g2">예시 2 ) 이번에 저희 회사에서 발주하는 제품 판매와 관련해서 타사와 업무제휴를 하려고 합니다. <br>제품 판매와 이벤트 업무를 공동으로 진행하는 내용인데, 저희 회사와 다른 회사 간에 체결할 계약서를 준비하라고 하시는데, 어떤 계약서를 어떻게 작성해야 하는지 추천 좀 해주셨으면 합니다.</p>
+                            </div>
+                            <div class="btn_wrap tr mar_top40">
+                                <div class="btn__cancel">이전</div>
+                                <div class="btn__active">다음</div>
+                            </div>
+                            
+                            <!-- 계약서 선택2 -->
+                            <div class="cont_box">
+                                <ul class="clearfix_itm mar_r_last">
+                                    <li class="circle_num_itm">1</li>
+                                    <li class="circle_num_itm active">2</li>
+                                </ul>
+                                <p class="txt01 mar_ver1 icon_check_p">추천하는 계약서는 다음과 같습니다.</p>
+                                <!-- active_ul: 클릭 시 active 효과 -->
+                                <ul class="list_box clearfix_ul active_ul">
+                                    <li>
+                                        <p class="fl">금전소비대차계약서</p>
+                                        <p class="fr txt_red b">₩ 2,000</p>
+                                    </li>
+                                    <li>
+                                        <p class="fl">이행각서</p>
+                                        <p class="fr txt_red b"></p>
+                                    </li>
+                                    <li>
+                                        <p class="fl">차용증</p>
+                                        <p class="fr txt_red b">₩ 5,000</p>
+                                    </li>
+                                    <li>
+                                        <p class="fl">자동차임대계약서</p>
+                                        <p class="fr txt_red b"></p>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="btn_wrap tr mar_top40">
+                                <div class="btn__cancel">이전</div>
+                                <div class="btn__active">다음</div>
+                            </div>
+                        </li>
+                        <!-- //tview -->
+                        <!-- tview -->
+                        <li class="tview">
+                            <div class="cont_box">
+                                <ul class="clearfix_itm mar_r_last">
+                                    <li class="circle_num_itm">1</li>
+                                    <li class="circle_num_itm active">2</li>
+                                </ul>
+                                <p class="txt01 mar_ver1 icon_check_p">금전소비대차계약서 특약사항 추가</p>
+                                <!-- active_ul: 클릭 시 active 효과 -->
+                                <ul class="list_box clearfix_ul active_ul">
+                                    <li>
+                                        <p class="fl">기한의 이익상실</p>
+                                        <p class="fr btn__f xs">특약내용 보기</p>
+                                    </li>
+                                    <li>
+                                        <p class="fl">기타 당사자가 추가하고자 하는 특약사항</p>
+                                        <p class="fr btn__f xs">특약내용 보기</p>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="btn_wrap mar_top40">
+                                <div class="fl">
+                                    <div class="btn__f itm01">임시저장</div>
+                                    <div class="btn__f itm01">미리보기</div>
+                                </div>
+                                <div class="fr">
+                                    <div class="btn__cancel">이전</div>
+                                    <div class="btn__active">다음</div>
+                                </div>
+                            </div>
+                        </li>
+                        <!-- //tview -->
+                        <!-- tview -->
+                        <li class="tview">
+                            <div class="cont_box">
+                                <p class="txt01 mar_ver1 icon_check_p">신청내용을 확인하세요</p>
+                                <table class="table">
+                                    <colgroup>
+                                        <col width="20%">
+                                        <col width="20%">
+                                        <col width="20%">
+                                        <col width="20%">
+                                        <col width="20%">
+                                    </colgroup>
+                                    <tr>
+                                        <th>작성일</th>
+                                        <th>채권자(갑)</th>
+                                        <th>채무자(을)</th>
+                                        <th>계약서 유형</th>
+                                        <th>이메일</th>
+                                    </tr>
+                                    <tr>
+                                        <td>2020.09.23</td>
+                                        <td>리걸인사이트</td>
+                                        <td>법무법인 리인</td>
+                                        <td>금전소비대차계약서</td>
+                                        <td>testmail@gmail.com</td>
+                                    </tr>
+                                </table>
+                                <div class="mar_top20">
+                                    <input type="checkbox" id="checkbox">
+                                    <label for="checkbox">신청하신 내용을 확인하시기 바랍니다. 완성된 계약서는 다음단계인 STEP 5 에서 확인하실 수 있습니다.</label>
+                                </div>
+                            </div>
+                            <div class="btn_wrap mar_top40 tr">
+                                <div class="btn__cancel">이전</div>
+                                <div class="btn__active">다음</div>
+                            </div>
+                        </li>
+                        <!-- //tview -->
+                        <!-- tview -->
+                        <li class="tview">
+                            <div class="clearfix txt_notice">
+                                <p class="txt_red b">※</p>
+                                <p>
+                                    아래 계약서는 귀하께서 입력하신 내용을 바탕으로 작성된 것으로서, <br>
+                                    리걸인사이트는 아래 계약서 내용과 관련해서 아무런 법적 책임이 없음을 알려드립니다.
+                                </p>
+                            </div>
+                            <div class="content_view_box">
+                                <p class="ab_center" style="font-size: 23px;">중문 계약서 내용 text</p>
+                            </div>
+                            <div class="btn_wrap mar_top40">
+                                <div class="fl">
+                                    <div class="btn__f lg">국문 보기</div>
+                                </div>
+                                <div class="fr">
+                                    <div class="btn__f lg">다운로드</div>
+                                    <div class="btn__active">이메일발송</div>
+                                </div>
+                            </div>
+                        </li>
+                        <!-- //tview -->
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </div>
+    <!-- //content -->
+    
+    <!-- footer -->
+    <footer id="footer">
+        <div class="footer_top section">
+            <a href="#" class="foot_logo"><img src="" alt="마시멜로로고"></a>
+            <div class="flex_box txt_g">
+                <div class="box">
+                    <p>
+                       리걸인사이트  |    사업자등록번호: 530-81-00892   |  이메일: support@legalinsight.kr<br>
+                        주소: 서울시 강남구 봉은사로 417(삼성동 구구빌딩) 4층  |  Tel: 02-3445-6600  |  Fax: 02-3445-6601
+                    </p>
+                </div>
+                <div class="box">© 2017 LEGAL INSIGHT. All Rights Reserved.</div>
+            </div>
+        </div>
+        <div class="footer_bottom bg_gray">
+            <div class="section">
+                <a href="#">리걸인사이트 소개</a>
+                <a href="#">면책공고</a>
+                <a href="#">이용약관</a>
+                <a href="#">개인정보취급방침</a>
+                <a href="#">오시는길</a>
+            </div>
+        </div>
+    </footer>
+    <!-- //footer -->
+</div>
+<!-- //wrap -->
+</body>
+</html>

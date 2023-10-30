@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="376" height="333" viewBox="0 0 376 333">
+    <g fill="none" fill-rule="evenodd" transform="translate(1)">
+        <path fill="#626475" d="M106 0h150v27H106z"/>
+        <path fill="#F9B2B2" d="M129 142h100v27H129z"/>
+        <text fill="#FFF" font-family="AppleSDGothicNeo-Regular, Apple SD Gothic Neo" font-size="13" letter-spacing="-.191">
+            <tspan x="128.103" y="16">A 주식회사 회사 계정</tspan>
+        </text>
+        <text fill="#000" font-family="AppleSDGothicNeo-Regular, Apple SD Gothic Neo" font-size="13" letter-spacing="-.191">
+            <tspan x="150.25" y="158">디지털 직인</tspan>
+        </text>
+        <text fill="#999" font-family="AppleSDGothicNeo-Regular, Apple SD Gothic Neo" font-size="13" letter-spacing="-.191">
+            <tspan x="41.391" y="211">사용허가</tspan>
+        </text>
+        <text fill="#999" font-family="AppleSDGothicNeo-Regular, Apple SD Gothic Neo" font-size="13" letter-spacing="-.191">
+            <tspan x="289.391" y="211">사용허가</tspan>
+        </text>
+        <text fill="#585858" font-family="AppleSDGothicNeo-Regular, Apple SD Gothic Neo" font-size="15" letter-spacing="-.22">
+            <tspan x="132.495" y="130">회사계정 관리자</tspan>
+        </text>
+        <circle cx="179" cy="78" r="30" fill="#F8F8F8" stroke="#C5C6CD" stroke-width="2"/>
+        <path stroke="#C5C6CD" stroke-linecap="square" stroke-width="2" d="M30.5 191.5H344M30 192v59.692M179.5 169v21.192M345 192v59.692"/>
+        <text fill="#585858" font-family="AppleSDGothicNeo-Regular, Apple SD Gothic Neo" font-size="15" letter-spacing="-.22">
+            <tspan x="12.367" y="330">사용자</tspan>
+        </text>
+        <text fill="#585858" font-family="AppleSDGothicNeo-Regular, Apple SD Gothic Neo" font-size="15" letter-spacing="-.22">
+            <tspan x="325.368" y="330">사용자</tspan>
+        </text>
+        <circle cx="30" cy="278" r="30" fill="#F8F8F8" stroke="#C5C6CD" stroke-width="2"/>
+        <circle cx="344" cy="278" r="30" fill="#F8F8F8" stroke="#C5C6CD" stroke-width="2"/>
+        <g fill="#898B96" fill-rule="nonzero" transform="translate(20 66)">
+            <circle cx="158.989" cy="5.479" r="5.479"/>
+            <circle cx="9.479" cy="204.479" r="5.479"/>
+            <circle cx="323.479" cy="204.479" r="5.479"/>
+            <path d="M158.989 13.699c-5.485 0-9.932 4.446-9.932 9.931h19.863c0-5.485-4.446-9.931-9.931-9.931zM9.932 213C4.446 213 0 217.446 0 222.932h19.863c0-5.486-4.446-9.932-9.931-9.932zM323.932 213c-5.486 0-9.932 4.446-9.932 9.932h19.863c0-5.486-4.446-9.932-9.931-9.932z"/>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,34 @@
+#popup { width:700px; }
+.header h1 { height:45px; padding:0 0 0 20px; color:#fff; font-size:14px; line-height:45px; background:#495164; }
+.content { padding:20px 20px 60px; }
+.btnArea { position:fixed; bottom:0; left:0; width:100%; padding:10px 0; border-top:1px solid #d7d5d5; text-align:center; background:#fbfafa; }
+
+.xans-myshop-orderissuetax .info { padding:12px 15px; border:5px solid #e8e8e8; }
+.xans-myshop-orderissuetax .info li { padding:0 0 0 9px; color:#757575; line-height:1.5; background:url("http://img.echosting.cafe24.com/skin/base_ko_KR/order/ico_grid.gif") no-repeat 0 7px; }
+
+.xans-myshop-orderissuetax h3 { margin:20px 0 10px 10px; color:#353535; font-size:12px; }
+.xans-myshop-orderissuetax table { table-layout:fixed; border:1px solid #d7d5d5; color:#757575; line-height:1.5; }
+.xans-myshop-orderissuetax table th { width:120px; padding:11px 0 9px 19px; border-top:1px solid #e9e9e9; border-right:1px solid #e9e9e9; color:#353535; font-weight:normal; text-align:left; background:#fbfafa; }
+.xans-myshop-orderissuetax table td { width:auto; padding:8px 0 7px 10px; border-top:1px solid #e9e9e9; color:#757575; vertical-align:middle; }
+.xans-myshop-orderissuetax table tbody tr:first-child th,
+.xans-myshop-orderissuetax table tbody tr:first-child td { border-top:0; }
+.xans-myshop-orderissuetax table img { vertical-align:middle; }
+.xans-myshop-orderissuetax table a { text-decoration:none; }
+.xans-myshop-orderissuetax table label { padding:0 30px 0 0; }
+.xans-myshop-orderissuetax table input { height:22px; padding:0 0 0 9px; border:1px solid #d5d5d5; line-height:22px; }
+.xans-myshop-orderissuetax input[type=radio],
+.xans-myshop-orderissuetax input[type=checkbox] { width:13px; height:13px; margin:0 5px 0 0; padding:0; border:0; }
+.xans-myshop-orderissuetax select { margin:0 4px 0 0; }
+
+.xans-myshop-orderissuetax #mall_addr_btn { overflow:hidden; width:83px; height:24px; margin:0; padding:0; font-size:0; line-height:0; vertical-align:top; background:url("http://img.echosting.cafe24.com/skin/base_ko_KR/order/btn_zipcode.gif") no-repeat 0 0; }
+.xans-myshop-orderissuetax #name, .xans-myshop-orderissuetax #company_regno,
+.xans-myshop-orderissuetax #company_name, .xans-myshop-orderissuetax #president_name { width:180px; }
+.xans-myshop-orderissuetax #company_condition, .xans-myshop-orderissuetax #company_line  { width:235px; }
+.xans-myshop-orderissuetax #phone1 { width:60px; }
+.xans-myshop-orderissuetax #phone2, .xans-myshop-orderissuetax #phone3 { width:60px; margin:0 4px; }
+.xans-myshop-orderissuetax #email1 { width:120px; margin:0 4px 0 0; }
+.xans-myshop-orderissuetax #email2 { width:120px; margin:0 4px; }
+.xans-myshop-orderissuetax #mall_addr_zip1, .xans-myshop-orderissuetax #mall_addr_zip2 { width:60px; text-align:center; }
+.xans-myshop-orderissuetax #mall_addr_zip1 { margin:0 4px 0 0; }
+.xans-myshop-orderissuetax #mall_addr_zip2 { margin:0 0 0 4px; }
+.xans-myshop-orderissuetax #mall_addr_addr1, .xans-myshop-orderissuetax #mall_addr_addr2 { width:450px; margin:5px 0 0; }

@@ -1,0 +1,1257 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8" />
+<title></title>
+<!-- STYLE CSS -->
+<link href="css/application.css" rel="stylesheet" type="text/css">
+<link href="css/style.css" rel="stylesheet" type="text/css">
+<link href="css/reset.css" rel="stylesheet" type="text/css">
+<!-- SCRIPT -->
+<script src="scripts/jquery-3.4.1.min.js"></script>
+<script src="scripts/jquery.nice-select.min.js"></script>
+<script src="scripts/main.js"></script>
+<script>
+    $(document).ready(function(){
+        // label select 토글효과
+        $(document).on("click", ".select2_view", function(e){
+            var toggle = $(this).next(".bt_select2_wrap").children(".bt_select2");
+            if (!$(".label_sel_ul>li").is(e.target) && $(".label_sel_ul>li").has(e.target).length === 0){
+                if ( $(toggle).hasClass("active") ) {
+                    $(toggle).slideUp("fast");
+                    $(toggle).removeClass("active")
+                } else {
+                    $(toggle).slideDown("fast");
+                    $(toggle).addClass("active")
+                }
+            }
+        });
+        $(document).on("click", ".bt_select2 .select2_results>li", function(){
+            $(this).parents(".bt_select2").removeClass("active")
+            $(this).parents(".bt_select2").slideUp("fast");
+        });
+        // 190806 공지사항 추가 수직 슬라이더
+        $(function() {
+            // Verical Slider
+            var $row = $('.vertical-slider__item'),
+                $container = $('.vertical-slider');
+            currentMarginTop = 0,
+                itemHeight = $row.height(),
+                rowsNr = $row.length, 
+                maxPadd = (rowsNr-1) * itemHeight;
+            console.log(itemHeight);
+
+            function setHeight() {
+                console.log(itemHeight);
+                $('.header_notice__dynamic').css({
+                    'height' : itemHeight
+                });
+            }
+            function animateSlider () {
+                //setInterval(moveRows,2000);
+                setHeight();
+                function moveRows () {
+                    $container.animate({
+                        'margin-top' : currentMarginTop - itemHeight  
+                    },500);
+                    currentMarginTop -= itemHeight;
+                }
+                if (currentMarginTop == -(maxPadd)) {
+                    $container.css({
+                        'margin-top' : 0
+                    })
+                    currentMarginTop = 0;
+                    // moveRows();
+                } else {
+                    moveRows();
+                }
+            }
+            function automateSlider (interval) {
+                setInterval(animateSlider,interval);  
+            }
+            automateSlider(3000);
+        });    
+    });
+</script>
+</head>
+<body>
+<!-- wrap -->
+    <div id="wrap">
+        <!-- header -->
+        <header id="header">
+            <div class="in">
+                <!-- logo -->
+                <div class="logo"><a href="adele_list.html"><img src='https://image.gsshop.com/ui/gsshop/pc/common/images/logo.png'></a></div>
+                <!-- gnb -->
+                <ul class="gnb">
+                    <li class="active">
+                        <a href="index.html">계약관리</a>
+                        <!-- lnb -->
+                        <div class="lnb">
+                            <ul>
+                                <li class="active"><a href="index.html">전체 계약</a></li>
+                                <li><a href="index_my.html">나의 계약</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="legal_advice_list.html">법률자문</a>
+                    </li>
+                    <li>
+                        <a href="official_note_list.html">공문 발송</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="header_notice">
+                <div class="header_notice__dynamic">
+                    <div class="vertical-slider">
+                        <h2 class="vertical-slider__item">김영란법 개정으로 인해 외식 시 필독!김영란법 개정으로 인해 외식 시 필독!김영란법 개정으로 인해 외식 시 필독!김영란법 개정으로 인해 외식 시 필독!</h2>
+                        <h2 class="vertical-slider__item">법률자문 올리기 전 확인하세요.</h2>
+                        <h2 class="vertical-slider__item">가맹계약서 양식입니다.</h2>
+                    </div>
+                </div>
+            </div>
+
+            <div class="in in_admin">
+                <div class="in_admin_inner">
+                    <div class="number_approval">
+                        <a class="approval_on">결재건수</a>
+                        <p class="badge">7</p>
+                        <ul class="number_approval_view clearfix_ul">
+                            <li>
+                                <p class="xs_p58 elipsis">1.4분기 계약관리 시스템 교체 스템 교체 계약교체 스템 교체 계약</p>
+                                <a class="btn__f btn_xs">바로가기</a>
+                            </li>
+                            <li>
+                                <p class="xs_p58 elipsis">1.4분기 계약관리 시스템 교체 계약</p>
+                                <a class="btn__f btn_xs">바로가기</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="home">
+                        <a href="dashboard.html"></a>
+                    </div>
+                    <div class="hd_user_wrap">
+                        <div class="hd_user">
+                            <p class="hd_user_name">이유진님</p>
+                            <ul class="hd_user_ul">
+                                <li><a href="mypage_user_info.html">내 정보 보기</a></li>
+                                <li><a href="login.html">로그아웃</a></li>
+                            </ul>
+                        </div>
+                        <div class="hd_user_img"><img src="https://img1.daumcdn.net/thumb/R720x0.q80/?scode=mtistory&fname=http%3A%2F%2Fcfile10.uf.tistory.com%2Fimage%2F99530A3B5BE7C1803380DF"></div>
+                    </div>
+                </div>
+                <!-- header_sub -->
+                <div class="header_sub">
+                    <ul class="gnb_admin">
+                        <li><a href="notice.html">공지사항</a></li>
+                        <li><a href="group_list.html">그룹 관리자</a></li>
+                        <li>
+                            <a href="admin_workflow_list.html">관리자</a>
+                            <!-- lnb -->
+                            <div class="lnb">
+                                <ul class="lnb_admin">
+                                    <li class="active"><a href="admin_workflow_list.html">워크플로우</a></li>
+                                    <li><a href="admin_template_list.html">템플릿 관리</a></li>
+                                    <li><a href="admin_user.html">유저 관리</a></li>
+                                    <li><a href="admin_notify.html">공지사항 관리</a></li>
+                                    <li><a href="admin_contract_counterpart.html">외부업체관리</a></li>
+                                    <li><a href="admin_group.html">그룹</a></li>
+                                    <li><a href="admin_tag.html">TAG</a></li>
+                                    <li><a href="admin_company_info.html">회사 정보</a></li>
+                                    <li><a href="admin_digital_seal.html">디지털 직인 관리</a></li>
+                                    <li><a href="admin_legal_setting.html">법률 자문</a></li>
+                                    <li><a href="admin_official_note.html">공문 발송</a></li>
+                                    <li><a href="admin_label.html">라벨</a></li>
+                                    <li><a href="admin_empowerment.html">권한 위임</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <!-- //header_sub -->
+            </div>
+        </header>
+        <!-- //header -->
+
+    <!-- ================================= content ================================= -->
+    
+    <script>
+        $(document).ready(function(){
+            // 모달_공용 modal_fixed: 배경 클릭 시 모달창 닫힘_공용
+            $(document).on("click", ".search_filter_layout", function(e){
+                if (!$(".fixed_content").is(e.target) && $(".fixed_content").has(e.target).length === 0){
+                    $(this).removeClass("active");
+                }
+            });
+        });
+    </script>
+    <!-- ================================= 좌측 상세 검색 모달 ================================= -->
+    <!-- search_filter_layout -->
+    <div class="search_filter_layout" id="modalOnSearchFilterLayout">
+        <!-- fixed_content -->
+        <div class="fixed_content">
+            <!-- search_filter_wrap -->
+            <div class="search_filter_wrap">
+                <div class="contract_detail_hd contract_detail_line">
+                    <h1 class="cont_detail_h1">상세 검색</h1>
+                </div>
+                <ul class="form_wrap_ul">
+                    <li class="clearfix_10">
+                        <div class="divide__2">
+                            <label class="label">계약 제목</label>
+                            <input type="text" class="input">
+                        </div>
+                        <div class="divide__2">
+                            <label class="label">계약 내용</label>
+                            <input type="text" class="input">
+                        </div>
+                    </li>
+                    <li class="clearfix_10">
+                        <div class="divide__2">
+                            <label class="label">계약 ID</label>
+                            <input type="text" class="input">
+                        </div>
+                        <div class="divide__2">
+                            <label class="label">검토자</label>
+                            <input type="text" class="input">
+                        </div>
+                    </li>
+                    <li class="clearfix_10">
+                        <div class="divide__2">
+                            <label class="label">기안자</label>
+                            <input type="text" class="input">
+                        </div>
+                        <div class="divide__2">
+                            <label class="label">계약 상대</label>
+                            <input type="text" class="input">
+                        </div>
+                    </li>
+                    <li class="clearfix_10">
+                        <label class="label">계약 시작일</label>
+                        <div class="divide__2">
+                            <input type="text" class="input">
+                        </div>
+                        <div class="divide__2">
+                            <input type="text" class="input">
+                        </div>
+                    </li>
+                    <li class="clearfix_10">
+                        <label class="label">계약 종료일</label>
+                        <div class="divide__2">
+                            <input type="text" class="input">
+                        </div>
+                        <div class="divide__2">
+                            <input type="text" class="input">
+                        </div>
+                    </li>
+                    <li class="clearfix_10">
+                        <div class="divide__1 form_group">
+                            <label class="label">계약 종류</label>
+                            <div class="input_date_wrap">
+                                <div class="inline_block">
+                                    <input type="checkbox" id="checkbox">
+                                    <label for="checkbox">계열사간 계약</label>
+                                </div>
+                                <div class="inline_block" style="margin-left: 15px;">
+                                    <input type="checkbox" id="checkbox">
+                                    <label for="checkbox">수의 계약</label>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <div class="btn_wrap__tr">
+                    <a class="btn__b">검색</a>
+                </div>
+            </div>
+            <!-- //search_filter_wrap -->
+        </div>
+        <!-- //fixed_content -->
+    </div>
+    <!-- //search_filter_layout -->
+    <!-- ================================= //좌측 상세 검색 모달 ================================= -->
+    
+    
+    
+    <!-- snb -->
+    <nav class="snb">
+        <a href="contract_create.html" class="btn__active">신규 계약 생성</a>
+        <div class="snb_wrap">
+            <div class="input_search_wrap">
+                <div class="input_search">
+                    <div class="icon_search"></div>
+                    <input type="text" class="input">
+                </div>
+                <div class="btn__y btn_snb_filter" id="modalOnSearchFilter">상세 검색</div>
+            </div>
+            <!-- snb_label_wrap -->
+            <div class="snb_label_wrap">
+                <div class="clearfix">
+                    <label class="b fl">라벨</label>
+                    <div class="fr tr">
+                        <a href="admin_label.html" class="btn_setting"></a>
+                    </div>
+                </div>
+                <!-- 190805 라벨 셀렉트 추가 -->
+                <!-- select2_view -->
+                <div class="select2_view" id="subLabel">
+                    <ul class="label_sel_ul">
+                        <li>
+                            <div class="cont_label pblc_02">가맹계약서</div>
+                            <p class="btn_x"></p>
+                        </li>
+                        <li>
+                            <div class="cont_label pblc_02">가맹계약서</div>
+                            <p class="btn_x"></p>
+                        </li>
+                    </ul>
+                </div>
+                <!-- //select2_view -->
+                <!-- bt_select2_wrap -->
+                <div class="bt_select2_wrap">
+                    <ul class="bt_select2">
+                        <li class="select2_group">
+                            <div class="select2_group_label bor_btm">공개</div>
+                            <ul class="select2_results">
+                                <li>
+                                    <div class="cont_label pblc_01">가맹계약서</div>
+                                </li>
+                                <li>
+                                    <div class="cont_label pblc_02">가맹계약서</div>
+                                </li>
+                                <li>
+                                    <div class="cont_label pblc_03">가맹계약서</div>
+                                </li>
+                                <li>
+                                    <div class="cont_label pblc_04">가맹계약서</div>
+                                </li>
+                                <li>
+                                    <div class="cont_label pblc_05">가맹계약서</div>
+                                </li>
+                                <li>
+                                    <div class="cont_label pblc_01">가맹계약서</div>
+                                </li>
+                                <li>
+                                    <div class="cont_label pblc_02">가맹계약서</div>
+                                </li>
+                                <li>
+                                    <div class="cont_label pblc_03">가맹계약서</div>
+                                </li>
+                                <li>
+                                    <div class="cont_label pblc_04">가맹계약서</div>
+                                </li>
+                                <li>
+                                    <div class="cont_label pblc_05">가맹계약서</div>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="select2_group">
+                            <div class="select2_group_label bor_btm">비공개</div>
+                            <ul class="select2_results">
+                                <li>
+                                    <div class="cont_label prvt_01">가맹계약서</div>
+                                </li>
+                                <li>
+                                    <div class="cont_label prvt_02">가맹계약서</div>
+                                </li>
+                                <li>
+                                    <div class="cont_label prvt_03">가맹계약서</div>
+                                </li>
+                                <li>
+                                    <div class="cont_label prvt_04">가맹계약서</div>
+                                </li>
+                                <li>
+                                    <div class="cont_label prvt_05">가맹계약서</div>
+                                </li>
+                                <li>
+                                    <div class="cont_label prvt_01">가맹계약서</div>
+                                </li>
+                                <li>
+                                    <div class="cont_label prvt_02">가맹계약서</div>
+                                </li>
+                                <li>
+                                    <div class="cont_label prvt_03">가맹계약서</div>
+                                </li>
+                                <li>
+                                    <div class="cont_label prvt_04">가맹계약서</div>
+                                </li>
+                                <li>
+                                    <div class="cont_label prvt_05">가맹계약서</div>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <!-- //bt_select2_wrap -->
+            </div>
+            <!-- //snb_label_wrap -->
+        </div>
+        <!-- snb_wrap -->
+        <div class="snb_wrap">
+            <label class="snb_label">카테고리</label>
+            <!-- snb_ul -->
+            <ul class="snb_ul">
+                <li class="active">
+                    <!-- 190830 추가 카테고리 카운트 -->
+                    1차분류<p class="badge">13</p>
+                    <!-- 190809 추가 하위 카테고리 -->
+                    <ul class="snb_depth_ul">
+                        <li class="active">하위 카테고리</li>
+                        <!-- 190830 추가 카테고리 카운트 -->
+                        <li>하위 카테고리<p class="badge">3</p></li>
+                        <li>하위<p class="badge">3</p></li>
+                        <li>하위 카테고리 하위 카테고리 하위 카테고리 하위 카테고리<p class="badge">3</p></li>
+                    </ul>
+                </li>
+                <li>
+                    가맹계약서
+                    <ul class="snb_depth_ul">
+                        <li>하위 카테고리</li>
+                        <li>하위 카테고리</li>
+                        <li>하위 카테고리</li>
+                        <li>하위 카테고리</li>
+                        <li>하위 카테고리</li>
+                    </ul>
+                </li>
+                <li>위탁운영 계약서</li>
+                <li>해지 거래처</li>
+            </ul>
+            <!-- //snb_ul -->
+        </div>
+        <!-- //snb_wrap -->
+    </nav>
+    <!-- //snb -->
+
+    <!-- content -->
+    <div class="content snb_layout">
+        <!-- 190620 법무검토자 할당 부분 전체 계약 보기 승인 요청 부분 -->
+        <!-- section_contract_filter -->
+        <section class="section_contract_filter">
+           <!-- 191007 추가 -->
+            <h1 class="main_search_h"><span class="b">"테스트"</span> 검색 결과</h1>
+            <div class="clearfix">
+                <p class="icon_notify_p_r">법무검토자가 할당되지 않은 계약 리스트</p>
+            </div>
+            <div class="clearfix">
+                <div class="fl divide__2 result_wrap">
+                    <div class="result_updown">오름차순</div>
+                    <ul class="result_box clearfix_ul">
+                        <li class="active">ID</li>
+                        <li>제목</li>
+                        <li>날짜</li>
+                        <li>상태</li>
+                        <li>검토자</li>
+                    </ul>
+                </div>
+                <div class="fl divide__2 tr">
+                    <ul class="tab_contract_filter">
+                        <li>전체 요청<span class="count">7</span></li>
+                        <li>법무팀 신규 계약 작성 요청<span class="count">3</span></li>
+                        <li>법무팀 검토 요청<span class="count">4</span></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <!-- //section_contract_filter -->
+        
+        <!-- 전체 계약 보기 기본 -->
+        <!-- section__contract -->
+        <section class="section__contract">
+            <div class="tab_contract_wrap">
+                <ul class="tab_contract clearfix active_ul" id="tab_contract1">
+                    <li class="active">전체보기</li>
+                    <li>초안 작성중</li>
+                    <li>법무팀 검토중</li>
+                    <li>사업부 협의중</li>
+                    <li>승인 대기</li>
+                    <li>서명중</li>
+                    <li>날인중</li>
+                    <li>회수대기</li>
+                    <li>완료</li>
+                </ul>
+            </div>
+            <!-- contract_list_wrap -->
+            <div class="contract_list_wrap">
+                <!-- contract_list -->
+                <ul class="main_list contract_list">
+                    <li>
+                        <div class="clearfix contract_list_hd">
+                            <div class="main_li_sub elipsis fl"><p class="state__request">승인 요청</p>계약 제목 영역입니다 계약 제목 영역입니다 계약 제목 영역입니다 계약 제목 영역입니다</div>
+                            <div class="fr state__workflow">법무팀 검토중</div>
+                        </div>
+                        <div class="clearfix">
+                            <!-- 기안자 / 계약상대 / 검토자 -->
+                            <p class="fl sm_p58">
+                                <span>기안자:이유진</span><span>&nbsp;/&nbsp;계약상대:옐로우업체</span><span>&nbsp;/&nbsp;검토자:<span class="need_allot"> 할당 필요!</span></span>
+                            </p>
+                            <p class="fr sm_pb4 main_li_id">20190207-00001004</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="clearfix contract_list_hd">
+                            <div class="main_li_sub elipsis fl"><p class="state__request_check">승인</p>계약 제목 영역입니다 계약 제목 영역입니다 계약 제목 영역입니다 계약 제목 영역입니다</div>
+                            <div class="fr state__workflow">법무팀 검토중</div>
+                        </div>
+                        <div class="clearfix">
+                            <!-- 기안자 / 계약상대 / 검토자 -->
+                            <p class="fl sm_p58">
+                                <span>기안자:이유진</span><span>&nbsp;/&nbsp;계약상대:옐로우업체</span><span>&nbsp;/&nbsp;검토자:<span class="need_allot"> 할당 필요!</span></span>
+                            </p>
+                            <p class="fr sm_pb4 main_li_id">20190207-00001004</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="clearfix contract_list_hd">
+                            <div class="main_li_sub elipsis fl">계약 제목 영역입니다 계약 제목 영역입니다 계약 제목 영역입니다 계약 제목 영역입니다</div>
+                            <!-- 190916 추가 -->
+                            <div class="fr state__failed">계약 거절</div>
+                        </div>
+                        <div class="clearfix">
+                            <!-- 기안자 / 계약상대 / 검토자 -->
+                            <p class="fl sm_p58">
+                                <span>기안자:이유진</span><span>&nbsp;/&nbsp;계약상대:옐로우업체</span><span>&nbsp;/&nbsp;검토자:<span class="need_allot"> 할당 필요!</span></span>
+                            </p>
+                            <p class="fr sm_pb4 main_li_id">20190207-00001004</p>
+                        </div>
+                    </li>
+                </ul>
+                <!-- //contract_list -->
+                <div class="clearfix">
+                    <ul class="pagination fr">
+                        <li class="prev">prev</li>
+                        <li>1</li>
+                        <li>2</li>
+                        <li class="active">3</li>
+                        <li>4</li>
+                        <li>5</li>
+                        <li class="next">next</li>
+                    </ul>
+                </div>
+            </div>
+            <!-- //contract_list_wrap -->
+        </section>
+        <!-- //section__contract -->
+
+        <!-- 190620 법무검토자 할당 부분 전체 계약 보기 승인 요청 부분 -->
+        <!-- section_contract_filter -->
+        <section class="section_contract_filter clearfix">
+            <div class="clearfix">
+                <p class="icon_notify_p">그 외 전체 계약 리스트</p>
+            </div>
+            <div class="clearfix">
+                <div class="fl divide__2 result_wrap">
+                    <div class="result_updown">오름차순</div>
+                    <ul class="result_box clearfix_ul">
+                        <li class="active">ID</li>
+                        <li>제목</li>
+                        <li>날짜</li>
+                        <li>상태</li>
+                        <li>검토자</li>
+                    </ul>
+                </div>
+                <div class="fl divide__2 tr">
+                    <ul class="tab_contract_filter">
+                        <li>전체 요청<span class="count">7</span></li>
+                        <li>법무팀 신규 계약 작성 요청<span class="count">3</span></li>
+                        <li>법무팀 검토 요청<span class="count">4</span></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <!-- //section_contract_filter -->
+        <!-- section__contract -->
+        <section class="section__contract">
+            <!-- tab_contract_wrap -->
+            <div class="tab_contract_wrap">
+                <ul class="tab_contract clearfix active_ul" id="tab_contract2">
+                    <li class="active">전체보기</li>
+                    <li>초안 작성중</li>
+                    <li>법무팀 검토중</li>
+                    <li>사업부 협의중</li>
+                    <li>승인 대기</li>
+                    <li>서명중</li>
+                    <li>날인중</li>
+                    <li>회수대기</li>
+                    <li>완료</li>
+                </ul>
+            </div>
+            <!-- //tab_contract_wrap -->
+
+            <!-- contract_list_wrap -->
+            <div class="contract_list_wrap">
+                <!-- contract_list -->
+                <ul class="main_list contract_list">
+                    <li class="list_none_li">
+                        <p class="sm_p58">진행 중인 계약이 없습니다.</p>
+                    </li>
+                </ul>
+                <!-- //contract_list -->
+                <div class="clearfix">
+                    <ul class="pagination fr">
+                        <li class="prev">prev</li>
+                        <li>1</li>
+                        <li>2</li>
+                        <li class="active">3</li>
+                        <li>4</li>
+                        <li>5</li>
+                        <li class="next">next</li>
+                    </ul>
+                </div>
+            </div>
+            <!-- //contract_list_wrap -->
+        </section>
+        <!-- //section__contract -->
+
+        <!-- 190620 엑셀 다운로드 버튼 -->
+        <section class="section__contract tr" style="border: none; background: none; border-radius: 0; padding: 0;">
+            <a class="btn__f">엑셀 다운로드</a>
+        </section>
+        
+    </div>
+    <!-- //content -->
+
+    <!-- ================================= 계약 중간화면 우측 레이아웃 ================================= -->
+    <!-- fixed_layout -->
+    <div class="fixed_layout" id="fixed_contract">
+        <!-- contract_detail_wrap -->
+        <div class="fixed_content_wrap">
+            <!-- contract_detail -->
+            <div class="fixed_content contract_detail">
+                <!-- contract_detail_hd -->
+                <div class="contract_detail_hd contract_detail_line">
+                    <!-- 190802 카테고리 변경 추가 -->
+                    <p class="sm_pb4 fr cate_location" id="modalOnContCate">인사 계약 > 자산 관리</p>
+                    <!-- 수정 불가일 때 h1으로
+                        <h1 class="cont_detail_h1">샘플 가맹 계약서</h1>
+                        190802 추가
+                    -->
+                    <input class="cont_detail_h1" type="text" value="계약서 제목">
+                    <p class="sm_p58">템플릿명 : IT자산 임대차 계약서</p>
+                </div>
+                <!-- //contract_detail_hd -->
+                <!-- workflow_wrap -->
+                <div class="workflow_wrap contract_detail_line">
+                    <!-- detail_workflow_ul -->
+                    <!-- 아래 detail_workflow_ul에
+                         워크플로우 개수를 class로 추가해주세요.
+                         workflow_7 ~ workflow_1
+                    -->
+                    <ul class="detail_workflow_ul clearfix workflow_7">
+                        <li class="finish">
+                            <p class="workflow_p">초안<br>작성중</p>
+                        </li>
+                        <li class="finish">
+                            <p class="workflow_p">법무팀<br>검토중</p>
+                        </li>
+                        <!-- 190813 추가
+                        
+                        Class 추가: 워크플로우 상태
+                        li.active.wf_상태
+
+                        wf_writing 초안 작성중
+                        wf_review 법무팀 검토중
+                        wf_consultation 사업부 협의중
+                        wf_request 승인 대기중
+                        wf_signing 서명중
+                        wf_seal 날인중
+                        wf_recovery 회수대기
+                        wf_finish 완료   
+                        -->
+                        <li class="active wf_writing">
+                            <p class="workflow_p">사업부<br>협의중</p>
+                        </li>
+                        <li>
+                            <p class="workflow_p">승인<br>대기중</p>
+                        </li>
+                        <li>
+                            <p class="workflow_p">서명중</p>
+                        </li>
+                        <li>
+                            <p class="workflow_p">날인중</p>
+                        </li>
+<!--
+                        <li>
+                            <p class="workflow_p">회수대기</p>
+                        </li>
+-->
+                        <li>
+                            <p class="workflow_p">완료</p>
+                        </li>
+                    </ul>
+                    
+                    <ul class="detail_workflow_ul clearfix workflow_6">
+                        <li class="finish">
+                            <p class="workflow_p">초안<br>작성중</p>
+                        </li>
+                        <li class="finish">
+                            <p class="workflow_p">법무팀<br>검토중</p>
+                        </li>
+                        <li class="finish">
+                            <p class="workflow_p">사업부<br>협의중</p>
+                        </li>
+                        <li class="finish">
+                            <p class="workflow_p">승인<br>대기중</p>
+                        </li>
+                        <li class="active wf_signing">
+                            <p class="workflow_p">서명중</p>
+                        </li>
+                        <li>
+                            <p class="workflow_p">날인중</p>
+                        </li>
+                    </ul>
+                    
+                    
+                    <!-- ========================== 190916 추가 계약 거절 워크플로우 ========================== -->
+                    <!-- ul태그에 workflow_failed 추가 -->
+                    <ul class="detail_workflow_ul clearfix workflow_4 workflow_failed">
+                        <li>
+                            <p class="workflow_p">초안<br>작성중</p>
+                        </li>
+                        <li>
+                            <p class="workflow_p">법무팀<br>검토중</p>
+                        </li>
+                        <li>
+                            <p class="workflow_p">사업부<br>협의중</p>
+                        </li>
+                        <!-- 계약 거절 상태에 active -->
+                        <li class="active">
+                            <p class="workflow_p">계약<br>거절</p>
+                        </li>
+                    </ul>
+                </div>
+                <!-- //workflow_wrap -->
+                
+                <!-- 190820 추가 contract_workflow_doc -->
+                <ul class="contract_workflow_doc">
+                    <li class="attachment">
+                        <p class="sm_p58">본 계약은 날인 가능 상태입니다.<br>날인 담당자에게 날인을 요청하세요.</p>
+                        <p class="sm_p58 prs_chr">담당자 : XXX (test@test.com)</p>
+                    </li>
+                    <li>
+                        <p class="sm_p58">본 계약은 날인 가능 상태입니다.</p>
+                        <div class="tc">
+                            <a class="btn__y btn_xs">날인확인</a>
+                        </div>
+                    </li>
+                    <li>
+                        <p class="sm_p58">계약 문서를 스캔해서 등록해 주세요.<br>(1개의 pdf / jpg 파일로 등록해 주세요.)</p>
+                        <div class="tc">
+                            <a class="btn__y btn_xs">스캔본 등록</a>
+                        </div>
+                    </li>
+                    <li class="attachment">
+                        <p class="sm_p58">첨부파일명이 노출되는 영역입니다.docx</p>
+                        <div class="tc">
+                            <a class="btn__f btn_xs">다운로드</a>
+                        </div>
+                    </li>
+                    <li class="attachment">
+                        <p class="sm_p58">첨부파일명이 노출되는 영역입니다.docx</p>
+                        <div class="tc">
+                            <a class="btn__f btn_xs">다운로드</a>
+                            <a class="btn__y btn_xs">스캔본 재등록</a>
+                        </div>
+                    </li>
+                    <li>
+                        <p class="sm_p58">본 계약은 원본회수 요청 상태입니다.<br>날인이 완료된 계약서를 담당자에게 직접 전달해주세요.</p>
+                        <p class="sm_p58 prs_chr">담당자 : XXX (test@test.com)</p>
+                    </li>
+                    <li>
+                        <p class="sm_p58">본 계약은 원본 회수 요청 상태입니다.</p>
+                        <div class="tc">
+                            <a class="btn__y btn_xs">원본 회수</a>
+                        </div>
+                    </li>
+                </ul>
+                <!-- //190820 추가 contract_workflow_doc -->
+                
+                <!-- form_wrap_ul -->
+                <ul class="form_wrap_ul contract_detail_line">
+                    <li class="clearfix_15">
+                        <div class="divide__2 form_group">
+                            <label class="sm_label">ID</label>
+                            <input type="text" class="input">
+                        </div>
+                        <div class="divide__2 form_group">
+                            <label class="sm_label">기안자</label>
+                            <input type="text" class="input">
+                        </div>
+                    </li>
+                    <li>
+                        <!-- 190816 라벨의 라벨 추가 -->
+                        <label class="sm_label">라벨</label>
+                        <!-- 190814 라벨 셀렉트 추가 -->
+                        <!-- select2_view -->
+                        <div class="select2_view" id="detailLabel">
+                            <ul class="label_sel_ul">
+                                <li>
+                                    <div class="cont_label pblc_02">가맹계약서</div>
+                                    <p class="btn_x"></p>
+                                </li>
+                                <li>
+                                    <div class="cont_label pblc_02">가맹계약서</div>
+                                    <p class="btn_x"></p>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- //select2_view -->
+                        <!-- bt_select2_wrap -->
+                        <div class="bt_select2_wrap">
+                            <ul class="bt_select2">
+                                <li class="select2_group">
+                                    <div class="select2_group_label bor_btm">공개</div>
+                                    <ul class="select2_results">
+                                        <li>
+                                            <div class="cont_label pblc_01">가맹계약서</div>
+                                        </li>
+                                        <li>
+                                            <div class="cont_label pblc_02">가맹계약서</div>
+                                        </li>
+                                        <li>
+                                            <div class="cont_label pblc_03">가맹계약서</div>
+                                        </li>
+                                        <li>
+                                            <div class="cont_label pblc_04">가맹계약서</div>
+                                        </li>
+                                        <li>
+                                            <div class="cont_label pblc_05">가맹계약서</div>
+                                        </li>
+                                        <li>
+                                            <div class="cont_label pblc_01">가맹계약서</div>
+                                        </li>
+                                        <li>
+                                            <div class="cont_label pblc_02">가맹계약서</div>
+                                        </li>
+                                        <li>
+                                            <div class="cont_label pblc_03">가맹계약서</div>
+                                        </li>
+                                        <li>
+                                            <div class="cont_label pblc_04">가맹계약서</div>
+                                        </li>
+                                        <li>
+                                            <div class="cont_label pblc_05">가맹계약서</div>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="select2_group">
+                                    <div class="select2_group_label bor_btm">비공개</div>
+                                    <ul class="select2_results">
+                                        <li>
+                                            <div class="cont_label prvt_01">가맹계약서</div>
+                                        </li>
+                                        <li>
+                                            <div class="cont_label prvt_02">가맹계약서</div>
+                                        </li>
+                                        <li>
+                                            <div class="cont_label prvt_03">가맹계약서</div>
+                                        </li>
+                                        <li>
+                                            <div class="cont_label prvt_04">가맹계약서</div>
+                                        </li>
+                                        <li>
+                                            <div class="cont_label prvt_05">가맹계약서</div>
+                                        </li>
+                                        <li>
+                                            <div class="cont_label prvt_01">가맹계약서</div>
+                                        </li>
+                                        <li>
+                                            <div class="cont_label prvt_02">가맹계약서</div>
+                                        </li>
+                                        <li>
+                                            <div class="cont_label prvt_03">가맹계약서</div>
+                                        </li>
+                                        <li>
+                                            <div class="cont_label prvt_04">가맹계약서</div>
+                                        </li>
+                                        <li>
+                                            <div class="cont_label prvt_05">가맹계약서</div>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- //bt_select2_wrap -->
+                    </li>
+                    <!-- 190708 추가 계약 상대방 -->
+                    <li class="clearfix">
+                        <label class="sm_label">계약 상대방</label>
+                        <div class="clearfix">
+                            <div class="tag admin">
+                                <p class="sm_p58">주식회사 법틀</p>
+                                <a class="btn_x"></a>
+                            </div>
+                            <div class="tag admin">
+                                <p class="sm_p58">카카오톡</p>
+                                <a class="btn_x"></a>
+                            </div>
+                            <!--할당 btn-->
+                            <a class="btn_add mar6">+ 추가</a>
+                        </div>
+                    </li>
+                    <!-- 190708 추가 계약 초안 업로드 -->
+                    <li class="clearfix">
+                        <label class="sm_label">계약 초안 업로드</label>
+                        <div class="contract_detail_related_material clearfix">
+                            <ul class="related_material_ul admin">
+                                <li>
+                                    <p>파일명 노출영역.pdf</p>
+                                    <div class="btn_x"></div>
+                                </li>
+                            </ul>
+                            <a class="btn_add">+ 추가하기</a>
+                        </div>
+                    </li>
+                    <li>
+                        <label class="sm_label">계열 계약 여부</label>
+                        <div class="clearfix">
+                            <div class="fl cont_detail_radio">
+                                <input type="radio" id="radio1">
+                                <label for="radio1">GS 계열사간 계약입니다</label>
+                            </div>
+                            <div class="fl cont_detail_radio">
+                                <input type="radio" id="radio2">
+                                <label for="radio2">GS 계열사간 계약이 아닙니다</label>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <label class="sm_label">수의 계약 여부</label>
+                        <div class="clearfix">
+                            <div class="fl cont_detail_radio">
+                                <input type="radio" id="radio3">
+                                <label for="radio3">수의 계약입니다</label>
+                            </div>
+                            <div class="fl cont_detail_radio">
+                                <input type="radio" id="radio4">
+                                <label for="radio4">수의 계약이 아닙니다</label>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <label class="sm_label">계약 요약 정보</label>
+                        <textarea class="contract_info_textarea"></textarea>
+                    </li>
+                    <li class="clearfix_15">
+                        <div class="divide__2">
+                            <label class="sm_label">시작일</label>
+                            <div class="input_date">
+                                <input type="text" class="input">
+                                <div class="btn_calendar"></div>
+                            </div>
+                        </div>
+                        <div class="divide__2">
+                            <label class="sm_label">종료일</label>
+                            <div class="input_date">
+                                <input type="text" class="input">
+                                <div class="btn_calendar"></div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <label class="sm_label">계약금액</label>
+                        <input type="text">
+                    </li>
+                    <li class="clearfix">
+                        <label class="sm_label">첨부파일</label>
+                        <div class="attachment_wrap">
+                            <ul data-brackets-id="1446" class="attachment_list admin">
+                                <li>
+                                    <p>관리자 및 본인이 추가했을 경우 (삭제 가능 상태)</p>
+                                    <div class="btn_x"></div>
+                                </li>
+                            </ul>
+                            <a class="btn_add">+ 추가하기</a>
+                        </div>
+                    </li>
+                    <li class="clearfix">
+                        <label class="sm_label">연관 계약 정보</label>
+                        <div class="contract_detail_related_material">
+                            <ul data-brackets-id="1446" class="related_material_ul admin">
+                                <li>
+                                    <p>2019 가맹계약서</p>
+                                    <div class="btn_x"></div>
+                                </li>
+                            </ul>
+                            <a class="btn_add">+ 추가하기</a>
+                        </div>
+                    </li>
+                    <li class="clearfix">
+                        <label class="sm_label">계약 품의서</label>
+                        <div class="contract_detail_related_material">
+                            <ul data-brackets-id="1446" class="related_material_ul">
+                                <li><p>파일명 노출영역.pdf</p></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="clearfix">
+                        <label class="sm_label">품의서 PDF</label>
+                        <div class="contract_detail_related_material">
+                            <ul data-brackets-id="1446" class="related_material_ul admin">
+                                <li>
+                                    <p>파일명 노출영역.pdf</p>
+                                    <div class="btn_x"></div>
+                                </li>
+                            </ul>
+                            <a class="btn_add">+ 추가하기</a>
+                        </div>
+                    </li>
+                    <li>
+                        <label class="sm_label">자동 연장</label>
+                        <input type="checkbox" id="swich" class="swich">
+                        <label for="swich"></label>
+                        <p class="icon_notify_p">계약 종료에 관한 별도의 통지가 없으면 계약이 자동연장되는 조항이 있나요?</p>
+                    </li>
+                    <!-- 190801 검토자 추가 -->
+                    <li class="clearfix_15">
+                        <div class="divide__1">
+                            <label class="sm_label">계약 검토자</label>
+                            <div class="clearfix">
+                                <div class="user admin">
+                                    <p class="sm_p58">홍길동 부서장</p>
+                                    <a class="btn_x"></a>
+                                </div>
+                                <a class="btn_add  mar6">+ 검토자 할당</a>
+                            </div>
+                        </div>
+                    </li>
+                    <!-- 190801 승인자 추가 -->
+                    <li class="clearfix_15">
+                        <div class="divide__1">
+                            <label class="sm_label">최종 승인자</label>
+                            <div class="clearfix">
+                                <div class="user admin">
+                                    <p class="sm_p58">홍길동 변호사</p>
+                                    <a class="btn_x"></a>
+                                </div>
+                                <a class="btn_add  mar6">+ 검토자 할당</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="checkbox">
+                        <label class="sm_p" for="checkbox">동일한 계약을 여러명과 각각 계약할 수 있도록 합니다.</label>
+                    </li>
+                    <li class="li_alarm clearfix">
+                        <label class="sm_label">알람</label>
+                        <ul class="alarm_date_ul">
+                            <li class="input_date_wrap">
+                                <!-- input_date -->
+                                <div class="input_date">
+                                    <input type="text" class="input">
+                                    <div class="btn_calendar"></div>
+                                </div>
+                                <!-- //input_date -->
+                                <!-- input_date -->
+                                <div class="input_date">
+                                    <input type="text" class="input">
+                                    <div class="btn_calendar"></div>
+                                </div>
+                                <!-- //input_date -->
+                                <div class="btn_x"></div>
+                            </li>
+                        </ul>
+                        <div class="clearfix">
+                            <a class="btn_add">+ 알람 추가</a>
+                        </div>
+                        <p class="icon_notify_p">계약 완료 14일 전에 기안자에게 알람 메일이 자동 전송됩니다. (설정필요없음)</p>
+                    </li>
+                </ul>
+                <!-- //form_wrap_ul -->
+
+                <div class="tc">
+                    <a href="contract_memo.html" class="btn__active">상세보기</a>
+                </div>
+            </div>
+            <!-- //contract_detail -->
+            <!-- contract_detail_comment -->
+            <div class="fixed_content contract_detail_comment">
+                <div class="comment_notify">
+                    <div class="icon_comment_notify">
+                        <img src="imgs/icon_notify.svg">
+                    </div>
+                    <p>
+                        이 계약에 대해 유관 부서 간에 토론하는 공간입니다.<br>
+                        논의가 필요한 사항, 관련 히스토리 등을 올려주세요.
+                    </p>
+                </div>
+                <ul class="comment_ul">
+                    <li class="comment_my">
+                        <div class="comment_area">
+                            문의사항을 이야기 하는 부분을 나타내는 영역
+                            입니다
+                        </div>
+                        <div class="comment_date">19/02/01 13:19</div>
+                        <div class="clearfix">
+                            <div class="comment_writer">
+                                <div class="comment_writerprofile">
+                                    <p class="name">이유진</p>
+                                    <p class="email">sample@naver.com</p>
+                                </div>
+                                <div class="comment_profile_img"><img src=""></div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="comment_area">
+                            문의사항을 이야기 하는 부분을 나타내는 영역
+                            입니다
+                        </div>
+                        <div class="comment_date">19/02/01 13:19</div>
+                        <div class="clearfix">
+                            <div class="comment_writer">
+                                <div class="comment_profile_img"><img src=""></div>
+                                <div class="comment_writerprofile">
+                                    <p class="name">이유진</p>
+                                    <p class="email">sample@naver.com</p>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <div class="comment_send">
+                    <textarea class="comment_send_textarea auto_textarea" placeholder="코멘트를 남겨주세요"></textarea>
+                    <div class="btn_comment_send"></div>
+                </div>
+            </div>
+            <!-- //contract_detail_comment -->
+        </div>
+        <!-- //contract_detail_wrap -->
+    </div>
+    <!-- //fixed_layout -->
+
+    <!-- ================================= 모달 ================================= -->
+    <!-- 공용 모달: 라벨 선택 -->
+    <!-- modal_fixed -->
+    <div class="modal_fixed modal_label_select" id="modalOnLabelSelLayout">
+        <!-- dis_table -->
+        <div class="dis_table">
+            <!-- table_cell -->
+            <div class="table_cell">
+                <!-- modal_section -->
+                <section class="modal_section">
+                    <div class="modal_title bor_btm clearfix">
+                        <p class="fl" style="line-height: 30px">라벨 선택</p>
+                        <a class="fr btn__b btn_m">라벨 추가</a>
+                    </div>
+                    <div class="clearfix mar15">
+                        <div class="input_search">
+                            <div class="icon_search"></div>
+                            <input type="text" class="input" placeholder="회사명 또는 사업자등록번호 검색">
+                        </div>
+                    </div>
+                    <ul class="clearfix modal_label_sel">
+                        <li class="cont_label pblc_01">라벨 내용<p class="btn_x"></p></li>
+                        <li class="cont_label prvt_02">신규 계약 작성 후 문제 있음<p class="btn_x"></p></li>
+                        <li class="cont_label pblc_01">라벨 내용<p class="btn_x"></p></li>
+                        <li class="cont_label prvt_02">신규 계약 작성 후 문제 있음<p class="btn_x"></p></li>
+                        <li class="cont_label pblc_01">라벨 내용<p class="btn_x"></p></li>
+                        <li class="cont_label prvt_02">신규 계약 작성 후 문제 있음<p class="btn_x"></p></li>
+                        <li class="cont_label pblc_01">라벨 내용<p class="btn_x"></p></li>
+                        <li class="cont_label prvt_02">신규 계약 작성 후 문제 있음<p class="btn_x"></p></li>
+                        <li class="cont_label pblc_01">라벨 내용<p class="btn_x"></p></li>
+                        <li class="cont_label prvt_02">신규 계약 작성 후 문제 있음<p class="btn_x"></p></li>
+                    </ul>
+                    <div class="modal_label_wrap">
+                        <p class="m_p b">공개 라벨</p>
+                        <ul class="modal_cont_label_ul clearfix_ul">
+                            <li class="pblc_01">라벨 네임 샘플 네임 샘플 샘플</li>
+                            <li class="pblc_02">라벨 샘플</li>
+                            <li class="pblc_03">라벨 네임 샘플</li>
+                            <li class="pblc_04">라벨 네임 샘플</li>
+                            <li class="pblc_05">라벨 네임 샘플</li>
+                        </ul>
+                    </div>
+                    <div class="modal_label_wrap">
+                        <p class="m_p b">비공개 라벨</p>
+                        <ul class="modal_cont_label_ul clearfix_ul">
+                            <li class="prvt_01">라벨 네임 샘플 네임 샘플 샘플</li>
+                            <li class="prvt_02">라벨 샘플</li>
+                            <li class="prvt_03">라벨 네임 샘플</li>
+                            <li class="prvt_04">라벨 네임 샘플</li>
+                            <li class="prvt_05">라벨 네임 샘플</li>
+                        </ul>
+                    </div>
+                    <!-- btn_wrap -->
+                    <div class="active_btn_wrap tc bor_top">
+                        <a class="btn__active btn_m">확인</a>
+                        <a class="btn__cancel btn_m modal_off">취소</a>
+                    </div>
+                    <!-- //btn_wrap -->
+                </section>
+                <!-- //modal_section -->
+            </div>
+            <!-- //dis_table -->
+        </div>
+        <!-- //dis_table -->
+    </div>
+    <!-- //modal_fixed -->
+
+    <!-- 모달: 카테고리 변경 190802 카테고리 변경 추가 -->
+    <!-- modal_fixed -->
+    <div class="modal_fixed" id="modalOnContCateLayout">
+        <!-- dis_table -->
+        <div class="dis_table">
+            <!-- table_cell -->
+            <div class="table_cell">
+                <!-- modal_section -->
+                <section class="modal_section">
+                    <!-- modal_title -->
+                    <div class="modal_title">
+                        <p class="lg_p">카테고리 변경</p>
+                    </div>
+                    <!-- //modal_title -->
+
+                    <div class="clearfix_r15">
+                        <div class="divide__2">
+                            <div class="clearfix">
+                                <select>
+                                    <option>회사 명의 서명</option>
+                                    <option>개인 명의 서명</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="divide__2">
+                            <div class="clearfix">
+                                <select>
+                                    <option>수정 가능</option>
+                                    <option>수정 불가능</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- btn_wrap -->
+                    <div class="active_btn_wrap tc bor_top">
+                        <a class="btn__active btn_m">확인</a>
+                        <a class="btn__cancel btn_m modal_off">취소</a>
+                    </div>
+                    <!-- //btn_wrap -->
+                </section>
+                <!-- //modal_section -->
+            </div>
+            <!-- //dis_table -->
+        </div>
+        <!-- //dis_table -->
+    </div>
+    <!-- //modal_fixed -->
+
+    <!-- ================================= //content ================================= -->
+    
+</div>
+<!-- //wrap -->
+<!-- footer -->
+<footer id="footer">
+    <div class="clearfix footer_inner">
+        <div class="fl"><a class="guide">법무지원시스템 메뉴얼 다운로드</a></div>
+        <div class="fr">
+            <b>기술 및 지원 문의</b>support@buptle.com / v 1.4.1.5 / ©company_name
+        </div>
+    </div>
+</footer>
+<div id="toTop"></div>
+<!-- //footer -->
+</body>
+</html>
+

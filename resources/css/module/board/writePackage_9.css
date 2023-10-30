@@ -1,0 +1,33 @@
+/* 게시판 전체 공통 */
+.xans-board-title .title { min-height:30px; margin:10px 0 20px; border-bottom:1px solid #e8e8e8; }
+.xans-board-title .title h2 { display:inline-block; padding:0 0 0 12px; color:#2e2e2e; font-size:16px; *display:inline; *zoom:1; background:url("http://img.echosting.cafe24.com/skin/base_ko_KR/common/ico_heading.gif") 0 2px no-repeat; }
+.xans-board-title .title p { display:inline-block; margin:0 0 0 6px; padding:0 0 0 10px; color:#939393; vertical-align:bottom; background:url("http://img.echosting.cafe24.com/skin/base_ko_KR/common/ico_title.gif") no-repeat 0 0; *display:inline; *zoom:1; }
+
+.xans-board-title p.imgArea { margin:0 0 20px; }
+
+/* write */
+.xans-board-write-9 .boardWrite table { table-layout:fixed; border:1px solid #d7d5d5; line-height:180%; }
+.xans-board-write-9 table th { width:110px; padding:10px 0 8px 20px; border-top:1px solid #e8e8e8; border-right:1px solid #e8e8e8; background-color:#fbfafa; text-align:left; font-weight:normal; vertical-align:middle; }
+.xans-board-write-9 table td { width:auto; padding:10px 0 8px 10px; border-top:1px solid #e8e8e8; }
+
+.xans-board-write-9 table td img { vertical-align:middle; }
+.xans-board-write-9 table a { text-decoration:none; }
+.xans-board-write-9 table input,
+.xans-board-write-9 table textarea { padding:2px 2px 2px 4px; border:1px solid #d9d9d9; color:#202020; }
+.xans-board-write-9 table td.write { width:100%; padding:0; border-top:none; }
+.xans-board-write-9 table td.write table { border:0; table-layout:auto; }
+.xans-board-write-9 table tr.first th,
+.xans-board-write-9 table tr.first td { border-top:none; }
+.xans-board-write-9 table tr.captcha td { font-size:11px; color:#757575; vertical-align:middle; }
+.xans-board-write-9 table tr.agree th,
+.xans-board-write-9 table tr.agree td { vertical-align:top; }
+.xans-board-write-9 table tr.agree td textarea { width:560px; height:140px; margin:0 0 10px; }
+.xans-board-write-9 table #subject { width:390px; height:14px; padding:3px;}
+.xans-board-write-9 table input[type=radio], .xans-board-write-9 table input[type=checkbox], .xans-board-write-9 table #notice0, .xans-board-write-9 table #secure0, .xans-board-write-9 table #secure1, .xans-board-write-9 table #privacy_agreement_radio0, .xans-board-write-9 table #privacy_agreement_radio1, .xans-board-write-9 table #cons_re0, .xans-board-write-9 table #cons_re1 { border:0; width:13px; height:13px; margin:0 3px 0 0; background:none; vertical-align:middle; }
+.xans-board-write-9 table .info { display:block; margin:5px 0 0; }
+
+.xans-board-write-9 .btnArea { overflow:hidden; margin:20px 0 50px; text-align:right; font-size:1%; line-height:1%; }
+.xans-board-write-9 .btnArea.miniType { float:left; }
+.xans-board-write-9 .btnArea.center { text-align:center; }
+.xans-board-write-9 .btnArea img { cursor:pointer; margin:0 1px 0 0;}
+.xans-board-write-9 .btnArea span.left { float:left; margin:0 0 0 3px; }

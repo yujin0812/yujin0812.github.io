@@ -1,0 +1,265 @@
+<!DOCTYPE HTML5>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>HYCON</title>
+<!-- GOOGLE FONTS -->
+<link href="http://fonts.googleapis.com/earlyaccess/notosanskr.css" rel="stylesheet">
+<link href="http://fonts.googleapis.com/earlyaccess/nanumgothic.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Titillium+Web:300,400,500,700" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
+
+<!-- STYLE CSS -->
+<link href="hycon/css/mobile.css" rel="stylesheet" type="text/css">
+<link href="hycon/css/media.css" rel="stylesheet" type="text/css">
+<link href="hycon/css/reset.css" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700" rel="stylesheet">
+<!-- WOW STYLE CSS -->
+<link href="hycon/css/animate.min.css" rel="stylesheet" />
+<!-- SCRIPT -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="hycon/scripts/main.js"></script>
+<!-- WOW SCRIPT -->
+<script src="hycon/scripts/wow.min.js"></script>
+<script>
+	new WOW().init();
+</script>
+</head>
+
+<body>
+    <header>
+        <div class="m-header">
+            <div class="m-header-inner">
+                <a href="m_index.html" class="header-block">
+                    <div class="mheader-icon"><img src="hycon/imgs/m_header_icon1.png" /></div>
+                    <div class="mheader-icon icon-on"><img src="hycon/imgs/m_header_icon_on1.png" /></div>
+                    <p class="mheader-li">Home</p>
+                </a>
+                <a href="m_trade.html" class="header-block">
+                    <div class="mheader-icon"><img src="hycon/imgs/m_header_icon2.png" /></div>
+                    <div class="mheader-icon icon-on"><img src="hycon/imgs/m_header_icon_on2.png" /></div>
+                    <p class="mheader-li">Trade</p>
+                </a>
+                <a href="m_wallet.html" class="header-block">
+                    <div class="mheader-icon"><img src="hycon/imgs/m_header_icon3.png" /></div>
+                    <div class="mheader-icon icon-on"><img src="hycon/imgs/m_header_icon_on3.png" /></div>
+                    <p class="mheader-li">Wallet</p>
+                </a>
+                <a href="m_profile.html" class="header-block">
+                    <div class="mheader-icon"><img src="hycon/imgs/m_header_icon4.png" /></div>
+                    <div class="mheader-icon icon-on"><img src="hycon/imgs/m_header_icon_on4.png" /></div>
+                    <p class="mheader-li">Profile</p>
+                </a>
+            </div>
+        </div>
+    </header>
+    
+    <div class="mobile-wrap">
+        <section class="mobile-main-user">
+            <div class="sub-section-wrap">
+                <div class="mobile-trade-wrap">
+                    <div class="mobile-trade-tab">
+                        <div class="trade-tab tab3n">BTC</div>
+                        <div class="trade-tab tab3n">ETH</div>
+                        <div class="trade-tab tab3n last">ZEC</div>
+                        <div class="trade-tab tab2n">LTC</div>
+                        <div class="trade-tab tab2n last">ETC</div>
+                    </div>
+                    <div class="trade-js-wrap">
+                        <div class="rangeHolder">
+                            <input type="range" #range (change)="checkRange(range.value)" [value]=slideValue/>
+                        </div>
+                        <div class="percent-wrap">
+                            <input type="button" class="percent" value="10%" (click)="checkRange('10')"/>
+                            <input type="button" class="percent" value="25%" (click)="checkRange('25')"/>
+                            <input type="button" class="percent" value="50%" (click)="checkRange('50')"/>
+                            <input type="button" class="percent" value="100%" (click)="checkRange('100')"/>
+                        </div>
+                        <div class="mobile-btn-wrap">
+                          <input type="button" class="trade-btn trade-buy" value="Buy" (click)="doBuy()"/><input type="button" class="trade-btn trade-sell" value="Sell" (click)="doSell()"/>
+                        </div>
+                        <app-trade-list [coinFlag]="'BTC'"></app-trade-list>
+                    </div>
+                    <div class="mobile-trade-tview">
+                        <!-- trade tview BTC -->
+                        <div class="trade-tview tview-sel">
+                            <div class="trade-table-wrap">
+                                <table class="mobile-table">
+                                    <thead>
+                                        <tr>
+                                            <th>ASK</th>
+                                            <th>VOLUME</th>
+                                            <th>BID</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr class="trade-tr-buy">
+                                            <td>5000000</td>
+                                            <td>1.23</td>
+                                            <td></td>
+                                        </tr>
+                                    <tr class="trade-tr-buy">
+                                            <td>4900000</td>
+                                            <td>4.996</td>
+                                            <td></td>
+                                        </tr>
+                                    <tr class="trade-tr-sell">
+                                            <td></td>
+                                            <td>4.321</td>
+                                            <td>49999000</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <!--     버튼 
+                                <div class="mobile-btn-wrap">
+                                  <input type="button" class="trade-btn trade-buy" value="Buy" (click)="doBuy()"/>
+                                  <input type="button" class="trade-btn trade-sell" value="Sell" (click)="doSell()"/>
+                                </div>
+                                -->
+                            </div>
+                            
+                            <button class="complete-btn">Incomplete Trades</button>
+                            <div class="trade-none">
+                                <table class="mobile-table trade-table">
+                                    <thead>
+                                        <tr>
+                                            <th>TYPE</th>
+                                            <th>PRICE</th>
+                                            <th>VOLUME</th>
+                                            <th>TOTAL</th>
+                                            <th>TIME</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr class="trade-tr-buy">
+                                            <td>5000000</td>
+                                            <td>1.23</td>
+                                            <td></td>
+                                            <td>1.23</td>
+                                            <td></td>
+                                        </tr>
+                                        <tr class="trade-tr-buy">
+                                            <td>4900000</td>
+                                            <td>4.996</td>
+                                            <td></td>
+                                            <td>4.996</td>
+                                            <td></td>
+                                        </tr>
+                                        <tr class="trade-tr-sell">
+                                            <td></td>
+                                            <td>4.321</td>
+                                            <td>49999000</td>
+                                            <td>4.321</td>
+                                            <td>49999000</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <button class="complete-btn">Complete Trades</button>
+                            <div class="trade-none">
+                                <table class="mobile-table trade-table">
+                                    <thead>
+                                        <tr>
+                                            <th>TYPE</th>
+                                            <th>PRICE</th>
+                                            <th>VOLUME</th>
+                                            <th>TOTAL</th>
+                                            <th>TIME</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr class="trade-tr-buy">
+                                            <td>5000000</td>
+                                            <td>1.23</td>
+                                            <td></td>
+                                            <td>1.23</td>
+                                            <td></td>
+                                        </tr>
+                                        <tr class="trade-tr-buy">
+                                            <td>4900000</td>
+                                            <td>4.996</td>
+                                            <td></td>
+                                            <td>4.996</td>
+                                            <td></td>
+                                        </tr>
+                                        <tr class="trade-tr-buy">
+                                            <td></td>
+                                            <td>4.321</td>
+                                            <td>49999000</td>
+                                            <td>4.321</td>
+                                            <td>49999000</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <!-- trade tview BTC end -->
+                        <!-- trade tview ETC start -->
+                        <div class="trade-tview">
+                            
+                        </div>
+                        <!-- trade tview ETC end -->
+                        <!-- trade tview ZEC start -->
+                        <div class="trade-tview">
+                        </div>
+                        <!-- trade tview ZEC end -->
+                        <!-- trade tview LTC start -->
+                        <div class="trade-tview">
+                        </div>
+                        <!-- trade tview LTC end -->
+                        <!-- trade tview ETC start -->
+                        <div class="trade-tview">
+                        </div>
+                        <!-- trade tview ETC end -->
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <div class="trade-popup">
+            <h1>BTC TRADE</h1>
+            <div class="trade-popup-wrap">
+                <div class="trade-box">
+                    <div class="data-wrap">
+                        <p class="data-h">Type:</p>
+                        <p class="data-p">Buy</p>
+                    </div>
+                    <div class="data-wrap">
+                        <p class="data-h">Cost</p>
+                        <p class="data-p">4,000,000</p>
+                    </div>
+                    <div class="data-wrap">
+                        <p class="data-h">Total</p>
+                        <p class="data-p">4,920,000</p>
+                    </div>
+                    <div class="data-wrap">
+                        <p class="data-h">Received</p>
+                        <p class="data-p">BTC</p>
+                        <span class="data-received">0.0000 BTC</span>
+                    </div>
+                </div>
+                <div class="trade-box">
+                    <div class="data-wrap">
+                        <p class="data-h">Date:</p>
+                        <p class="data-p">17/10/01</p>
+                    </div>
+                    <div class="data-wrap">
+                        <p class="data-h">Volume</p>
+                        <p class="data-p">1.235 BTC</p>
+                    </div>
+                    <div class="data-wrap">
+                        <p class="data-h">Fee</p>
+                        <p class="data-p">2,000 w</p>
+                    </div>
+                </div>
+            </div>
+            <div class="trade-popup-btn-wrap">
+                <div class="trade-btn btn-ok">OK</div>
+                <div class="trade-btn btn-cancel">CANCEL</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+ 

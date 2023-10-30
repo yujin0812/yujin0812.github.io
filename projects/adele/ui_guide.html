@@ -1,0 +1,743 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8" />
+<title></title>
+<!-- STYLE CSS -->
+<link href="css/application.css" rel="stylesheet" type="text/css">
+<link href="css/style.css" rel="stylesheet" type="text/css">
+<link href="css/media.css" rel="stylesheet" type="text/css">
+<link href="css/reset.css" rel="stylesheet" type="text/css">
+<!-- SCRIPT -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="scripts/main.js"></script>
+<script src="http://hernansartorio.com/jquery-nice-select/js/jquery.js"></script>
+<script src="http://hernansartorio.com/jquery-nice-select/js/jquery.nice-select.min.js"></script>
+
+<script>
+    $(document).ready(function() {
+        $('select').niceSelect();
+    });
+</script>
+<style>
+h1, h2 {
+    text-transform: uppercase;
+}
+h1:not(.section_h1) {
+    height: 30px;
+    margin-top: 140px;
+    border-left: 4px solid #000;
+    padding-left: 16px;
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 1;
+    letter-spacing: normal;
+}
+h2.ui_h2 {
+    margin-top: 52px;
+    margin-bottom: 50px;
+    padding-bottom: 17px;
+    border-bottom: 1px solid #ece9f1;
+    font-size: 20px;
+    font-weight: normal;
+    line-height: 1.5;
+    letter-spacing: normal;
+    color: #1a051d;
+}
+.ui_content {
+    max-width: 1120px;
+    margin: 0 auto;
+}
+.ui_list {
+    clear: both;
+}
+.ui_list>li {
+    margin-bottom: 30px;
+}
+.ui_fl:after {
+    content: "";
+    clear: both;
+    display: block;
+}
+.ui_fl>li {
+    float: left;
+    margin-left: 25px;
+    margin-right: 25px;
+}
+.color_box {
+    width: 160px;
+    height: 190px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 7px 64px 0 rgba(0, 0, 0, 0.03);
+    background-color: #ffffff;
+}
+.color_box .color_view {
+    height: 140px;
+}
+.color_box .color_name {
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+}
+.tooltip {
+    white-space: pre;
+}
+.ui_p_list {
+    margin-bottom: 55px;
+}
+.ui_p_list>p {
+    float: left;
+    margin-right: 20px;
+}
+</style>
+</head>
+<body>
+<!--
+<div class="filebox">
+<input class="upload_name">
+<label for="fileInput" id="upload_file2">첨부</label>
+<input type="file" id="fileInput" class="file_hidden">
+</div>
+-->
+
+<div class="ui_content">
+
+    <section>
+        <h1>color</h1>
+        <div class="ui_group">
+            <h2 class="ui_h2">black</h2>
+            <ul class="ui_list ui_fl">
+            <li>
+                <div class="color_box">
+                    <div class="color_view" style="background: #000000;"></div>
+                    <div class="color_name">#000000</div>
+                </div>
+            </li>
+            <li>
+                <div class="color_box">
+                    <div class="color_view" style="background: #585858;"></div>
+                    <div class="color_name">#585858</div>
+                </div>
+            </li>
+            <li>
+                <div class="color_box">
+                    <div class="color_view" style="background: #a8aab7;"></div>
+                    <div class="color_name">#a8aab7</div>
+                </div>
+            </li>
+            <li>
+                <div class="color_box">
+                    <div class="color_view" style="background: #b4b4b4;"></div>
+                    <div class="color_name">#b4b4b4</div>
+                </div>
+            </li>
+            <li>
+                <div class="color_box">
+                    <div class="color_view" style="background: #cccccc;"></div>
+                    <div class="color_name">#cccccc</div>
+                </div>
+            </li>
+            <li>
+                <div class="color_box">
+                    <div class="color_view" style="background: #f5f5f5;"></div>
+                    <div class="color_name">#f5f5f5</div>
+                </div>
+            </li>
+            </ul>
+            <h2 class="ui_h2">point</h2>
+            <ul class="ui_list ui_fl">
+            <li>
+                <div class="color_box">
+                    <div class="color_view" style="background: #364aed;"></div>
+                    <div class="color_name">#364aed</div>
+                </div>
+            </li>
+            <li>
+                <div class="color_box">
+                    <div class="color_view" style="background: #ffcb19;"></div>
+                    <div class="color_name">#ffcb19</div>
+                </div>
+            </li>
+            <li>
+                <div class="color_box">
+                    <div class="color_view" style="background: #f95f5f;"></div>
+                    <div class="color_name">#f95f5f</div>
+                </div>
+            </li>
+            </ul>
+        </div>
+    </section>
+    <section>
+        <h1>style</h1>
+        <div class="ui_group">
+            <!--
+                190703 툴팁 추가
+                hover할 부분에 class 추가 "ttp"
+                안에 자식 요소로 아래의 툴팁 추가
+                <div class="tooltip">툴팁</div>
+            -->
+            <h2 class="ui_h2">tooltip</h2>
+            <ul class="ui_list ui_fl">
+            <li>
+                <div class="ttp">툴팁
+                    <div class="tooltip">툴팁 가운데</div>
+                </div>
+            </li>
+            <li>
+                <div class="ttp">툴팁
+                    <div class="tooltip left">툴팁 왼쪽</div>
+                </div>
+            </li>
+            </ul>
+        </div>
+        <div class="ui_group">
+            <h2 class="ui_h2">font</h2>
+            <ul class="ui_list">
+            <li class="ui_p_list clearfix">
+                <p class="b">볼드</p>
+                <p class="xs_p">xs_p</p>
+                <p class="xs_p58">xs_p58</p>
+                <p class="sm_p">sm_p</p>
+                <p class="sm_b">sm_b</p>
+                <p class="sm_pa2">sm_pa2</p>
+                <p class="sm_pb4">sm_pb4</p>
+                <p class="sm_p58">sm_p58</p>
+                <p class="sm_p58_b">sm_p58_b</p>
+                <p class="m_p">m_p</p>
+                <p class="m_p58">m_p58</p>
+                <p class="m_p58_b">m_p58_b</p>
+                <p class="l_p">l_p</p>
+                <p class="l_p58">l_p58</p>
+                <p class="xl_p_b">xl_p_b</p>
+            </li>
+            <li>
+                <p class="icon_notify_p">계약 종료에 관한 별도의 통지가 없으면 계약이 자동연장되는 조항이 있나요?</p>
+            </li>
+            <li>
+                <p class="icon_notify_p_r">계약 종료에 관한 별도의 통지가 없으면 계약이 자동연장되는 조항이 있나요?</p>
+            </li>
+            </ul>
+        </div>
+        <div class="ui_group">
+            <h2 class="ui_h2">input</h2>
+            <ul class="ui_list ui_fl">
+            <li>
+                <div class="form_group">
+                    <label>Title</label>
+                    <input type="text" class="input">
+                </div>
+                <div class="form_group">
+                    <label>disabled</label>
+                    <input type="text" disabled>
+                </div>
+            </li>
+            <li>
+                <div class="form_group">
+                    <label class="sm_label">Title</label>
+                    <input type="text" class="input">
+                </div>
+                <div class="form_group">
+                    <label class="sm_label">readonly</label>
+                    <input type="text" readonly>
+                </div>
+            </li>
+            </ul>
+        </div>
+        <div class="ui_group">
+            <h2 class="ui_h2">search</h2>
+            <ul class="ui_list">
+                <li>
+                    <div class="input_search">
+                        <div class="icon_search"></div>
+                        <input type="text" class="input">
+                    </div>
+                </li>
+            </ul>
+            <h2 class="ui_h2">select</h2>
+            <ul class="ui_list">
+                <li style="min-height: 40px;">
+                    <select>
+                        <option data-display="Select">Nothing</option>
+                        <option value="1">Some option</option>
+                        <option value="2">Another option</option>
+                        <option value="3">Potato</option>
+                    </select>
+                </li>
+            </ul>
+            <h2 class="ui_h2">attachment</h2>
+            <ul class="ui_list">
+                <li>
+                    <div class="attachment_wrap">
+                        <ul class="attachment_list admin">
+                            <li>
+                                <p>관리자 및 본인이 추가했을 경우 (삭제 가능 상태)</p>
+                                <div class="btn_x"></div>
+                            </li>
+                        </ul>
+                        <a class="btn_add">+ 추가하기</a>
+                    </div>
+                </li>
+                <li>
+                    <ul class="attachment_list">
+                        <li>
+                            <p>수정 불가능한 첨부파일</p>
+                        </li>
+                        <li>
+                            <p>수정 불가능한 첨부파일</p>
+                        </li>
+                        <li>
+                            <p>수정 불가능한 첨부파일</p>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <h2 class="ui_h2">common</h2>
+            <ul class="ui_list">
+                <li>
+                    <div class="clearfix">
+                        <!--tag-->
+                        <div class="tag">
+                            <p class="sm_p58">#TAG_01</p>
+                        </div>
+                        <!--//tag-->
+                        <!--tag-->
+                        <div class="tag">
+                            <p class="sm_p58">#TAG_02</p>
+                        </div>
+                        <!--//tag-->
+                        <!--tag-->
+                        <div class="tag">
+                            <p class="sm_p58">#TAG_03</p>
+                        </div>
+                        <!--//tag-->
+                    </div>
+                </li>
+                <li>
+                    <div class="clearfix">
+                        <!--tag-->
+                        <div class="tag admin">
+                            <p class="sm_p58">#TAG_01</p>
+                            <a class="btn_x"></a>
+                        </div>
+                        <!--//tag-->
+                        <!--tag-->
+                        <div class="tag admin">
+                            <p class="sm_p58">#TAG_02</p>
+                            <a class="btn_x"></a>
+                        </div>
+                        <!--//tag-->
+                        <!--tag-->
+                        <div class="tag admin">
+                            <p class="sm_p58">#TAG_03</p>
+                            <a class="btn_x"></a>
+                        </div>
+                        <!--//tag-->
+                        <!--할당 btn-->
+                        <a class="btn_add mar6">+ 태그 추가</a>
+                    </div>
+                </li>
+                <li>
+                   
+                    <div class="clearfix">
+                        <div class="user">
+                            <p class="sm_p58">홍길동 부서장</p>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="clearfix">
+                        <div class="user">
+                            <p class="sm_p58">홍길동 부서장</p>
+                            <a class="btn_x"></a>
+                        </div>
+                        <a class="btn_add  mar6">+ 검토자 할당</a>
+                    </div>
+                </li>
+                <li>
+                    <!-- 190727 툴팁 추가 -->
+                    <div class="clearfix">
+                        <div class="user ttp">
+                            <p class="sm_p58">홍길동 부서장</p>
+                            <div class="tooltip">툴팁 가운데툴팁 가운데툴팁 가운데툴팁<br> 가운데툴팁 가운데툴팁 가운데</div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <h2 class="ui_h2">checkbox &amp; radio</h2>
+            <ul class="ui_list">
+            <li>
+                <input type="checkbox" id="checkbox">
+                <label for="checkbox">아아</label>
+            </li>
+            <li>
+                <input type="radio" id="radio">
+                <label for="radio">아아</label>
+            </li>
+            <li>
+                <input type="checkbox" id="checkbo_disabled" disabled>
+                <label for="checkbo_disabled">아아</label>
+            </li>
+            <li>
+                <input type="radio" id="radio_disabled" disabled>
+                <label for="radio_disabled">아아</label>
+            </li>
+            <li>
+                <input type="checkbox" id="checkbo_disabled" disabled checked>
+                <label for="checkbo_disabled">아아</label>
+            </li>
+            <li>
+                <input type="radio" id="radio_disabled" disabled checked>
+                <label for="radio_disabled">아아</label>
+            </li>
+            <li>
+                <input type="checkbox" id="swich" class="swich">
+                <label for="swich"></label>
+            </li>
+            </ul>
+        </div>
+    </section>
+    <section>
+        <h1>button</h1>
+        <div class="ui_group">
+            <h2 class="ui_h2">button style</h2>
+            <ul class="ui_list ui_fl">
+            <li>
+                <a class="btn__b">button</a>
+            </li>
+            <li>
+                <a class="btn__n">button</a>
+            </li>
+            <li>
+                <a class="btn__e">button</a>
+            </li>
+            <li>
+                <a class="btn__f">button</a>
+            </li>
+            <li>
+                <a class="btn__y">button</a>
+            </li>
+            <li>
+                <a class="btn__g">button</a>
+            </li>
+            <li>
+                <a class="btn__disable">button</a>
+            </li>
+            </ul>
+            <ul class="ui_list ui_fl">
+                <li>
+                    <a class="btn__b btn_m">button</a>
+                </li>
+                <li>
+                    <a class="btn__b btn_s">button</a>
+                </li>
+                <li>
+                    <a class="btn__b btn_xs">button</a>
+                </li>
+            </ul>
+            <ul class="ui_list">
+                <li class="clearfix">
+                    <a class="btn_add">+ 추가하기</a>
+                </li>
+                <li>
+                    <!-- active_btn_wrap -->
+                    <div class="active_btn_wrap clearfix">
+                        <a class="btn__active">완료</a>
+                        <a class="btn__cancel">취소</a>
+                    </div>
+                    <!-- //active_btn_wrap -->
+                </li>
+                <li>
+                    <!-- btn_loading addClass -->
+                    <div class="active_btn_wrap clearfix">
+                        <a class="btn__active btn_loading">완료</a>
+                        <a class="btn__cancel btn_loading">취소</a>
+                    </div>
+                    <a class="btn__b btn_loading">button</a>
+                    <a class="btn__f btn_loading">button</a>
+                    <a class="btn__y btn_loading">button</a>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <section>
+        <h1>buptle system</h1>
+        <div class="ui_group">
+            <h2 class="ui_h2">label style</h2>
+            <ul class="ui_list ui_fl">
+            <li>
+                <div class="state__workflow">법무팀 검토중</div>
+            </li>
+            </ul>
+        </div>
+        <div class="ui_group">
+            <h2 class="ui_h2">label style</h2>
+            <ul class="ui_list ui_fl">
+            <li>
+                <div class="bt_alert_wrap">
+                    <!-- bt_alert -->
+                    <div class="bt_alert">
+                        <p class="alert_sub">계약관리</p><p class="alert_info">부서장 승인 확인 5건</p><div class="alert_x"><img src="imgs/remove_round.svg"></div>
+                    </div>
+                    <div class="bt_alert_accept">
+                        <p class="alert_sub">계약관리</p><p class="alert_info">부서장 승인 확인 5건</p><br>
+                        <p class="alert_sub">계약관리</p><p class="alert_info">부서장 승인 확인 5건</p><br>
+                        <p class="alert_sub">계약관리</p><p class="alert_info">부서장 승인 확인 5건</p>
+                        
+                        <div class="alert_x"><img src="imgs/remove_round.svg"></div>
+                    </div>
+                </div>
+            </li>
+            </ul>
+        </div>
+    </section>
+    <section>
+        <h1>section head</h1>
+        <div class="ui_group">
+            <h2 class="ui_h2">섹션 하위, h1, input_search</h2>
+            <ul class="ui_list">
+            <li>
+                <section class="section__head">
+                    <div class="table_cell">
+                        <h1 class="section_h1">전체계약</h1>
+                    </div>
+                </section>
+            </li>
+            <li>
+                <section class="section__title">
+                    <div class="section_head2">
+                        <div class="fl dis_table_h">
+                            <div class="table_cell">
+                                <h1 class="section_h1">그룹 관리</h1>
+                                <h2 class="section_h2">그룹을 관리합니다.</h2>
+                            </div>
+                        </div>
+                        <div class="fr dis_table_h">
+                            <div class="table_cell">
+                                <a class="btn__b btn_m">+ 신규 그룹 생성</a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </li>
+            <li>
+                <section class="section__title">
+                    <!-- section_head -->
+                    <div class="section_head">
+                        <div class="table_cell">
+                            <h1 class="section_h1">전체계약</h1>
+                        </div>
+                    </div>
+                    <!-- //section_head -->
+                </section>
+            </li>
+            <li>
+                <section class="section__title">
+                <!-- section_head -->
+                <div class="section_head">
+                    <div class="table_cell">
+                        <div class="fl">
+                            <h1 class="section_h1">전체계약</h1>
+                        </div>
+                        <div class="fr">
+                            <div class="input_search">
+                                <div class="icon_search"></div>
+                                <input type="text" class="input">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- //section_head -->
+                </section>
+                </li>
+                <li>
+                    <!-- section__search -->
+                    <section class="section__search">
+                        <!-- section_head -->
+                        <div class="section_head">
+                            <div class="table_cell">
+                                <h1 class="section_h1">권한 위임</h1>
+                            </div>
+                        </div>
+                        <!-- //section_head -->
+                        <!-- search_form_wrap -->
+                        <div class="clearfix_10 search_form_wrap">
+                            <div class="divide__32">
+                                <div class="form_group"><!-- 마이페이지 -> 계약이관일 경우 transfer_input_disabled -->
+                                    <label class="b">이관 계약 보유자</label>
+                                    <div class="input_date_wrap">
+                                        <!-- input_date -->
+                                        <div class="input_date">
+                                            <input type="text" class="input">
+                                            <div class="btn_calendar"></div>
+                                        </div>
+                                        <!-- //input_date -->
+                                        <!-- input_date -->
+                                        <div class="input_date">
+                                            <input type="text" class="input">
+                                            <div class="btn_calendar"></div>
+                                        </div>
+                                        <!-- //input_date -->
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="divide__3">
+                                <div class="form_group">
+                                    <label class="b">이관 받을 담당자</label>
+                                    <input type="text">
+                                </div>
+                            </div>
+                        </div>
+                        <!-- //search_form_wrap -->
+                        <div class="btn_wrap__tr">
+                            <a class="btn__b">검색</a>
+                        </div>
+                    </section>
+                    <!-- //section__search -->
+                </li>
+                <li>
+                    <!-- section__filter_search -->
+                    <section class="section__filter_search">
+                        <!-- dis_table -->
+                        <div class="dis_table">
+                            <!-- table_cell -->
+                            <div class="table_cell">
+                                <div class="fl">
+                                    <h1 class="section_h1">전체계약</h1>
+                                </div>
+                                <!-- search_wrap -->
+                                <div class="fr search_wrap">
+                                    <!-- search_select -->
+                                    <div class="fl search_select">
+                                        <select>
+                                            <option data-display="Select">Nothing</option>
+                                            <option value="1">Some option</option>
+                                            <option value="2">Another option</option>
+                                            <option value="3">Potato</option>
+                                        </select>
+                                    </div>
+                                    <!-- //search_select -->
+                                    <!-- input_search -->
+                                    <div class="fl input_search">
+                                        <div class="icon_search"></div>
+                                        <input type="text" class="input">
+                                    </div>
+                                    <!-- //input_search -->
+                                    <div class="fl btn_search_filter">상세필터</div>
+                                </div>
+                                <!-- //search_wrap -->
+                            </div>
+                            <!-- //table_cell -->
+                        </div>
+                        <!-- //dis_table -->
+                        <!-- search_filter_wrap -->
+                        <div class="search_filter_wrap">
+                            <!-- clearfix_r15 -->
+                            <div class="clearfix_r15">
+                                <div class="divide__3 form_group">
+                                    <label class="label">계약 제목</label>
+                                    <input type="text" class="input">
+                                </div>
+                                <div class="divide__3 form_group">
+                                    <label class="label">계약 내용</label>
+                                    <input type="text" class="input">
+                                </div>
+                                <div class="divide__3 form_group">
+                                    <label class="label">계약 ID</label>
+                                    <input type="text" class="input">
+                                </div>
+                            </div>
+                            <!-- //clearfix_r15 -->
+                            <!-- clearfix_r15 -->
+                            <div class="clearfix_r15">
+                                <div class="divide__3 form_group">
+                                    <label class="label">기안자</label>
+                                    <input type="text" class="input">
+                                </div>
+                                <div class="divide__3 form_group">
+                                    <label class="label">계약 상대</label>
+                                    <input type="text" class="input">
+                                </div>
+                                <div class="divide__3 form_group">
+                                    <label class="label">검토자</label>
+                                    <input type="text" class="input">
+                                </div>
+                            </div>
+                            <!-- //clearfix_r15 -->
+                            <!-- clearfix_r15 -->
+                            <div class="clearfix_r15">
+                                <div class="divide__3 form_group">
+                                    <label class="label">그룹</label>
+                                    <input type="text" class="input">
+                                </div>
+                                <div class="divide__3 form_group">
+                                    <label class="label">부서</label>
+                                    <input type="text" class="input">
+                                </div>
+                                <div class="divide__3 form_group">
+                                    <label class="label">TAG</label>
+                                    <input type="text" class="input">
+                                </div>
+                            </div>
+                            <!-- //clearfix_r15 -->
+                            <!-- clearfix_r15 -->
+                            <div class="clearfix_r15">
+                                <!-- divide__2 form_group -->
+                                <div class="divide__2 form_group">
+                                    <label class="label">계약시작일</label>
+                                    <!-- input_date_wrap -->
+                                    <div class="input_date_wrap">
+                                        <!-- input_date -->
+                                        <div class="input_date">
+                                            <input type="text" class="input">
+                                            <div class="btn_calendar"></div>
+                                        </div>
+                                        <!-- //input_date -->
+                                        <!-- input_date -->
+                                        <div class="input_date">
+                                            <input type="text" class="input">
+                                            <div class="btn_calendar"></div>
+                                        </div>
+                                        <!-- //input_date -->
+                                    </div>
+                                    <!-- //input_date_wrap -->
+                                </div>
+                                <!-- //divide__2 form_group -->
+                                <!-- divide__2 form_group -->
+                                <div class="divide__2 form_group">
+                                    <label class="label">계약종료일</label>
+                                    <!-- input_date_wrap -->
+                                    <div class="input_date_wrap">
+                                        <!-- input_date -->
+                                        <div class="input_date">
+                                            <input type="text" class="input">
+                                            <div class="btn_calendar"></div>
+                                        </div>
+                                        <!-- //input_date -->
+                                        <!-- input_date -->
+                                        <div class="input_date">
+                                            <input type="text" class="input">
+                                            <div class="btn_calendar"></div>
+                                        </div>
+                                        <!-- //input_date -->
+                                    </div>
+                                    <!-- //input_date_wrap -->
+                                </div>
+                                <!-- //divide__2 form_group -->
+                            </div>
+                            <!-- //clearfix_r15 -->
+                            <div class="btn_wrap__tr">
+                                <a class="btn__b">검색</a>
+                            </div>
+                        </div>
+                        <!-- //search_filter_wrap -->
+                    </section>
+                    <!-- //section__filter_search -->
+                </li>
+            </ul>
+        </div>
+    </section>
+</div>
+</body>
+</html>
+ 

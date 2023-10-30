@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="723" height="505" viewBox="0 0 723 505">
+    <defs>
+        <path id="a" d="M6 0h651a6 6 0 0 1 6 6v442a6 6 0 0 1-6 6H6a6 6 0 0 1-6-6V6a6 6 0 0 1 6-6z"/>
+        <filter id="b" width="115.8%" height="123.1%" x="-7.9%" y="-8.3%" filterUnits="objectBoundingBox">
+            <feOffset dy="15" in="SourceAlpha" result="shadowOffsetOuter1"/>
+            <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="15"/>
+            <feColorMatrix in="shadowBlurOuter1" values="0 0 0 0 0.197172619 0 0 0 0 0.197172619 0 0 0 0 0.197172619 0 0 0 0.142837631 0"/>
+        </filter>
+    </defs>
+    <g fill="none" fill-rule="evenodd" transform="translate(-13 -6)">
+        <g transform="translate(43 21)">
+            <use fill="#000" filter="url(#b)" xlink:href="#a"/>
+            <use fill="#FFF" xlink:href="#a"/>
+        </g>
+        <rect width="267" height="36" x="94" y="207" fill="#E2E2E2" rx="5"/>
+        <rect width="266" height="35" x="94.5" y="161.5" fill="#FFF" stroke="#D4D6DE" rx="5"/>
+        <rect width="266" height="35" x="389.5" y="161.5" fill="#FFF" stroke="#D4D6DE" rx="5"/>
+        <rect width="267" height="36" x="389" y="207" fill="#E2E2E2" rx="5"/>
+        <rect width="267" height="36" x="94" y="253" fill="#E2E2E2" rx="5"/>
+        <rect width="267" height="36" x="389" y="253" fill="#E2E2E2" rx="5"/>
+        <rect width="267" height="36" x="94" y="299" fill="#E2E2E2" rx="5"/>
+        <rect width="267" height="36" x="389" y="299" fill="#E2E2E2" rx="5"/>
+        <text fill="#000" font-family="AppleSDGothicNeo-Regular, Apple SD Gothic Neo" font-size="19" letter-spacing="-.114">
+            <tspan x="93" y="97">상세 검색</tspan>
+        </text>
+        <text fill="#000" font-family="AppleSDGothicNeo-Regular, Apple SD Gothic Neo" font-size="15" letter-spacing="-.09" opacity=".4">
+            <tspan x="112" y="230">계약 ID</tspan>
+        </text>
+        <text fill="#000" font-family="AppleSDGothicNeo-SemiBold, Apple SD Gothic Neo" font-size="15" font-weight="500" letter-spacing="-.09">
+            <tspan x="95" y="150">계약 제목</tspan>
+        </text>
+        <text fill="#000" font-family="AppleSDGothicNeo-SemiBold, Apple SD Gothic Neo" font-size="15" font-weight="500" letter-spacing="-.09">
+            <tspan x="390" y="150">계약 내용</tspan>
+        </text>
+        <text fill="#000" font-family="AppleSDGothicNeo-Regular, Apple SD Gothic Neo" font-size="15" letter-spacing="-.09" opacity=".4">
+            <tspan x="407" y="230">검토자</tspan>
+        </text>
+        <text fill="#000" font-family="AppleSDGothicNeo-Regular, Apple SD Gothic Neo" font-size="15" letter-spacing="-.09" opacity=".4">
+            <tspan x="112" y="276">기안자</tspan>
+        </text>
+        <text fill="#000" font-family="AppleSDGothicNeo-Regular, Apple SD Gothic Neo" font-size="15" letter-spacing="-.09" opacity=".4">
+            <tspan x="407" y="276">계약상대</tspan>
+        </text>
+        <text fill="#000" font-family="AppleSDGothicNeo-Regular, Apple SD Gothic Neo" font-size="15" letter-spacing="-.09" opacity=".4">
+            <tspan x="407" y="322">계약종료일</tspan>
+        </text>
+        <text fill="#000" font-family="AppleSDGothicNeo-Regular, Apple SD Gothic Neo" font-size="15" letter-spacing="-.09" opacity=".4">
+            <tspan x="112" y="322">계약 시작일</tspan>
+        </text>
+        <rect width="199" height="56" fill="#F9A51A" rx="4" transform="translate(274 368)"/>
+        <text fill="#FFF" font-family="AppleSDGothicNeo-Bold, Apple SD Gothic Neo" font-size="22" font-weight="bold" letter-spacing="-.322">
+            <tspan x="355.292" y="399">검색</tspan>
+        </text>
+    </g>
+</svg>

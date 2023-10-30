@@ -1,0 +1,950 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+
+
+
+/* Mobile Layout: 320px. */
+
+@media (max-width: 640px) {
+    
+    .section-wrap {
+        width: 100%;
+    }
+    /* 폰트 사이즈 */
+    h1 { font-size: 35px; }
+    h4 { font-size: 16px; }
+    p { line-height: 25px; }
+    
+    /* ------------------ header ------------------ */
+    .header {
+        display: none;
+    }
+    .min-header {
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 60px;
+        overflow: hidden;
+        z-index: 999;
+        transition: all 0.3s;
+        -webkit-transition: all 0.3s;
+        background-color: #000;
+    }
+    .header-logo {
+        position: absolute;
+        top: 15px;
+        left: 28px;
+        width: 100px;
+    }
+    .header-menu {
+        float: right;
+    }
+    .header-ham {
+        float: left;
+        width: 40px;
+        height: 100%;
+        padding-right: 20px;
+        border-right: 1px solid #262626;
+        background: url(../imgs/MOBILE_MENU.png) no-repeat left center;
+        cursor: pointer;
+    }
+    .hd-select {
+        float: left;
+        height: 100%;
+        padding-right: 15px;
+        margin-left: 10px;
+        margin-right: 10px;
+        border: none;
+        background: url(../imgs/mobile_select_arrow.png) no-repeat center right;
+        color: #fff;
+        font-size: 20px;
+        vertical-align: middle;
+    }
+    .drawer {
+        display: block;
+	    position: fixed;
+        top: 60px;
+        right: -100%;
+        bottom: 0;
+        width: 80%;
+        overflow: hidden;
+        background-color: #0d0d0d;
+        z-index: 9999;
+        transition: all 0.8s;
+        -webkit-transition: all 0.8s;
+    }
+    .min-gnb {
+        float: right;
+        margin-top: 35px;
+        padding-right: 40px;
+    }
+    .min-gnb-list {
+        height: 50px;
+        line-height: 50px;
+        text-align: right;
+        margin: 0px;
+        padding: 0px;
+        color: #fff;
+        font-size: 18px;
+        display: block;
+    }
+    .gnb-a {
+        padding-bottom: 6px;
+        transition: color 0.3s;
+        -webkit-transition: color 0.3s;
+    }
+    .gnb-a:hover {
+        color: #1fa8b5;
+        border-bottom: 3px solid #1fa8b5;
+    }
+    .gnb-list-sel {
+        color: #1fa8b5;
+        border-bottom: 3px solid #1fa8b5;
+    }
+    .drawer-bottom {
+        position: absolute;
+        right: 20px;
+        bottom: 30px;
+        color: #fff;
+        font-size: 18px;
+        font-weight: 100;
+        letter-spacing: -0.7;
+    }
+    .drawer-blog {
+        float: left;
+        width: 60px;
+        height: 31px;
+        text-align: center;
+        line-height: 30px;
+        font-size: 15px;
+    }
+    .drawer-login {
+        float: left;
+        width: 60px;
+        height: 31px;
+        font-size: 15px;
+        text-align: center;
+        line-height: 30px;
+        border: 1px solid #565656;
+        transition: all 0.4s;
+        -webkit-transition: all 0.4s;
+    }
+    .drawer-span {
+        border-right: none;
+    }
+    .drawer-login:hover {
+        color: #1fa8b5;
+        border: 1px solid #1fa8b5;
+    }
+    .minheader-on {
+        background: url(../imgs/MOBILE_MENU_ON.png) no-repeat left center;
+    }
+    .drawer-on { right: 0; }
+
+    /* ------------------ 섹션 ------------------ */
+    
+    .main-logo {
+        width: 100%;
+    }
+    .clock-wrap {
+        width: 90%;
+    }
+    .clock-day {
+        margin-top: 15px;
+        font-size: 13px;
+    }
+    .clock-num {
+        font-size: 40px;
+    }
+    .money {
+        padding-top: 68px;
+        padding-bottom: 70px;
+    }
+      /* 사업 추진 전략 */
+    .strategy {
+        padding-top: 70px;
+        padding-bottom: 40px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    /* INFINITY BLOCKCHAIN PLATFORM 의 기술적 차별성 */
+    .different {
+        padding-top: 70px;
+        padding-bottom: 70px;
+    }
+    /* COMPARISON OF BLOCKCHAINS */
+    .comparison {
+        padding-top: 70px;
+    }
+    /* 기업연혁 */
+    .paradigm {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+    
+    /* HYCON 세계 최초 실증 중심 화폐 */
+    
+    .money-box {
+        width: 50%;
+        padding-top: 49.78%;
+    }
+    .money-icon {
+        width: 53px;
+        height: 53px;
+        margin-top: 35px;
+        margin-bottom: 20px;
+    }
+    .money-p1 {
+        font-size: 16px;
+        font-weight: bold;
+        line-height: 24px;
+        letter-spacing: -2px;
+    }
+    .money-p2 {
+        margin-top: 11px;
+        font-size: 13px;
+        line-height: 20px;
+    }
+    .money-box:nth-child(1) {
+        border-bottom: none;
+    }
+    .money-box:nth-child(2) {
+        border-right: 1px solid #3e5cbb;
+        border-bottom: none;
+    }
+    
+    /* ------------------ media css ------------------ */
+    
+    /*하이콘 머니 */
+    .body-money {
+        height: auto; overflow: hidden; }
+    .money h4 {
+        margin-top: 6px;
+    }
+    .hycon-money {
+        margin-top: 50px;
+        margin-bottom: 60px;
+	}
+    
+    /* 사업 추진 전략 */
+	.strategy-box-wrap {
+		margin-top: 60px;
+	}
+	.strategy-box {
+		width: 100%;
+		padding: 0 20px;
+	}
+    .sbox-last {
+        border-bottom: none;
+    }
+	.sbox-wrap {
+		height: auto;
+        overflow: hidden;
+		padding: 0;
+        margin-bottom: 35px;
+    }
+    .strategy-box::after { top: 5px; }
+    .strategy-box p {
+        margin-top: 17px;
+        margin-bottom: 20px;
+        }
+    
+    /* INFINITY BLOCKCHAIN PLATFORM 의 기술적 차별성 */
+
+    .span-dh1, .font-w {
+        font-size: 25px;
+    }
+    .different-box-wrap {
+        margin-top: 20px;
+        margin-bottom: 30px;
+    }
+    
+    /* COMPARISON OF BLOCKCHAINS */
+    .table-wrap {
+        width: 100%;
+        margin-top: 40px;
+        margin-bottom: 60px;
+    }
+    .comparison-table th {
+        font-size: 13px;
+    }
+    .comparison-table td {
+        font-size: 12px;
+        padding: 10px 8px;
+    }
+    
+    /* HYCON 발행 계획, 예산 운영 계획 */
+    .hycon-plan-wrap {
+        margin-top: 60px;
+        margin-bottom: 60px;
+        padding: 0 15px;
+    }
+    .hycon-plan {
+        float: none;
+        width: 100%;
+        padding-right: 0;
+        margin-bottom: 40px;
+    }
+    .plan-section {
+        margin-bottom: 20px;
+    }
+    
+    /* ABOUT US */
+    .about-wrap {
+        margin-top: 30px;
+        padding-top: 25px;
+        background: url(../imgs/about_logo.png) no-repeat top left;
+    }
+    .about-float {
+        width: 100%;
+        height: auto;
+        overflow: hidden;
+        padding: 0 30px;
+    }
+    .about-float p.about-h1 {
+        font-size: 25px;
+        margin-bottom: 25px;
+    }
+    .about-p {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    
+/* team */
+.team {
+    padding-top: 70px;
+}
+.team-box {
+    width: 100%;
+    padding-top: 66.5%;
+    overflow: hidden;
+}
+.team-top {
+    width: 50%;
+}
+.team-top:nth-child(3) { display: none; }
+.team-top:nth-child(4) { display: none; }
+    
+.team-bottom {
+    width: 50%;
+}
+.ceo-m-bg::after {
+    content: "";
+    position: absolute;
+    top: 47px;
+    left: 0;
+    width: 1px;
+    height: 52px;
+    background-color: #18b5c4;
+}
+.team-bottom:nth-child(1) { display: none; }
+.team-bottom:nth-child(2) { display: none; }
+.team-display1 { display: block; }
+.ceo-text {
+    padding: 15px;
+}
+.ceo-ceo {
+    margin-top: 0;
+    margin-bottom: 1px;
+    color: #18b5c4;
+    font-size: 15px;
+}
+.ceo-name {
+    margin-bottom: 18px;
+    font-size: 24px;
+}
+.ceo-p {
+    line-height: 22px;
+}
+.ceo-bg::after {
+    content: "";
+    position: absolute;
+    top: 47px;
+    right: 0;
+    width: 1px;
+    height: 52px;
+    background-color: #18b5c4;
+}
+    
+    
+    
+    /* ALL WORKS */
+    .team-wrap {
+        margin-top: 60px;
+    }
+    .team-all-tab {
+        width: 80%;
+        margin: auto;
+        margin-bottom: 40px;
+    }
+    .team-tab {
+        width: 33.3333%;
+    }
+    .team-tab0 {
+        display: none;
+    }
+    .team-sel {
+        color: inherit;
+    }
+    .team-m-sel {
+        color: #18b5c4;
+    }
+    .team-all-wrap {
+        display: inline-block;
+        vertical-align: top;
+        width: 49%;
+        margin-bottom: 40px;
+        padding: 0 15px;
+    }
+    .team-all {
+        width: 100%;
+        padding-top: 73%;
+        margin-bottom: 0;
+    }
+    .all-text {
+        display: none;
+    }
+    .all-float {
+        width: 100%;
+        padding: 0 
+    }
+    .team-m-text {
+        display: block;
+        height: auto;
+        overflow: hidden;
+        padding-right: 10px;
+        color: #d3d3d3;
+    }
+    .team-all1 {
+        padding-top: 16px;
+        font-size: 14px;
+    }
+    .team-all2 {
+        padding-top: 5px;
+        padding-bottom: 15px;
+        font-size: 22px;
+    }
+    .team-all4 {
+        font-weight: 200;
+    }
+    
+    
+    /* 기업연혁 */
+    .paradigm-wrap {
+        margin-top: 60px;
+        padding-top: 1px;
+ 
+        background: none;
+    }
+    .paradigm-wrap::after {
+        display: none;
+    }
+    .paradigm-wrap::before {
+        display: none;
+    }
+    .paradigm-float {
+        width: 100%;
+    }
+    .paradigm-exp {
+        padding: 12px 20px;
+        font-size: 16px;
+        font-weight: bold;
+        cursor: default;
+    }
+    .paradigm-section {
+        display: none;
+        padding: 5px 40px 20px 20px;
+        border-left: 1px solid #a5a5a5;
+        background: url(../imgs/paradigm_bg.jpg) no-repeat bottom left;
+    }
+    .pview-sel {
+        display: block;
+    }
+
+    /* FOOTER INFO */
+    .body-contact {
+        background: url(../imgs/contact_bg.jpg) no-repeat center center fixed;
+        background-size: cover;
+        -ms-filter:"progid:DXImageTransform.Microsoft.AlphaImageLoader(src='main_bg.jpg', sizingMethod='scale')"; 
+    }
+    .contactus {
+        padding: 80px 0 84px 0;
+    }
+    .contactus h4 {
+        display: none;
+    }
+    .contact-info-wrap {
+        padding-top: 26%;
+        margin-top: 50px;
+        margin-bottom: 80px;
+    }
+    .contact-info {
+        padding-top: 20px;
+        padding-left: 20px;
+    }
+    .contact-info:first-child {
+        border-left: none;
+        background: url(../imgs/cont_icon_1.png) no-repeat center left;
+        background-size: 30%;
+    }
+    .contact-info:nth-child(2) {
+        background: url(../imgs/cont_icon_2.png) no-repeat center left;
+        background-size: 25%;
+    }
+    .contact-info:nth-child(3) {
+        background: url(../imgs/cont_icon_3.png) no-repeat center left;
+        background-size: 25%;
+    }
+
+    .contact-info1 {
+        font-size: 18px;
+        line-height: 20px;
+    }
+    .contact-info2 {
+        margin-top: 10px;
+        font-size: 15px;
+        line-height: 20px;
+    }
+    .footer-info {
+        font-size: 15px;
+    }
+
+
+    /* CONTACT US 시작 */
+    .contact-head {
+        padding-left: 48px;
+        margin-bottom: 40px;
+    }
+    .contact-h1 {
+        margin-bottom: 20px;
+        color: #fff;
+        font-size: 38px;
+        font-weight: bold;
+    }
+    .contact-h4 {
+        color: #828282;
+        font-size: 15px;
+    }
+    .contact-form1 {
+        float: left;
+        width: 33.33%;
+        height: 50px;
+        padding: 0 15px;
+        margin-bottom: 20px;
+    }
+    .contact-subject {
+        clear: both;
+        width: 100%;
+        height: 50px;
+        padding: 0 15px;
+        margin-bottom: 20px;
+    }
+    .contact-textarea {
+        width: 100%;
+        height: 270px;
+        padding: 0 15px;
+    }
+    .form-control {
+        width: 100%;
+        height: 100%;
+        padding: 8px 28px;
+        border: 1px solid #828282;
+        background-color: inherit;
+        background: none;
+        color: #828282;
+        font-size: 15px;
+    }
+    .textarea-control {
+        width: 100%;
+        height: 100%;
+        padding: 21px 28px;
+        border: 1px solid #828282;
+        background-color: inherit;
+        background: none;
+        color: #828282;
+        font-size: 15px;
+    }
+    .submit-btn {
+        display: block;
+        width: 204px;
+        height: 50px;
+        margin: auto;
+        margin-top: 70px;
+        border: border: 1px solid #fff;;
+        border-radius: 30px;
+        background-color: #fff;
+        color: #000;
+        font-size: 17px;
+        letter-spacing: -1px;
+        font-family: 'Ubuntu';
+        cursor: pointer;
+        border-width: 0;
+        border-style: none;
+        border-color: inherit;
+        border-image: none;
+        transform: all 0.3s;
+        -webkit-transform: all 0.3s;
+    }
+    .submit-btn:hover {
+        background-color: inherit;
+        border: 1px solid #fff;
+        color: #fff;
+    }
+    
+    /* media 추가 */
+    
+    /* WHAT */
+    .what {
+        padding-top: 100px;
+        padding-bottom: 180px;
+        background: url(../imgs/m_Hycon_VISUAL_07.png) no-repeat top right;
+        background-size: 50%;
+    }
+    .what-box {
+        margin-top: 90px;
+        margin-bottom: 0px;
+        padding-top: 67.5%;
+        background: url(../imgs/m_what_hycon.png) no-repeat top left;
+        background-size: 50%;
+    }
+    .what-text {
+        top: 50%;
+        height: 190px;
+        margin-top: -95px;
+        padding-top: 0;
+        margin-left: 44%;
+    }
+    .what-text h1 {
+        text-align: left;
+        padding: 0;
+        font-size: 30px;
+        line-height: 38px;
+    }
+    
+    /* INFINITY PROJECT */
+    .infinity-project {
+        width: 100%;
+        height:auto;
+        overflow: hidden;
+        margin-top: 85px;
+        background: none;
+    }
+    .project-top {
+        width: 100%;
+        height: auto;
+        overflow: hidden;
+    }
+    .project-bottom {
+        width: 100%;
+        height: auto;
+        overflow: hidden;
+        clear: both;
+    }
+    .project-pwrap {
+        padding-top: 10px;
+        padding-left: 10px;
+    }
+    .project-box {
+        position: relative;
+        float: left;
+        width: 33.3333%;
+        height: 0;
+        padding-top: 33.3333%;
+        margin: auto;
+        overflow: hidden;
+    }
+    .pbox1 {
+        top: 0;
+        left: 0;
+        background-size: 100%;
+        margin-left: 16.6666%;
+    }
+    .pbox2 {
+        top: 0;
+        right: 0;
+        background-size: 100%;
+        margin-right: 16.6666%;
+    }
+    .pbox3 {
+        left: 0;
+        bottom: 0;
+        background-size: 100%;
+    }
+    .pbox4 {
+        left: 0;
+        bottom: 0;
+        margin-left: 0;
+        background-size: 100%;
+    }
+    .pbox5 {
+        right: 0;
+        bottom: 0;
+        background-size: 100%;
+    }
+    .project-icon {
+        width: 40px;
+        height: 40px;
+        margin-top: 4px;
+    }
+    .project-p1 {
+        font-size: 13px;
+        font-weight: bold;
+        line-height: 15px;
+        margin-top: 8px;
+    }
+    .project-p2 {
+        display: none;
+    }
+    .project-span {
+        margin-top: 15px;
+    }
+    
+    
+    
+    
+    /* CHART */
+    .section-chart {
+        padding: 112px 15px 0 15px;
+    }
+    .section-chart2 {
+        padding-bottom: 112px;
+    }
+    .cahcrt-tab-wrap {
+        padding-top: 0;
+        margin-top: 50px;
+        border: 1px solid #bababa;
+    }
+    .chart-tab {
+        float: left;
+        width: 25%;
+        height: 60px;
+        border: none;
+        border-right: 1px solid #bababa;
+        border-bottom: 1px solid #bababa;
+        background-color: #fff;
+        font-size: 17px;
+        font-weight: bold;
+        text-align: center;
+        line-height: 60px;
+        cursor: pointer;
+    }
+    .chart-tab:nth-child(1) {
+        border-left: none;
+    }
+    .chart-tab:nth-child(4) {
+        border-right: none;
+    }
+    .chart-tab:nth-child(6) {
+        border-bottom: none;
+    }
+    .chart-tab:nth-child(7) {
+        border-right: 1px solid #bababa;
+        border-bottom: none;
+    }
+    .chart-tab:nth-child(5) {
+        border-left: none;
+        border-bottom: none;
+    }
+    .chart-tab2 {
+        float: left;
+        width: 25%;
+        height: 60px;
+        border: none;
+        border-right: 1px solid #bababa;
+        border-bottom: 1px solid #bababa;
+        background-color: #fff;
+        font-size: 17px;
+        font-weight: bold;
+        text-align: center;
+        line-height: 60px;
+        cursor: pointer;
+    }
+    .chart-tab2:nth-child(1) {
+        border-left: none;
+    }
+    .chart-tab2:nth-child(4) {
+        border-right: none;
+    }
+    .chart-tab2:nth-child(6) {
+        border-bottom: none;
+    }
+    .chart-tab2:nth-child(7) {
+        border-right: 1px solid #bababa;
+        border-bottom: none;
+    }
+    .chart-tab2:nth-child(5) {
+        border-left: none;
+        border-bottom: none;
+    }
+
+
+    .chart-tab-sel {
+        color: #2da9b7;
+        font-weight: bold;
+        background-color: #fff;
+    }
+    
+
+    
+    /* ROADMAP */
+    .roadmap-body {
+        width: 100%;
+        background:
+        url(../imgs/road_circle.png) no-repeat top center,
+        url(../imgs/road_circle.png) no-repeat center 200px,
+        url(../imgs/road_circle.png) no-repeat center 445px,
+        url(../imgs/road_circle.png) no-repeat center 600px,
+        url(../imgs/road_circle.png) no-repeat center 850px,
+        url(../imgs/road_circle.png) no-repeat center 1000px,
+        url(../imgs/roadmap_last.png) no-repeat bottom center,
+        url(../imgs/border_8e.jpg) repeat-y top center;
+    }
+    .roadmap-left {
+        width: 50%;
+    }
+    .roadmap-right {
+        width: 50%;
+        background:
+            url(../imgs/road_month_line.png) no-repeat left 8px,
+            url(../imgs/road_month_line.png) no-repeat left 208px,
+            url(../imgs/road_month_line.png) no-repeat left 453px,
+            url(../imgs/road_month_line.png) no-repeat left 608px,
+            url(../imgs/road_month_line.png) no-repeat left 858px,
+            url(../imgs/road_month_line.png) no-repeat left 1008px,
+            url(../imgs/road_line_box.png) no-repeat left 308px,
+            url(../imgs/road_line_box.png) no-repeat left 708px;
+    }
+    .road-box {
+        position: absolute;
+        width: 80%;
+        height: 133px;
+        overflow: hidden;
+        padding: 18px;
+        background-color: #000;
+        border-right: 1px dashed #374f9b;
+    }
+    .purpurebox1 {
+        top: 460px;
+        left: 0;
+        background-image: url(../imgs/m_box_purpure.png);
+        background-repeat: no-repeat;
+    }
+    .purpurebox2 {
+        top: 860px;
+        left: 0;
+        background-image: url(../imgs/m_box_purpure.png);
+        background-repeat: no-repeat;
+    }
+    .bluebox1 {
+        top: 255px;
+        right: 0;
+        background-image: url(../imgs/m_box_blue.png);
+        background-repeat: no-repeat;
+    }
+    .bluebox2 {
+        top: 655px;
+        right: 0;
+        background-image: url(../imgs/m_box_blue.png);
+        background-repeat: no-repeat;
+    }
+    .road-box1 {
+        margin-top: 0;
+        margin-left: 0;
+    }
+    .road-box2 {
+        margin-top: 6px;
+        margin-left: 0;
+        line-height: 22px;
+    }
+    .m-box1 {
+        margin-top: 25px;
+    }
+    .m-box2 {
+        margin-top: 10px;
+    }
+    .month3 {
+        top: 440px;
+    }
+    .month5 {
+        top: 845px;
+    }
+    .road-box3 {
+        margin-top: 30px;
+        padding-right: 15px;
+        text-align: left;
+        line-height: 20px;
+    }
+    
+    .comparison {
+        padding: 114px 15px 0 15px;
+    }
+    
+    /* FAQ */
+    .section-border-e5 {
+        background: none;
+    }
+    .faq-tab-wrap {
+        margin-top: 70px;
+        margin-bottom: 60px;
+    }
+    .faq-tab {
+        width: 50%;
+        border-left: none;
+        font-size: 16px;
+        font-weight: bold;
+        text-align: center;
+        line-height: 60px;
+        cursor: pointer;
+    }
+    .faq-tab:nth-child(1) {
+        border-left: 1px solid #bababa;
+        border-bottom: none;
+    }
+    .faq-tab:nth-child(2) {
+        border-bottom: none;
+    }
+    .faq-tab:nth-child(3) {
+        border-left: 1px solid #bababa;
+    }
+    .faq-tab:nth-child(4) {
+        border-right: 1px solid #bababa;
+    }
+
+    .strategy {
+        padding-left: 22px;
+        padding-right: 22px;
+    }
+    .section-border4 {
+        background: none;
+    }
+    .section-border3 {
+        background: none;
+    }
+    .section-border32 {
+        background: none;
+    }
+    .border-both {
+        background: none;
+    }
+    
+    .top {
+        right: 25px;
+        bottom: 25px;
+        width: 60px;
+        height: 60px;
+    }
+    /* sel 속성 */
+    .tview-sel {
+        display: block;
+    }
+    .header-fixed {
+        position: fixed;
+        background-color: #000;
+    }
+}
+

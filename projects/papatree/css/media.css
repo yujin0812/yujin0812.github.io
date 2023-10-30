@@ -1,0 +1,274 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+
+@media (max-width: 999px) {
+
+
+    /* ---------------------------- header ---------------------------- */
+    .header-login { display: none; }
+    .header-menu { display: none; }
+    .header-logo-wrap { height: 80px;  }
+    .minheader-ham { display: block; }
+    .header-logo {
+        position: absolute;
+        top: 12px;
+        left: 50%;
+        margin-left: -80px;
+        width: 160px; 
+    }
+
+    /* ---------------------------- footer ---------------------------- */
+
+    footer { margin-top: 70px; }
+    .footer-logo {
+        position: absolute;
+        top: 30px;
+        left: 50%;
+        margin-left: -62.7px;
+    }
+    .footer-text { margin-top: 80px; display: inline-block; }
+    .footer-tex1 { margin-bottom: 5px; }
+    .footer-copyright { margin-top: 15px; margin-bottom: 18px; }
+
+
+    /* ----------------------------  메인-슬라이더 ---------------------------- */
+
+    /*main-slider*/
+    .carousel { height: 960px; }
+    .carousel img { width: 200%; margin-left: -50%; }
+    .carousel_center { display: none; }
+    .main-product-wrap { width: 46%; }
+
+    /* ---------------------------- 로그인 ---------------------------- */
+
+    .login-wrap {
+        width: 100%;
+        margin-top: 30px;
+        margin-bottom: 10px;
+    }
+    .join-title { font-size: 30px; margin-top: 40px; margin-bottom: 0px; line-height: 40px; }
+    .login-text { margin-top: 60px; margin-bottom: 60px; }
+    /*로그인-인풋*/
+    .input-login { width: 100%; font-size: 18px; }
+
+    /* 아이디 비밀번호 찾기 */
+    .login-find { width: 100%; margin-top: 15px; }
+    .login-find a { height: 50px; line-height: 50px; }
+    
+    /* 아직 회원이 아니신가요 */
+    .join-p { margin-top: 50px; margin-bottom: 20px; }
+
+    /*회원가입 버튼, 찾기 페이지 공통사용*/
+    .joinpage-btn a { width: 100%; margin-top: 10px; }
+
+    /* ---------------------------- 회원가입 ---------------------------- */
+
+
+    .find-title {
+        margin-top: 95px;
+        margin-bottom: 60px;
+        font-size: 40px;
+    }
+    .join-table { width: 100%; margin-top: 40px; }
+    .join-th { width: 26%; padding: 6px 0; padding-right: 5px; }
+    
+    /* 회원가입 아이디 중복확인 */
+    .join-id { margin-right: 90px; }
+    .check-btn { position: absolute; top: 11px; right: 0; height: 40px; line-height: 40px; }
+
+    /*find id,pw 테이블 css 추가*/
+    .join-th.th02 { height: 50px; }
+    .join-table2 { margin-top: 60px; margin-bottom: 45px; }
+    .join-table2 td { height: 30px; }
+
+    
+    /*input */
+    
+    .input-join { width: 100%; height: 40px; }
+    .join-number { width: 28%; height: 40px; }
+    .phone-bar { float: left; width: 8%; margin: 0px; font-size: 14px; line-height: 40px; text-align: center; }
+    .join-mail { width: 46%; height: 40px; }
+    .accordion-email { width: 100%; height: 40px; margin-top: 15px; margin-left: 0px; background-position: 96% 50%; }
+
+    /*회원가입 테이블의 width값 조정*/
+    .join-box {
+        width: 100%;
+        height: 40px;
+    }
+ 
+
+
+    /* 파파트리 스토리 */
+    .brand-text { margin-top: 50px; }
+    .brand-img { padding-top: 31.5%; }
+    .brand-title { font-size: 28px; color: #614137; margin-bottom: 50px; }
+    .brand-p { font-size: 18px; margin: 50px 0; }
+    .brand { display: inline; }
+    
+
+    /* -------------------------------- PRODUCT 부분 -------------------------------- */
+
+    /* PRODUCT */
+
+    .product-img {
+        float: none;
+        width: 100%;
+        padding-top: 54%;
+    }
+    .product-standard {
+        float: none;
+        width: 100%;
+    }
+    .standard-text { margin-top: 40px; margin-right:  40px; }
+    .standard-title {
+        height: 60px;
+        line-height: 60px;
+    }
+    .product-btn a {
+        width: 100%;
+        height: 50px;
+    }
+    .product-box {
+        line-height: 45px;
+    }
+     .product-image { padding-top: 40px; }
+
+    /* ---------------------------- 게시판 ---------------------------- */
+
+    /*search*/
+    .search-wrap { margin-top: 20px; margin-bottom: 50px; }
+    .board-search { width: 100%; }
+
+    /*게시판 display none*/
+    .board-table th:nth-child(1) { display: none; }
+    .board-table td:nth-child(1) { display: none; }
+    .board-table th:nth-child(2) { width: 65%; }
+    .board-table td:nth-child(2) { width: 65%; }
+    .board-table th:nth-child(3) { width: 35%; }
+    .board-table td:nth-child(3) { width: 35%; }
+    .board-table th:nth-child(4) { display: none; }
+    .board-table td:nth-child(4) { display: none; }
+    .board-table th:nth-child(5) { display: none; }
+    .board-table td:nth-child(5) { display: none; }
+
+    /*게시판 목록 버튼*/
+    
+    .board-btn-page {
+        height: auto;
+        overflow: hidden;
+        margin-bottom: 50px;
+    }
+    .board-btn-page a  {
+        float: left;
+        width: 21%;
+        padding: 0px;
+        margin-left: 0px;
+        margin: 0 2%;
+        margin-bottom: 20px;
+        box-sizing: border-box;
+        -moz-box-sizing: border-box;
+    }
+
+    /*페이지 btn*/
+    .prev { margin-right: 20px; width: 20px; line-height: 21px; }
+    .next { margin-left: 20px;  width: 20px; line-height: 21px; }
+    .num-wrap li { padding: 0 10px; line-height: 25px; }
+
+
+    /*글쓰기 섹션(contents)*/
+    .write-subject { height: 40px; }
+
+    /*게시판 첨부파일*/
+    .find-file {
+        width: 100%;
+        text-align: left;
+    }
+    .input-find-file { display: none; }
+    /*게시판 썸네일 부분*/
+    .thumnail-title {
+        width: 30%;
+    }
+
+
+    /* 리뷰 게시판 */
+    .review-title { font-size: 35px; margin-top: 80px; margin-bottom: 80px; }
+    .search-wrap { margin-bottom: 80px; }
+    .review { padding: 0 8px; }
+    .review-content { margin: 0 12px; }
+    .review-box {
+        width: 50%;
+        padding:  0 12px;
+        margin-bottom: 50px;
+    }
+    .review-sub { height: 18px; margin-top: 12px; }
+    .review-sub a {
+        font-size: 16px;
+        line-height: 18px;
+    }
+    .review-date { font-size: 14px; }
+    .section-category { margin-bottom: 20px; }
+    
+    
+}/* ---------------------------- media ---------------------------- */
+
+
+@media (max-width: 640px) {
+    /* 카테고리 */
+    .section-category { height: auto; overflow: hidden;  }
+    .category li { width: 50%; height: 50px; line-height: 50px; }
+    .category li:nth-child(3) { border-top: 1px solid #e8e8e8; }
+    .category li:nth-child(4) { border-top: 1px solid #e8e8e8; }
+    .faqborder { border-bottom: 1px solid #e8e8e8; }
+    .category-fixed { position: relative; }
+    .read-info p { line-height: 24px; font-size: 14px; }
+    .read-info .right { width: 100%; }
+    .thumnail-image {
+        width: 44%;
+        padding-top: 42%;
+        margin: 3%;
+    }/* ---------------------------- media ---------------------------- */
+    
+    .product-wrap { margin-top:  30px; }
+    .product-img { margin-bottom: 80px; }
+    .product-wrap h1 { font-size: 24px; }
+    .product-wrap h2 { margin-top: 25px; font-size: 16px; }
+    /* FAQ */
+    .faq-write-section { padding: 5% 5%; }
+}
+
+@media (max-width: 380px) {
+    
+    
+    .review-box { margin-bottom: 20px; }
+    .review-sub a {
+        font-size: 14px;
+        line-height: 18px;
+    }
+    .review-date { font-size: 12px; }
+    
+    .faq-product {
+        height: 50px;
+        margin-bottom: 45px;
+    }
+    .faq-product a {
+        padding: 0 10%;
+        line-height: 50px;
+    }
+    
+    
+    .section-category { margin-bottom: 20px; }
+    .read-section {
+        padding: 40px 15px;
+        text-align: left;
+        line-height: 1.4;
+    }
+    .read-section .view_con {
+        padding: 40px 15px;
+        text-align: left;
+        line-height: 1.5;
+    }
+    #toTop { right: 5px; bottom: 5px; width: 35px; height: 33px;}
+    
+}/* ---------------------------- media ---------------------------- */

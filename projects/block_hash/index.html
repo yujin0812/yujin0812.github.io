@@ -1,0 +1,155 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf_8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Block</title>
+<!-- GOOGLE FONTS -->
+<link href="http://fonts.googleapis.com/earlyaccess/notosanskr.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Maven+Pro:400,500,700" rel="stylesheet">
+<!-- STYLE CSS -->
+<link href="css/index.css" rel="stylesheet" type="text/css">
+<script>
+</script>
+</head>
+
+<body>
+    <div class="section_wrap">
+        <header>
+            <nav class="header_inner">
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="_txHash.html">TxHash</a></li>
+                </ul>
+            </nav>
+        </header>
+        <section class="section_inner">
+            <div class="block">
+                <div class="search_wrap">
+                    <input class="search_input" autofocus type="text" v-model="searchBlockHash" @keyup.enter="searchBlockHash()">
+                    <button>Search</button>
+                </div>
+                <div class="tab_btn_wrap">
+                    <div class="tab_btn">
+                        Cuurent Block:<br>
+                        {{blockNumber}}
+                    </div>
+                    <div class="tab_btn">
+                        hashRate:<br>
+                        {{hashrate}}
+                    </div>
+                    <div class="tab_btn">
+                        Recent Blocks
+                    </div>
+                </div>
+
+                <div class="block-info">
+                    <div v-for="(block, idx) in blocks" v-bind:key="idx">
+                        <nuxt-link :to='"/blocks/" + block["number"]'>
+                            <table class="list_table">
+                                <colgroup>
+                                    <col width="10%">
+                                    <col width="32%">
+                                    <col width="32%">
+                                    <col width="12%">
+                                    <col width="12%">
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th>Number</th>
+                                        <th>Block Hash</th>
+                                        <th>Difficulty</th>
+                                        <th>Miner</th>
+                                        <th>Tx count</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>{{block['number']}}</td>
+                                        <td>{{block['hash']}}</td>
+                                        <td>{{block['difficulty']}}</td>
+                                        <td>{{block['miner']}}</td>
+                                        <td>{{block['transactions'].length}}</td>
+                                    </tr>
+                                    <tr>
+                                        <td>MegaNerd.nl Ξthereum Node</td>
+                                        <td>50</td>
+                                        <td>#4,605,323</td>
+                                        <td>e10f3972...51295e86</td>
+                                        <td>9s ago</td>
+                                    </tr>
+                                    <tr>
+                                        <td>MegaNerd.nl Ξthereum Node</td>
+                                        <td>50</td>
+                                        <td>#4,605,323</td>
+                                        <td>e10f3972...51295e86</td>
+                                        <td>9s ago</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                               
+                           <table class="list_table">
+                                <colgroup>
+                                    <col width="10%">
+                                    <col width="33%">
+                                    <col width="33%">
+                                    <col width="12%">
+                                    <col width="12%">
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th>Number</th>
+                                        <th>Block Hash</th>
+                                        <th>Difficulty</th>
+                                        <th>Miner</th>
+                                        <th>Tx count</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>{{block['number']}}</td>
+                                        <td>{{block['hash']}}</td>
+                                        <td>{{block['difficulty']}}</td>
+                                        <td>{{block['miner']}}</td>
+                                        <td>{{block['transactions'].length}}</td>
+                                    </tr>
+                                    <tr>
+                                        <td>MegaNerd.nl Ξthereum Node</td>
+                                        <td>50</td>
+                                        <td>#4,605,323</td>
+                                        <td>e10f3972...51295e86</td>
+                                        <td>9s ago</td>
+                                    </tr>
+                                    <tr>
+                                        <td>MegaNerd.nl Ξthereum Node</td>
+                                        <td>50</td>
+                                        <td>#4,605,323</td>
+                                        <td>e10f3972...51295e86</td>
+                                        <td>9s ago</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </nuxt-link>
+                    </div>
+                </div><!-- block-info end -->
+
+                <div class="page_wrap">
+                    <ul>
+                        <li><a href="#">1</a></li>
+                        <li><a href="#">2</a></li>
+                        <li><a href="#">3</a></li>
+                    </ul>
+                </div>
+                <h1 v-for="page in totalPage" v-bind:key="page" @click="setBlockInfo(page-1)"></h1>
+
+            </div><!-- block end -->
+
+            <div class="txs">
+                <div v-for="(txs, idx) in pendingTxs" v-bind:key="idx"></div>
+            </div><!-- txs end -->
+        </section>
+    </div><!-- section_wrap end -->
+       
+</body>
+</html>
+ 

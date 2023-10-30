@@ -1,0 +1,717 @@
+@charset "utf-8";
+/* CSS Document */
+body { min-width: 320px; color: #354346; font-size: 15px; }
+table th { font-size: 15px; }
+table td { font-size: 15px; }
+body { height: 100%; }
+button { display: block; cursor: pointer; font-size: 14px; }
+button a { display: block; }
+.m-header {
+    width: 100%;
+    height: 90px;
+    padding: 0 15px;
+    background-color: #fff;
+    border-bottom: 2px solid #dde1e7;
+    z-index: 1;
+}
+.m-header-inner { width: 100%; }
+.header-block {
+    float: left;
+    width: 25%;
+    display: block;
+    text-align: center;
+}
+.header-block p.mheader-li {
+    margin-top: 10px;
+    font-size: 14px;
+}
+.mheader-icon {
+    display: block;
+    width: 40px;
+    margin: auto;
+    margin-top: 24px;
+}
+.icon-on { display: none; }
+.header-block p {
+    color: #354346;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* main */
+.mobile-wrap {
+    position: relative;
+    width: 100%;
+    min-height: 100%;
+    background: url(../imgs/bg_pattern.jpg) repeat;
+}
+html .mobile-wrap {
+    height: 100%;
+}   /* for IE6.0 */
+.mobile-wrap .mobile-main { height: 100%; }
+.mobile-wrap section {
+    width: 100%;
+    color: #354346;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+.mobile-wrap .mobile-main {
+    background-image: url(../imgs/mobile_main.png);
+    width: 100%;
+    display: table;
+}
+.m-login-visual {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+}
+.main-login-wrap {
+    width: 80%;
+    height: auto;
+    overflow: hidden;
+    margin: auto;
+}
+.m-login-visual h1 {
+    color: #354346;
+    font-size: 24px;
+    margin-bottom: 60px;
+}
+.login-input1 {
+    width: 100%;
+    height: 60px;
+    padding: 0 15px;
+    margin: auto;
+    margin-bottom: 40px;
+    border: 1px solid #d4dee2;
+    border-radius: 2px;
+}
+.login-input2 {
+    width: 100%;
+    height: 60px;
+    padding: 0 15px;
+    margin: auto;
+    border: 1px solid #d4dee2;
+    border-radius: 2px;
+}
+.login-join {
+    float: right;
+    height: 12px;
+    margin: 8px 0;
+    font-size: 14px;
+}
+.login-join p {
+    display: inline-block;
+}
+.join-border {
+    margin-right: 8px;
+    padding-right: 8px;
+    border-right: 1px solid #97a3a5;
+}
+.login-button {
+    clear: both;
+    width: 164px;
+    height: 56px;
+    margin: 0 auto;
+    margin-top: 60px;
+    border: 1px solid #d0d5dc;
+    border-radius: 30px;
+    background-color: #fff;
+    color: #40ad89;
+    font-weight: bold;
+    text-align: center;
+    line-height: 56px;
+}
+.login-button:hover { color: #369b7a; }
+
+/* mobile main user */
+.m-main-visual {
+    margin-top: 55px;
+}
+.mobile-table {
+    width: 100%;
+}
+.mobile-table th {
+    padding: 0 20px;
+    height: 56px;
+    border-top: 1px solid #dfe6e8;
+    border-bottom: 1px solid #dfe6e8;
+    background-color: #fff;
+    color: #97a3a5;
+    font-weight: 400;
+    box-shadow: border-box!important;
+}
+.mobile-table td {
+    padding: 0 20px;
+    height: 45px;
+    border-bottom: 1px solid #fff; 
+}
+.mobile-table-th1 { text-align: left; }
+.mobile-table-th2 { text-align: center; }
+.mobile-table-th3 { text-align: right; }
+.mobile-table .trade-plus { background-color: #f9f0eb; cursor: pointer; }
+.mobile-table .trade-minus { background-color: #e9f1f3; cursor: pointer; }
+
+/* trade section */
+.mobile-trade-tab {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    margin-bottom: 45px;
+    cursor: pointer;
+}
+.trade-tab {
+    float: left;
+    height: 70px;
+    background-color: #fff;
+    color: #97a3a5;
+    font-size: 18px;
+    font-weight: 500;
+    text-align: center;
+    line-height: 70px;
+}
+/* trade tview */
+.trade-tview {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    padding-bottom: 40px;
+    background-image: url(../imgs/bg_pattern.jpg); /* 이 부분 체크 */
+    display: none;
+}
+.trade-table-wrap { margin-bottom: 65px; }
+.trade-table { margin-bottom: 65px; }
+.mobile-btn-wrap {
+    margin: auto;
+    height: auto;
+    overflow: hidden;
+    padding: 0 15px;
+    margin-top: 45px;
+    text-align: center;
+}
+.trade-btn {
+    float: left;
+    width: 46%;
+    height: 50px;
+    margin: 0 2%;
+    border: 2px solid #eceff1;
+    border-radius: 30px;
+    background-color: #fff;
+    text-align: center;
+    line-height: 50px;
+    font-weight: 600;
+    cursor: pointer;
+}
+.trade-btn.trade-buy { color: #d68561; }
+.trade-btn.trade-sell { color: #78acb6; }
+.trade-btn.trade-buy:hover {
+    color: #c57653;
+    border: 1px solid #e5e8ec;
+    background-color: none;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,f8f9f9+100 */
+    background: #ffffff; /* Old browsers */
+    background: -moz-linear-gradient(top, #ffffff 0%, #f8f9f9 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #ffffff 0%,#f8f9f9 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #ffffff 0%,#f8f9f9 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#f8f9f9',GradientType=0 ); /* IE6-9 */
+}
+.trade-btn.trade-sell:hover {
+    color: #6897a0 ;
+    border: 1px solid #e5e8ec;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,f8f9f9+100 */
+    background: #ffffff; /* Old browsers */
+    background: -moz-linear-gradient(top, #ffffff 0%, #f8f9f9 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #ffffff 0%,#f8f9f9 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #ffffff 0%,#f8f9f9 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#f8f9f9',GradientType=0 ); /* IE6-9 */
+}
+.complete-btn {
+    width: 338px;
+    height: 58px;
+    margin: auto;
+    margin-bottom: 40px;
+    border-radius: 8px;
+    background-color: #e5ecee;
+    color: #97a3a5;
+    font-weight: 600;
+    text-align: center;
+    line-height: 58px;
+}
+.mobile-table .trade-tr-buy { background-color: #f9f0eb; cursor: pointer; }
+.mobile-table .trade-tr-sell { background-color: #e9f1f3; cursor: pointer; }
+.mobile-table .trade-tr-buy td.mobile-table-sel { background-color: #dcd3ce; color: #fff; }
+.mobile-table .trade-tr-sell td.mobile-table-sel { background-color: #9cbac2;color: #fff; }
+.trade-none { display: none; }
+.trade-table {
+    
+}
+.trade-popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 65px 0;
+    background-color: #fff;
+    z-index: 99;
+    display: none;
+}
+.trade-popup h1 {
+    font-size: 25px;
+    text-align: center;
+    margin-bottom: 45px;
+}
+.trade-box {
+    float: left;
+    width: 50%;
+    padding: 23px 36px;
+}
+.data-wrap p {
+    display: inline-block;
+    margin-bottom: 16px;
+    font-size: 14px;
+}
+.data-h {
+    font-weight: bold;
+    margin-right: 10px;
+}
+.trade-popup-btn-wrap {
+    position: absolute;
+    bottom: 60px;
+    width: 100%;
+    text-align: center;
+}
+.trade-popup-btn-wrap .trade-btn {
+    font-size: 14px;
+    cursor: pointer;
+}
+.trade-btn.btn-ok {
+    color: #97a3a5;
+    background-color: #e5ecee;
+}
+
+/* Wallet */
+
+.coin-select-btn {
+    width: 338px;
+    height: 58px;
+    margin: auto;
+    margin-top: 68px;
+    margin-bottom: 53px;
+    background-color: #40ad89;
+    border-radius: 8px;
+    color: #fff;
+    font-size: 17px;
+    font-weight: 600;
+    text-align: center;
+    line-height: 58px;
+}
+.coin-select-btn:hover { background-color: #3c9577; }
+.coin-select-btn-sel { background-color: #3c9577; }
+.coin-pwrap {
+    margin-bottom: 45px;
+    text-align: center;
+}
+.coin-pwrap p {
+    font-size: 17px;
+    display: inline;
+}
+.coin-p1 {
+    font-weight: 600;
+    margin-right: 10px;
+}
+.mobile-wallet-tab {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    margin-bottom: 45px;
+    cursor: pointer;
+}
+.wallet-tab {
+    float: left;
+    height: 70px;
+    background-color: #fff;
+    color: #97a3a5;
+    font-size: 18px;
+    font-weight: 500;
+    text-align: center;
+    line-height: 70px;
+}
+.wallet-tab-btn-wrap {
+    height: auto;
+    overflow: hidden;
+}
+.wallet-tab-btn {
+    float: left;
+    width: 50%;
+    height: 65px;
+    color: #97a3a5;
+    font-size: 15px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 65px;
+    background-color: #fff;
+    cursor: pointer;
+}
+.wallet-tab-btn-sel {
+    color: #354346;
+    background-color: #e5ecee;
+}
+.wallet-inner-tview {
+    height: auto;
+    overflow: hidden;
+    background-image: url(../imgs/bg_pattern.jpg); /* 이 부분 체크 */
+    display: none;
+}
+.wallet-tview { display: none; }
+.wallet-withraw {
+    height: auto;
+    overflow: hidden;
+}
+
+.wallet-list-wrap {
+    height: 100%;
+    padding-bottom: -107px;
+}
+.wallet-code {
+    width: 186px;
+    height: 186px;
+    margin: auto;
+    margin-top: 80px;
+    margin-bottom: 33px;
+    background-color: #97a3a5;
+}
+.withdraw-select-wrap {
+    padding: 0 38px;
+    margin-top: 55px;
+    margin-bottom: 48px;
+}
+.withdraw-select {
+    width: 100%;
+    height: 58px;
+    padding: 0 17px;
+    border: 1px solid #d8e2e5;
+    border-radius: 0px;
+    background-color: #fff;
+    background-image: url(../imgs/sellect_arrow.png);
+    background-repeat: no-repeat;
+    background-position: 97% center;
+    color: #c5cdd5;
+}
+.wallet-js-warp {
+    padding-top: 70px;
+    padding-bottom: 62px;
+    background-color: #fff;
+}
+.withraw-btn {
+    width: 142px;
+    height: 50px;
+    border-radius: 30px;
+    background-color: #40ad89;
+    margin: auto;
+    margin-bottom: 62px;
+    color: #fff;
+    font-size: 15px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 50px;
+}
+.wallet-withraw h1 {
+    font-size: 25px;
+    text-align: center;
+    margin-top: 70px;
+    margin-bottom: 40px;
+}
+.confirm-wrap {
+    height: 100%;
+}
+.confirm-pwrap {
+    padding: 0 36px;
+    margin-bottom: 15px;
+}
+.confirm-pwrap p {
+    display: inline;
+    font-size: 15px;
+}
+.confirm-p1 {
+    font-weight: bold;
+    margin-right: 8px;
+}
+
+
+.wallet-popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 65px 0;
+    background-color: #fff;
+    z-index: 99;
+    display: none;
+}
+/* profile */
+.profile-head {
+    padding: 0 38px;
+    margin: 55px 0 52px 0;
+}
+.profile-head h1 {
+    display: inline;
+    font-size: 22px;
+}
+.profile-head .my-email {
+    float: right;
+    display: inline-block;
+    height: 31px;
+    padding: 0 32px;
+    border: 1px solid #dbdfe0;
+    border-radius: 30px;
+    color: #97a3a5;
+    font-size: 13px;
+    text-align: center;
+    line-height: 31px;
+}
+.coin-head {
+    width: 100%;
+    padding: 0 38px;
+    height: 45px;
+    line-height: 45px;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+1,f2f4f7+99 */
+    background: #ffffff; /* Old browsers */
+    background: -moz-linear-gradient(top, #ffffff 1%, #f2f4f7 99%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #ffffff 1%,#f2f4f7 99%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #ffffff 1%,#f2f4f7 99%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#f2f4f7',GradientType=0 ); /* IE6-9 */
+}
+.coin-list-wrap {
+    height: 100%;
+    padding-bottom: -107px;
+    background-color: #fff;
+}
+.coin-th {
+    display: inline-block;
+    text-align: left;
+    font-size: 15px;
+    font-weight: 600;
+}
+.coin-td {
+    display: inline-block;
+    float: right;
+    font-size: 15px;
+}
+.coin-list {
+    height: 45px;
+    margin: 0 22px;
+    padding: 0 16px;
+    border-bottom: 2px solid #f0f2f3;
+    line-height: 45px;
+}
+
+.wallet-inner-tview-wrap {
+    height: auto;
+    overflow: hidden;
+}
+
+/* sel */
+
+.tab3n {
+    width: 33.3333%;
+    border-right: 2px solid #eaecf0;
+    border-bottom: 2px solid #eaecf0;
+}
+.tab2n {
+    width: 50%;
+    border-right: 2px solid #eaecf0;
+}
+.tab3n.last, .tab2n.last { border-right: none; }
+
+.tview-sel { display: block; }
+.display-sel { display: block; }
+
+
+
+
+
+
+
+table {
+    width:100%;
+    font-size: 1.8em;
+}
+
+nav {
+    font-size: 2em;
+}
+
+
+.trade-js-wrap {
+    padding: 40px 40px 30px;
+}
+.percent-wrap {
+    height: auto;
+    overflow: hidden;
+}
+.percent {
+    display: block;
+    float: left;
+    width: 22%;
+    height: 35px;
+    border: 1px solid #eef1f3;
+    border-radius: 30px;
+    background-color: #fff;
+    margin-right: 3%;
+    box-shadow: 1px 2px 2px #eef1f3;
+    cursor: pointer;
+}
+.percent:last-child { margin-right: 0; }
+
+input[type='range']{
+    width: 100%;
+}
+
+input[type=range] {
+    -webkit-appearance: none; /* Hides the slider so that custom slider can be made */
+    background: transparent; /* Otherwise white in Chrome */
+  }
+  
+  input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+  }
+  
+  input[type=range]:focus {
+    outline: none; /* Removes the blue border. You should probably do some kind of focus styling for accessibility reasons though. */
+  }
+  
+  input[type=range]::-ms-track {
+    width: 100%;
+    cursor: pointer;
+  
+    /* Hides the slider so custom styles can be added */
+    background: transparent; 
+    border-color: transparent;
+    color: transparent;
+  }
+  /* Special styling for WebKit/Blink */
+input[type=range]::-webkit-slider-thumb {
+    width: 15px;
+    height: 41px;
+    margin-top: -20px; /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
+    background: none;
+    background-image: url(../imgs/thumb_bg.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    cursor: pointer;
+    -webkit-appearance: none;
+  }
+  
+  /* All the same stuff for Firefox */
+  input[type=range]::-moz-range-thumb {
+    width: 15px;
+    height: 41px;
+    margin-top: -20px; /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
+    background: none;
+    background-image: url(../imgs/thumb_bg.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    cursor: pointer;
+  }
+  
+  /* All the same stuff for IE */
+  input[type=range]::-ms-thumb {
+    width: 15px;
+    height: 41px;
+    margin-top: -20px; /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
+    background: none;
+    background-image: url(../imgs/thumb_bg.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    cursor: pointer;
+  }
+
+/* 슬라이드 body */
+  input[type=range]::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 7px;
+    border: 1px solid #dee5e8;
+    background: #f0f4f6;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  
+  input[type=range]::-moz-range-track {
+    width: 100%;
+    height: 7px;
+    border: 1px solid #dee5e8;
+    background: #f0f4f6;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  
+  input[type=range]::-ms-track {
+    width: 100%;
+    height: 7px;
+    border: 1px solid #dee5e8;
+    background: #f0f4f6;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+/* 슬라이드 body end */
+
+input[type=range]::-webkit-range-progress-bar {
+    height: 7px;
+    border-radius: 8px;
+    border: 1px solid #86c6b2;
+    background-color: #9ad2c1;
+}
+input[type=range]::-moz-range-progress {
+    height: 7px;
+    border-radius: 8px;
+    border: 1px solid #86c6b2;
+    background-color: #9ad2c1;
+}
+input[type=range]::-ms-range-progress {
+    height: 7px;
+    border-radius: 8px;
+    border: 1px solid #86c6b2;
+    background-color: #9ad2c1;
+}
+
+
+  input[type=range]::-ms-fill-lower {
+    background: #2a6495;
+    border: 0.2px solid #010101;
+    border-radius: 2.6px;
+    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  }
+  input[type=range]:focus::-ms-fill-lower {
+    background: #3071a9;
+  }
+  input[type=range]::-ms-fill-upper {
+    background: #3071a9;
+    border: 0.2px solid #010101;
+    border-radius: 2.6px;
+    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  }
+  input[type=range]:focus::-ms-fill-upper {
+    background: #367ebd;
+  }
+
+
+.buyButton {
+    font-size:2em;
+    background-color: blue;
+    color: white;
+}
+
+.sellButton {
+    font-size:2em;
+    background-color: darkred;
+    color: white;
+}
+
+.rangeHolder {
+    height: 60px;
+}
+
+

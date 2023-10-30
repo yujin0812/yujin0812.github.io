@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="30" height="32" viewBox="0 0 30 32">
+    <g fill="none" fill-rule="evenodd">
+        <text fill="#5D5D5D" font-family="AppleSDGothicNeo-Medium, Apple SD Gothic Neo" font-size="13" font-weight="400">
+            <tspan x="4" y="32">TOP</tspan>
+        </text>
+        <path fill="#232D81" d="M14.986 0L0 14.986l1.498 1.499L14.99 2.995l13.512 13.512L30 15.009 15.013.022l-.002.003z"/>
+    </g>
+</svg>

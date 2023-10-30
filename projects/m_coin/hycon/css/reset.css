@@ -1,0 +1,25 @@
+@charset "utf-8";
+/* CSS Document */
+@import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
+
+* { margin:0; padding:0; }
+* { box-sizing: border-box; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; }
+html, body { height: 100%; }
+body { margin: 0; min-width: 320px; text-size-adjust: none; -webkit-text-size-adjust: none; -moz-text-size-adjust: none; -ms-text-size-adjust:none; font-size: 100%; line-height: 1; font-family: 'Ubuntu', 'Noto Sans KR'; font-weight: 300; }
+div section { overflow: hidden; }
+div, nav, section, footer { position: relative; }
+img, video { vertical-align: top; width: 100%; }
+a { text-decoration: none; color: inherit; }
+ul, li, ol, dl { list-style:none; }
+select::-ms-expand { display: none; }
+select { -webkit-appearance: none; -moz-appearance: none; appearance: none; }
+input, select, textarea, button { font: inherit; color: inherit; }
+article, aside, details, figcaption, figire, footer, header, hgroup, menu, nav, section { display:block; }
+article, aside, details, figcaption, figire, footer, header, hgroup, menu, nav, section { display:block; }
+table { border-collapse:collapse; border-spacing:0; }
+input, select { vertical-align:middle; }
+lable { cursor:pointer; }
+.blind, legend, hr, caption { display:block; position:absolute; left:1000em; top:0; overflow:hidden; }
+i, em, address {font-style:normal; font-weight:normal;}
+body, h1,h2,h3,h4,h5,h6, p,ul,ol,dl,dt,dd,li,table,th,td, form,address,pre,caption,cite,code,dfn,var { font-style: normal;margin: 0; padding: 0; text-decoration: none; }
+button { background:  none; outline: none; border: none; cursor: pointer;}

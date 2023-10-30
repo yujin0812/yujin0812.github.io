@@ -1,0 +1,160 @@
+<!DOCTYPE HTML5>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>HYCON</title>
+<!-- GOOGLE FONTS -->
+<link href="http://fonts.googleapis.com/earlyaccess/notosanskr.css" rel="stylesheet">
+<link href="http://fonts.googleapis.com/earlyaccess/nanumgothic.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Titillium+Web:300,400,500,700" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
+
+<!-- STYLE CSS -->
+<link href="hycon/css/mobile.css" rel="stylesheet" type="text/css">
+<link href="hycon/css/media.css" rel="stylesheet" type="text/css">
+<link href="hycon/css/reset.css" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700" rel="stylesheet">
+<!-- WOW STYLE CSS -->
+<link href="hycon/css/animate.min.css" rel="stylesheet" />
+<!-- SCRIPT -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="hycon/scripts/main.js"></script>
+<!-- WOW SCRIPT -->
+<script src="hycon/scripts/wow.min.js"></script>
+<script>
+	new WOW().init();
+</script>
+</head>
+
+<body>
+    <header>
+        <div class="m-header">
+            <div class="m-header-inner">
+                <a href="m_index.html" class="header-block">
+                    <div class="mheader-icon"><img src="hycon/imgs/m_header_icon1.png" /></div>
+                    <div class="mheader-icon icon-on"><img src="hycon/imgs/m_header_icon_on1.png" /></div>
+                    <p class="mheader-li">Home</p>
+                </a>
+                <a href="m_trade.html" class="header-block">
+                    <div class="mheader-icon"><img src="hycon/imgs/m_header_icon2.png" /></div>
+                    <div class="mheader-icon icon-on"><img src="hycon/imgs/m_header_icon_on2.png" /></div>
+                    <p class="mheader-li">Trade</p>
+                </a>
+                <a href="m_wallet.html" class="header-block">
+                    <div class="mheader-icon"><img src="hycon/imgs/m_header_icon3.png" /></div>
+                    <div class="mheader-icon icon-on"><img src="hycon/imgs/m_header_icon_on3.png" /></div>
+                    <p class="mheader-li">Wallet</p>
+                </a>
+                <a href="m_profile.html" class="header-block">
+                    <div class="mheader-icon"><img src="hycon/imgs/m_header_icon4.png" /></div>
+                    <div class="mheader-icon icon-on"><img src="hycon/imgs/m_header_icon_on4.png" /></div>
+                    <p class="mheader-li">Profile</p>
+                </a>
+            </div>
+        </div>
+    </header>
+    
+    <div class="mobile-wrap">
+        <section class="mobile-main-user">
+            <div class="sub-section-wrap">
+               <!--
+                <button class="coin-select-btn">Coin Select</button>
+                <div class="coin-pwrap">
+                    <p class="coin-p1">Balance</p>
+                    <p class="coin-p2">10033.23212324BTC</p>
+                </div>
+                -->
+                <div class="mobile-trade-wrap">
+                    <div class="mobile-wallet-tab">
+                        <div class="wallet-tab tab3n">BTC</div>
+                        <div class="wallet-tab tab3n">ETH</div>
+                        <div class="wallet-tab tab3n last">ZEC</div>
+                        <div class="wallet-tab tab2n">LTC</div>
+                        <div class="wallet-tab tab2n last">ETC</div>
+                    </div>
+                    <div class="mobile-wallet-tview">
+                        <!-- wallet tview BTC -->
+                        <div class="wallet-tview tview-sel">
+                            <div class="wallet-tab-btn-wrap">
+                                <div class="wallet-tab-btn wallet-tab-deposit wallet-tab-btn-sel">Deposit</div>
+                                <div class="wallet-tab-btn">Withraw</div>
+                            </div>
+                            <div class="wallet-inner-tview-wrap">
+                                <div class="wallet-inner-tview wallet-deposit tview-sel"><!-- wallet-Deposit -->
+                                    <div class="wallet-list-wrap">
+                                        <div class="wallet-code"></div>
+                                        <div class="coin-pwrap">
+                                            <p class="coin-p1">Balance</p>
+                                            <p class="coin-p2">10033.23212324BTC</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="wallet-inner-tview"><!-- wallet-Withdraw -->
+                                   <div class="wallet-withraw wallet-withdraw display-sel">
+                                        <div class="withdraw-select-wrap">
+                                            <select class="withdraw-select">
+                                                <option value="">Address</option>
+                                                <option value="">test</option>
+                                                <option value="">test</option>
+                                            </select>
+                                        </div>
+                                        <div class="wallet-js-warp">
+                                            <div class="coin-pwrap">
+                                                <p class="coin-p1">Amount</p>
+                                                <p class="coin-p2">1.234BTC</p>
+                                            </div>
+                                            <div class="trade-js-wrap">
+                                                <div class="rangeHolder">
+                                                    <input type="range" #range (change)="checkRange(range.value)" [value]=slideValue/>
+                                                </div>
+                                            </div>
+                                            <button class="withraw-btn">Withdraw</button>
+                                        </div>
+                                    </div>
+                                    <div class="wallet-popup wallet-withraw withraw-confirm">
+                                        <div class="confirm-wrap">
+                                            <h1>Confirm</h1>
+                                            <div class="confirm-pwrap">
+                                                <p class="confirm-p1">Address&#58;</p>
+                                                <p class="confirm-p2">wallet address confirm test</p>
+                                            </div>
+                                            <div class="confirm-pwrap">
+                                                <p class="confirm-p1">Amount&#58;</p>
+                                                <p class="confirm-p2">1.234BTC</p>
+                                            </div>
+                                            <div class="trade-popup-btn-wrap">
+                                                <div class="trade-btn btn-ok">OK</div>
+                                                <div class="trade-btn btn-cancel">CANCEL</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- wallet tview BTC end -->
+                        <!-- wallet tview ETC start -->
+                        <div class="wallet-tview">
+                            
+                        </div>
+                        <!-- wallet tview ETC end -->
+                        <!-- wallet tview ZEC start -->
+                        <div class="wallet-tview">
+                        </div>
+                        <!-- wallet tview ZEC end -->
+                        <!-- wallet tview LTC start -->
+                        <div class="wallet-tview">
+                        </div>
+                        <!-- wallet tview LTC end -->
+                        <!-- wallet tview ETC start -->
+                        <div class="wallet-tview">
+                        </div>
+                        <!-- wallet tview ETC end -->
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
+ 

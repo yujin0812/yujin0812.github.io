@@ -1,0 +1,117 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>원제주_게시판_글쓰기</title>
+<link href="css/common.css" rel="stylesheet" type="text/css">
+<link href="css/index.css" rel="stylesheet" type="text/css">
+<link href="css/media.css" rel="stylesheet" type="text/css">
+<link href='http://fonts.googleapis.com/earlyaccess/nanumgothic.css'>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="scripts/main.js"></script>
+</head>
+<body>
+<header>
+    <div class="header-inner">
+        <div class="hd-login-wrap">
+            <div class="hd-login"><a href="login.html">로그인</a></div>
+            <div class="hd-login"><a href="join.html">회원가입</a></div>
+            <div class="hd-login"><a href="board.html">커뮤니티</a></div>
+        </div>
+        <div class="header-menu">
+            <div class="header-logo-wrap">
+                <div class="header-logo"><a href="index.html"><img src="images/header_logo.png" /></a></div>
+                <div class="minheader-ham">
+                    <div class="btn-ham"></div>
+                    <div class="btn-ham"></div>
+                    <div class="btn-ham"></div>
+                </div>
+            </div>
+            <div class="header-gnb">
+                <a href="jeju_story.html"><div class="gnb gnb-one">원제주소개</div></a>
+                <a href="jeju_oreum.html"><div class="gnb">오름이야기</div></a>
+                <a href="jeju_school.html"><div class="gnb">학교이야기</div></a>
+                <a href="jeju_tourist.html"><div class="gnb">관광지</div></a>
+                <a href="jeju_settler.html"><div class="gnb">4인4색 정착기</div></a>
+                <a href="jeju_collection.html"><div class="gnb">제주컬렉션</div></a>
+            </div>
+        </div><!--header-menu-->        
+    </div><!--header-inner-->
+</header>
+
+<div class="drawer-popup">
+<div class="drawer">
+    <div class="drawer-xbtn"><img src="images/x_btn.png" /></div>
+    <div class="drawer-body">
+        <div class="drawer-header">
+            <a href="login.html">로그인</a>
+            <a href="join.html">회원가입</a>
+        </div>
+        <div class="nav-list">
+            <a href="jeju_story.html">원제주소개</a>
+            <div class="list-line"></div>
+            <a href="jeju_oreum.html">오름이야기</a>
+            <a href="jeju_school.html">학교이야기</a>
+            <a href="jeju_tourist.html">관광지</a>
+            <a href="jeju_settler.html">4인4색 정착기</a>
+            <a href="jeju_collection.html">제주컬렉션</a>
+            <div class="list2">
+               <div class="list-line"></div>
+                <a href="board.html">공지사항</a>
+                <a href="board.html">커뮤니티</a>
+            </div>
+        </div>
+    </div><!--drawer-body-->
+</div><!--drawer-->
+</div><!--drawer-popup-->
+
+<div class="jeju_photo">
+    <div class="category-image"><img src="images/category_board.jpg" /></div>
+</div>
+<section class="board-section">
+    <div class="write-wrap" module="board_ReadPackage_1002">
+        <div class="read-head">
+            <input class="read-subject-write" name="query" placeholder="제목을 입력해주세요 &#58;&#41;" />
+        </div>
+        <div class="write-section">
+            <textarea class="read-section-write" name="contents"></textarea>
+        </div>
+        <div class="attach-wrap">
+                <div class="attach">
+                    <div class="attach-head">대표이미지</div>
+                    <div class="attach-section">
+                        <input class="input-find-file" name="query" />
+                        <div class="find-file-btn">찾아보기</div>
+                    </div>
+                </div>
+                <div class="attach">
+                    <div class="read-thumnail">
+                        <div class="thumnail-image"><div class="wrap"><img src="images/sample1.jpg"></div></div>
+                        <div class="thumnail-image"><div class="wrap"><img src="images/sample2.jpg"></div></div>
+                        <div class="thumnail-image"><div class="wrap"><img src="images/sample3.jpg"></div></div>
+                        <div class="thumnail-image"><div class="wrap"><img src="images/sample1.jpg"></div></div>
+                        <div class="thumnail-image"><div class="wrap"><img src="images/sample2.jpg"></div></div>
+                        <div class="thumnail-image"><div class="wrap"><img src="images/sample3.jpg"></div></div>
+                        <div class="thumnail-image"><div class="wrap"><img src="images/sample1.jpg"></div></div>
+                        <div class="thumnail-image"><div class="wrap"><img src="images/sample2.jpg"></div></div>
+                        <div class="thumnail-image"><div class="wrap"><img src="images/sample3.jpg"></div></div>
+                        <div class="thumnail-image"><div class="wrap"><img src="images/sample1.jpg"></div></div>
+                    </div>
+                </div>
+            </div>
+    </div><!--write-wrap-->
+    <div class="list-btn">
+        <a href="jeju_oreum.html">취소</a>
+        <input type="button" id="save" value="등록" class="list-btn-input">
+    </div>
+</section>
+
+<footer>
+    <h1>하나의 제주 원제주</h1>
+    <p>Copyright © 2016 SJ TECH. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
+ 

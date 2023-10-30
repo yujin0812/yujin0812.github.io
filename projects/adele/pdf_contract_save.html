@@ -1,0 +1,463 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8" />
+<title></title>
+<!-- SCRIPT -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="scripts/main.js"></script>
+
+<style>
+
+  /* reset css */
+  .blind, legend, hr, caption { display: block; position: absolute; left: 1000em; top: 0; overflow: hidden; }
+  i, em, address { font-style: normal; font-weight: normal; }
+  body, h1, h2, h3, h4, h5, h6, p, ul, ol, dl, dt, dd, li, table, th, td, form, address, pre, caption, cite, ode, dfn, var { font-style: normal; text-decoration: none; }
+  body,p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,dd,table,th,td,form,fieldset,legend,input,textare a,button,select{margin:0;padding:0}
+  html, body { width: 100%; height: 100%; min-width: 320px; }
+  body { word-wrap: break-word; word-break: break-all; text-size-adjust: none; -webkit-text-size-adjust: none; -moz-text-size-adjust: none; -ms-text-size-adjust: none; }
+  article, aside, details, figcaption, figire, footer, header, hgroup, menu, nav, section { display: block; }
+  ul, li, ol, dl { height: auto; overflow: hidden; }
+  table { border-collapse: collapse; border-spacing: 0; }
+  img, video { vertical-align: top; width: 100%; }
+  button { background: none; outline: none; border: none; cursor: pointer; background-color: transparent; border-radius: 0px; }
+  label { vertical-align: middle; }
+  input, select, textarea, button { font: inherit; color: inherit; vertical-align: middle; }
+  input:-webkit-autofill { -webkit-box-shadow: 0 0 0 1000px #f6f8f9 inset !important; }
+  select::-ms-expand { display: none; }
+  select { -webkit-appearance: none; -moz-appearance: none; appearance: none; }
+  textarea { resize: none; }
+  a { display: block; color: inherit; text-decoration: none; }
+  div, nav, section, header, footer { position: relative; height: auto; overflow: hidden; }
+  *, *::after, *::before { box-sizing: border-box; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; }
+  input[type="checkbox"] + label { cursor: pointer; }
+
+  @page {
+    size: auto;
+    margin: 0;
+  }
+  .pdf_page {
+    width: 210mm;
+    height: 296.8mm;
+    margin: 60px auto;
+    background: #ffffff;
+    padding: 40px;
+    border: 1px solid #e8e8e8;
+    line-height: 1.5;
+  }
+  .pdf_page_main {
+    page-break-after: always;
+  }
+  .pdf_page_signing {
+    page-break-before: always;
+  }
+  @media print {
+    .pdf_page {
+      margin: 0 auto;
+      border: none;
+    }
+  }
+  .pdf_main {
+    height: 830px;
+  }
+  .fl {
+    float: left;
+  }
+  .fr {
+    float: right;
+  }
+  .pdf_hd_line {
+    display: flex;
+    display: -ms-flex;
+    display: -moz-flex;
+    display: -webkit-flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 13px;
+    margin-bottom: 30px;
+    font-size: 13px;
+  }
+  .pdf_hd_line .pdf_logo img {
+    max-width: 80px;
+    max-height: 34px;
+    width: auto;
+    height: auto;
+  }
+  .pdf_h1 {
+    margin-bottom: 40px;
+    font-size: 16px;
+    font-weight: 400;
+    text-align: center;
+  }
+  .pdf_date {
+    text-align: right;
+    color: #9b9b9b;
+    font-size: 12px;
+    line-height: 2.25;
+  }
+  .pdf_contract_info_wrap {
+    margin-top: 20px;
+    border-top: 1px solid #000000;
+    border-bottom: 1px solid #000000;
+    font-size: 13px;
+  }
+  .pdf_online_p, .pdf_contract_info {
+    padding: 22px 0;
+  }
+  .pdf_online_p {
+    border-bottom:1px solid #f0f0f0;
+  }
+  .pdf_info_box {
+    float: left;
+    width: 50%;
+  }
+  .pdf_company {
+    font-weight: bold;
+  }
+  .pdf_p_s_9b {
+    font-size: 13px;
+    color: #9b9b9b;
+  }
+  .pdf_info_box .pdf_p_s_9b {
+    margin-top: 7px;
+  }
+  .pdf_main_foot {
+    color: #7e7e7e;
+    font-size: 12px;
+  }
+  .pdf_p1 {
+    color: #000;
+  }
+  .pdf_barcode {
+    width: 345px;
+    margin: 15px 0;
+  }
+  .pdf_p3 {
+    margin-top: 25px;
+    text-align: center;
+  }
+  .signing_hd {
+    border-bottom: 1px solid #000000;
+    padding-bottom: 12px;
+    margin-bottom: 12px;
+  }
+  .signing_hd .fl {
+    float: left;
+    font-size: 16px;
+  }
+  .signing_hd .fr {
+    float: right;
+    font-size: 12px;
+  }
+  .pdf_p {
+    font-size: 13px;
+  }
+  /* signing_box_wrap */
+  .signing_box_wrap {
+    margin: 0 -20px;
+    display: flex;
+    display: -ms-flex;
+    display: -moz-flex;
+    display: -webkit-flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+  .signing_box {
+    width: 50%;
+    padding: 0 20px;
+    margin-bottom: 20px;
+  }
+  .signing_line_wrap {
+    display: flex;
+    display: -ms-flex;
+    display: -moz-flex;
+    display: -webkit-flex;
+    align-items: flex-end;
+    flex-direction: column;
+  }
+  .signing_box .signing_line {
+    width: 100%;
+    padding: 10px 0 8px;
+    border-bottom: 1px solid #d0d2db;
+  }
+  .signing_box .signing_line p {
+    float: left;
+  }
+  .signing_box .signing_line .pdf_p_s_9b {
+    width: 70px;
+  }
+  .signing_box .signing_line .pdf_p {
+    width: calc(100% - 70px);
+  }
+  .signing_area {
+    height: 74px;
+    margin-top: 24px;
+    border: 1px solid #fbfbfb;
+    text-align: center;
+  }
+  .signing_line_date {
+    padding: 10px 0 8px;
+  }
+  .signing_line_date_p {
+    width: 100%;
+    text-align: right;
+    color: #b4b4b4;
+    font-size: 11px;
+  }
+  /* //signing_box_wrap */
+  
+  .signing_foot_hd {
+    padding-bottom: 12px;
+    margin-top: 17px;
+    margin-bottom: 17px;
+    border-bottom: 1px solid #000;
+    font-size: 13px;
+  }
+  .pdf_foot_p {
+    color: #7e7e7e;
+    font-size: 12px;
+  }
+  .pdf_foot_p .pdf_foot_span {
+    color: #000000;
+  }
+  @font-face {
+    font-family: 'hanjunseo';
+    src:url('fonts/hanjunseo.eot'); /*IE9 호환성 보기*/
+    src: local("☺"),
+      url('fonts/hanjunseo.eot?#iefix') format('embedded-opentype'),
+      url('fonts/hanjunseo.woff') format('woff'); /*표준 브라우저*/
+  }
+  .stamp_trad {
+    font-family: 'hanjunseo';
+    font-size: 24px;
+    color: rgb(213, 38, 30);
+    border-radius: 5px;
+    border-color: rgb(213, 38, 30);
+    border-style: solid solid solid;
+    border-width: 5px;
+    text-align: center;
+    padding: 5px 5px 8px;
+    width: 100%;
+    height: auto;
+    line-height: 1;
+    display: block;
+    margin: auto;
+  }
+</style>
+</head>
+<body>
+  <!-- pdf_page -->
+  <div class="pdf_page pdf_page_main">
+    <div class="pdf_main">
+      <div class="pdf_hd_line">
+        <p class="fl">온라인 계약서</p>
+        <p class="fr pdf_logo">
+          <img src="http://www.stickpng.com/assets/images/580b57fcd9996e24bc43c513.png">
+        </p>
+      </div>
+      <h1 class="pdf_h1">계약서 제목 영역입니다.</h1>
+      <p class="pdf_date">2019/06/10</p>
+      <div class="pdf_contract_info_wrap">
+        <div class="pdf_online_p">
+          Online Contract<br>
+          Access License Authorized
+        </div>
+        <div class="pdf_contract_info">
+          <div class="pdf_info_box">
+            <p class="pdf_company">법틀</p>
+            <p class="pdf_p_s_9b">사업자 등록번호 123-00-1049290</p>
+          </div>
+          <div class="pdf_info_box">
+            <p class="pdf_company">주식회사 회사</p>
+            <p class="pdf_p_s_9b">사업자 등록번호 123-00-1049290</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pdf_main_foot">
+      <p class="pdf_p1">
+        본 계약은 온라인 계약 증빙 문서입니다. 대한민국 전자서명법에 따라 본 계약은 당사자간 법적 구속력을 가지는 계약입니다.<br>
+        [문서번호 : 7c0890983_abc9919_jjdlkqoiw]
+      </p>
+      <figure class="pdf_barcode">
+        <img src="imgs/sample/barcode.png" style="max-width: 140px;">
+      </figure>
+      <p class="pdf_p2">위의 문서 번호 혹은 바코드를 통해 법틀에 본 계약의 서버 저장본과 일치함을 조회 요청할 수 있습니다. 즉 본 계약의 원본은 클라우드 서버 내에 안전하게 저장되어 있습니다. 또한 프린트한 경우 바코드가 훼손되지 않도록 조심하여 주세요.<br>
+        조회 요청 정보 : support@bubtle.com
+      </p>
+      <p class="pdf_p3">ⓒ 2017 ~ 2018 STG 법무 지원 시스템</p>
+    </div>
+  </div>
+  <!-- //pdf_page -->
+  
+  
+  
+    <!-- legal_pdf_question -->
+    <div style="page-break-after: always;" class="pdf_page">
+        <h1 style="margin: 20px 0 35px; font-size: 16px; text-align: center; font-weight: 400; line-height: 1.3;">제목 영역입니다.</h1>
+
+        <p style="margin: 0; font-size: 15px; line-height: 1.6;">
+            친구는 세월의 도둑이다. 봄부터 흐르는 물은 겨울이 되어도 얼지 않듯이 마음에서 우러나오는 우적은 역경이 닥친다고 해서 식지 않는다. 불행했을 때 만난 친구는 가장 소중히 여겨야 한다. 행복했을 때 함께 기쁨을 누리는 친구보다 힘들 떄 슬픔을 덜어지는 친구를 더 많이 신뢰할 수 있다. 부유했을 때는 친구를 사귀기 쉽지만, 어려울 때는 눈을 씻고 찾아봐도 친구를 찾기 어렵다. 누군가 진정한 우정을 나누고 있다 할지라도 그 우정을 지키려면 오랜 시간이 걸린다. 짧은 시간 안에 많은 친구를 얻기란 불가능하다. 왜냐하면 그들은 진정한 친구가 아니기 때문이다. 친구란 말하자면 또 하나의 자신이다. 친구를 보면 그 사람을 알 수 있다. 현명한 사람과 어리석은 사람은 서로 어울리지 않는다. 친구는 나를 동정하는 자가 아니라 나를 돕는 자다. 서로가 고통을 덜어 주지 않는다면 우리는 무엇을 위해 사는 것일까? 우리는 모두 적막한 세계를 떠도는 나그네다. 그 여정에서 찾을 수 있는 최고의 선물은 바로 믿음직한 벗이다. 좋은 벗은 충격을 덜어주는 완충장치와도 같은 것이며 인생의 길에서 충동을 피할 수 있도록 도와준다. 우정만이 세상을 하나로 만들 수 있다. 우정은 영혼의 결혼이다.
+        </p>
+    </div>
+    <!-- //legal_pdf_question -->
+
+    <!-- legal_pdf_answer -->
+    <div class="pdf_page">
+        <div style="padding-bottom: 8px; border-bottom: 1px solid #000000; font-size: 16px;">
+            답변 사항
+        </div>
+        <!-- 검토자 정보 -->
+        <div style="margin-bottom: 25px; padding: 12px 0 9px; border-bottom: 1px solid #f0f0f0;">
+            <p style="margin: 0; margin-bottom: 2px; font-size: 13px;">이유진</p>
+            <div style="display: block; float: none; width: 100%; height: auto; overflow: hidden;">
+                <p style="float: left; margin: 0; color: #9b9b9b; font-size: 13px;">yj0812@buptle.com</p>
+                <p style="float: right; margin: 0; color: #9b9b9b; font-size: 13px;">19/08/22 19:44:59</p>
+            </div>
+        </div>
+
+        <!-- 답변 내용 --> 
+        <p style="margin: 0; font-size: 15px; line-height: 1.6;">
+            친구는 세월의 도둑이다. 봄부터 흐르는 물은 겨울이 되어도 얼지 않듯이 마음에서 우러나오는 우적은 역경이 닥친다고 해서 식지 않는다. 불행했을 때 만난 친구는 가장 소중히 여겨야 한다. 행복했을 때 함께 기쁨을 누리는 친구보다 힘들 떄 슬픔을 덜어지는 친구를 더 많이 신뢰할 수 있다. 부유했을 때는 친구를 사귀기 쉽지만, 어려울 때는 눈을 씻고 찾아봐도 친구를 찾기 어렵다. 누군가 진정한 우정을 나누고 있다 할지라도 그 우정을 지키려면 오랜 시간이 걸린다. 짧은 시간 안에 많은 친구를 얻기란 불가능하다. 왜냐하면 그들은 진정한 친구가 아니기 때문이다. 친구란 말하자면 또 하나의 자신이다. 친구를 보면 그 사람을 알 수 있다. 현명한 사람과 어리석은 사람은 서로 어울리지 않는다. 친구는 나를 동정하는 자가 아니라 나를 돕는 자다. 서로가 고통을 덜어 주지 않는다면 우리는 무엇을 위해 사는 것일까? 우리는 모두 적막한 세계를 떠도는 나그네다. 그 여정에서 찾을 수 있는 최고의 선물은 바로 믿음직한 벗이다. 좋은 벗은 충격을 덜어주는 완충장치와도 같은 것이며 인생의 길에서 충동을 피할 수 있도록 도와준다. 우정만이 세상을 하나로 만들 수 있다. 우정은 영혼의 결혼이다.
+        </p>
+    </div>
+    <!-- //legal_pdf_answer -->
+    
+    
+    
+
+  <!-- pdf_page -->
+  <div class="pdf_page pdf_page_signing">
+    <div class="signing_hd">
+      <div class="fl">문서 서명란</div>
+      <div class="fr">전자 서명 "계약서 이름"</div>
+    </div>
+    <!-- signing_box_wrap -->
+    <div class="signing_box_wrap">
+      <!-- box -->
+      <div class="signing_box">
+        <div class="signing_line_wrap">
+          <div class="signing_line">
+            <p class="pdf_p_s_9b">회사명</p>
+            <p class="pdf_p">STG Company</p>
+          </div>
+          <div class="signing_line">
+            <p class="pdf_p_s_9b">서명자</p>
+            <p class="pdf_p">홍길동</p>
+          </div>
+        </div>
+        <div class="signing_area"></div>
+        <div class="signing_line_date">
+          <p class="signing_line_date_p">전자서명 / 2019/04/26 12:33:18</p>
+        </div>
+      </div>
+      <!-- box -->
+      <div class="signing_box">
+        <div class="signing_line_wrap">
+          <div class="signing_line">
+            <p class="pdf_p_s_9b">이메일</p>
+            <p class="pdf_p">bubtle_test@gmail.com</p>
+          </div>
+        </div>
+        <div class="signing_area"></div>
+        <div class="signing_line_date">
+          <p class="signing_line_date_p">전자서명 / 2019/04/26 12:33:18</p>
+        </div>
+      </div>
+      <!-- box -->
+      <div class="signing_box">
+        <div class="signing_line_wrap">
+          <div class="signing_line">
+            <p class="pdf_p_s_9b">회사명</p>
+            <p class="pdf_p">STG Company</p>
+          </div>
+        </div>
+        <div class="signing_area">
+         <div class="pdf_stamp_trad">
+           <span> 일이삼사오륙칠팔구십일 </span><br><span class="pdf_sign_stamp">디지털직인</span>
+         </div>
+          
+        </div>
+        <div class="signing_line_date">
+          <p class="signing_line_date_p">전자서명 / 2019/04/26 12:33:18</p>
+        </div>
+      </div>
+      <!-- box -->
+      <div class="signing_box">
+        <div class="signing_line_wrap">
+          <div class="signing_line">
+            <p class="pdf_p_s_9b">이메일</p>
+            <p class="pdf_p">bubtle_test@gmail.com</p>
+          </div>
+          <div class="signing_line">
+            <p class="pdf_p_s_9b">서명자</p>
+            <p class="pdf_p">홍길동</p>
+          </div>
+        </div>
+        <div class="signing_area"></div>
+        <div class="signing_line_date">
+          <p class="signing_line_date_p">전자서명 / 2019/04/26 12:33:18</p>
+        </div>
+      </div>
+      <!-- box -->
+      <div class="signing_box">
+        <div class="signing_line_wrap">
+          <div class="signing_line">
+            <p class="pdf_p_s_9b">회사명</p>
+            <p class="pdf_p">STG Company</p>
+          </div>
+          <div class="signing_line">
+            <p class="pdf_p_s_9b">서명자</p>
+            <p class="pdf_p">홍길동</p>
+          </div>
+        </div>
+        <div class="signing_area"></div>
+        <div class="signing_line_date">
+          <p class="signing_line_date_p">전자서명 / 2019/04/26 12:33:18</p>
+        </div>
+      </div>
+      <!-- box -->
+      <div class="signing_box">
+        <div class="signing_line_wrap">
+          <div class="signing_line">
+            <p class="pdf_p_s_9b">이메일</p>
+            <p class="pdf_p">bubtle_test@gmail.com</p>
+          </div>
+          <div class="signing_line">
+            <p class="pdf_p_s_9b">서명자</p>
+            <p class="pdf_p">홍길동</p>
+          </div>
+        </div>
+        <div class="signing_area"></div>
+        <div class="signing_line_date">
+          <p class="signing_line_date_p">전자서명 / 2019/04/26 12:33:18</p>
+        </div>
+      </div>
+    </div>
+    <!-- //signing_box_wrap -->
+    
+    <div class="signing_foot">
+      <div class="signing_foot_hd">
+          "전자서명법" 참고
+        </div>
+        <div>
+          <p class="pdf_foot_p">
+            <span class="pdf_foot_span">제2조(정의)</span> 이 법에서 사용하는 용어의 정의는 다음과 같다.<br>
+            1. "전자문서"라 함은 정보처리시스템에 의하여 전자적 형태로 작성되어 송신 또는 수신되거나 저장된 정보를 말한다.<br>
+            2. "전자서명"이라 함은 서명자를 확인하고 서명자가 당해 전자문서에 서명을 하였음을 나타내는데 이용하기 위하여 당해 전자문서에 첨부되거나 논리적으로 결합된 전자적 형태의 정보를 말한다.<br>
+            …(중략)<br>
+            12. "서명자"라 함은 전자서명생성정보를 보유하고 자신이 직접 또는 타인을 대리하여 서명을 하는 자를 말한다.<br>
+            13. "개인정보"라 함은 생존하고 있는 개인에 관한 정보로서 성명·주민등록번호 등에 의하여 당해 개인을 알아볼 수 있는 부호·문자·음성·음향·영상 및 생체특성 등에 관한 정보(당해 정보만으로는 특정 개인을 알아볼 수 없는 경우에도 다른 정보와 용이하게 결합하여 알아볼 수 있는 것을 포함한다)를 말한다.<br><br>
+          </p>
+          <p class="pdf_foot_p">
+            <span class="pdf_foot_span">제3조(전자서명의 효력 등)</span> 1 다른 법령에서 문서 또는 서면에 서명, 서명날인 또는 기명날인을 요하는 경우 전자문서에 공인전자서명이 있는 때에는 이 를 충족한 것으로 본다.<br>
+            2공인전자서명이 있는 경우에는 당해 전자서명이 서명자의 서명, 서명날인 또는 기명날인이고, 당해 전자문서가 전자 서명된 후 그 내용이 변경되지 아니하였다고 추정한다.<br>
+            3공인전자서명 외의 전자서명은 당사자간의 약정에 따른 서명, 서명날인 또는 기명날인으로서의 효력을 가진다.
+          </p>
+        </div>
+      </div>
+  </div>
+  <!-- //pdf_page -->
+</body>
+</html>
+

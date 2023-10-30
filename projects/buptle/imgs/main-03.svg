@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="569" height="466" viewBox="0 0 569 466">
+    <defs>
+        <path id="b" d="M38 29h497a6 6 0 0 1 6 6v394a6 6 0 0 1-6 6H38a6 6 0 0 1-6-6V35a6 6 0 0 1 6-6z"/>
+        <filter id="a" width="120.6%" height="125.9%" x="-10.3%" y="-9.2%" filterUnits="objectBoundingBox">
+            <feOffset dy="15" in="SourceAlpha" result="shadowOffsetOuter1"/>
+            <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="15"/>
+            <feColorMatrix in="shadowBlurOuter1" values="0 0 0 0 0.197172619 0 0 0 0 0.197172619 0 0 0 0 0.197172619 0 0 0 0.142837631 0"/>
+        </filter>
+        <path id="d" d="M152 266h115v57H152z"/>
+        <filter id="c" width="122.6%" height="145.6%" x="-11.3%" y="-19.3%" filterUnits="objectBoundingBox">
+            <feOffset dy="2" in="SourceAlpha" result="shadowOffsetOuter1"/>
+            <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="4"/>
+            <feComposite in="shadowBlurOuter1" in2="SourceAlpha" operator="out" result="shadowBlurOuter1"/>
+            <feColorMatrix in="shadowBlurOuter1" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.0646033654 0"/>
+        </filter>
+    </defs>
+    <g fill="none" fill-rule="evenodd" transform="translate(-2 -14)">
+        <use fill="#000" filter="url(#a)" xlink:href="#b"/>
+        <use fill="#E6E6E6" xlink:href="#b"/>
+        <path fill="#FFF" d="M47 42h297v375H47zM359 42h167v375H359z"/>
+        <rect width="144" height="7" x="368" y="178" fill="#FFC4C4" rx="3.5"/>
+        <rect width="144" height="7" x="368" y="257" fill="#FFC4C4" rx="3.5"/>
+        <rect width="144" height="7" x="368" y="195" fill="#E0E3FD" rx="3.5"/>
+        <rect width="144" height="7" x="368" y="274" fill="#E0E3FD" rx="3.5"/>
+        <rect width="144" height="7" x="368" y="212" fill="#B8FBAA" rx="3.5"/>
+        <rect width="144" height="7" x="368" y="291" fill="#B8FBAA" rx="3.5"/>
+        <rect width="144" height="7" x="368" y="229" fill="#FFE99E" rx="3.5"/>
+        <rect width="144" height="7" x="368" y="308" fill="#FFE99E" rx="3.5"/>
+        <path fill="#F0F1FE" d="M447 144h65v-19h-65zM269 175h59v-19h-59z"/>
+        <path fill="#FFF" stroke="#989898" d="M63 403h123v-57H63z"/>
+        <path fill="#FFF" stroke="#EE4040" d="M203 403h123v-57H203z"/>
+        <path stroke="#E2E2E2" stroke-linecap="square" d="M61.243 101.315l264.257.185M61.243 182.493l264.257.185M368 246.4h144M368 325.4h144M61.243 296.493l264.257.185"/>
+        <text fill="#000" font-family="AppleSDGothicNeo-Bold, Apple SD Gothic Neo" font-size="12" font-weight="bold" letter-spacing="-.175">
+            <tspan x="62" y="66">법무관리시스템 구축사업 계약서</tspan>
+        </text>
+        <text fill="#4D4D4D" font-family="AppleSDGothicNeo-Regular, Apple SD Gothic Neo" font-size="9" letter-spacing="-.132">
+            <tspan x="62" y="80">템플릿명:사업계약서</tspan>
+        </text>
+        <text fill="#4D4D4D" font-family="AppleSDGothicNeo-Regular, Apple SD Gothic Neo" font-size="7" letter-spacing="-.102">
+            <tspan x="293" y="168">전송</tspan>
+        </text>
+        <text fill="#4D4D4D" font-family="AppleSDGothicNeo-Regular, Apple SD Gothic Neo" font-size="7" letter-spacing="-.102">
+            <tspan x="455" y="137">계약내용 비교하기</tspan>
+        </text>
+        <text fill="#4D4D4D" font-family="AppleSDGothicNeo-Regular, Apple SD Gothic Neo" font-size="9" letter-spacing="-.132">
+            <tspan x="64" y="320">전자서명</tspan>
+        </text>
+        <text fill="#4D4D4D" font-family="AppleSDGothicNeo-Regular, Apple SD Gothic Neo" font-size="9" letter-spacing="-.132">
+            <tspan x="368" y="63">진행상황</tspan>
+        </text>
+        <text fill="#4D4D4D" font-family="AppleSDGothicNeo-Regular, Apple SD Gothic Neo" font-size="9" letter-spacing="-.132">
+            <tspan x="368" y="167">첨부파일</tspan>
+        </text>
+        <rect width="225" height="7" x="62" y="234" fill="#F0F0F0" rx="3.5"/>
+        <rect width="225" height="7" x="62" y="120" fill="#F0F0F0" rx="3.5"/>
+        <rect width="129" height="7" x="368" y="74" fill="#F0F0F0" rx="3.5"/>
+        <rect width="129" height="7" x="368" y="108" fill="#F0F0F0" rx="3.5"/>
+        <rect width="80" height="7" x="368" y="91" fill="#F0F0F0" rx="3.5"/>
+        <rect width="225" height="7" x="62" y="200" fill="#F0F0F0" rx="3.5"/>
+        <rect width="80" height="7" x="62" y="251" fill="#F0F0F0" rx="3.5"/>
+        <rect width="80" height="7" x="62" y="137" fill="#F0F0F0" rx="3.5"/>
+        <rect width="190" height="7" x="62" y="217" fill="#F0F0F0" rx="3.5"/>
+        <rect width="100" height="7" x="152" y="251" fill="#FFBE8C" rx="3.5"/>
+        <rect width="140" height="7" x="62" y="268" fill="#F0F0F0" rx="3.5"/>
+        <rect width="65" height="7" x="62" y="330" fill="#F0F0F0" rx="3.5"/>
+        <rect width="65" height="7" x="202" y="330" fill="#F0F0F0" rx="3.5"/>
+        <use fill="#000" filter="url(#c)" xlink:href="#d"/>
+        <path fill="#FFF" stroke="#FF7D19" stroke-linejoin="square" d="M152.5 266.5h114v56h-114z"/>
+        <path fill="#FF7D19" d="M160.327 265.498h-5.67a.385.385 0 0 1 0-.77h5.67a.385.385 0 1 1 0 .77m0 2.156h-5.67a.385.385 0 0 1 0-.77h5.67a.385.385 0 0 1 0 .77m.731-5.654h-7.132a1.928 1.928 0 0 0-1.926 1.926v4.4c0 1.061.864 1.925 1.926 1.925h4.543l2.175 2.175a.385.385 0 0 0 .657-.273v-1.917a1.929 1.929 0 0 0 1.683-1.91v-4.4a1.928 1.928 0 0 0-1.926-1.926"/>
+        <rect width="80" height="7" x="162" y="279" fill="#F0F0F0" rx="3.5"/>
+        <rect width="27" height="7" x="162" y="305" fill="#E0E3FD" rx="3.5"/>
+        <rect width="87" height="7" x="162" y="292" fill="#F0F0F0" rx="3.5"/>
+        <g>
+            <path fill="#5666ED" fill-rule="nonzero" d="M379.83 71.131a.448.448 0 0 0-.634 0l-5.368 5.368-2.063-2.063a.448.448 0 0 0-.634.634l2.38 2.38a.448.448 0 0 0 .634 0l5.685-5.685a.448.448 0 0 0 0-.634zM379.83 106.131a.448.448 0 0 0-.634 0l-5.368 5.368-2.063-2.063a.448.448 0 0 0-.634.634l2.38 2.38a.448.448 0 0 0 .634 0l5.685-5.685a.448.448 0 0 0 0-.634z"/>
+            <text fill="#000" font-family="THEFACESHOP, THEFACESHOP INKLIPQUID" font-size="18" letter-spacing=".257" transform="translate(92 71)">
+                <tspan x="0" y="307">sing sample</tspan>
+            </text>
+            <text fill="#EE4040" font-family="THEFACESHOP, THEFACESHOP INKLIPQUID" font-size="18" letter-spacing=".257" transform="translate(92 71)">
+                <tspan x="134" y="307">stamp sample</tspan>
+            </text>
+        </g>
+    </g>
+</svg>

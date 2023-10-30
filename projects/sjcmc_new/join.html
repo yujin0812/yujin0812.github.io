@@ -1,0 +1,85 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SJ chemical</title>
+<link href="css/common.css" rel="stylesheet" type="text/css">
+<link href="css/index.css" rel="stylesheet" type="text/css">
+<link href="css/media.css" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/earlyaccess/notosanskr.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="scripts/main.js"></script>
+</head>
+
+<body>
+
+<section class="login-section">
+	<div class="join-title">JOIN</div>
+    
+    <div class="join-table-wrap">
+    <table class="join-table">
+    	<colgroup>
+            <col width="20%"/>
+            <col width="80%"/>
+		</colgroup>
+        <tr>
+        	<td class="join-th">아이디</td>
+            <td class="join-td" colspan="3">
+                <div class="join-id"><input class="input-join id-check" name="query" /></div>
+                <a href="#"><div class="check-btn">중복확인</div></a>
+            </td>
+        </tr>
+        <tr>
+        	<td class="join-th">비밀번호</td>
+            <td class="join-td">
+            	<input class="input-join" name="query" />
+            </td>
+		</tr>
+        <tr>
+            <td class="join-th">비밀번호 확인</td>
+            <td class="join-td">
+            	<input class="input-join" name="query" />
+            </td>
+        </tr>
+        <tr>
+        	<td class="join-th">이름</td>
+            <td class="join-td" colspan="3">
+            	<input class="input-join" name="query" />
+            </td>
+        </tr>
+        <tr>
+        	<td class="join-th">연락처</td>
+            <td class="join-td" colspan="3">
+            	<input class="join-number" name="query" />
+                <div class="phone-bar">-</div>
+                <input class="join-number" name="query" />
+                <div class="phone-bar">-</div>
+                <input class="join-number" name="query" />
+            </td>
+        </tr>
+        <tr>
+            <td class="join-th th02">이메일</td>
+            <td class="join-td" colspan="3">
+            	<input class="join-mail" name="query" />
+                <div class="phone-bar">@</div>
+                <input class="join-mail" name="query" />
+                <select class="accordion-email" name="emailsel" onchange="setEmail()">
+                    <option value="">직접입력</option>
+                    <option value="naver.com">naver.com</option>
+                    <option value="nate.com">nate.com</option>
+                    <option value="gmail.com">gmail.com</option>
+                    <option value="hanmail.net">hanmail.net</option>
+                    <option value="hotmail.com">hotmail.com</option>
+                    <option value="yahoo.co.kr">yahoo.co.kr</option>
+                </select>
+            </td>
+        </tr>
+	</table>
+    </div>
+    <div class="join-btn"><a href="#">회원가입</a></div>
+</section>
+
+</body>
+</html>
+ 

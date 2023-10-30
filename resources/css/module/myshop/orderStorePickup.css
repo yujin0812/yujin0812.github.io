@@ -1,0 +1,21 @@
+#popup { width:785px; }
+.header h1 { height:45px; padding:0 0 0 20px; color:#fff; font-size:14px; line-height:45px; background:#495164; }
+.content { padding:20px 20px 35px; }
+.btnArea { position:fixed; bottom:0; left:0; width:100%; padding:10px 0; border-top:1px solid #d7d5d5; text-align:center; background:#fbfafa; }
+ 
+.xans-myshop-orderhistorystorepickup .info { padding:12px 15px; border:5px solid #e8e8e8; line-height:1.5em; }
+ 
+.xans-myshop-orderhistorystorepickup h3 { margin:20px 0 10px 10px; color:#353535; font-size:12px; }
+.xans-myshop-orderhistorystorepickup table { table-layout:fixed; border:1px solid #d7d5d5; color:#353535; line-height:1.5em; }
+.xans-myshop-orderhistorystorepickup table th { width:120px; padding:11px 0 9px 19px; border-top:1px solid #e9e9e9; border-right:1px solid #e9e9e9; font-weight:normal; text-align:left; background:#fbfafa; }
+.xans-myshop-orderhistorystorepickup table th.line { border-left:1px solid #e9e9e9; }
+.xans-myshop-orderhistorystorepickup table td { width:auto; padding:8px 0 7px 10px; border-top:1px solid #e9e9e9; vertical-align:middle; }
+.xans-myshop-orderhistorystorepickup table td img { max-height:300px; max-width:600px; width:auto; border:1px solid #e8e8e8; vertical-align:middle; }
+.xans-myshop-orderhistorystorepickup table tbody tr:first-child th,
+.xans-myshop-orderhistorystorepickup table tbody tr:first-child td { border-top:0; }
+ 
+.xans-myshop-orderhistorystorepickup table thead.center th { padding:11px 0 9px 0; text-align:center; }
+.xans-myshop-orderhistorystorepickup table tbody.center { border-top:1px solid #e9e9e9; }
+.xans-myshop-orderhistorystorepickup table tbody.center td { padding:15px 18px 13px; text-align:center; }
+.xans-myshop-orderhistorystorepickup table tbody.center td.left { text-align:left; }
+.xans-myshop-orderhistorystorepickup table tbody.center td .price { color:#008bcc; }

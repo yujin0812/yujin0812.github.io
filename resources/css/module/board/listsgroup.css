@@ -1,0 +1,12 @@
+.xans-board-listsgroup { margin:0 0 10px; }
+.xans-board-listsgroup h3 { margin:0 0 10px; font-size:12px; color:#353535; }
+.xans-board-listsgroup table { border:1px solid #d7d5d5; color:#353535; font-size:12px; line-height:140%;}
+.xans-board-listsgroup table th { padding:12px 0 10px; border-right:1px solid #e3e3e3; background:#fbfafa; font-weight:normal; }
+.xans-board-listsgroup table td { padding:6px 3px 4px; height:32px; border-top:1px solid #e3e3e3; border-right:1px solid #e3e3e3; text-align:center; vertical-align:middle; }
+.xans-board-listsgroup table th:last-child,
+.xans-board-listsgroup table td:last-child { border-right:none; }
+.xans-board-listsgroup table a,
+.xans-board-listsgroup table a:hover { color:#000; }
+.xans-board-listsgroup table td.subject { font-size:12px; text-align:left; word-break:break-all; }
+.xans-board-listsgroup table .subject img { vertical-align:middle; margin:0 1px; }
+.xans-board-listsgroup table .txtLess { color:#939393; font-size:11px; }

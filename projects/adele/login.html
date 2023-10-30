@@ -1,0 +1,125 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8" />
+<title></title>
+<!-- STYLE CSS -->
+<link href="css/application.css" rel="stylesheet" type="text/css">
+<link href="css/style.css" rel="stylesheet" type="text/css">
+<link href="css/reset.css" rel="stylesheet" type="text/css">
+<!-- SCRIPT -->
+<script src="scripts/jquery-3.4.1.min.js"></script>
+<script src="scripts/jquery.nice-select.min.js"></script>
+<script src="scripts/main.js"></script>
+</head>
+<body>
+<!-- wrap_login -->
+<div id="wrap_login">
+    <!-- dis_table -->
+    <div class="dis_table">
+        <!-- table_cell -->
+        <div class="table_cell">
+            <!-- section_login -->
+            <section class="section_login">
+                <div class="logo">
+                   <img src="http://www.stickpng.com/assets/images/580b57fcd9996e24bc43c513.png">
+                </div>
+                <div class="login_head">
+                   <h1>법무지원시스템</h1>
+                   <h2 class="section_h2">법무지원시스템</h2>
+                </div>
+                <ul class="login_form_wrap">
+                    <li>
+                        <input class="login_input" placeholder="Employee No">
+                        <p class="error_p">올바른 형식으로 입력하세요.</p>
+                    </li>
+                    <li>
+                        <input class="login_input" placeholder="Email address">
+                        <p class="error_p">올바른 형식으로 입력하세요.</p>
+                    </li>
+                    <li>
+                        <input class="login_input" placeholder="Password">
+                        <p class="error_p">올바른 형식으로 입력하세요.</p>
+                    </li>
+                </ul>
+                <div class="btn_wrap">
+                    <a href="index.html" class="btn__active">Sign in</a>
+                    <ul class="btn_signup_wrap">
+                    <li><a class="btn_sign_up" id="modalOnJoin">Sing up</a></li>
+                    <li><a class="btn_sign_up" id="modalOnPassword">Forgot password?</a></li>
+                    </ul>
+                </div>
+            </section>
+            <!-- //section_login -->
+        </div>
+        <!-- //table_cell -->
+    </div>
+    <!-- //dis_table -->
+</div>
+<!-- //wrap_login -->
+
+<!-- 모달: 신규 등록 -->
+<!-- modal_fixed -->
+<div class="modal_fixed modal_login" id="modalOnJoinLayout">
+    <!-- dis_table -->
+    <div class="dis_table">
+        <!-- table_cell -->
+        <div class="table_cell">
+            <!-- modal_section -->
+            <section class="modal_section">
+                <div class="logo">
+                    <img src="http://www.stickpng.com/assets/images/580b57fcd9996e24bc43c513.png">
+                </div>
+                <h2 class="section_h2">등록된 이메일 아이디를 입력하시면<br>해당 메일로 신규 등록 링크가 전송됩니다.</h2>
+                <div class="login_form_wrap">
+                    <input class="login_input" placeholder="Email address">
+                    <p class="error_p">올바른 형식으로 입력하세요.</p>
+                </div>
+                <div class="btn_wrap">
+                    <a class="btn__active">링크 전송</a>
+                </div>
+            </section>
+            <!-- //modal_section -->
+        </div>
+        <!-- //dis_table -->
+    </div>
+    <!-- //dis_table -->
+</div>
+<!-- //modal_fixed -->
+
+
+<!-- 모달: 비밀번호 찾기 -->
+<!-- modal_fixed -->
+<div class="modal_fixed modal_login" id="modalOnPasswordLayout">
+    <!-- dis_table -->
+    <div class="dis_table">
+        <!-- table_cell -->
+        <div class="table_cell">
+            <!-- modal_section -->
+            <section class="modal_section">
+                <div class="logo">
+                    <img src="http://www.stickpng.com/assets/images/580b57fcd9996e24bc43c513.png">
+                </div>
+                <h2 class="section_h2">등록된 이메일 아이디를 입력하시면,<br>
+                    해당 메일로 비밀번호 변경 링크가 전송됩니다.</h2>
+                <div class="login_form_wrap">
+                    <input class="login_input" placeholder="Email address">
+                        <p class="error_p">올바른 형식으로 입력하세요.</p>
+                </div>
+                <div class="btn_wrap">
+                    <a class="btn__active">링크 전송</a>
+                </div>
+            </section>
+            <!-- //modal_section -->
+        </div>
+        <!-- //dis_table -->
+    </div>
+    <!-- //dis_table -->
+</div>
+<!-- //modal_fixed -->
+
+
+
+</body>
+</html>
+ 

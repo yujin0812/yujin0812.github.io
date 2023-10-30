@@ -1,0 +1,201 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8" />
+<title></title>
+<!-- STYLE CSS -->
+<link href="css/application.css" rel="stylesheet" type="text/css">
+<link href="css/style.css" rel="stylesheet" type="text/css">
+<link href="css/reset.css" rel="stylesheet" type="text/css">
+<!-- SCRIPT -->
+<script src="scripts/jquery-3.4.1.min.js"></script>
+<script src="scripts/jquery.nice-select.min.js"></script>
+<script src="scripts/main.js"></script>
+<style>
+/* section__admin_workflow_list */
+.workflow_list>li {
+    padding: 17px 0 19px;
+    border-bottom: 1px solid #f6f6fd;
+}
+.workflow_info {
+    width: calc(100% - 180px);
+    margin-top: 13px;
+}
+.list_hd .workflow_info {
+    margin-top: 0;
+}
+.workflow_info p a {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.workflow_show {
+    width: 180px;
+}
+.workflow_show .tr {
+    margin-bottom: 6px;
+}
+.workflow_show .sm_p58 span {
+    margin-left: 15px;
+}
+</style>
+</head>
+<body>
+<!-- wrap -->
+<div id="wrap">
+    <!-- header -->
+    <header id="header">
+        <!-- header_inner -->
+        <div class="header_inner">
+            <!-- logo -->
+            <div class="logo"><a href="ui_guide.html"><img src='http://www.stickpng.com/assets/images/580b57fcd9996e24bc43c513.png'></a></div>
+            <!-- //logo -->
+            <!-- hd_user_wrap -->
+            <div class="hd_user_wrap">
+                <!-- hd_user -->
+                <div class="hd_user">
+                    <p class="hd_user_name">이유진님</p>
+                    <!-- hd_user_ul -->
+                    <ul class="hd_user_ul">
+                        <li><a href="mypage_user_info.html">내 정보 보기</a></li>
+                        <li><a href="login.html">로그아웃</a></li>
+                    </ul>
+                    <!-- //hd_user_ul -->
+                </div>
+                <!-- //hd_user -->
+                <div class="hd_user_img"><img src="https://img1.daumcdn.net/thumb/R720x0.q80/?scode=mtistory&fname=http%3A%2F%2Fcfile10.uf.tistory.com%2Fimage%2F99530A3B5BE7C1803380DF"></div>
+            </div>
+            <!-- //hd_user_wrap -->
+            <!-- gnb_wrap -->
+            <div class="gnb_wrap">
+                <!-- gnb -->
+                <ul class="gnb">
+                    <li>
+                        <a href="index.html">계약관리</a>
+                    </li>
+                    <li>
+                        <a href="legal_advice_list.html">법률자문</a>
+                    </li>
+                </ul>
+                <!-- //gnb -->
+                <!-- gnb_admin -->
+                <ul class="gnb_admin">
+                    <li><a href="notice.html">공지사항</a></li>
+                    <li><a href="group_list.html">그룹 관리자</a></li>
+                    <li class="active">
+                        <a href="admin_workflow_list.html">관리자</a>
+                        <!-- lnb -->
+                        <ul class="lnb lnb_admin">
+                            <li class="active"><a href="admin_workflow_list.html">워크플로우</a></li>
+                            <li><a href="admin_template_list.html">템플릿 관리</a></li>
+                            <li><a href="admin_user.html">유저 관리</a></li>
+                            <li><a href="admin_contract_counterpart.html">외부업체관리</a></li>
+                            <li><a href="admin_group.html">그룹</a></li>
+                            <li><a href="admin_tag.html">TAG</a></li>
+                            <li><a href="admin_company_info.html">회사 정보</a></li>
+                            <li><a href="admin_digital_seal.html">디지털 직인 관리</a></li>
+                            <li><a href="admin_legal_setting.html">법률 자문</a></li>
+                            <li><a href="admin_empowerment.html">권한 위임</a></li>
+                        </ul>
+                        <!-- //lnb -->
+                    </li>
+                </ul>
+                <!-- //gnb_admin -->
+            </div>
+            <!-- //gnb_wrap -->
+        </div>
+        <!-- //header_inner -->
+    </header>
+    <!-- //header -->
+
+    <!-- ================================= content ================================= -->
+    <!-- content -->
+    <div class="content">
+
+        <!-- section__admin_workflow -->
+        <section class="section__admin_workflow">
+            <!-- section_head2 -->
+            <div class="section_head2">
+                <div class="fl dis_table_h">
+                    <div class="table_cell">
+                        <h1 class="section_h1">워크플로우</h1>
+                        <h2 class="section_h2">워크플로우를 작성합니다.</h2>
+                    </div>
+                </div>
+                <div class="fr dis_table_h">
+                    <div class="table_cell">
+                        <a class="btn__b btn_m" href="admin_workflow_create.html">+ 신규 워크플로우 생성</a>
+                    </div>
+                </div>
+            </div>
+            <!-- //section_head2 -->
+
+            <!-- 190621 검색 수정(확인 후 삭제) -->
+            <!-- section_search_bar -->
+            <div class="section_search_bar">
+                <div class="input_search">
+                    <div class="icon_search"></div>
+                    <input type="text" class="input">
+                </div>
+            </div>
+            <!-- //section_search_bar -->
+
+            <!-- workflow_list_wrap -->
+            <div class="workflow_list_wrap">
+               
+                <ul class="bt_list clearfix_ul">
+                    <li class="list_hd">
+                        <div class="fl workflow_info">워크플로우 정보</div>
+                        <div class="fr workflow_show tr">워크플로우 적용</div>
+                    </li>
+                </ul>
+                <!-- workflow_list -->
+                <ul class="bt_list workflow_list">
+                    <li class="clearfix">
+                        <div class="fl workflow_info">
+                           <p class="sm_pb4">2019/02/01</p>
+                           <p class="l_p b"><a>워크플로우명</a></p>
+                           <p class="sm_p58">생성자 : 이유진</p>
+                       </div>
+                       <div class="fr workflow_show">
+                           <div class="tr">
+                               <p class="sm_p58">적용 템플릿 수&nbsp;&nbsp;:<span>12</span></p>
+                               <p class="sm_p58">진행 중 계약 수&nbsp;&nbsp;:<span>12</span></p>
+                               <p class="sm_p58">완료 계약 수&nbsp;&nbsp;:<span>12</span></p>
+                           </div>
+                           <div class="btn_wrap__tr">
+                               <a class="btn__e btn_m">삭제</a>
+                               <a class="btn__y btn_m">변경</a>
+                           </div>
+                        </div>
+                    </li>
+                </ul>
+                <!-- //workflow_list -->
+                <!-- pagination -->
+                <div class="clearfix">
+                    <ul class="pagination fr">
+                        <li class="prev">prev</li>
+                        <li>1</li>
+                        <li>2</li>
+                        <li class="active">3</li>
+                        <li>4</li>
+                        <li>5</li>
+                        <li class="next">next</li>
+                    </ul>
+                </div>
+                <!-- //pagination -->
+            </div>
+            <!-- //workflow_list_wrap -->
+        </section>
+        <!-- //section__admin_workflow -->
+    </div>
+    <!-- //content -->
+    <!-- ================================= //content ================================= -->
+</div>
+<!-- //wrap -->
+<!-- footer -->
+<footer id="footer"></footer>
+<!-- //footer -->
+</body>
+</html>
+ 

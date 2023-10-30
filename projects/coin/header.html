@@ -1,0 +1,175 @@
+<!DOCTYPE HTML5>
+<html>
+<head>
+<meta charset="utf-8" />
+
+<title>거래소</title>
+<!-- GOOGLE FONTS -->
+<link href="http://fonts.googleapis.com/earlyaccess/notosanskr.css" rel="stylesheet">
+<link href="http://fonts.googleapis.com/earlyaccess/nanumgothic.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Titillium+Web:300,400,500,700" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
+
+<!-- STYLE CSS -->
+<link href="hycon/css/index.css" rel="stylesheet" type="text/css">
+<link href="hycon/css/media.css" rel="stylesheet" type="text/css">
+<link href="hycon/css/reset.css" rel="stylesheet" type="text/css">
+<!-- WOW STYLE CSS -->
+<link href="hycon/css/animate.min.css" rel="stylesheet" />
+<!-- SCRIPT -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="hycon/scripts/main.js"></script>
+<!-- WOW SCRIPT -->
+<script src="hycon/scripts/wow.min.js"></script>
+<script>
+	new WOW().init();
+</script>
+</head>
+
+<body>
+   
+   
+    <!-- logout header -->
+    <header>
+        <div class="header">
+            <div class="header-inner">
+                <div class="header-logo">
+                    <a href="index.html"><img src="hycon/imgs/header_logo.png" /></a>
+                </div>
+                <div class="header-menu">
+                    <ul class="gnb">
+                        <li class="gnb-list gnb-list-sel">
+                            <a href="index.html">홈</a>
+                        </li>
+                        <li class="gnb-list">
+                            <a href="transaction-list.html">거래</a>
+                        </li>
+                        <li class="gnb-list">
+                            <a href="chart.html">차트</a>
+                            <div class="drop-menu">
+                                <a href="faq.html">FAQ</a>
+                                <a href="notice.html">공지사항</a>
+                                <a href="contact.html">1:1문의</a>
+                                <a href="information.html">이용안내</a>
+                            </div>
+                        </li>
+                        <li class="gnb-list">
+                            <a href="wallet.html">지갑</a>
+                        </li>
+                        <li class="gnb-list">
+                            <a href="">고객지원</a>
+                            <div class="drop-menu">
+                                <a href="faq.html">FAQ</a>
+                                <a href="notice.html">공지사항</a>
+                                <a href="contact.html">1:1문의</a>
+                                <a href="information.html">이용안내</a>
+                            </div>
+                        </li>
+                    </ul>
+                    <ul class="header-login">
+                        <li class="hd-login"><a href="login.html"></a></li>
+                        <li class="hd-join"><a href="join.html"></a></li>
+                        <li class="hd-language">
+                            <select class="hd-select" id="language" name="language" onchange="i18next.changeLanguage(this.value);">	
+                                <option class="selop" value="ko">KOR</option>
+                                <option class="selop" value="ko">EN</option>
+                            </select>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <!-- login header -->
+    <header>
+        <div class="header">
+            <div class="header-inner">
+                <div class="header-logo">
+                    <a href="index.html"><img src="hycon/imgs/header_logo.png" /></a>
+                </div>
+                <div class="header-menu">
+                    <ul class="gnb">
+                        <li class="gnb-list gnb-list-sel">
+                            <a href="index.html">홈</a>
+                        </li>
+                        <li class="gnb-list">
+                            <a href="transaction-list.html">거래</a>
+                        </li>
+                        <li class="gnb-list">
+                            <a href="chart.html">차트</a>
+                            <div class="drop-menu">
+                                <a href="faq.html">FAQ</a>
+                                <a href="notice.html">공지사항</a>
+                                <a href="contact.html">1:1문의</a>
+                                <a href="information.html">이용안내</a>
+                            </div>
+                        </li>
+                        <li class="gnb-list">
+                            <a href="wallet.html">지갑</a>
+                        </li>
+                        <li class="gnb-list">
+                            <a href="">고객지원</a>
+                            <div class="drop-menu">
+                                <a href="faq.html">FAQ</a>
+                                <a href="notice.html">공지사항</a>
+                                <a href="contact.html">1:1문의</a>
+                                <a href="information.html">이용안내</a>
+                            </div>
+                        </li>
+                    </ul>
+                    <ul class="header-login">
+                        <li class="hd-user"><p>LEE DONG JU</p></li>
+                        <li class="hd-mypage"><a href="mypage.html"></a></li>
+                        <li class="hd-logout"><a href="index.html"></a></li>
+                        <li class="hd-language">
+                            <select class="hd-select" id="language" name="language" onchange="i18next.changeLanguage(this.value);">	
+                                <option class="selop" value="ko">KOR</option>
+                                <option class="selop" value="ko">EN</option>
+                            </select>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- login, 'coin-info-wrap' add -->
+        <div class="coin-info-wrap">
+          <div class="coin-info-inner">
+              <div class="coin-info">
+                  <p class="coininfo-p1">총합</p>
+                  <select class="coin-info-select">
+                      <option value="">10,215원</option>
+                      <option value="">10,215원</option>
+                  </select>
+              </div>
+              <div class="coin-info">
+                  <p class="coininfo-p1">KRW</p>
+                  <p class="coininfo-p2">0.00000000</p>
+              </div>
+              <div class="coin-info">
+                  <p class="coininfo-p1">BTC</p>
+                  <p class="coininfo-p2">0.00000000</p>
+              </div>
+              <div class="coin-info">
+                  <p class="coininfo-p1">ETH</p>
+                  <p class="coininfo-p2">0.00000000</p>
+              </div>
+              <div class="coin-info">
+                  <p class="coininfo-p1">ETC</p>
+                  <p class="coininfo-p2">0.00000000</p>
+              </div>
+              <div class="coin-info">
+                  <p class="coininfo-p1">LTC</p>
+                  <p class="coininfo-p2">0.00000000</p>
+              </div>
+              <div class="coin-info">
+                  <p class="coininfo-p1">ZEC</p>
+                  <p class="coininfo-p2">0.00000000</p>
+              </div>
+          </div>
+        </div>
+    </header>
+    
+</body>
+</html>
+ 

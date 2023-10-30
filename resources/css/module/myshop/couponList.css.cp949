@@ -1,0 +1,25 @@
+.xans-myshop-couponlist .title { overflow:hidden; margin:40px 0 10px 10px; *zoom:1; }
+.xans-myshop-couponlist .title h3 { float:left; color:#353535; font-size:12px; }
+.xans-myshop-couponlist .title p { float:right; color:#757575; }
+
+.xans-myshop-couponlist .couponList { border:1px solid #d7d5d5; }
+.xans-myshop-couponlist .couponList table { table-layout:fixed; color:#353535; line-height:1.5; }
+.xans-myshop-couponlist .couponList th { padding:11px 0 9px; border-left:1px solid #e9e9e9; font-weight:normal; background:#fbfafa; }
+.xans-myshop-couponlist .couponList th:first-child { border-left:0; }
+.xans-myshop-couponlist .couponList td { padding:8px 0 5px; border-top:1px solid #e9e9e9; text-align:center; vertical-align:middle; }
+.xans-myshop-couponlist .couponList .no { width:45px; }
+.xans-myshop-couponlist .couponList .coupon { width:auto; }
+.xans-myshop-couponlist .couponList .product { width:85px; }
+.xans-myshop-couponlist .couponList .price { width:75px; }
+.xans-myshop-couponlist .couponList .payment { width:150px; }
+.xans-myshop-couponlist .couponList .benefit { width:100px; }
+.xans-myshop-couponlist .couponList .period { width:150px; }
+.xans-myshop-couponlist .couponList td.coupon,
+.xans-myshop-couponlist .couponList td.payment { padding-left:10px; text-align:left; }
+.xans-myshop-couponlist .couponList td.payment,
+.xans-myshop-couponlist .couponList td.sale,
+.xans-myshop-couponlist .couponList td.mileage { color:#757575; }
+.xans-myshop-couponlist .couponList td.empty { padding:50px 0; text-align:center; font-weight:bold; color:#757575; }
+
+.xans-myshop-couponlist .button { margin:20px 0 0; text-align:right; }
+.xans-myshop-couponlist .button img { cursor:pointer; }

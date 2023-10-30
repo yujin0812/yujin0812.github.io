@@ -1,0 +1,22 @@
+#ec-shop_orderConfirmLayer.orderConfirmLayer { display:none; position:fixed; z-index:100; top:90px; left:50%; width:850px; border:1px solid #757575; margin:0 0 0 -426px; }
+#ec-shop_orderConfirmLayer.orderConfirmLayer h3 { height:35px; padding:0 35px 0 19px; color:#fff; font-size:14px; line-height:35px; background:#495164; }
+#ec-shop_orderConfirmLayer.orderConfirmLayer .content { padding:15px; margin:0 0 44px; background:#fff; }
+#ec-shop_orderConfirmLayer.orderConfirmLayer .confirm { overflow-y:auto; height:450px; padding:0 10px; margin:10px 0 0; }
+#ec-shop_orderConfirmLayer.orderConfirmLayer .confirm .title { margin:20px 0 10px 10px; }
+#ec-shop_orderConfirmLayer.orderConfirmLayer .confirm > .title:first-child { margin-top:0; }
+#ec-shop_orderConfirmLayer.orderConfirmLayer .confirm .title h4 { color:#353535; font-size:12px; }
+#ec-shop_orderConfirmLayer.orderConfirmLayer .confirm .boardView { border:1px solid #d7d5d5; }
+#ec-shop_orderConfirmLayer.orderConfirmLayer .confirm .boardView table { table-layout:fixed; color:#353535; line-height:1.5; }
+#ec-shop_orderConfirmLayer.orderConfirmLayer .confirm .boardView th { width:130px; padding:11px 0 10px 19px; border-top:1px solid #e9e9e9; border-right:1px solid #e9e9e9; font-weight:normal; text-align:left; background:#fbfafa; }
+#ec-shop_orderConfirmLayer.orderConfirmLayer .confirm .boardView td { width:auto; padding:11px 0 10px 10px; border-top:1px solid #e9e9e9; }
+#ec-shop_orderConfirmLayer.orderConfirmLayer .confirm .boardView tbody tr:first-child th,
+#ec-shop_orderConfirmLayer.orderConfirmLayer .confirm .boardView tbody tr:first-child td { border-top:0; }
+#ec-shop_orderConfirmLayer.orderConfirmLayer .confirm .boardView img { vertical-align:middle; }
+#ec-shop_orderConfirmLayer.orderConfirmLayer .confirm .boardView .price { padding-top:6px; padding-bottom:7px; color:#008bcc; font-size:17px; }
+#ec-shop_orderConfirmLayer.orderConfirmLayer .confirm .boardView .price .tail { font-size:12px; }
+#ec-shop_orderConfirmLayer.orderConfirmLayer .confirm .boardView .cashReciept span { font-weight:normal; }
+#ec-shop_orderConfirmLayer.orderConfirmLayer .confirm .boardView .cashReciept .grid { font-size:11px; color:#757575; }
+#ec-shop_orderConfirmLayer.orderConfirmLayer .confirm .totalArea { margin:40px 0 0; }
+#ec-shop_orderConfirmLayer.orderConfirmLayer .btnArea { position:absolute; bottom:0; left:0; width:100%; padding:6px 0 7px; border:0; border-top:1px solid #757575; text-align:center; background:#fbfafa; }
+#ec-shop_orderConfirmLayer.orderConfirmLayer .close { position:absolute; right:20px; top:10px; }
+#ec-shop_orderConfirmLayer.orderConfirmLayer .close img { cursor:pointer; }

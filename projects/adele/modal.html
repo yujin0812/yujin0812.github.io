@@ -1,0 +1,3312 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8" />
+<title></title>
+<!-- STYLE CSS -->
+<link href="css/application.css" rel="stylesheet" type="text/css">
+<link href="css/style.css" rel="stylesheet" type="text/css">
+<link href="css/reset.css" rel="stylesheet" type="text/css">
+<!-- SCRIPT -->
+<script src="scripts/jquery-3.4.1.min.js"></script>
+<script src="scripts/jquery.nice-select.min.js"></script>
+<script src="scripts/main.js"></script>
+</head>
+<style>
+    h1, h2 {
+        text-transform: uppercase;
+    }
+    h1.guide_h1:not(.section_h1) {
+        height: 30px;
+        margin-top: 80px;
+        margin-bottom: 30px;
+        border-left: 4px solid #000;
+        padding-left: 16px;
+        font-size: 30px;
+        font-weight: 400;
+        line-height: 1;
+        letter-spacing: normal;
+    }
+    h2.ui_h2 {
+        margin-top: 52px;
+        margin-bottom: 50px;
+        padding-bottom: 17px;
+        border-bottom: 1px solid #ece9f1;
+        font-size: 20px;
+        font-weight: normal;
+        line-height: 1.5;
+        letter-spacing: normal;
+        color: #1a051d;
+    }
+    .ui_content {
+        max-width: 1120px;
+        margin: 0 auto;
+    }
+    .ui_list {
+        clear: both;
+    }
+    .ui_list>li {
+        margin-bottom: 30px;
+    }
+    .ui_fl {
+        overflow: hidden;
+        margin: 0 -25px;
+    }
+    .ui_fl>li {
+        float: left;
+        margin-left: 25px;
+        margin-right: 25px;
+    }
+    .color_box {
+        width: 160px;
+        height: 190px;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 7px 64px 0 rgba(0, 0, 0, 0.03);
+        background-color: #ffffff;
+    }
+    .color_box .color_view {
+        height: 140px;
+    }
+    .color_box .color_name {
+        height: 50px;
+        line-height: 50px;
+        text-align: center;
+    }
+    
+    .ui_content ul>li {
+        margin-bottom: 10px;
+    }
+    
+    .ui_content ul>li::after {
+        content: "";
+        display: block;
+        clear: both;
+    }
+    section:last-child {
+        margin-bottom: 80px;
+    }
+</style>
+    <body>
+        <!-- header -->
+        <header id="header">
+            <div class="in">
+                <!-- logo -->
+                <div class="logo"><a href="ui_guide.html"><img src='https://image.gsshop.com/ui/gsshop/pc/common/images/logo.png'></a></div>
+                <!-- gnb -->
+                <ul class="gnb">
+                    <li>
+                        <a href="index.html">계약관리</a>
+                        <!-- lnb -->
+                        <div class="lnb">
+                            <ul>
+                                <li class="active"><a href="index.html">전체 계약</a></li>
+                                <li><a href="index_my.html">나의 계약</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="legal_advice_list.html">법률자문</a>
+                    </li>
+                    <li>
+                        <a href="official_note_list.html">공문 발송</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="header_notice">
+                <div class="header_notice__dynamic">
+                    <div class="vertical-slider">
+                        <h2 class="vertical-slider__item">김영란법 개정으로 인해 외식 시 필독!김영란법 개정으로 인해 외식 시 필독!김영란법 개정으로 인해 외식 시 필독!김영란법 개정으로 인해 외식 시 필독!</h2>
+                        <h2 class="vertical-slider__item">법률자문 올리기 전 확인하세요.</h2>
+                        <h2 class="vertical-slider__item">가맹계약서 양식입니다.</h2>
+                    </div>
+                </div>
+            </div>
+
+            <div class="in in_admin">
+                <div class="in_admin_inner">
+                    <div class="number_approval">
+                        <a class="approval_on">결재건수</a>
+                        <p class="badge">7</p>
+                        <ul class="number_approval_view clearfix_ul">
+                            <li>
+                                <p class="xs_p58 elipsis">1.4분기 계약관리 시스템 교체 스템 교체 계약교체 스템 교체 계약</p>
+                                <a class="btn__f btn_xs">바로가기</a>
+                            </li>
+                            <li>
+                                <p class="xs_p58 elipsis">1.4분기 계약관리 시스템 교체 계약</p>
+                                <a class="btn__f btn_xs">바로가기</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="home">
+                        <a href="dashboard.html"></a>
+                    </div>
+                    <div class="hd_user_wrap">
+                        <div class="hd_user">
+                            <p class="hd_user_name">이유진님</p>
+                            <ul class="hd_user_ul">
+                                <li><a href="mypage_user_info.html">내 정보 보기</a></li>
+                                <li><a href="login.html">로그아웃</a></li>
+                            </ul>
+                        </div>
+                        <div class="hd_user_img"><img src="https://img1.daumcdn.net/thumb/R720x0.q80/?scode=mtistory&fname=http%3A%2F%2Fcfile10.uf.tistory.com%2Fimage%2F99530A3B5BE7C1803380DF"></div>
+                    </div>
+                </div>
+                <!-- header_sub -->
+                <div class="header_sub">
+                    <ul class="gnb_admin">
+                        <li><a href="notice.html">공지사항</a></li>
+                        <li><a href="group_list.html">그룹 관리자</a></li>
+                        <li class="active">
+                            <a href="admin_workflow_list.html">관리자</a>
+                            <!-- lnb -->
+                            <div class="lnb">
+                                <ul class="lnb_admin">
+                                    <li class="active"><a href="admin_workflow_list.html">워크플로우</a></li>
+                                    <li><a href="admin_template_list.html">템플릿 관리</a></li>
+                                    <li><a href="admin_user.html">유저 관리</a></li>
+                                    <li><a href="admin_notify.html">공지사항 관리</a></li>
+                                    <li><a href="admin_contract_counterpart.html">외부업체관리</a></li>
+                                    <li><a href="admin_group.html">그룹</a></li>
+                                    <li><a href="admin_tag.html">TAG</a></li>
+                                    <li><a href="admin_company_info.html">회사 정보</a></li>
+                                    <li><a href="admin_digital_seal.html">디지털 직인 관리</a></li>
+                                    <li><a href="admin_legal_setting.html">법률 자문</a></li>
+                                    <li><a href="admin_official_note.html">공문 발송</a></li>
+                                    <li><a href="admin_label.html">라벨</a></li>
+                                    <li><a href="admin_empowerment.html">권한 위임</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <!-- //header_sub -->
+            </div>
+        </header>
+        <!-- //header -->
+        
+        
+<div class="ui_content">
+    <section>
+        <h1 class="guide_h1">로그인</h1>
+        <ul class="modal_ul">
+            <li>
+                <!-- 모달: 비밀번호 찾기 -->
+                <a class="btn__y" id="modalOnPassword">비밀번호 찾기</a>
+            </li>
+            <li>
+                <!-- 모달: 신규 유저 등록 -->
+                <a class="btn__y" id="modalOnJoin">신규 유저 등록</a>
+            </li>
+        </ul>
+    </section>
+    <section>
+        <h1 class="guide_h1">공용 알람</h1>
+        <ul class="modal_ul">
+            <li>
+                <a class="btn__y" id="modalOnModalLoading">로딩중</a>
+            </li>
+            <li>
+                <a class="btn__y" id="modalOnAlramCheck">알람_체크</a>
+            </li>
+            <li>
+                <a class="btn__y" id="modalOnAlramBell">알람_벨</a>
+            </li>
+            <li>
+                <a class="btn__y" id="modalOnAlramWarningl">알람_경고</a>
+            </li>
+            <li>
+                <a class="btn__y" id="modalOnAlramConfirm">알람_컨펌</a>
+            </li>
+            <li>
+                <a class="btn__y" id="modalOnAlram">알람</a>
+            </li>
+            <li>
+                <a class="btn__y" id="modalOnIfError">Iframe Error</a>
+            </li>
+        </ul>
+    </section>
+    <section>
+        <h1 class="guide_h1">공용 모달</h1>
+        <ul class="modal_ul">
+            <li>
+                <!-- 공용 모달: 임직원 검색 -->
+                <a class="btn__y" id="modalOnUser">임직원 검색</a>
+            </li>
+            <li>
+                <!-- 공용 모달: 태그 선택 -->
+                <a class="btn__y" id="modalOnAddTag">태그 선택</a>
+            </li>
+            <li>
+                <!-- 공용 모달: 모달 공지 -->
+                <a class="btn__y" id="modalOnModalNotice">공지사항 관리</a>
+            </li>
+        </ul>
+    </section>
+    <section>
+        <h1 class="guide_h1">계약 관리</h1>
+        <ul class="modal_ul">
+            <li>
+                <!-- 모달: 카테고리 변경 -->
+                <a class="btn__y" id="modalOnContCate">카테고리 변경</a>
+            </li>
+            <li>
+                <!-- 모달: 템플릿 미리보기 -->
+                <a class="btn__y" id="modalOnTmplPrvw">템플릿 미리보기</a>
+            </li>
+            <li>
+                <!-- 모달: 관련인 추가 -->
+                <a class="btn__y" id="modalOnAddRelevant">관련인 추가</a>
+            </li>
+            <li>
+                <!-- 모달: 계약 상대 추가 -->
+                <a class="btn__y" id="modalOnAddOppsite">계약 상대 추가</a>
+            </li>
+            <li>
+                <!-- 모달: 다중 수신인 추가 -->
+                <a class="btn__y" id="modalOnAddMultiple">수신인 추가</a>
+            </li>
+            <li>
+                <!-- 모달: 다중 수신인 계약서 -->
+                <a class="btn__y" id="modalOnMltplContract">다중 수신인 계약서</a>
+            </li>
+            <li>
+                <!-- 모달: 서명하기 내부인 -->
+                <a class="btn__y" id="modalOnSign">서명하기 내부인</a>
+            </li>
+            <li>
+                <!-- 모달: 서명하기 외부인 -->
+                <a class="btn__y" id="modalOnSignOutsider">서명하기 외부인</a>
+            </li>
+            <li>
+                <!-- 모달: 계약이관 - 증빙용 문서함 -->
+                <a class="btn__y" id="modalOnDocBox">증빙용 문서함</a>
+            </li>
+            <li>
+                <!-- 모달: 필수 입력필드 -->
+                <a class="btn__y" id="modalOnInpFld">필수 입력필드</a> 
+            </li>
+            <li>
+                <!-- 모달: 선택 입력필드 -->
+                <a class="btn__y" id="modalOnselInpFld">선택 입력필드</a>
+            </li>
+            <li>
+                <!-- 모달: 검토 의견 -->
+                <a class="btn__y" id="modalOnReview">검토 의견</a>
+            </li>
+            <li>
+                <!-- 모달: 공문 승인 의견 -->
+                <a class="btn__y" id="modalOnOfficialReviewWriting">공문 승인 의견</a>
+            </li>
+            <li>
+                <!-- 모달: 승인 요청 -->
+                <a class="btn__y" id="modalOnReviewWriting">승인 요청</a>
+            </li>
+            <li>
+                <!-- 모달: 의견 작성 -->
+                <a class="btn__y" id="modalOnWriting">의견 작성</a>
+            </li>
+            <li>
+                <!-- 모달: 회람 의견 작성 -->
+                <a class="btn__y" id="modalOnWritingLegal">회람 의견 작성</a>
+            </li>
+            <li>
+                <!-- 모달: 계약 상대 불러오기 -->
+                <a class="btn__y" id="modalOnOpposite">계약 상대 불러오기</a>
+            </li>
+            <li>
+                <!-- 모달: 계약 상대 불러오기 -->
+                <a class="btn__y" id="modalOnCirculation">회람인 추가</a>
+            </li>
+        </ul>
+    </section>
+    <section>
+        <h1 class="guide_h1">관리자</h1>
+        <ul class="modal_ul">
+            <li>
+                <!-- 모달: 관리자 - 신규 유저 초대 -->
+                <a class="btn__y" id="modalOnAdminUserAdd">신규 유저 초대</a>
+            </li>
+            <li>
+                <!-- 모달: 관리자 - 유저 관리 -->
+                <a class="btn__y" id="modalOnAdminUser">유저 관리</a>
+            </li>
+            <li>
+                <!-- 모달: 권한 위임 - 권한 위임 등록 -->
+                <a class="btn__y" id="modalOnEmpowerment">권한 위임 등록</a>
+            </li>
+            <li>
+                <!-- 모달: 계약 이관 - 전체 계약 이관 -->
+                <a class="btn__y" id="modalOnTransferAll">전체 계약 이관</a>
+            </li>
+            <li>
+                <!-- 모달: 계약 이관 - 계약서 추가 -->
+                <a class="btn__y" id="modalOnTransfer">이관 계약서 추가</a>
+            </li>
+            <li>
+                <!-- 모달: 관리자 - 그룹 - 신규 그룹 생성 -->
+                <a class="btn__y" id="modalOnAdminGroupCreate">신규 그룹 생성</a>
+            </li>
+            <li>
+                <!-- 모달: 관리자 - 템플릿 - 템플릿 설정 - 카테고리 추가 -->
+                <a class="btn__y" id="modalOnAdminAddTag">카테고리 추가</a>
+            </li>
+            <li>
+                <!-- 모달: 관리자 - 법률자문 - 카테고리 추가 -->
+                <a class="btn__y" id="modalOnAdminAddNewLegalCate">카테고리 추가</a>
+            </li>
+            <li>
+                <!-- 모달: 라벨 추가 -->
+                <a class="btn__y" id="modalOnAddLabel">라벨 추가</a>
+            </li>
+            <!--  <li>
+                 모달: 라벨 선택 
+                <a class="btn__y" id="modalOnLabelSel">라벨 선택</a>
+</li>-->
+            <li>
+                <!-- 모달: 관리자 - 외부업체관리 - 신규 업체 추가 -->
+                <a class="btn__y" id="modalOnContractCounterpart">신규 업체 추가</a>
+            </li>
+            <li>
+                <!-- 모달: 자동 날인 안내 모달 -->
+                <a class="btn__y" id="modalOnAutoSigning">자동 날인 안내</a>
+            </li>
+            <li>
+                <!-- 모달: 관리자 > 워크플로우 > 문서 계약 > 날인/회수 안내 메일 -->
+                <a class="btn__y" id="modalOnEmail">날인/회수 안내 메일</a>
+            </li>
+        </ul>
+    </section>
+</div>
+
+<!-- ================================= 모달 모음 시작 ================================= -->
+
+
+<!--
+.modal_fixed modal_section { max-width: 524px; }
+.modal_fixed.modal1 .modal_section { max-width: 406px; }
+.modal_fixed.modal3 .modal_section { max-width: 880px; }
+-->
+<!-- 190625 추가 모달: 공용 프레임 -->
+<!-- modal_fixed -->
+<div class="modal_fixed">
+    <div class="dis_table">
+        <div class="table_cell">
+            <section class="modal_section">
+
+            </section>
+        </div>
+    </div>
+</div>
+<!-- //modal_fixed -->
+
+
+<!-- 190625 추가 모달: 기본 -->
+<!-- modal_fixed -->
+<div class="modal_fixed">
+    <div class="dis_table">
+        <div class="table_cell">
+            <section class="modal_section">
+                <div class="modal_title bor_btm">모달 기본</div>
+                <div class="modal_content">
+                    <p>모달 내용</p>
+                </div>
+                <div class="active_btn_wrap bor_top tc">
+                    <a class="btn__active btn_m">확인</a>
+                    <a class="btn__cancel btn_m modal_off">취소</a>
+                </div>
+            </section>
+        </div>
+    </div>
+</div>
+<!-- //modal_fixed -->
+
+
+<!-- 190731 추가 모달: 회람인 추가 -->
+<!-- modal_fixed -->
+<div class="modal_fixed modal_circulation" id="modalOnCirculationLayout">
+    <div class="dis_table">
+        <div class="table_cell">
+            <section class="modal_section">
+                <div class="modal_title bor_btm clearfix">
+                    <p class="fl" style="line-height: 30px">회람 요청</p>
+                    <a class="fr btn__y btn_m">회람인 추가</a>
+                </div>
+                <ul class="modal_circulation_ul">
+                    <li>
+                        <div class="clearfix modal_circulation_user">
+                            <label class="fl mar6">회람인 : </label>
+                            <div class="user admin">
+                                <p class="sm_p58">홍길동 부서장</p>
+                                <a class="btn_x"></a>
+                            </div>
+                        </div>
+                        <div class="modal_circulation_input">
+                            <input type="text" class="form-control" placeholder="회람 요청 메세지">
+                            <a class="btn_x"></a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="clearfix modal_circulation_user">
+                            <label class="fl mar6">회람인 : </label>
+                            <a class="btn_add  mar6">+ 회람인 지정</a>
+                        </div>
+                        <div class="modal_circulation_input">
+                            <input type="text" class="form-control" placeholder="회람 요청 메세지">
+                            <a class="btn_x"></a>
+                        </div>
+                    </li>
+                </ul>
+                <div class="active_btn_wrap bor_top tc">
+                    <a class="btn__active btn_m">확인</a>
+                    <a class="btn__cancel btn_m modal_off">취소</a>
+                </div>
+            </section>
+        </div>
+    </div>
+</div>
+<!-- //modal_fixed -->
+
+
+
+<!-- 모달: 비밀번호 찾기 -->
+<!-- modal_fixed -->
+<div class="modal_fixed modal_login" id="modalOnPasswordLayout">
+    <!-- dis_table -->
+    <div class="dis_table">
+        <!-- table_cell -->
+        <div class="table_cell">
+            <!-- modal_section -->
+            <section class="modal_section">
+                <div class="logo">
+                    <img src="http://www.stickpng.com/assets/images/580b57fcd9996e24bc43c513.png">
+                </div>
+                <h2 class="section_h2">등록된 이메일 아이디를 입력하시면,<br>
+                    해당 메일로 비밀번호 변경 링크가 전송됩니다.</h2>
+                <div class="login_form_wrap">
+                    <input class="login_input" placeholder="Email address">
+                </div>
+                <div class="btn_wrap">
+                    <a class="btn__active">링크 전송</a>
+                </div>
+            </section>
+            <!-- //modal_section -->
+        </div>
+        <!-- //dis_table -->
+    </div>
+    <!-- //dis_table -->
+</div>
+<!-- //modal_fixed -->
+
+<!-- 모달: 신규 유저 등록 -->
+<!-- modal_fixed -->
+<div class="modal_fixed modal_login" id="modalOnJoinLayout">
+    <!-- dis_table -->
+    <div class="dis_table">
+        <!-- table_cell -->
+        <div class="table_cell">
+            <!-- modal_section -->
+            <section class="modal_section">
+                <div class="logo">
+                    <img src="http://www.stickpng.com/assets/images/580b57fcd9996e24bc43c513.png">
+                </div>
+                <h2 class="section_h2">등록된 이메일 아이디를 입력하시면<br>해당 메일로 신규 등록 링크가 전송됩니다.</h2>
+                <div class="login_form_wrap">
+                    <input class="login_input" placeholder="Email address">
+                </div>
+                <div class="btn_wrap">
+                    <a class="btn__active">링크 전송</a>
+                </div>
+            </section>
+            <!-- //modal_section -->
+        </div>
+        <!-- //dis_table -->
+    </div>
+    <!-- //dis_table -->
+</div>
+<!-- //modal_fixed -->
+
+
+<!-- 모달: modal_loading -->
+<!-- modal_fixed -->
+<div class="modal_fixed modal_loading" id="modalOnModalLoadingLayout">
+    <!-- dis_table -->
+    <div class="dis_table">
+        <!-- table_cell -->
+        <div class="table_cell">
+            <!-- modal_section -->
+            <section class="modal_section">
+                <p class="modal_p">문서를 저장 중입니다.</p>
+            </section>
+            <!-- //modal_section -->
+        </div>
+        <!-- //dis_table -->
+    </div>
+    <!-- //dis_table -->
+</div>
+<!-- //modal_fixed -->
+
+
+<!-- 모달: 공용 알람 체크 -->
+<!-- modal_fixed -->
+<div class="modal_fixed modal_confirm" id="modalOnAlramCheckLayout">
+    <!-- dis_table -->
+    <div class="dis_table">
+        <!-- table_cell -->
+        <div class="table_cell">
+            <!-- modal_section -->
+            <section class="modal_section">
+                <div class="icon">
+                    <img src="imgs/check_bold.svg">
+                </div>
+                <p class="modal_p">
+                    메일이 송부되었습니다.<br>
+                    1분후에 메일을 확인해주세요!
+                </p>
+            </section>
+            <!-- //modal_section -->
+        </div>
+        <!-- //dis_table -->
+    </div>
+    <!-- //dis_table -->
+</div>
+<!-- //modal_fixed -->
+
+
+<!-- 모달: 공용 알람 벨 -->
+<!-- modal_fixed -->
+<div class="modal_fixed modal_confirm" id="modalOnAlramBellLayout">
+    <!-- dis_table -->
+    <div class="dis_table">
+        <!-- table_cell -->
+        <div class="table_cell">
+            <!-- modal_section -->
+            <section class="modal_section">
+                <div class="icon">
+                    <img src="imgs/bell.svg">
+                </div>
+                <p class="modal_p">
+                    메일이 송부되었습니다.<br>
+                    1분후에 메일을 확인해주세요!
+                </p>
+            </section>
+            <!-- //modal_section -->
+        </div>
+        <!-- //dis_table -->
+    </div>
+    <!-- //dis_table -->
+</div>
+<!-- //modal_fixed -->
+
+<!-- 모달: 공용 알람 경고 -->
+<!-- modal_fixed -->
+<div class="modal_fixed modal_confirm" id="modalOnAlramWarninglLayout">
+    <!-- dis_table -->
+    <div class="dis_table">
+        <!-- table_cell -->
+        <div class="table_cell">
+            <!-- modal_section -->
+            <section class="modal_section">
+                <div class="icon">
+                    <img src="imgs/warning.svg">
+                </div>
+                <p class="modal_p">
+                    중복입니다.
+                </p>
+            </section>
+            <!-- //modal_section -->
+        </div>
+        <!-- //dis_table -->
+    </div>
+    <!-- //dis_table -->
+</div>
+<!-- //modal_fixed -->
+
+<!-- 모달: 공용 알람 컨펌 -->
+<!-- modal_fixed -->
+<div class="modal_fixed modal_confirm" id="modalOnAlramConfirmLayout">
+    <!-- dis_table -->
+    <div class="dis_table">
+        <!-- table_cell -->
+        <div class="table_cell">
+            <!-- modal_section -->
+            <section class="modal_section">
+                <div class="icon">
+                    <img src="imgs/warning.svg">
+                </div>
+                <p class="modal_p">
+                    삭제하면 되돌릴 수 없습니다.<br>
+                    정말 삭제하시겠습니까?
+                </p>
+                <!-- btn_wrap -->
+                <div class="active_btn_wrap tc">
+                    <a class="btn__active btn_m">확인</a>
+                    <a class="btn__cancel btn_m modal_off">취소</a>
+                </div>
+                <!-- //btn_wrap -->
+            </section>
+            <!-- //modal_section -->
+        </div>
+        <!-- //dis_table -->
+    </div>
+    <!-- //dis_table -->
+</div>
+<!-- //modal_fixed -->
+
+
+<!-- 모달: 공용 알람 컨펌 -->
+<!-- modal_fixed -->
+<div class="modal_fixed modal1 modal_confirm" id="modalOnAlramLayout">
+    <!-- dis_table -->
+    <div class="dis_table">
+        <!-- table_cell -->
+        <div class="table_cell">
+            <!-- modal_section -->
+            <section class="modal_section">
+                <p class="modal_p">
+                    삭제하면 되돌릴 수 없습니다.<br>
+                    정말 삭제하시겠습니까?
+                </p>
+                <!-- btn_wrap -->
+                <div class="active_btn_wrap tc">
+                    <a class="btn__active btn_m">확인</a>
+                    <a class="btn__cancel btn_m modal_off">취소</a>
+                </div>
+                <!-- //btn_wrap -->
+            </section>
+            <!-- //modal_section -->
+        </div>
+        <!-- //dis_table -->
+    </div>
+    <!-- //dis_table -->
+</div>
+<!-- //modal_fixed -->
+
+<!-- 모달: 관리자 - 신규 유저 초대 -->
+<!-- modal_fixed -->
+<div class="modal_fixed modal_admin_user" id="modalOnAdminUserAddLayout">
+    <!-- dis_table -->
+    <div class="dis_table">
+        <!-- table_cell -->
+        <div class="table_cell">
+            <!-- modal_section -->
+            <section class="modal_section">
+                <!-- modal_title -->
+                <div class="modal_title bor_btm">
+                    <p class="lg_p">신규 유저 초대</p>
+                    <p class="sm_p58">신규 유저를 초대하면 유저에게 초대 이메일이 전송됩니다.</p>
+                </div>
+                <!-- //modal_title -->
+                <!-- form_wrap -->
+                <ul class="form_wrap">
+                <li>
+                    <label class="sm_label">이메일</label>
+                    <input type="text">
+                    <p class="icon_notify_p">이메일은 가입 ID와 동일하며 수정이 불가합니다.</p>
+                </li>
+                <li class="clearfix_r15">
+                    <div class="divide__2">
+                        <label class="sm_label">관리자 권한</label>
+                        <input type="checkbox" id="check01">
+                        <label for="check01">권한을 부여합니다</label>
+                    </div>
+                    <div class="divide__2">
+                        <label class="sm_label">법무검토자 권한</label>
+                        <input type="checkbox" id="check02">
+                        <label for="check02">권한을 부여합니다</label>
+                    </div>
+                </li>
+                <li>
+                    <label class="sm_label">이름</label>
+                    <input type="text">
+                </li>
+                <li>
+                    <label class="sm_label">전화번호</label>
+                    <input type="text">
+                </li>
+                <li class="clearfix_r15">
+                    <div class="divide__2">
+                        <label class="sm_label">부서</label>
+                        <input type="text">
+                    </div>
+                    <div class="divide__2">
+                        <label class="sm_label">직급</label>
+                        <input type="text">
+                    </div>
+                </li>
+                <li>
+                    <label class="sm_label">설명</label>
+                    <input type="text">
+                    <p class="icon_notify_p">사용자에 대한 설명은 관리자만 볼 수 있습니다.</p>
+                </li>
+                </ul>
+                <!-- //form_wrap -->
+                <!-- btn_wrap -->
+                <div class="btn_wrap bor_top tc">
+                    <a class="btn__active btn_m">저장</a>
+                    <a class="btn__cancel btn_m modal_off">취소</a>
+                </div>
+                <!-- //btn_wrap -->
+            </section>
+            <!-- //modal_section -->
+        </div>
+        <!-- //dis_table -->
+    </div>
+    <!-- //dis_table -->
+</div>
+<!-- //modal_fixed -->
+
+<!-- 모달: 관리자 - 유저 관리 -->
+<!-- modal_fixed -->
+<div class="modal_fixed modal_admin_user" id="modalOnAdminUserLayout">
+    <!-- dis_table -->
+    <div class="dis_table">
+        <!-- table_cell -->
+        <div class="table_cell">
+            <!-- modal_section -->
+            <section class="modal_section">
+                <!-- modal_title -->
+                <div class="modal_title bor_btm">
+                    <p class="lg_p">유저관리</p>
+                </div>
+                <!-- //modal_title -->
+                <!-- form_wrap -->
+                <ul class="form_wrap">
+                <li>
+                    <label class="sm_label">이메일</label>
+                    <input type="text" value="hong_test@gmail.com" disabled>
+                    <p class="icon_notify_p">이메일은 가입 ID와 동일하며 수정이 불가합니다.</p>
+                </li>
+                <li>
+                    <label class="sm_label">이름</label>
+                    <input type="text" value="홍길동" disabled>
+                    <p class="icon_notify_p">이름은 수정이 불가합니다.</p>
+                </li>
+                <li class="clearfix_r15">
+                    <div class="divide__2">
+                        <label class="sm_label">관리자 권한</label>
+                        <input type="checkbox" id="check01">
+                        <label for="check01">권한을 부여합니다</label>
+                    </div>
+                    <div class="divide__2">
+                        <label class="sm_label">법무검토자 권한</label>
+                        <input type="checkbox" id="check02">
+                        <label for="check02">권한을 부여합니다</label>
+                    </div>
+                </li>
+                <li class="clearfix_r15">
+                    <div class="divide__2">
+                        <label class="sm_label">부서</label>
+                        <input type="text">
+                    </div>
+                    <div class="divide__2">
+                        <label class="sm_label">직급</label>
+                        <input type="text">
+                    </div>
+                </li>
+                <li>
+                    <label class="sm_label">전화번호</label>
+                    <input type="text">
+                </li>
+                <li>
+                    <label class="sm_label">설명</label>
+                    <input type="text">
+                    <p class="icon_notify_p">사용자에 대한 설명은 관리자만 볼 수 있습니다.</p>
+                </li>
+                <li class="clearfix_r15">
+                    <div class="divide__2">
+                        <label class="sm_label">비밀번호</label>
+                        <a class="btn__y">비밀번호 변경 안내 메일 전송</a>
+                    </div>
+                    <div class="divide__2">
+                        <label class="sm_label">계약 이관</label>
+                        <a class="btn__y">보유한 전체 계약 이관</a>
+                    </div>
+                </li>
+                </ul>
+                <!-- //form_wrap -->
+                <!-- btn_wrap -->
+                <div class="btn_wrap bor_top">
+                    <div class="fl">
+                        <a class="btn__del btn_m">유저삭제</a>
+                    </div>
+                    <div class="fr tr">
+                        <a class="btn__active btn_m">저장</a>
+                        <a class="btn__cancel btn_m modal_off">취소</a>
+                    </div>
+                </div>
+                <!-- //btn_wrap -->
+            </section>
+            <!-- //modal_section -->
+        </div>
+        <!-- //dis_table -->
+    </div>
+    <!-- //dis_table -->
+</div>
+<!-- //modal_fixed -->
+
+<!-- 모달: 관련인 추가 -->
+<!-- modal_fixed -->
+<div class="modal_fixed modal_add_relevant" id="modalOnAddRelevantLayout">
+    <!-- dis_table -->
+    <div class="dis_table">
+        <!-- table_cell -->
+        <div class="table_cell">
+            <!-- modal_section -->
+            <section class="modal_section">
+                <!-- modal_title -->
+                <div class="modal_title">
+                    <p class="lg_p">관련인 추가</p>
+                </div>
+                <!-- //modal_title -->
+                <!-- bt_tab tab_add_relevant -->
+                <div class="bt_tab" id="tab_add_relevant">
+                    <!-- tabs -->
+                    <div class="tabs">
+                        <div class="tab active">외부 관련인</div>
+                        <div class="tab">사내 관련인</div>
+                    </div>
+                    <!-- //tabs -->
+                    <!-- tviews -->
+                    <div class="tviews">
+                        <!-- tview -->
+                        <div class="tview active">
+                            <!-- form_wrap -->
+                            <ul class="form_wrap">
+                            <li class="clearfix" style="margin-bottom: -12px;">
+                                <a class="fr btn_add" id="modalOnOpposite">+ 계약 상대 불러오기</a>
+                            </li>
+                            <li>
+                                <label class="sm_label">이름</label>
+                                <input type="text">
+                            </li>
+                            <li class="clearfix_r15">
+                                <div class="divide__2">
+                                    <label class="sm_label">회사명</label>
+                                    <input type="text">
+                                </div>
+                                <div class="divide__2">
+                                    <label class="sm_label">사업자등록번호</label>
+                                    <input type="text">
+                                </div>
+                            </li>
+                            <li>
+                                <label class="sm_label">이메일</label>
+                                <input type="text">
+                            </li>
+                            <li>
+                                <label class="sm_label">전화번호</label>
+                                <input type="text">
+                            </li>
+                            <li>
+                                <div class="clearfix_r15">
+                                    <div class="divide__2">
+                                        <label class="sm_label">서명 설정</label>
+                                        <div class="clearfix">
+                                            <select>
+                                                <option>회사 명의 서명</option>
+                                                <option>개인 명의 서명</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="divide__2">
+                                        <label class="sm_label">수정 권한</label>
+                                        <div class="clearfix">
+                                            <select>
+                                                <option>수정 가능</option>
+                                                <option>수정 불가능</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="modal_add_relevant_btn">
+                                <div class="clearfix_r15">
+                                    <div class="divide__2">
+                                        <label class="sm_label">관련인</label>
+                                        <a class="btn__g">관련인 삭제</a>
+                                    </div>
+                                    <div class="divide__2">
+                                        <label class="sm_label">알람</label>
+                                        <a class="btn__y">알람 재전송</a>
+                                    </div>
+                                </div>
+                            </li>
+                            </ul>
+                            <!-- //form_wrap -->
+                            <!-- btn_wrap -->
+                            <div class="active_btn_wrap tc">
+                                <a class="btn__active btn_m">확인</a>
+                                <a class="btn__cancel btn_m modal_off">취소</a>
+                            </div>
+                            <!-- //btn_wrap -->
+                        </div>
+                        <!-- //tview -->
+                        <!-- tview -->
+                        <div class="tview">
+                            <!-- form_wrap -->
+                            <ul class="form_wrap">
+                            <li>
+                                <label class="sm_label">이름</label>
+                                <div class="clearfix">
+                                    <input type="text" class="fl calc_input" disabled>
+                                    <div class="fl calc_btn_wrap tr">
+                                        <a class="btn__y btn_m calc_btn">검색</a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <label class="sm_label">부서</label>
+                                <input type="text" disabled>
+                            </li>
+                            <li>
+                                <label class="sm_label">이메일</label>
+                                <input type="text" disabled>
+                            </li>
+                            <li>
+                                <label class="sm_label">전화번호</label>
+                                <input type="text">
+                            </li>
+                            <li>
+                                <div class="clearfix_r15">
+                                    <div class="divide__2">
+                                        <label class="sm_label">서명 설정</label>
+                                        <div class="clearfix">
+                                            <select>
+                                                <option>회사 명의 서명</option>
+                                                <option>개인 명의 서명</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="divide__2">
+                                        <label class="sm_label">수정 권한</label>
+                                        <div class="clearfix">
+                                            <select>
+                                                <option>수정 가능</option>
+                                                <option>수정 불가능</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            </ul>
+                            <!-- //form_wrap -->
+                            <!-- btn_wrap -->
+                            <div class="active_btn_wrap tc">
+                                <a class="btn__active btn_m">확인</a>
+                                <a class="btn__cancel btn_m modal_off">취소</a>
+                            </div>
+                            <!-- //btn_wrap -->
+                        </div>
+                        <!-- //tview -->
+                    </div>
+                    <!-- //tviews -->
+                </div>
+                <!-- //bt_tab tab_add_relevant -->
+            </section>
+            <!-- //modal_section -->
+        </div>
+        <!-- //dis_table -->
+    </div>
+    <!-- //dis_table -->
+</div>
+<!-- //modal_fixed -->
+
+<!-- 모달: 카테고리 변경 -->
+<!-- modal_fixed -->
+<div class="modal_fixed" id="modalOnContCateLayout">
+    <!-- dis_table -->
+    <div class="dis_table">
+        <!-- table_cell -->
+        <div class="table_cell">
+            <!-- modal_section -->
+            <section class="modal_section">
+                <!-- modal_title -->
+                <div class="modal_title">
+                    <p class="lg_p">카테고리 변경</p>
+                </div>
+                <!-- //modal_title -->
+
+                <div class="clearfix_r15">
+                    <div class="divide__2">
+                        <div class="clearfix">
+                            <select>
+                                <option>회사 명의 서명</option>
+                                <option>개인 명의 서명</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="divide__2">
+                        <div class="clearfix">
+                            <select>
+                                <option>수정 가능</option>
+                                <option>수정 불가능</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <!-- btn_wrap -->
+                <div class="active_btn_wrap tc bor_top">
+                    <a class="btn__active btn_m">확인</a>
+                    <a class="btn__cancel btn_m modal_off">취소</a>
+                </div>
+                <!-- //btn_wrap -->
+            </section>
+            <!-- //modal_section -->
+        </div>
+        <!-- //dis_table -->
+    </div>
+    <!-- //dis_table -->
+</div>
+<!-- //modal_fixed -->
+
+<!-- 모달: 계약 상대방 추가 -->
+<!-- modal_fixed -->
+<div class="modal_fixed modal_add_oppsite modal3" id="modalOnAddOppsiteLayout">
+    <!-- dis_table -->
+    <div class="dis_table">
+        <!-- table_cell -->
+        <div class="table_cell">
+            <!-- modal_section -->
+            <section class="modal_section">
+                <!-- modal_title -->
+                <div class="modal_title">
+                    <p class="lg_p">계약 상대방 추가</p>
+                </div>
+                <!-- //modal_title -->
+                <!-- bt_tab tab_add_relevant -->
+                <div class="bt_tab" id="tab_oppsite">
+                    <!-- tabs -->
+                    <div class="tabs">
+                        <div class="tab active">외부 업체</div>
+                        <div class="tab">개인</div>
+                    </div>
+                    <!-- //tabs -->
+                    <!-- tviews -->
+                    <div class="tviews">
+                        <!-- tview -->
+                        <div class="tview active">
+                            <div class="clearfix modal_search_hd">
+                                <div class="input_search">
+                                    <div class="icon_search"></div>
+                                    <input type="text" class="input" placeholder="회사명 또는 사업자등록번호 검색">
+                                </div>
+                                <a class="btn__b">+ 신규 업체 추가</a>
+                            </div>
+                            <!-- modal_add_opposite_ul -->
+                            <ul class="bt_list modal_add_opposite_ul">
+                                <li class="list_hd">
+                                    <div class="list_check">선택</div>
+                                    <div class="list2">회사명</div>
+                                    <div class="list3">대표자</div>
+                                    <div class="list4">사업자등록번호</div>
+                                </li>
+                            </ul>
+                            <ul class="bt_list modal_add_opposite_ul">
+                                <li>
+                                    <div class="list_check">
+                                        <input type="checkbox" id="tagCheck01">
+                                        <label for="tagCheck01"></label>
+                                    </div>
+                                    <label for="tagCheck01" class="clearfix">
+                                        <div class="list2">배달의한국</div>
+                                        <div class="list3">김민규</div>
+                                        <div class="list4">000-12-32433</div>
+                                    </label>
+                                </li>
+                            </ul>
+                            <div class="pagination_area clearfix">
+                                <ul class="pagination fr">
+                                    <li class="prev">prev</li>
+                                    <li>1</li>
+                                    <li>2</li>
+                                    <li class="active">3</li>
+                                    <li>4</li>
+                                    <li>5</li>
+                                    <li class="next">next</li>
+                                </ul>
+                            </div>
+                            <!-- btn_wrap -->
+                            <div class="active_btn_wrap tc">
+                                <a class="btn__active btn_m">확인</a>
+                                <a class="btn__cancel btn_m modal_off">취소</a>
+                            </div>
+                            <!-- //btn_wrap -->
+                        </div>
+                        <!-- //tview -->
+                        <!-- tview -->
+                        <div class="tview">
+                            <!-- form_wrap -->
+                            <ul class="form_wrap">
+                                <li class="clearfix" style="margin-bottom: -12px;">
+                                    <a class="fr btn_add" id="modalOnOpposite">+ 임직원 검색</a>
+                                </li>
+                                <li>
+                                    <label class="sm_label">이름</label>
+                                    <input type="text">
+                                </li>
+                                <li>
+                                    <label class="sm_label">이메일</label>
+                                    <input type="text">
+                                </li>
+                                <li>
+                                    <label class="sm_label">전화번호</label>
+                                    <input type="text">
+                                </li>
+                            </ul>
+                            <!-- //form_wrap -->
+                            <!-- btn_wrap -->
+                            <div class="active_btn_wrap tc">
+                                <a class="btn__active btn_m">확인</a>
+                                <a class="btn__cancel btn_m modal_off">취소</a>
+                            </div>
+                            <!-- //btn_wrap -->
+                        </div>
+                        <!-- //tview -->
+                    </div>
+                    <!-- //tviews -->
+                </div>
+                <!-- //bt_tab tab_add_relevant -->
+            </section>
+            <!-- //modal_section -->
+        </div>
+        <!-- //dis_table -->
+    </div>
+    <!-- //dis_table -->
+</div>
+<!-- //modal_fixed -->
+
+
+<!-- 모달: 검토 의견 -->
+<!-- modal_fixed -->
+<div class="modal_fixed modal_sign" id="modalOnReviewLayout">
+    <!-- dis_table -->
+    <div class="dis_table">
+        <!-- table_cell -->
+        <div class="table_cell">
+            <!-- modal_section -->
+            <section class="modal_section">
+                <!-- modal_title -->
+                <div class="modal_title">
+                    <p class="lg_p">검토 의견</p>
+                </div>
+                <!-- //modal_title -->
+                <!-- sign_info -->
+                <div class="sign_box">
+                    <!-- sign_contract_info -->
+                    <ul class="sign_contract_info clearfix_ul">
+                    <li>
+                        <label class="sm_p58_b mar6" style="line-height: 30px;">검토자</label>
+                        <div class="user">
+                            <p class="sm_p58">홍길동 부서장</p>
+                        </div>
+                    </li>
+                    <li>
+                        <label class="sm_p58_b">검토 제목</label>
+                        <p class="sm_p58">위시켓</p>
+                    </li>
+                    <li>
+                        <label class="sm_p58_b">내용</label>
+                        <p class="sm_p58">
+                            제 1조 검토의견에 대하여  나의 의견은 이러하다는 점에 대해서 이렇게 말씀드리는 바입니다. 제 1조 검토의견에 대하여  나의 의견은 이러하다는 점에 대해서 이렇게 말씀드리는 바입니다. 제 1조 검토의견에 대하여  나의 의견은 이러하다는 점에 대해서 이렇게 말씀드리는 바입니다.
+                        </p>
+                    </li>
+                    </ul>
+                    <!-- //sign_contract_info -->
+                </div>
+                <!-- //sign_box -->
+                <!-- btn_wrap -->
+                <div class="btn_wrap tr">
+                    <a class="btn__y">서명하기</a>
+                    <a class="btn__f modal_off">취소</a>
+                </div>
+                <!-- //btn_wrap -->
+            </section>
+            <!-- //modal_section -->
+        </div>
+        <!-- //dis_table -->
+    </div>
+    <!-- //dis_table -->
+</div>
+<!-- //modal_fixed -->
+
+<!-- 모달: 승인 요청 -->
+<!-- modal_fixed -->
+<div class="modal_fixed modal_review_writing" id="modalOnReviewWritingLayout">
+    <!-- dis_table -->
+    <div class="dis_table">
+        <!-- table_cell -->
+        <div class="table_cell">
+            <!-- modal_section -->
+            <section class="modal_section">
+                <!-- modal_title -->
+                <div class="modal_title bor_btm" style="margin-bottom: 15px">
+                    <p class="lg_p">승인 요청</p>
+                </div>
+                <!-- //modal_title -->
+                <!-- signmodal_info_ul_info -->
+                <ul class="modal_info_ul clearfix_ul">
+                    <li>
+                        <label class="sm_p58_b mar6" style="line-height: 30px;">부서장</label>
+                        <div class="info_r">
+                            <div class="user admin">
+                                <p class="sm_p58">홍길동 부서장</p>
+                                <a class="btn_x"></a>
+                            </div>
+                            <a class="btn_add mar6">부서장 선택</a>
+                        </div>
+                    </li>
+                    <li>
+                        <label class="sm_p58_b">내용</label>
+                        <div class="info_r">
+                            <textarea class="txtr_writing"></textarea>
+                        </div>
+                    </li>
+                </ul>
+                <!-- //modal_info_ul -->
+                <!-- btn_wrap -->
+                <div class="btn_wrap tr">
+                    <a class="btn__y">확인</a>
+                    <a class="btn__f modal_off">취소</a>
+                </div>
+                <!-- //btn_wrap -->
+            </section>
+            <!-- //modal_section -->
+        </div>
+        <!-- //dis_table -->
+    </div>
+    <!-- //dis_table -->
+</div>
+<!-- //modal_fixed -->
+
+
+
+<!-- 모달: 공문 승인 의견 -->
+<!-- modal_fixed -->
+<div class="modal_fixed" id="modalOnOfficialReviewWritingLayout">
+    <!-- dis_table -->
+    <div class="dis_table">
+        <!-- table_cell -->
+        <div class="table_cell">
+            <!-- modal_section -->
+            <section class="modal_section">
+                <!-- modal_title -->
+                <div class="modal_title bor_btm" style="margin-bottom: 15px">
+                    <p class="lg_p">승인 의견</p>
+                </div>
+                <!-- //modal_title -->
+                <!-- signmodal_info_ul_info -->
+                <ul class="modal_info_ul clearfix_ul">
+                    <li style="margin-bottom: 15px;">
+                        <label class="sm_p58_b">내용</label>
+                        <div class="info_r">
+                            <textarea class="txtr_writing"></textarea>
+                        </div>
+                    </li>
+                    <li>
+                        <label class="sm_p58_b lh36">비밀번호</label>
+                        <div class="info_r">
+                            <input type="text">
+                        </div>
+                    </li>
+                </ul>
+                <!-- //modal_info_ul -->
+                <!-- btn_wrap -->
+                <div class="btn_wrap tr">
+                    <a class="btn__y">확인</a>
+                    <a class="btn__f modal_off">취소</a>
+                </div>
+                <!-- //btn_wrap -->
+            </section>
+            <!-- //modal_section -->
+        </div>
+        <!-- //dis_table -->
+    </div>
+    <!-- //dis_table -->
+</div>
+<!-- //modal_fixed -->
+
+
+
+<!-- 190813 추가 검토 의견 tmp_static_simple_popup_wrapper -->
+<!-- modal_fixed -->
+<div id="tmp_static_simple_popup_wrapper">
+    <div class="modal_fixed modal2" id="modalOnWritingLayout">   
+        <div class="dis_table">        
+            <div class="table_cell">            
+                <section class="modal_section">
+                    <div class="modal_title bor_btm">
+                        <p class="lg_p">검토 의견</p>
+                        <p class="sm_p58">이것은 계약의 검토본 문서이고 사내에서만 보여집니다.</p>
+                    </div>
+                    <ul class="form_wrap">
+                        <li>
+                            <label class="sm_p58 b">검토자</label>
+                            <div class="clearfix" style="margin-bottom: -6px">
+                                <div class="user">
+                                    <p class="sm_p58" id="reviewer_name">변호사</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <input type="text" id="review_title" placeholder="제목을 입력하세요" data-val="">
+                        </li>
+                        <li>
+                            <textarea class="textarea" id="review_content" placeholder="검토사항을 입력하세요" data-val=""></textarea>
+                        </li>
+                    </ul>
+                    <div class="active_btn_wrap tr">
+                        <a class="btn__b btn_m" onclick="fn_save_review_contents();">확인</a>
+                    </div>
+                </section>       
+            </div>   
+        </div>
+    </div>
+</div>
+
+
+<!-- 모달: 의견 작성 -->
+<!-- modal_fixed -->
+<div class="modal_fixed modal_writing" id="modalOnWritingLegalLayout">
+    <!-- dis_table -->
+    <div class="dis_table">
+        <!-- table_cell -->
+        <div class="table_cell">
+            <!-- modal_section -->
+            <section class="modal_section">
+                <!-- modal_title -->
+                <div class="modal_title bor_btm" style="margin-bottom: 20px">
+                    <p class="lg_p">회람 의견</p>
+                </div>
+                <!-- //modal_title -->
+                <div>
+                    <textarea class="txtr_writing"></textarea>
+                </div>
+                <!-- btn_wrap -->
+                <div class="btn_wrap tr">
+                    <a class="btn__y">확인</a>
+                    <a class="btn__f modal_off">취소</a>
+                </div>
+                <!-- //btn_wrap -->
+            </section>
+            <!-- //modal_section -->
+        </div>
+        <!-- //dis_table -->
+    </div>
+    <!-- //dis_table -->
+</div>
+<!-- //modal_fixed -->
+
+<!-- 모달: 서명하기 내부인 -->
+<!-- modal_fixed -->
+<div class="modal_fixed modal_sign" id="modalOnSignLayout">
+    <!-- dis_table -->
+    <div class="dis_table">
+        <!-- table_cell -->
+        <div class="table_cell">
+            <!-- modal_section -->
+            <section class="modal_section">
+                <!-- modal_title -->
+                <div class="modal_title">
+                    <p class="lg_p">서명하기</p>
+                </div>
+                <!-- //modal_title -->
+                <!-- tab_sign_top -->
+                <div class="clearfix modal_sign_top">
+                    <div class="fl">
+                        <input type="radio" id="modalSignRadio1" name="sign_type" value="0" checked>
+                        <label for="modalSignRadio1">회사 서명</label>
+                    </div>
+                    <div class="fl">
+                        <input type="radio" id="modalSignRadio2" name="sign_type" value="1">
+                        <label for="modalSignRadio2">개인 서명</label>
+                    </div>
+                </div>
+                <!-- //tab_sign_top -->
+                <!-- sign_info -->
+                <div class="sign_info">
+                    <div class="sign_notice">전자서명은 계약서에 도장을 찍는 것과 같은 법적 행위입니다.</div>
+                    <!-- sign_box -->
+                    <div class="sign_box">
+                        <!-- sign_contract_info -->
+                        <ul class="sign_contract_info clearfix_ul">
+                        <li>
+                            <label class="sm_p58_b">계약명</label>
+                            <p class="sm_p58">서명 테스트를 위한 계약서</p>
+                        </li>
+                        <li>
+                            <label class="sm_p58_b">회사명</label>
+                            <p class="sm_p58">위시켓</p>
+                        </li>
+                        <li>
+                            <label class="sm_p58_b">주소</label>
+                            <p class="sm_p58">성수일로 89</p>
+                        </li>
+                        <li>
+                            <label class="sm_p58_b">사업자등록번호</label>
+                            <p class="sm_p58">11022301048</p>
+                        </li>
+                        <li>
+                            <label class="sm_p58_b">계약 진행자</label>
+                            <p class="sm_p58">이이(tadkdldl@naver.com)<br>홍길동(dldl@naver.com)</p>
+                        </li>
+                        </ul>
+                        <!-- //sign_contract_info -->
+                    </div>
+                    <!-- //sign_box -->
+                </div>
+                <!-- //sign_info -->
+
+                <!-- modal_sign_views -->
+                <div class="modal_sign_views">
+                    <!-- modal_sign_view 회사 서명 -->
+                    <div class="modal_sign_view active">
+                        <!-- bt_tab tab_sign -->
+                        <div class="bt_tab" id="tab_sign1">
+                            <!-- tabs -->
+                            <div class="tabs">
+                                <div class="tab active">디지털직인</div>
+                                <div class="tab">공인인증서</div>
+                            </div>
+                            <!-- //tabs -->
+                            <!-- tviews -->
+                            <div class="tviews">
+                                <!-- tview 디지털직인 -->
+                                <div class="tview active">
+                                    <!-- sign_box -->
+                                    <div class="sign_box">
+                                        <!-- sign_contract_info -->
+                                        <ul class="sign_contract_info clearfix_ul">
+                                        <li>
+                                            <div class="sign_zone">
+                                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSxnz_yq7L3vvgOWkfmHlWjDuczliqX_Q89BmOk8TkYGeCDzIj4">
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <p class="icon_notify_p fl">디지털직인으로 서명하게 됩니다.</p>
+                                            <a class="fr btn__f btn_xs">디지털 직인이란?</a>
+                                        </li>
+                                        <!-- 서명 영역 -->
+                                        <li class="sign_agree">
+                                            <input type="checkbox" id="checkbox1">
+                                            <label class="sm_p58" for="checkbox1">저 이유진은 STG의 디지털 직인을 사용하여 회사 명의로 서명합니다.</label>
+                                        </li>
+                                        </ul>
+                                        <!-- //sign_contract_info -->
+                                    </div>
+                                    <!--//sign_box -->
+                                </div>
+                                <!-- //tview 디지털직인 -->
+                                <!-- tview 공인인증서 -->
+                                <div class="tview">
+                                    <!-- sign_box -->
+                                    <div class="sign_box">
+                                        <!-- sign_contract_info -->
+                                        <ul class="sign_contract_info clearfix_ul">
+                                        <li class="sign_line">
+                                            <label class="sm_p58_b">회사명</label>
+                                            <p class="sm_p58"><input type="text"></p>
+                                        </li>
+                                        <li>
+                                            <!-- 서명 영역 -->
+                                            <div class="sign_zone">
+                                                <p class="sm_p58_b">범용 공인인증서로 계약서 서명을 진행합니다.</p>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <p class="icon_notify_p">개인 법인이 계약서에 전자 서명 시에는 법률상 유료 범용 공인인증서를 사용하셔야 합니다.</p>
+                                        </li>
+                                        </ul>
+                                        <!-- //sign_contract_info -->
+                                    </div>
+                                    <!--//sign_box -->
+                                </div>
+                                <!-- //tview 공인인증서 -->
+                            </div>
+                            <!-- //tviews -->
+                        </div>
+                        <!-- //bt_tab tab_sign -->
+                    </div>
+                    <!-- //modal_sign_view 회사 서명 -->
+
+                    <!-- modal_sign_view 개인 서명 -->
+                    <div class="modal_sign_view">
+                        <!-- bt_tab tab_sign -->
+                        <div class="bt_tab" id="tab_sign2">
+                            <!-- tabs -->
+                            <div class="tabs">
+                                <div class="tab active">휴대폰인증</div>
+                                <div class="tab">수기</div>
+                            </div>
+                            <!-- //tabs -->
+                            <!-- tviews -->
+                            <div class="tviews">
+                                <!-- tview 휴대폰인증 -->
+                                <div class="tview active">
+                                    <!-- sign_box -->
+                                    <div class="sign_box">
+                                        <!-- sign_contract_info -->
+                                        <ul class="sign_contract_info clearfix_ul">
+                                        <li>
+                                            <!-- 서명 영역 -->
+                                            <div class="sign_zone"></div>
+                                        </li>
+                                        <li>
+                                            <p class="icon_notify_p">이유진님 개인 명의로 서명합니다.</p>
+                                        </li>
+                                        </ul>
+                                        <!-- //sign_contract_info -->
+                                    </div>
+                                    <!--//sign_box -->
+                                </div>
+                                <!-- //tview 휴대폰인증 -->
+                                <!-- tview 수기 -->
+                                <div class="tview">
+                                    <!-- sign_box -->
+                                    <div class="sign_box">
+                                        <!-- sign_contract_info -->
+                                        <ul class="sign_contract_info clearfix_ul">
+                                        <li class="sign_line">
+                                            <label class="sm_p58_b">대표자</label>
+                                            <p class="sm_p58"><input type="text" value="이유진" disabled></p>
+                                        </li>
+                                        <li>
+                                            <!-- 서명 영역 -->
+                                            <div class="sign_zone"></div>
+                                        </li>
+                                        <li>
+                                            <p class="icon_notify_p">이유진님이 회사 대표자로 서명합니다.</p>
+                                        </li>
+                                        </ul>
+                                        <!-- //sign_contract_info -->
+                                    </div>
+                                    <!--//sign_box -->
+                                </div>
+                                <!-- //tview 수기 -->
+                            </div>
+                            <!-- //tviews -->
+                        </div>
+                        <!-- //bt_tab tab_sign -->
+                    </div>
+                    <!-- //modal_sign_view 개인 서명 -->
+                </div>
+                <!-- //modal_sign_views -->
+                <!-- btn_wrap -->
+                <div class="btn_wrap tr">
+                    <a class="btn__y">서명하기</a>
+                    <a class="btn__f modal_off">취소</a>
+                </div>
+                <!-- //btn_wrap -->
+            </section>
+            <!-- //modal_section -->
+        </div>
+        <!-- //dis_table -->
+    </div>
+    <!-- //dis_table -->
+</div>
+<!-- //modal_fixed -->
+
+<!-- 모달: 서명하기 외부인 -->
+<!-- modal_fixed -->
+<div class="modal_fixed modal_sign modal_sign_outsider" id="modalOnSignOutsiderLayout">
+    <!-- dis_table -->
+    <div class="dis_table">
+        <!-- table_cell -->
+        <div class="table_cell">
+            <!-- modal_section -->
+            <section class="modal_section">
+                <!-- modal_title -->
+                <div class="modal_title">
+                    <p class="lg_p">서명하기</p>
+                </div>
+                <!-- //modal_title -->
+                <!-- tab_sign_top -->
+                <div class="clearfix modal_sign_top">
+                    <div class="fl">
+                        <input type="radio" id="modalSignRadio3" name="sign_type_outsider" value="0" checked>
+                        <label for="modalSignRadio3">회사 서명</label>
+                    </div>
+                    <div class="fl">
+                        <input type="radio" id="modalSignRadio4" name="sign_type_outsider" value="1">
+                        <label for="modalSignRadio4">개인 서명</label>
+                    </div>
+                </div>
+                <!-- //tab_sign_top -->
+                <!-- sign_info -->
+                <div class="sign_info">
+                    <div class="sign_notice">전자서명은 계약서에 도장을 찍는 것과 같은 법적 행위입니다.</div>
+                    <!-- sign_box -->
+                    <div class="sign_box">
+                        <!-- sign_contract_info -->
+                        <ul class="sign_contract_info clearfix_ul">
+                        <li>
+                            <label class="sm_p58_b">계약명</label>
+                            <p class="sm_p58">서명 테스트를 위한 계약서</p>
+                        </li>
+                        <li>
+                            <label class="sm_p58_b">기업명</label>
+                            <p class="sm_p58">위시켓</p>
+                        </li>
+                        <li>
+                            <label class="sm_p58_b">주소</label>
+                            <p class="sm_p58">성수일로 89</p>
+                        </li>
+                        <li>
+                            <label class="sm_p58_b">사업자등록번호</label>
+                            <p class="sm_p58">11022301048</p>
+                        </li>
+                        <li>
+                            <label class="sm_p58_b">계약 진행자</label>
+                            <p class="sm_p58">이이(tadkdldl@naver.com)<br>홍길동(dldl@naver.com)</p>
+                        </li>
+                        </ul>
+                        <!-- //sign_contract_info -->
+                    </div>
+                    <!-- //sign_box -->
+                </div>
+                <!-- //sign_info -->
+
+                <!-- modal_sign_views -->
+                <div class="modal_sign_views">
+                    <!-- modal_sign_view 회사 서명 -->
+                    <div class="modal_sign_view active">
+                        <!-- bt_tab tab_sign -->
+                        <div class="bt_tab" id="tab_sign3">
+                            <!-- tabs -->
+                            <div class="tabs">
+                                <div class="tab active">휴대폰인증</div>
+                                <div class="tab">공인인증서</div>
+                            </div>
+                            <!-- //tabs -->
+                            <!-- tviews -->
+                            <div class="tviews">
+                                <!-- tview 휴대폰인증 -->
+                                <div class="tview active">
+                                    <!-- sign_box -->
+                                    <div class="sign_box">
+                                        <!-- sign_contract_info -->
+                                        <ul class="sign_contract_info clearfix_ul">
+                                        <li class="sign_line">
+                                            <label class="sm_p58_b">회사명</label>
+                                            <p class="sm_p58"><input type="text"></p>
+                                        </li>
+                                        <li class="sign_line">
+                                            <label class="sm_p58_b">사업자등록번호</label>
+                                            <p class="sm_p58"><input type="text"></p>
+                                        </li>
+                                        <li class="sign_line">
+                                            <label class="sm_p58_b">서명자</label>
+                                            <p class="sm_p58"><input type="text"></p>
+                                        </li>
+                                        <li>
+                                            <!-- 서명 영역 -->
+                                            <div class="sign_zone"></div>
+                                        </li>
+                                        <li>
+                                            <p class="icon_notify_p">홍길동님이 회사를 대표해 서명합니다.</p>
+                                        </li>
+                                        </ul>
+                                        <!-- //sign_contract_info -->
+                                    </div>
+                                    <!--//sign_box -->
+                                </div>
+                                <!-- //tview 휴대폰인증 -->
+                                <!-- tview 공인인증서 -->
+                                <div class="tview">
+                                    <!-- sign_box -->
+                                    <div class="sign_box">
+                                        <!-- sign_contract_info -->
+                                        <ul class="sign_contract_info clearfix_ul">
+                                        <li class="sign_line">
+                                            <label class="sm_p58_b">회사명</label>
+                                            <p class="sm_p58"><input type="text"></p>
+                                        </li>
+                                        <li class="sign_line">
+                                            <label class="sm_p58_b">사업자등록번호</label>
+                                            <p class="sm_p58"><input type="text"></p>
+                                        </li>
+                                        <li>
+                                            <!-- 서명 영역 -->
+                                            <div class="sign_zone">
+                                                <p class="sm_p58_b">범용 공인인증서로 계약서 서명을 진행합니다.</p>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <p class="icon_notify_p">개인 법인이 계약서에 전자 서명 시에는 법률상 유료 범용 공인인증서를 사용하셔야 합니다.</p>
+                                        </li>
+                                        </ul>
+                                        <!-- //sign_contract_info -->
+                                    </div>
+                                    <!--//sign_box -->
+                                </div>
+                                <!-- //tview 공인인증서 -->
+                            </div>
+                            <!-- //tviews -->
+                        </div>
+                        <!-- //bt_tab tab_sign -->
+                    </div>
+                    <!-- //modal_sign_view 회사 서명 -->
+
+                    <!-- modal_sign_view 개인 서명 -->
+                    <div class="modal_sign_view">
+                        <!-- bt_tab tab_sign -->
+                        <div class="bt_tab" id="tab_sign4">
+                            <!-- tabs -->
+                            <div class="tabs">
+                                <div class="tab active">휴대폰인증</div>
+                                <div class="tab">수기</div>
+                            </div>
+                            <!-- //tabs -->
+                            <!-- tviews -->
+                            <div class="tviews">
+                                <!-- tview 휴대폰인증 -->
+                                <div class="tview active">
+                                    <!-- sign_box -->
+                                    <div class="sign_box">
+                                        <!-- sign_contract_info -->
+                                        <ul class="sign_contract_info clearfix_ul">
+                                            <li>
+                                                <!-- 서명 영역 -->
+                                                <div class="sign_zone"></div>
+                                            </li>
+                                            <li>
+                                                <p class="icon_notify_p">이유진님 개인 명의로 서명합니다.</p>
+                                            </li>
+                                        </ul>
+                                        <!-- //sign_contract_info -->
+                                    </div>
+                                    <!--//sign_box -->
+                                </div>
+                                <!-- //tview 휴대폰인증 -->
+                                <!-- tview 수기 -->
+                                <div class="tview">
+                                    <!-- sign_box -->
+                                    <div class="sign_box">
+                                        <!-- sign_contract_info -->
+                                        <ul class="sign_contract_info clearfix_ul">
+                                            <li class="sign_line">
+                                                <label class="sm_p58_b">서명자</label>
+                                                <p class="sm_p58"><input type="text"></p>
+                                            </li>
+                                            <li>
+                                                <!-- 서명 영역 -->
+                                                <div class="sign_zone"></div>
+                                            </li>
+                                            <li>
+                                                <p class="icon_notify_p">수기서명으로 진행합니다.</p>
+                                            </li>
+                                        </ul>
+                                        <!-- //sign_contract_info -->
+                                    </div>
+                                    <!--//sign_box -->
+                                </div>
+                                <!-- //tview 수기 -->
+                            </div>
+                            <!-- //tviews -->
+                        </div>
+                        <!-- //bt_tab tab_sign -->
+                    </div>
+                    <!-- //modal_sign_view 개인 서명 -->
+
+                </div>
+                <!-- //modal_sign_views -->
+                <!-- btn_wrap -->
+                <div class="btn_wrap tr">
+                    <a class="btn__y">서명하기</a>
+                    <a class="btn__f modal_off">취소</a>
+                </div>
+                <!-- //btn_wrap -->
+            </section>
+            <!-- //modal_section -->
+        </div>
+        <!-- //dis_table -->
+    </div>
+    <!-- //dis_table -->
+</div>
+<!-- //modal_fixed -->
+
+<!-- 모달: 권한 위임 - 권한 위임 등록 -->
+<!-- modal_fixed -->
+<div class="modal_fixed modal_empowerment" id="modalOnEmpowermentLayout">
+    <!-- dis_table -->
+    <div class="dis_table">
+        <!-- table_cell -->
+        <div class="table_cell">
+            <!-- modal_section -->
+            <section class="modal_section">
+                <!-- modal_title -->
+                <div class="modal_title bor_btm">
+                    <p class="lg_p">권한 위임 등록</p>
+                </div>
+                <!-- //modal_title -->
+                <!-- form_wrap -->
+                <ul class="form_wrap">
+                <li class="clearfix">
+                    <label class="sm_label">권한 위임 기간</label>
+                    <div class="input_date_wrap">
+                        <!-- input_date -->
+                        <div class="input_date">
+                            <div class="clearfix">
+                                <input type="text" class="input">
+                                <div class="btn_calendar"></div>
+                            </div>
+                        </div>
+                        <!-- //input_date -->
+                        <!-- input_date -->
+                        <div class="input_date">
+                            <div class="clearfix">
+                                <input type="text" class="input">
+                                <div class="btn_calendar"></div>
+                            </div>
+                        </div>
+                        <!-- //input_date -->
+                    </div>
+                </li>
+                <li class="clearfix_20">
+                    <div class="divide__2">
+                        <label class="sm_label">위임자</label>
+                        <!-- empowerment_user -->
+                        <div class="empowerment_user" style="display: none">
+                            <div class="clearfix">
+                                <div class="fl"><p class="l_p b empowerment_name">홍길동</p></div>
+                                <div class="fl"><p class="l_p empowerment_team">개발팀/팀장</p></div>
+                            </div>
+                            <p class="sm_p58">hong_test_email@gmail.com</p>
+                        </div>
+                        <!-- //empowerment_user -->
+                        <!-- btn_wrap -->
+                        <div class="btn_wrap">
+                            <a class="btn__y btn_m modal_user_on">유저 찾기</a>
+                            <!--<a class="btn__y btn_m modal_user_on">유저 변경</a>-->
+                        </div>
+                        <!-- //btn_wrap -->
+                    </div>
+                    <div class="divide__2">
+                        <label class="sm_label">수임자</label>
+                        <!-- empowerment_user -->
+                        <div class="empowerment_user">
+                            <div class="clearfix">
+                                <div class="fl"><p class="l_p b empowerment_name">홍길동</p></div>
+                                <div class="fl"><p class="l_p empowerment_team">개발팀/팀장</p></div>
+                            </div>
+                            <p class="sm_p58">hong_test_email@gmail.com</p>
+                        </div>
+                        <!-- //empowerment_user -->
+                        <!-- btn_wrap -->
+                        <div class="btn_wrap">
+                            <!--<a class="btn__y btn_m modal_user_on">유저 찾기</a>-->
+                            <a class="btn__y btn_m modal_user_on">유저 변경</a>
+                        </div>
+                        <!-- //btn_wrap -->
+                    </div>
+                </li>
+                </ul>
+                <!-- //form_wrap -->
+                <!-- btn_wrap -->
+                <div class="active_btn_wrap bor_top tc">
+                    <a class="btn__active btn_m">등록</a>
+                    <a class="btn__cancel btn_m modal_off">취소</a>
+                </div>
+                <!-- //btn_wrap -->
+            </section>
+            <!-- //modal_section -->
+        </div>
+        <!-- //dis_table -->
+    </div>
+    <!-- //dis_table -->
+</div>
+<!-- //modal_fixed -->
+
+
+<!-- 모달: 권한 위임 - 전체 계약 이관 -->
+<!-- modal_fixed -->
+<div class="modal_fixed modal_transfer_all" id="modalOnTransferAllLayout">
+    <!-- dis_table -->
+    <div class="dis_table">
+        <!-- table_cell -->
+        <div class="table_cell">
+            <!-- modal_section -->
+            <section class="modal_section">
+                <!-- modal_title -->
+                <div class="modal_title bor_btm">
+                    <p class="lg_p">계약 담당자 변경</p>
+                </div>
+                <!-- //modal_title -->
+                <!-- form_wrap -->
+                <ul class="form_wrap">
+                <li>
+                    <label class="sm_label">임직원 정보</label>
+                    <!-- empowerment_user -->
+                    <div class="empowerment_user clearfix">
+                        <div class="clearfix">
+                            <div class="fl"><p class="l_p b empowerment_name">홍길동</p></div>
+                            <div class="fl"><p class="l_p empowerment_team">개발팀/팀장</p></div>
+                        </div>
+                        <p class="sm_p58">hong_test_email@gmail.com</p>
+                    </div>
+                    <!-- //empowerment_user -->
+                    <!-- btn_wrap -->
+                    <div class="btn_wrap">
+                        <!--<a class="btn__y btn_m modal_user_on">유저 찾기</a>-->
+                        <a class="btn__y btn_m modal_user_on">유저 변경</a>
+                    </div>
+                    <!-- //btn_wrap -->
+                </li>
+                </ul>
+                <!-- //form_wrap -->
+                <!-- btn_wrap -->
+                <div class="active_btn_wrap bor_top tc">
+                    <a class="btn__active btn_m">확인</a>
+                    <a class="btn__cancel btn_m modal_off">취소</a>
+                </div>
+                <!-- //btn_wrap -->
+            </section>
+            <!-- //modal_section -->
+        </div>
+        <!-- //dis_table -->
+    </div>
+    <!-- //dis_table -->
+</div>
+<!-- //modal_fixed -->
+
+
+<!-- 모달: 계약 이관 - 계약서 추가 -->
+<!-- modal_fixed -->
+<div class="modal_fixed modal3 modal_transfer" id="modalOnTransferLayout">
+    <!-- dis_table -->
+    <div class="dis_table">
+        <!-- table_cell -->
+        <div class="table_cell">
+            <!-- modal_section -->
+            <section class="modal_section">
+                <!-- modal_title -->
+                <div class="modal_title bor_btm">
+                    <p class="lg_p">계약서 추가</p>
+                </div>
+                <!-- //modal_title -->
+                <!-- modal_top -->
+                <div class="modal_top">
+                    <!-- form_wrap -->
+                    <ul class="form_wrap">
+                        <li class="clearfix_20">
+                            <div class="divide__2">
+                                <label class="sm_label">계약 제목</label>
+                                <input type="text">
+                            </div>
+                            <div class="divide__2">
+                                <label class="sm_label">계약 상대</label>
+                                <input type="text">
+                            </div>
+                        </li>
+                        <li class="clearfix_20">
+                            <div class="divide__2">
+                                <div class="input_date_wrap">
+                                    <!-- input_date -->
+                                    <div class="input_date">
+                                        <label class="sm_label">검색 시작일</label>
+                                        <div class="clearfix">
+                                            <input type="text" class="input">
+                                            <div class="btn_calendar"></div>
+                                        </div>
+                                    </div>
+                                    <!-- //input_date -->
+                                    <!-- input_date -->
+                                    <div class="input_date">
+                                        <label class="sm_label">검색 종료일</label>
+                                        <div class="clearfix">
+                                            <input type="text" class="input">
+                                            <div class="btn_calendar"></div>
+                                        </div>
+                                    </div>
+                                    <!-- //input_date -->
+                                </div>
+                            </div>
+                            <div class="divide__2">
+                                <label class="sm_label">검토자</label>
+                                <input type="text">
+                            </div>
+                        </li>
+                    </ul>
+                    <!-- //form_wrap -->
+                    <!-- btn_wrap -->
+                    <div class="btn_wrap">
+                        <a class="fr btn__b">검색</a>
+                    </div>
+                    <!-- //btn_wrap -->
+                </div>
+                <!-- //modal_top -->
+                <!-- transfer_list_wrap -->
+                <div class="transfer_list_wrap">
+                    <p class="sm_p58_b">검색결과</p>
+                    <ul class="contract_list" style="margin-top: 4px;">
+                        <!-- contract_list li -->
+                        <li>
+                            <div class="list_check">
+                                <input type="checkbox" id="check1">
+                                <label for="check1"></label>
+                            </div>
+                            <div class="contract">
+                                <div class="clearfix contract_list_hd">
+                                    <div class="main_li_sub elipsis fl"><div class="state__request">승인 요청</div>계약 제목 영역입니다 계약 제목 영역입니다 계약 제목 영역입니다 계약 제목 영역입니다</div>
+                                    <div class="fr state__workflow">법무팀 검토중</div>
+                                </div>
+                                <div class="clearfix">
+                                    <!-- 기안자 / 계약상대 / 검토자 -->
+                                    <p class="fl sm_p58">
+                                        <span>기안자:이유진</span><span>&nbsp;/&nbsp;계약상대:옐로우업체</span><span>&nbsp;/&nbsp;검토자:<span class="need_allot"> 할당 필요!</span></span>
+                                    </p>
+                                    <p class="fr sm_pb4 main_li_id">20190207-00001004</p>
+                                </div>
+                            </div>
+                        </li>
+                        <!-- //contract_list li -->
+                    </ul>
+                    <!-- //contract_list -->
+                    <!-- pagination_wrap -->
+                    <div class="clearfix pagination_wrap">
+                        <p class="sm_p58 fl">총 0개의 계약이 선택되었습니다.</p>
+                        <ul class="pagination fr">
+                            <li class="prev">prev</li>
+                            <li>1</li>
+                            <li>2</li>
+                            <li class="active">3</li>
+                            <li>4</li>
+                            <li>5</li>
+                            <li class="next">next</li>
+                        </ul>
+                    </div>
+                    <!-- //pagination_wrap -->
+                    <!-- btn_wrap -->
+                    <div class="btn_wrap tr">
+                        <a class="btn__y">이관할 계약에 추가</a> 
+                        <a class="btn__f modal_off">취소</a>
+                    </div>
+                    <!-- //btn_wrap -->
+                </div>
+                <!-- //transfer_list_wrap -->
+            </section>
+            <!-- //modal_section -->
+        </div>
+        <!-- //dis_table -->
+    </div>
+    <!-- //dis_table -->
+</div>
+<!-- //modal_fixed -->
+
+
+<!-- 공용 모달: 임직원 검색 -->
+<!-- modal_fixed -->
+<div class="modal_fixed modal3 modal_user" id="modalOnUserLayout">
+    <!-- dis_table -->
+    <div class="dis_table">
+        <!-- table_cell -->
+        <div class="table_cell">
+            <!-- modal_section -->
+            <section class="modal_section">
+                <!-- modal_title -->
+                <div class="modal_title bor_btm">
+                    <p class="lg_p">임직원 검색</p>
+                </div>
+                <!-- //modal_title -->
+                <!-- modal_top -->
+                <div class="modal_top">
+                    <!-- form_wrap -->
+                    <ul class="form_wrap">
+                    <li class="clearfix_20">
+                        <div class="divide__2">
+                            <label class="sm_label">이름</label>
+                            <input type="text">
+                        </div>
+                        <div class="divide__2">
+                            <label class="sm_label">부서</label>
+                            <input type="text">
+                        </div>
+                    </li>
+                    </ul>
+                    <!-- //form_wrap -->
+                    <!-- btn_wrap -->
+                    <div class="btn_wrap">
+                        <a class="fr btn__b">검색</a>
+                    </div>
+                    <!-- //btn_wrap -->
+                    <!-- 190731 유저 선택 추가 -->
+                    <ul class="clearfix_ul user_wrap">
+                        <li class="user admin">
+                            <p class="sm_p58">홍길동 부서장</p>
+                            <a class="btn_x"></a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- //modal_top -->
+                <!-- modal_user_ul -->
+                <ul class="bt_list modal_user_ul">
+                <li class="list_hd">
+                    <div class="list_check">선택</div>
+                    <div class="list2">유저 정보</div>
+                    <div class="list3">부서 / 직급</div>
+                </li>
+                <li>
+                    <div class="list_check">
+                        <input type="checkbox" id="testcheckbox">
+                        <label for="testcheckbox"></label>
+                    </div>
+                    <div class="list2 user_info">
+                        <label for="testcheckbox">
+                            <p class="sm_p">홍길동 <span class="sm_pb4">201901011199</span></p>
+                            <p class="sm_p">hong_test_email@gmail.com</p>
+                        </label>
+                    </div>
+                    <div class="list3">경영지원팀 / 사원</div>
+                </li>
+                </ul>
+                <!-- //modal_user_ul -->
+                <!-- pagination -->
+                <div class="pagination_area clearfix">
+                    <ul class="pagination fr">
+                        <li class="prev">prev</li>
+                        <li>1</li>
+                        <li>2</li>
+                        <li class="active">3</li>
+                        <li>4</li>
+                        <li>5</li>
+                        <li class="next">next</li>
+                    </ul>
+                </div>
+                <!-- //pagination -->
+                <!-- btn_wrap -->
+                <div class="active_btn_wrap tr">
+                    <a class="btn__y">확인</a>
+                    <a class="btn__f modal_off">취소</a>
+                </div>
+                <!-- //btn_wrap -->
+            </section>
+            <!-- //modal_section -->
+        </div>
+        <!-- //dis_table -->
+    </div>
+    <!-- //dis_table -->
+</div>
+<!-- //modal_fixed -->
+
+
+<!-- 공용 모달: 신규 계약 생성 - 템플릿 미리보기 -->
+<!-- modal_fixed -->
+<div class="modal_fixed modal3" id="modalOnTmplPrvwLayout">
+    <!-- dis_table -->
+    <div class="dis_table">
+        <!-- table_cell -->
+        <div class="table_cell">
+            <!-- modal_section -->
+            <section class="modal_section">
+                <!-- modal_title -->
+                <div class="modal_title bor_btm">
+                    <p class="lg_p">템플릿 미리보기</p>
+                </div>
+                <!-- //modal_title -->
+                <!-- template_preview_wrap -->
+                <div class="template_preview_wrap">
+                    <h1 class="template_preview_h1">약관식 표준계약서</h1>
+                    <p class="l_p prewrap">연합군의 오해 제2차 세계대전 당시 폴란드군과 연합군이 ‘거수경례’로 오해가 생긴 일화가 전해집니다. 두 손가락만 들고 거수경례를 하는 폴란드군의 경례 전통을 오해한 연합군 장교가 폴란드 군인들과 언쟁을 벌였다는데요. 거수경례는 대다수 국가에서 다섯 손가락을 모두 편 채 손의 날이 보이도록 하기 때문에 연합군 장교 입장에서는 폴란드식 경례가 자신을 조롱하는 것이라 오해했던 것이지요.<br><br>연합군의 오해 제2차 세계대전 당시 폴란드군과 연합군이 ‘거수경례’로 오해가 생긴 일화가 전해집니다. 두 손가락만 들고 거수경례를 하는 폴란드군의 경례 전통을 오해한 연합군 장교가 폴란드 군인들과 언쟁을 벌였다는데요. 거수경례는 대다수 국가에서 다섯 손가락을 모두 편 채 손의 날이 보이도록 하기 때문에 연합군 장교 입장에서는 폴란드식 경례가 자신을 조롱하는 것이라 오해했던 것이지요.<br><br>연합군의 오해 제2차 세계대전 당시 폴란드군과 연합군이 ‘거수경례’로 오해가 생긴 일화가 전해집니다. 두 손가락만 들고 거수경례를 하는 폴란드군의 경례 전통을 오해한 연합군 장교가 폴란드 군인들과 언쟁을 벌였다는데요. 거수경례는 대다수 국가에서 다섯 손가락을 모두 편 채 손의 날이 보이도록 하기 때문에 연합군 장교 입장에서는 폴란드식 경례가 자신을 조롱하는 것이라 오해했던 것이지요.</p>
+                </div>
+                <!-- //template_preview_wrap -->
+                <!-- btn_wrap -->
+                <div class="active_btn_wrap tr">
+                    <a class="btn__y">확인</a>
+                    <a class="btn__f modal_off">취소</a>
+                </div>
+                <!-- //btn_wrap -->
+            </section>
+            <!-- //modal_section -->
+        </div>
+        <!-- //dis_table -->
+    </div>
+    <!-- //dis_table -->
+</div>
+<!-- //modal_fixed -->
+
+
+<!-- 공용 모달: 다중 계약서 보기 -->
+<!-- modal_fixed -->
+<div class="modal_fixed modal3" id="modalOnMltplContractLayout">
+    <!-- dis_table -->
+    <div class="dis_table">
+        <!-- table_cell -->
+        <div class="table_cell">
+            <!-- modal_section -->
+            <section class="modal_section modal_contract">
+                <!-- modal_title -->
+                <div class="modal_title bor_btm clearfix">
+                    <p class="lg_p fl">계약서 보기</p>
+                    <div class="mltpl_li_btn btn_print fr"></div>
+                </div>
+                <!-- //modal_title -->
+                <!-- template_preview_wrap -->
+                <div class="template_preview_wrap">
+                    <p class="prewrap">연합군의 오해 제2차 세계대전 당시 폴란드군과 연합군이 ‘거수경례’로 오해가 생긴 일화가 전해집니다. 두 손가락만 들고 거수경례를 하는 폴란드군의 경례 전통을 오해한 연합군 장교가 폴란드 군인들과 언쟁을 벌였다는데요. 거수경례는 대다수 국가에서 다섯 손가락을 모두 편 채 손의 날이 보이도록 하기 때문에 연합군 장교 입장에서는 폴란드식 경례가 자신을 조롱하는 것이라 오해했던 것이지요.<br><br>연합군의 오해 제2차 세계대전 당시 폴란드군과 연합군이 ‘거수경례’로 오해가 생긴 일화가 전해집니다. 두 손가락만 들고 거수경례를 하는 폴란드군의 경례 전통을 오해한 연합군 장교가 폴란드 군인들과 언쟁을 벌였다는데요. 거수경례는 대다수 국가에서 다섯 손가락을 모두 편 채 손의 날이 보이도록 하기 때문에 연합군 장교 입장에서는 폴란드식 경례가 자신을 조롱하는 것이라 오해했던 것이지요.<br><br>연합군의 오해 제2차 세계대전 당시 폴란드군과 연합군이 ‘거수경례’로 오해가 생긴 일화가 전해집니다. 두 손가락만 들고 거수경례를 하는 폴란드군의 경례 전통을 오해한 연합군 장교가 폴란드 군인들과 언쟁을 벌였다는데요. 거수경례는 대다수 국가에서 다섯 손가락을 모두 편 채 손의 날이 보이도록 하기 때문에 연합군 장교 입장에서는 폴란드식 경례가 자신을 조롱하는 것이라 오해했던 것이지요.
+                    </p>
+                    <div class="signing_box_wrap">
+                        <!-- box -->
+                        <div class="signing_box">
+                            <div class="signing_line_wrap">
+                                <div class="signing_line">
+                                    <p class="pdf_p_s_9b">회사명</p>
+                                    <p class="pdf_p">STG Company</p>
+                                </div>
+                                <div class="signing_line">
+                                    <p class="pdf_p_s_9b">서명자</p>
+                                    <p class="pdf_p">홍길동</p>
+                                </div>
+                            </div>
+                            <div class="signing_area"></div>
+                            <div class="signing_line_date">
+                                <p class="signing_line_date_p">전자서명 / 2019/04/26 12:33:18</p>
+                            </div>
+                        </div>
+                        <!-- box -->
+                        <div class="signing_box">
+                            <div class="signing_line_wrap">
+                                <div class="signing_line">
+                                    <p class="pdf_p_s_9b">이메일</p>
+                                    <p class="pdf_p">bubtle_test@gmail.com</p>
+                                </div>
+                            </div>
+                            <div class="signing_area">
+                                <div class="stamp_trad">
+                                    <span> 일이삼사오륙칠팔구십일 </span><br><span class="pdf_sign_stamp">디지털직인</span>
+                                </div>
+                            </div>
+                            <div class="signing_line_date">
+                                <p class="signing_line_date_p">전자서명 / 2019/04/26 12:33:18</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- //template_preview_wrap -->
+                <!-- btn_wrap -->
+                <div class="active_btn_wrap tr">
+                    <a class="btn__y modal_off">확인</a>
+                </div>
+                <!-- //btn_wrap -->
+            </section>
+            <!-- //modal_section -->
+        </div>
+        <!-- //dis_table -->
+    </div>
+    <!-- //dis_table -->
+</div>
+<!-- //modal_fixed -->
+
+
+
+<!-- 공용 모달: 공지사항 -->
+<!-- modal_fixed -->
+<div class="modal_fixed modal3" id="modalOnModalNoticeLayout">
+    <!-- dis_table -->
+    <div class="dis_table">
+        <!-- table_cell -->
+        <div class="table_cell">
+            <!-- modal_section -->
+            <section class="modal_section modal_notice">
+                <!-- modal_title -->
+                <div class="modal_title bor_btm">
+                    <p class="lg_p">공지사항</p>
+                    <h1 class="modal_notice_h1">법무팀 공지</h1>
+                </div>
+                <!-- //modal_title -->
+                <!-- template_preview_wrap -->
+                <div class="template_preview_wrap">
+                    <p class="l_p prewrap">연합군의 오해 제2차 세계대전 당시 폴란드군과 연합군이 ‘거수경례’로 오해가 생긴 일화가 전해집니다. 두 손가락만 들고 거수경례를 하는 폴란드군의 경례 전통을 오해한 연합군 장교가 폴란드 군인들과 언쟁을 벌였다는데요. 거수경례는 대다수 국가에서 다섯 손가락을 모두 편 채 손의 날이 보이도록 하기 때문에 연합군 장교 입장에서는 폴란드식 경례가 자신을 조롱하는 것이라 오해했던 것이지요.<br><br>연합군의 오해 제2차 세계대전 당시 폴란드군과 연합군이 ‘거수경례’로 오해가 생긴 일화가 전해집니다. 두 손가락만 들고 거수경례를 하는 폴란드군의 경례 전통을 오해한 연합군 장교가 폴란드 군인들과 언쟁을 벌였다는데요. 거수경례는 대다수 국가에서 다섯 손가락을 모두 편 채 손의 날이 보이도록 하기 때문에 연합군 장교 입장에서는 폴란드식 경례가 자신을 조롱하는 것이라 오해했던 것이지요.<br><br>연합군의 오해 제2차 세계대전 당시 폴란드군과 연합군이 ‘거수경례’로 오해가 생긴 일화가 전해집니다. 두 손가락만 들고 거수경례를 하는 폴란드군의 경례 전통을 오해한 연합군 장교가 폴란드 군인들과 언쟁을 벌였다는데요. 거수경례는 대다수 국가에서 다섯 손가락을 모두 편 채 손의 날이 보이도록 하기 때문에 연합군 장교 입장에서는 폴란드식 경례가 자신을 조롱하는 것이라 오해했던 것이지요.</p>
+                    
+                    <ul class="attachment_list">
+                        <li>
+                            <p>수정 불가능한 첨부파일</p>
+                        </li>
+                        <li>
+                            <p>수정 불가능한 첨부파일</p>
+                        </li>
+                        <li>
+                            <p>수정 불가능한 첨부파일</p>
+                        </li>
+                    </ul>
+                    
+                </div>
+                <!-- //template_preview_wrap -->
+                <!-- btn_wrap -->
+                <div class="active_btn_wrap clearfix">
+                    <div class="fl">
+                        <input type="checkbox" id="checkbox">
+                        <label for="checkbox">다시 보지 않기</label>
+                    </div>
+                    <div class="fr tr">
+                        <a class="btn__y">확인</a>
+                    </div>
+                </div>
+                <!-- //btn_wrap -->
+            </section>
+            <!-- //modal_section -->
+        </div>
+        <!-- //dis_table -->
+    </div>
+    <!-- //dis_table -->
+</div>
+<!-- //modal_fixed -->
+
+
+<!-- 모달: 계약이관 - 증빙용 문서함 -->
+<!-- modal_fixed -->
+    <div class="modal_fixed modal3 modal_doc_box" id="modalOnDocBoxLayout">
+    <!-- dis_table -->
+    <div class="dis_table">
+        <!-- table_cell -->
+        <div class="table_cell">
+            <!-- modal_section -->
+            <section class="modal_section">
+                <!-- modal_title -->
+                <div class="modal_title bor_btm">
+                    <p class="lg_p">증빙용 문서함</p>
+                </div>
+                <!-- //modal_title -->
+                <!-- modal_top -->
+                <div class="modal_top">
+                    <!-- form_wrap -->
+                    <ul class="form_wrap">
+                    <li class="clearfix_15">
+                        <div class="divide__3 form_group">
+                            <label class="sm_label">문서함</label>
+                            <input type="text" class="input">
+                        </div>
+                        <div class="divide__3 form_group">
+                            <label class="sm_label">문서 제목</label>
+                            <input type="text" class="input">
+                        </div>
+                        <div class="divide__3 form_group">
+                            <label class="sm_label">기안자</label>
+                            <input type="text" class="input">
+                        </div>
+                    </li>
+                    <li class="clearfix_15">
+                        <div class="divide__2">
+                            <label class="sm_label">양식명</label>
+                            <div class="clearfix_10">
+                                <div class="divide__2"><input type="text"></div>
+                                <div class="divide__2">
+                                    <select>
+                                        <option>전체</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="divide__2">
+                            <label class="sm_label">완료일</label>
+                            <div class="input_date_wrap">
+                                <!-- input_date -->
+                                <div class="input_date">
+                                    <div class="clearfix">
+                                        <input type="text" class="input">
+                                        <div class="btn_calendar"></div>
+                                    </div>
+                                </div>
+                                <!-- //input_date -->
+                                <!-- input_date -->
+                                <div class="input_date">
+                                    <div class="clearfix">
+                                        <input type="text" class="input">
+                                        <div class="btn_calendar"></div>
+                                    </div>
+                                </div>
+                                <!-- //input_date -->
+                            </div>
+                        </div>
+                    </li>
+                    </ul>
+                    <!-- //form_wrap -->
+                    <!-- btn_wrap -->
+                    <div class="btn_wrap">
+                        <a class="fr btn__b">검색</a>
+                    </div>
+                    <!-- //btn_wrap -->
+                </div>
+                <!-- //modal_top -->
+                <!-- doc_box_ul_wrap -->
+                <div class="doc_box_ul_wrap">
+                    <div class="clearfix">
+                        <div class="fl">
+                            <p class="icon_notify_p_r">참조문서함의 문서도 포함하여 조회됩니다.</p>
+                        </div>
+                        <div class="fr">
+                            <select>
+                                <option>10개씩</option>
+                            </select>
+                        </div>
+                    </div>
+                    <!-- doc_box_ul -->
+                    <ul class="doc_box_ul bt_list">
+                    <li class="clearfix list_hd">
+                        <div class="list_check">선택</div>
+                        <div class="fl list2">문서 제목</div>
+                        <div class="fl list3">기안자</div>
+                        <div class="fl list4">완료일</div>
+                    </li>
+                    <!-- 증빙용 문서함 li -->
+                    <li>
+                        <div class="list_check">
+                            <input type="checkbox" id="check1">
+                            <label for="check1"></label>
+                        </div>
+                        <div class="clearfix">
+                            <div class="fl list2">
+                                <p class="cont_li_sub elipsis">계약 제목 영역입니다 계약 제목 영역입니다 계약 제목 영역입니다 계약 제목 영역입니다</p>
+                            </div>
+                            <div class="fl list3">홍길동</div>
+                            <div class="fl list4">2019.02.01. 09:30:19</div>
+                        </div>
+                        <p class="sm_p58"><span>문서번호 : 방송준비팀-18-1482</span><span>&nbsp;&nbsp;/&nbsp;&nbsp;분류 : OA</span></p>
+                    </li>
+                    <!-- //증빙용 문서함 li -->
+                    </ul>
+                    <!-- //doc_box_ul -->
+                    <!-- pagination_area -->
+                    <div class="clearfix pagination_area">
+                        <ul class="pagination fr">
+                            <li class="prev">prev</li>
+                            <li>1</li>
+                            <li>2</li>
+                            <li class="active">3</li>
+                            <li>4</li>
+                            <li>5</li>
+                            <li class="next">next</li>
+                        </ul>
+                    </div>
+                    <!-- //pagination_area -->
+                    <!-- btn_wrap -->
+                    <div class="btn_wrap tr">
+                        <a class="btn__y">확인</a>
+                        <a class="btn__f modal_off">취소</a>
+                    </div>
+                    <!-- //btn_wrap -->
+                </div>
+                <!-- //doc_box_ul_wrap -->
+            </section>
+            <!-- //modal_section -->
+        </div>
+        <!-- //dis_table -->
+    </div>
+    <!-- //dis_table -->
+</div>
+<!-- //modal_fixed -->
+
+<!-- 모달: 관리자 > 워크플로우 > 문서 계약 > 날인/회수 안내 메일 -->
+<!-- modal_fixed -->
+<div class="modal_fixed modal3" id="modalOnEmailLayout">
+    <!-- dis_table -->
+    <div class="dis_table">
+        <!-- table_cell -->
+        <div class="table_cell">
+            <!-- modal_section -->
+            <section class="modal_section">
+                <!-- modal_title -->
+                <div class="modal_title bor_btm">
+                    <p class="lg_p">날인/회수 안내 메일</p>
+                </div>
+                <div class="modal_notify">이 메일은 문서 계약 승인을 완료한 기안자에게 전달됩니다.</div>
+
+                <!-- modal email -->
+                <div style="background-color: #f3f5f9; overflow: hidden;">
+                    <div style="width: 600px; margin: 15px auto; color: #585858; font-size: 13px; text-align: center;">[ 회수 안내 메일 내용을 채워주세요 ]</div>
+                    <table style="width: 600px; margin: 0 auto; border: 1px solid #dfdfe4; border-collapse: collapse; border-spacing: 0; background-color: #ffffff; color: #000000; text-align: center;">
+                        <tr>
+                            <td>
+                                <div style="width: 500px; margin: 0 auto; border-bottom: 1px solid #dfdfe4;">
+                                    <div style="margin: 50px 0;">
+                                        <img src="http://www.stickpng.com/assets/images/580b57fcd9996e24bc43c513.png" style="width: auto; height: auto; max-width: 133px; max-height: 53px;" width="133" height="53">
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div style="width: 500px; margin: 50px auto; border-bottom: 1px solid #dfdfe4;">
+                                    <p style="font-size: 20px;">안녕하세요, <span style="font-weight: bold;">회수 담당자</span> 님.</p>
+                                    <textarea style="height: 290px; margin-top: 20px; margin-bottom: 30px; color: #585858; font-size: 15px;" placeholder="회수 담당자에게 보낼 이메일 내용을 입력하세요."></textarea>
+
+
+
+
+                                    <p style="margin-bottom: 20px; color: #364aed; font-size: 15px; font-weight: bold;">아래 버튼을 눌러서 상세 내용을 확인해주세요.</p>
+                                    <a style="display: inline-block; margin-bottom: 50px; padding: 15px 60px; border-radius: 30px; box-shadow: 0 4px 11px 0 rgba(49, 47, 120, 0.4); background-color: #364aed; color: #ffffff; font-size: 15px; line-height: 1.4; text-decoration: none;">계약서 확인하기</a>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div style="width: 327px; margin: 0 auto; color: #585858; font-size: 13px; line-height: 1.54; background-color: #f3f5f9; border-radius: 8px; height: auto; overflow: hidden;">
+                                    <p style="margin: 17px 0;">상시 링크는 수신된 이메일에서만 접근이 가능합니다.<br>감사합니다.</p>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div style="margin: 50px auto; font-size: 15px; font-weight: bold;">
+                                    STG 법무지원시스템
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                    <div style="width: 600px; margin: 15px auto; color: #585858; font-size: 13px; text-align: right;">Sent by Buptle(c). Enabled by buptle technology : <a href="www.buptle.com" style="color: #364aed; font-weight: bold;">www.buptle.com</a></div>
+                </div>
+                <!-- //modal email -->
+                        
+                <!-- btn_wrap -->
+                <div class="btn_wrap tr">
+                    <a class="btn__y">확인</a>
+                    <a class="btn__f modal_off">취소</a>
+                </div>
+                <!-- //btn_wrap -->
+            </section>
+            <!-- //modal_section -->
+        </div>
+        <!-- //dis_table -->
+    </div>
+    <!-- //dis_table -->
+</div>
+<!-- //modal_fixed -->
+
+<!-- 모달: 필수 입력필드 -->
+<!-- modal_fixed -->
+<div class="modal_fixed modal_contract_input_field" id="modalOnInpFldLayout">
+    <!-- dis_table -->
+    <div class="dis_table">
+        <!-- table_cell -->
+        <div class="table_cell">
+            <!-- modal_section -->
+            <section class="modal_section">
+                <!-- modal_title -->
+                <div class="modal_title bor_btm">
+                    <p class="lg_p">필수 입력필드</p>
+                </div>
+                <!-- //modal_title -->
+                <!-- modal_top -->
+                <div class="modal_top">
+                    <!-- form_wrap -->
+                    <ul class="form_wrap">
+                    <li>
+                        <label class="sm_label">입력필드명</label>
+                        <input type="text" class="input">
+                    </li>
+                    <li>
+                        <label class="sm_label">종류</label>
+                        <div class="clearfix">
+                        <select>
+                            <option>10개씩</option>
+                        </select>
+                        </div>
+                    </li>
+                    <li>
+                        <label class="sm_label">설명</label>
+                        <textarea></textarea>
+                    </li>
+                    </ul>
+                    <!-- //form_wrap -->
+                    <!-- btn_wrap -->
+                    <div class="active_btn_wrap tr">
+                        <a class="btn__y">확인</a>
+                        <a class="btn__f modal_off">취소</a>
+                    </div>
+                    <!-- //btn_wrap -->
+                </div>
+                <!-- //modal_top -->
+            </section>
+            <!-- //modal_section -->
+        </div>
+        <!-- //dis_table -->
+    </div>
+    <!-- //dis_table -->
+</div>
+<!-- //modal_fixed -->
+
+<!-- 모달: 선택 입력필드 -->
+<!-- modal_fixed -->
+<div class="modal_fixed modal_contract_input_field" id="modalOnselInpFldLayout">
+    <!-- dis_table -->
+    <div class="dis_table">
+        <!-- table_cell -->
+        <div class="table_cell">
+            <!-- modal_section -->
+            <section class="modal_section">
+                <!-- modal_title -->
+                <div class="modal_title bor_btm">
+                    <p class="lg_p">선택 입력필드</p>
+                </div>
+                <!-- //modal_title -->
+                <!-- modal_top -->
+                <div class="modal_top">
+                    <!-- form_wrap -->
+                    <ul class="form_wrap">
+                    <li>
+                        <label class="sm_label">입력필드명</label>
+                        <input type="text" class="input">
+                    </li>
+                    <li>
+                        <label class="sm_label">종류</label>
+                        <div class="clearfix">
+                        <select>
+                            <option>10개씩</option>
+                        </select>
+                        </div>
+                    </li>
+                    <li>
+                        <label class="sm_label">설명</label>
+                        <textarea class="auto_textarea"></textarea>
+                    </li>
+                    </ul>
+                    <!-- //form_wrap -->
+                    <!-- btn_wrap -->
+                    <div class="active_btn_wrap tr">
+                        <a class="btn__y">확인</a>
+                        <a class="btn__f modal_off">취소</a>
+                    </div>
+                    <!-- //btn_wrap -->
+                </div>
+                <!-- //modal_top -->
+            </section>
+            <!-- //modal_section -->
+        </div>
+        <!-- //dis_table -->
+    </div>
+    <!-- //dis_table -->
+</div>
+<!-- //modal_fixed -->
+
+
+<!-- 모달: 관리자 - 그룹 - 신규 그룹 생성 -->
+<!-- modal_fixed -->
+<div class="modal_fixed" id="modalOnAdminGroupCreateLayout">
+    <!-- dis_table -->
+    <div class="dis_table">
+        <!-- table_cell -->
+        <div class="table_cell">
+            <!-- modal_section -->
+            <section class="modal_section">
+                <!-- modal_title -->
+                <div class="modal_title bor_btm">
+                    <p class="lg_p">신규 그룹 생성</p>
+                </div>
+                <!-- //modal_title -->
+                <!-- modal_top -->
+                <div class="modal_top">
+                    <!-- form_wrap -->
+                    <ul class="form_wrap">
+                        <li>
+                            <label class="sm_label">그룹 이름</label>
+                            <input type="text" class="input">
+                        </li>
+                    </ul>
+                    <!-- //form_wrap -->
+                    <!-- btn_wrap -->
+                    <div class="active_btn_wrap tr">
+                        <a class="btn__y">확인</a>
+                        <a class="btn__f modal_off">취소</a>
+                    </div>
+                    <!-- //btn_wrap -->
+                </div>
+                <!-- //modal_top -->
+            </section>
+            <!-- //modal_section -->
+        </div>
+        <!-- //dis_table -->
+    </div>
+    <!-- //dis_table -->
+</div>
+<!-- //modal_fixed -->
+
+
+<!-- 모달: 관리자 - 템플릿 - 템플릿 설정 - 카테고리 추가 -->
+<!-- modal_fixed -->
+<div class="modal_fixed" id="modalOnAdminAddTagLayout">
+    <!-- dis_table -->
+    <div class="dis_table">
+        <!-- table_cell -->
+        <div class="table_cell">
+            <!-- modal_section -->
+            <section class="modal_section">
+                <!-- modal_title -->
+                <div class="modal_title bor_btm">
+                    <p class="lg_p">카테고리 추가</p>
+                </div>
+                <!-- //modal_title -->
+                <!-- modal_top -->
+                <div class="modal_top">
+                    <!-- form_wrap -->
+                    <ul class="form_wrap">
+                        <li>
+                            <label class="sm_label">카테고리명</label>
+                            <input type="text" class="input">
+                        </li>
+                    </ul>
+                    <!-- //form_wrap -->
+                    <!-- btn_wrap -->
+                    <div class="active_btn_wrap tr">
+                        <a class="btn__y">확인</a>
+                        <a class="btn__f modal_off">취소</a>
+                    </div>
+                    <!-- //btn_wrap -->
+                </div>
+                <!-- //modal_top -->
+            </section>
+            <!-- //modal_section -->
+        </div>
+        <!-- //dis_table -->
+    </div>
+    <!-- //dis_table -->
+</div>
+<!-- //modal_fixed -->
+
+
+<!-- 모달: 관리자 - 법률자문 - 카테고리 추가 -->
+<!-- modal_fixed -->
+<div class="modal_fixed" id="modalOnAdminAddNewLegalCateLayout">
+    <!-- dis_table -->
+    <div class="dis_table">
+        <!-- table_cell -->
+        <div class="table_cell">
+            <!-- modal_section -->
+            <section class="modal_section">
+                <!-- modal_title -->
+                <div class="modal_title bor_btm">
+                    <p class="lg_p">카테고리 추가</p>
+                </div>
+                <!-- //modal_title -->
+                <!-- modal_top -->
+                <div class="modal_top">
+                    <!-- form_wrap -->
+                    <ul class="form_wrap">
+                        <li>
+                            <label class="sm_label">카테고리명</label>
+                            <input type="text" class="input">
+                        </li>
+                        <li>
+                            <label class="sm_label">카테고리 설명</label>
+                            <textarea style="height: 112px;"></textarea>
+                        </li>
+                    </ul>
+                    <!-- //form_wrap -->
+                    <!-- btn_wrap -->
+                    <div class="active_btn_wrap tr">
+                        <a class="btn__y">확인</a>
+                        <a class="btn__f modal_off">취소</a>
+                    </div>
+                    <!-- //btn_wrap -->
+                </div>
+                <!-- //modal_top -->
+            </section>
+            <!-- //modal_section -->
+        </div>
+        <!-- //dis_table -->
+    </div>
+    <!-- //dis_table -->
+</div>
+<!-- //modal_fixed -->
+
+
+<!-- 모달: 계약 관리 - 다중발송 수신인 추가 -->
+<!-- modal_fixed -->
+<div class="modal_fixed" id="modalOnAddMultipleLayout">
+    <!-- dis_table -->
+    <div class="dis_table">
+        <!-- table_cell -->
+        <div class="table_cell">
+            <!-- modal_section -->
+            <section class="modal_section">
+                <!-- modal_title -->
+                <div class="modal_title bor_btm">
+                    <p class="lg_p">수신인 추가</p>
+                </div>
+                <!-- //modal_title -->
+                <!-- modal_top -->
+                <div class="modal_top">
+                    <!-- form_wrap -->
+                    <ul class="form_wrap">
+                        <li>
+                            <label class="sm_label">이름</label>
+                            <input type="text" class="input">
+                        </li>
+                        <li>
+                            <label class="sm_label">회사명</label>
+                            <input type="text" class="input">
+                        </li>
+                        <li>
+                            <label class="sm_label">사업자등록번호</label>
+                            <input type="text" class="input">
+                        </li>
+                        <li>
+                            <label class="sm_label">이메일 주소</label>
+                            <input type="text" class="input">
+                        </li>
+                        <li>
+                            <label class="sm_label">전화번호</label>
+                            <input type="text" class="input">
+                        </li>
+                    </ul>
+                    <!-- //form_wrap -->
+                    <!-- btn_wrap -->
+                    <div class="active_btn_wrap tr">
+                        <a class="btn__y">확인</a>
+                        <a class="btn__f modal_off">취소</a>
+                    </div>
+                    <!-- //btn_wrap -->
+                </div>
+                <!-- //modal_top -->
+            </section>
+            <!-- //modal_section -->
+        </div>
+        <!-- //dis_table -->
+    </div>
+    <!-- //dis_table -->
+</div>
+<!-- //modal_fixed -->
+
+
+<!-- 공용 모달: 라벨 선택
+<!-- modal_fixed 
+<div class="modal_fixed modal_label_select" id="modalOnLabelSelLayout">
+    <!-- dis_table 
+    <div class="dis_table">
+        <!-- table_cell 
+        <div class="table_cell">
+            <!-- modal_section
+            <section class="modal_section">
+                <div class="modal_title bor_btm clearfix">
+                    <p class="fl" style="line-height: 30px">라벨 선택</p>
+                    <a class="fr btn__b btn_m">라벨 추가</a>
+                </div>
+                <div class="clearfix mar15">
+                    <div class="input_search">
+                        <div class="icon_search"></div>
+                        <input type="text" class="input" placeholder="회사명 또는 사업자등록번호 검색">
+                    </div>
+                </div>
+                <ul class="clearfix modal_label_sel">
+                    <li class="cont_label pblc_01">라벨 내용<p class="btn_x"></p></li>
+                    <li class="cont_label prvt_02">신규 계약 작성 후 문제 있음<p class="btn_x"></p></li>
+                    <li class="cont_label pblc_01">라벨 내용<p class="btn_x"></p></li>
+                    <li class="cont_label prvt_02">신규 계약 작성 후 문제 있음<p class="btn_x"></p></li>
+                    <li class="cont_label pblc_01">라벨 내용<p class="btn_x"></p></li>
+                    <li class="cont_label prvt_02">신규 계약 작성 후 문제 있음<p class="btn_x"></p></li>
+                    <li class="cont_label pblc_01">라벨 내용<p class="btn_x"></p></li>
+                    <li class="cont_label prvt_02">신규 계약 작성 후 문제 있음<p class="btn_x"></p></li>
+                    <li class="cont_label pblc_01">라벨 내용<p class="btn_x"></p></li>
+                    <li class="cont_label prvt_02">신규 계약 작성 후 문제 있음<p class="btn_x"></p></li>
+                </ul>
+                <div class="modal_label_wrap">
+                    <p class="m_p b">공개 라벨</p>
+                    <ul class="modal_cont_label_ul clearfix_ul">
+                        <li class="pblc_01">라벨 네임 샘플 네임 샘플 샘플</li>
+                        <li class="pblc_02">라벨 샘플</li>
+                        <li class="pblc_03">라벨 네임 샘플</li>
+                        <li class="pblc_04">라벨 네임 샘플</li>
+                        <li class="pblc_05">라벨 네임 샘플</li>
+                    </ul>
+                </div>
+                <div class="modal_label_wrap">
+                    <p class="m_p b">비공개 라벨</p>
+                    <ul class="modal_cont_label_ul clearfix_ul">
+                        <li class="prvt_01">라벨 네임 샘플 네임 샘플 샘플</li>
+                        <li class="prvt_02">라벨 샘플</li>
+                        <li class="prvt_03">라벨 네임 샘플</li>
+                        <li class="prvt_04">라벨 네임 샘플</li>
+                        <li class="prvt_05">라벨 네임 샘플</li>
+                    </ul>
+                </div>
+                <!-- btn_wrap 
+                <div class="active_btn_wrap tc bor_top">
+                    <a class="btn__active btn_m">확인</a>
+                    <a class="btn__cancel btn_m modal_off">취소</a>
+                </div>
+                <!-- //btn_wrap 
+            </section>
+            <!-- //modal_section 
+        </div>
+        <!-- //dis_table 
+    </div>
+    <!-- //dis_table
+</div>
+<!-- //modal_fixed -->
+
+
+<!-- 모달: 관리자 - 라벨 - 라벨 추가 -->
+<!-- modal_fixed -->
+<div class="modal_fixed modal_label" id="modalOnAddLabelLayout">
+    <!-- dis_table -->
+    <div class="dis_table">
+        <!-- table_cell -->
+        <div class="table_cell">
+            <!-- modal_section -->
+            <section class="modal_section">
+                <!-- modal_title -->
+                <div class="modal_title bor_btm">
+                    <p class="lg_p">라벨 추가</p>
+                </div>
+                <!-- //modal_title -->
+                <!-- modal_top -->
+                <div class="modal_top">
+                    <div class="modal_label_form clearfix">
+                        <div class="fl select_wrap">
+                            <select>
+                                <option>공개</option>
+                                <option>비공개</option>
+                            </select>
+                        </div>
+                        <div class="fr">
+                            <input type="text" class="fr input_label">
+                        </div>
+                    </div>
+                    <script>
+                        $(document).ready(function(){
+                            function labelPick() {
+                                var labelPickBg = $(".label_color.active").css( "background-color" );
+                                $(".input_label").css("background-color", labelPickBg);
+                                $(".label_pick").css("background-color", labelPickBg);
+                                $(".input_label_pick").val(labelPickBg);
+                            }
+                            labelPick();
+                            $(document).on("click", ".label_color", function(){
+                                $(".label_color").removeClass("active");
+                                $(this).addClass("active");
+                                labelPick();
+                            });
+                            /* 칼라 16진수 변경 필요
+                            function rgb2hex(rgb) {
+                                rgb = labelPickBg.match(/^rgba?\((\d+),\s*(\d+),\s*(\d+)(,\s*\d+\.*\d+)?\)$/);
+                                return "#" + hex(rgb[1]) + hex(rgb[2]) + hex(rgb[3]);
+                                $(".input_label_pick").val(rgb);
+                                console.log(rgb);
+                            }
+                            rgb2hex(rgb);
+                            */
+                        });
+                    </script>
+                    <div class="clearfix">
+                        <ul class="modal_label_color fl">
+                            <!-- 공개 라벨 색상 -->
+                            <li class="label_color pblc_01 active"></li>
+                            <li class="label_color pblc_02"></li>
+                            <li class="label_color pblc_03"></li>
+                            <li class="label_color pblc_04"></li>
+                            <li class="label_color pblc_05"></li>
+                            <!-- 비공개 라벨 색상 
+                            <li class="label_color prvt_01"></li>
+                            <li class="label_color prvt_02"></li>
+                            <li class="label_color prvt_03"></li>
+                            <li class="label_color prvt_04"></li>
+                            <li class="label_color prvt_05"></li>
+                           -->
+                            <li class="modal_label_pick">
+                                <div class="label_pick"></div>
+                                <input type="text" class="input_label_pick">
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- form_wrap -->
+                    <!-- //form_wrap -->
+                    <!-- btn_wrap -->
+                    <div class="active_btn_wrap tr bor_top">
+                        <a class="btn__active btn_m">저장</a>
+                        <a class="btn__cancel btn_m modal_off">취소</a>
+                    </div>
+                    <!-- //btn_wrap -->
+                </div>
+                <!-- //modal_top -->
+            </section>
+            <!-- //modal_section -->
+        </div>
+        <!-- //dis_table -->
+    </div>
+    <!-- //dis_table -->
+</div>
+<!-- //modal_fixed -->
+
+
+<!-- 공용 모달: 태그 선택 -->
+<!-- modal_fixed -->
+<div class="modal_fixed" id="modalOnAddTagLayout">
+    <!-- dis_table -->
+    <div class="dis_table">
+        <!-- table_cell -->
+        <div class="table_cell">
+            <!-- modal_section -->
+            <section class="modal_section">
+                <!-- modal_title -->
+                <div class="modal_title bor_btm">
+                    <p class="lg_p">태그 선택</p>
+                </div>
+                <!-- //modal_title -->
+                <!-- modal_top -->
+                <div class="modal_top">
+                    <!-- form_wrap -->
+
+                    <!-- modal_user_ul -->
+                    <ul class="bt_list modal_tag_ul">
+                        <li class="list_hd">
+                            <div class="list_check">선택</div>
+                            <div class="list2">태그</div>
+                        </li>
+                        <li>
+                            <div class="list_check">
+                                <input type="checkbox" id="tagCheck01">
+                                <label for="tagCheck01"></label>
+                            </div>
+                            <div>
+                                <label for="tagCheck01" class="lg_p">강남지점</label>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="list_check">
+                                <input type="checkbox" id="tagCheck02">
+                                <label for="tagCheck02"></label>
+                            </div>
+                            <div>
+                                <label for="tagCheck02" class="lg_p">신규가맹계약서</label>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="list_check">
+                                <input type="checkbox" id="tagCheck03">
+                                <label for="tagCheck03"></label>
+                            </div>
+                            <div>
+                                <label for="tagCheck03" class="lg_p">비밀유지계약서외부인</label>
+                            </div>
+                        </li>
+                    </ul>
+                    <!-- //modal_user_ul -->
+                    <!-- pagination -->
+                    <div class="pagination_area clearfix">
+                        <ul class="pagination fr">
+                            <li class="prev">prev</li>
+                            <li>1</li>
+                            <li>2</li>
+                            <li class="active">3</li>
+                            <li>4</li>
+                            <li>5</li>
+                            <li class="next">next</li>
+                        </ul>
+                    </div>
+                    <!-- //pagination -->
+                    <!-- //form_wrap -->
+                    <!-- btn_wrap -->
+                    <div class="active_btn_wrap tr">
+                        <a class="btn__y">확인</a>
+                        <a class="btn__f modal_off">취소</a>
+                    </div>
+                    <!-- //btn_wrap -->
+                </div>
+                <!-- //modal_top -->
+            </section>
+            <!-- //modal_section -->
+        </div>
+        <!-- //dis_table -->
+    </div>
+    <!-- //dis_table -->
+</div>
+<!-- //modal_fixed -->
+
+
+<!-- 공용 모달: 자동 날인 안내 -->
+<!-- modal_fixed -->
+<div class="modal_fixed" id="modalOnAutoSigningLayout">
+    <!-- dis_table -->
+    <div class="dis_table">
+        <!-- table_cell -->
+        <div class="table_cell">
+            <!-- modal_section -->
+            <section class="modal_section modal_notice">
+                <!-- modal_title -->
+                <div class="modal_title bor_btm">
+                    <p class="lg_p">자동 날인 안내</p>
+                </div>
+                <!-- //modal_title -->
+                <!-- modal_top -->
+                <div class="modal_format">
+                    <div class="format_img_wrap tc">
+                        <div class="clearfix">
+                            <img src="imgs/adele_stamp_target.png">
+                        </div>
+                        <p class="icon_notify_p" style="display: inline-block;">최종 완료 시 ‘서명 인식 이미지’가 회사 직인으로 자동 변환됩니다.</p>
+                    </div>
+                    <div class="format_guide">
+                        <p class="sm_b">이미지 파일 다운로드</p>
+                        <p class="sm_p58">서명 인식 이미지를 다운로드하여 날인에 들어갈 docx 본문에 삽입해 주세요.</p>
+                        <a class="btn__y btn_s">다운로드</a>
+                    </div>
+                    <div class="format_guide">
+                        <p class="sm_b">예제 파일 다운로드</p>
+                        <p class="sm_p58">docx 예제 파일을 다운로드하여 사용하세요<br>(docx 포맷의 파일 간에는 서명 인식 이미지를 복사 후 붙여넣기 할 수 있습니다)</p>
+                        <a class="btn__y btn_s">다운로드</a>
+                    </div>
+                    <div class="format_guide">
+                        <p class="icon_notify_p_r sm_b">주의사항</p>
+                        <p class="sm_p58">
+                            - 서명 인식 이미지의 확장자(png 파일)를 임의로 변경하지 마세요.<br>
+                            - 이미지에 포함된 ${stamp}$ 표기가 인식되지 않을 만큼 크기를 과도하게 줄이지 마세요.<br>
+                            - 별도의 편집툴, 온리오피스 제어 시 파일의 시그니처가 손상되어 자동 날인 기능이 정상적으로 동작하지 않을 수 있습니다.
+                        </p>
+                    </div>
+                </div>
+                <!-- //modal_top -->
+                <!-- btn_wrap -->
+                <div class="active_btn_wrap tr bor_top">
+                    <a class="btn__y">확인</a>
+                </div>
+                <!-- //btn_wrap -->
+            </section>
+            <!-- //modal_section -->
+        </div>
+        <!-- //dis_table -->
+    </div>
+    <!-- //dis_table -->
+</div>
+<!-- //modal_fixed -->
+
+
+
+<!-- 공용 모달: 계약 관리 > 계약 상세 > 서명자 추가 > 계약 상대 불러오기 -->
+<!-- modal_fixed -->
+<div class="modal_fixed" id="modalOnOppositeLayout">
+    <!-- dis_table -->
+    <div class="dis_table">
+        <!-- table_cell -->
+        <div class="table_cell">
+            <!-- modal_section -->
+            <section class="modal_section">
+                <!-- modal_title -->
+                <div class="modal_title bor_btm">
+                    <p class="lg_p">계약 상대 불러오기</p>
+                </div>
+                <!-- //modal_title -->
+                <!-- modal_top -->
+                <div class="modal_top">
+                    <!-- modal_user_ul -->
+                    <ul class="bt_list modal_opposite_ul">
+                        <li class="list_hd">
+                            <div class="list_check">선택</div>
+                            <div class="list2">회사명</div>
+                            <div class="list3">대표자</div>
+                        </li>
+                    </ul>
+                    <ul class="bt_list modal_opposite_ul">
+                        <li>
+                            <div class="list_check">
+                                <input type="checkbox" id="tagCheck01">
+                                <label for="tagCheck01"></label>
+                            </div>
+                            <label for="tagCheck01" class="clearfix">
+                                <div class="list2">배달의한국</div>
+                                <div class="list3">김민규</div>
+                            </label>
+                        </li>
+                    </ul>
+                    <!-- //modal_user_ul -->
+                    <!-- btn_wrap -->
+                    <div class="active_btn_wrap tr">
+                        <a class="btn__y">확인</a>
+                        <a class="btn__f modal_off">취소</a>
+                    </div>
+                    <!-- //btn_wrap -->
+                </div>
+                <!-- //modal_top -->
+            </section>
+            <!-- //modal_section -->
+        </div>
+        <!-- //dis_table -->
+    </div>
+    <!-- //dis_table -->
+</div>
+<!-- //modal_fixed -->
+
+
+<!-- 모달: 신규 업체 추가 -->
+<!-- modal_fixed -->
+<div class="modal_fixed" id="modalOnContractCounterpartLayout">
+    <!-- dis_table -->
+    <div class="dis_table">
+        <!-- table_cell -->
+        <div class="table_cell">
+            <!-- modal_section -->
+            <section class="modal_section">
+                <!-- modal_title -->
+                <div class="modal_title bor_btm">
+                    <p class="lg_p">외부업체관리</p>
+                </div>
+                <!-- //modal_title -->
+                <!-- modal_top -->
+                <div class="modal_top">
+                    <!-- form_wrap -->
+                    <ul class="form_wrap">
+                        <li>
+                            <label class="sm_label">회사명</label>
+                            <input type="text" class="input">
+                        </li>
+                        <li>
+                            <label class="sm_label">대표자명</label>
+                            <input type="text" class="input">
+                        </li>
+                        <li>
+                            <label class="sm_label">사업자등록번호</label>
+                            <input type="text" class="input">
+                        </li>
+                        <li>
+                            <label class="sm_label">국가</label>
+                            <div>
+                                <select>
+                                    <option>대한민국</option>
+                                </select>
+                            </div>
+                        </li>
+                    </ul>
+                    <!-- //form_wrap -->
+                    <!-- btn_wrap -->
+                    <div class="active_btn_wrap tr">
+                        <a class="btn__y">확인</a>
+                        <a class="btn__f modal_off">취소</a>
+                    </div>
+                    <!-- //btn_wrap -->
+                </div>
+                <!-- //modal_top -->
+            </section>
+            <!-- //modal_section -->
+        </div>
+        <!-- //dis_table -->
+    </div>
+    <!-- //dis_table -->
+</div>
+<!-- //modal_fixed -->
+
+
+<!-- 모달: 아이프레임 error -->
+<!-- modal_fixed -->
+<div class="modal_fixed" id="modalOnIfErrorLayout">
+    <!-- dis_table -->
+    <div class="dis_table">
+        <!-- table_cell -->
+        <div class="table_cell">
+            <!-- modal_section -->
+            <section style="width: 405px; height: 673px; text-align: center; margin: auto; background: #fff;">
+<div class="iframe_error">
+    <p class="iframe_error_p">사업자 등록번호가 서명정보와 일치하지 않습니다.</p>
+    <div class="btn__cancel">닫기</div>
+</div>
+            </section>
+            <!-- //modal_section -->
+        </div>
+        <!-- //dis_table -->
+    </div>
+    <!-- //dis_table -->
+</div>
+<!-- //modal_fixed -->
+
+<!-- ================================= //모달 모음 ================================= -->
+</body>
+</html>
+ 

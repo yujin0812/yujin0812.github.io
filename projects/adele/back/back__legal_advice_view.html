@@ -1,0 +1,518 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8" />
+<title></title>
+<!-- STYLE CSS -->
+<link href="css/application.css" rel="stylesheet" type="text/css">
+<link href="css/style.css" rel="stylesheet" type="text/css">
+<link href="css/reset.css" rel="stylesheet" type="text/css">
+<!-- SCRIPT -->
+<script src="scripts/jquery-3.4.1.min.js"></script>
+<script src="scripts/jquery.nice-select.min.js"></script>
+<script src="scripts/main.js"></script>
+</head>
+<body>
+<!-- wrap -->
+<div id="wrap">
+    <!-- header -->
+    <header id="header">
+        <!-- header_inner -->
+        <div class="header_inner">
+            <!-- logo -->
+            <div class="logo"><a href="ui_guide.html"><img src='http://www.stickpng.com/assets/images/580b57fcd9996e24bc43c513.png'></a></div>
+            <!-- //logo -->
+            <!-- hd_user_wrap -->
+            <div class="hd_user_wrap">
+                <!-- hd_user -->
+                <div class="hd_user">
+                    <p class="hd_user_name">이유진님</p>
+                    <!-- hd_user_ul -->
+                    <ul class="hd_user_ul">
+                        <li><a href="mypage_user_info.html">내 정보 보기</a></li>
+                        <li><a href="login.html">로그아웃</a></li>
+                    </ul>
+                    <!-- //hd_user_ul -->
+                </div>
+                <!-- //hd_user -->
+                <div class="hd_user_img"><img src="https://img1.daumcdn.net/thumb/R720x0.q80/?scode=mtistory&fname=http%3A%2F%2Fcfile10.uf.tistory.com%2Fimage%2F99530A3B5BE7C1803380DF"></div>
+            </div>
+            <!-- //hd_user_wrap -->
+            <!-- gnb_wrap -->
+            <div class="gnb_wrap">
+                <!-- gnb -->
+                <ul class="gnb">
+                    <li>
+                        <a href="index.html">계약관리</a>
+                    </li>
+                    <li class="active">
+                        <a href="legal_advice_list.html">법률자문</a>
+                    </li>
+                </ul>
+                <!-- //gnb -->
+                <!-- gnb_admin -->
+                <ul class="gnb_admin">
+                    <li><a href="notice.html">공지사항</a></li>
+                    <li><a href="group_list.html">그룹 관리자</a></li>
+                    <li><a href="admin_workflow_list.html">관리자</a></li>
+                </ul>
+                <!-- //gnb_admin -->
+            </div>
+            <!-- //gnb_wrap -->
+        </div>
+        <!-- //header_inner -->
+    </header>
+    <!-- //header -->
+
+    <!-- ================================= content ================================= -->
+    
+    <!-- snb -->
+    <nav class="snb legal_create_wrap">
+        <a href="legal_advice_writing.html" class="btn__active">신규 자문 생성</a>
+    </nav>
+    <!-- //snb -->
+    <!-- content -->
+    <div class="content">
+        <!-- section_legal -->
+        <section class="section_legal">
+            
+            <!-- section__head legal_reading_head -->
+            <section class="section__head legal_reading_head">
+                <div class="table_cell">
+                    <p class="clearfix">자문 답변 내용에 대하여 “검토자누구” 님께서 요청하신 회람이 진행 중 입니다. 해당 답변 내용을 검토하여 회람을 완료하여 주십시오. 답변 내용 중 변경이 필요한 사항이 있는 경우 “답변 변경요청” 을 클릭하십시오.</p>
+                    <div class="fr">
+                        <a href="#reading_answer" class="btn__f btn_s">답변 확인하기</a>
+                    </div>
+                </div>
+            </section>
+            <!-- //section__head legal_reading_head -->
+
+            <!-- section__legal_advice -->
+            <section class="section__legal_advice">
+                <!-- legal_advice_hd -->
+                <div class="legal_advice_hd">
+                    <div class="legal_advice_hd1">
+                        <div class="fl">
+                            <a class="btn__f btn_m btn_printer">인쇄</a>
+                        </div>
+                        <div class="fr">
+                            <a class="btn__b btn_m">자문완료</a><a class="btn__f btn_m">삭제</a>
+                        </div>
+                    </div>
+                    <div class="legal_advice_hd2">
+                        <div class="legal_advice_logo">
+                            <img src="https://image.gsshop.com/ui/gsshop/pc/common/images/logo.png">
+                        </div>
+                    </div>
+                </div>
+                <!-- //legal_advice_hd -->
+
+                <!-- legal_advice_dept_comment -->
+                <div class="legal_advice_dept_comment dept_comment_approve">
+                    <p class="b">부서장 승인</p>
+                    <p class="m_p58">
+                        계약내용에 대해서 확인 했으며, 승인함.
+                    </p>
+                </div>
+                <!-- //legal_advice_dept_comment -->
+
+                <!-- legal_advice_dept_comment -->
+                <div class="legal_advice_dept_comment dept_comment_return">
+                    <p class="b">부서장 반려 <span class="sm_pb4">자문을 다시 생성해주세요.</span></p>
+                    <p class="m_p58">
+                        계약내용에 대해서 확인 했으며, 부적절 하다 생각하여 반려함.
+                    </p>
+                </div>
+                <!-- //legal_advice_dept_comment -->
+
+                <!-- legal_advice_info_wrap -->
+                <div class="legal_advice_info_wrap">
+                    <div class="legal_advice_info_hd">
+                        <p class="fl b">질문 등록 정보</p>
+                        <p class="fr sm_pb4">2019.01.09 09:30</p>
+                    </div>
+                    <!-- legal_advice_info_box -->
+                    <div class="legal_advice_info_box">
+                        <div class="legal_advice_info1 clearfix">
+                            <div class="fl">
+                                <p class="m_p58">이유진 / testmail@gmail.com</p>
+                            </div>
+                            <div class="fr">
+                                <div class="state__legal">부서장 승인대기</div>
+                            </div>
+                        </div>
+                        <ul class="legal_advice_setting_ul clearfix_ul">
+                            <li>
+                                <label class="fl m_p58_b">부서장</label>
+                                <div class="fr">
+                                    <!-- user -->
+                                    <div class="user">
+                                        <p class="sm_p58">홍길동 부서장</p>
+                                    </div>
+                                    <!-- //user -->
+                                </div>
+                            </li>
+                            <li>
+                                <label class="fl m_p58_b">검토자</label>
+                                <div class="fr">
+                                    <!-- user -->
+                                    <div class="user admin">
+                                        <p class="sm_p58">홍길동 부서장</p>
+                                        <a class="btn_x"></a>
+                                    </div>
+                                    <!-- //user -->
+                                    <!-- 할당 btn -->
+                                    <a class="btn_add">+ 검토자 할당</a>
+                                </div>
+                            </li>
+                            <li>
+                                <label class="fl m_p58_b">관련자</label>
+                                <div class="fr">
+                                    <!-- 할당 btn -->
+                                    <a class="btn_add">+ 관련자 추가</a>
+                                </div>
+                            </li>
+                            <li>
+                                <label class="fl m_p58_b">TAG</label>
+                                <div class="fr">
+                                    <!-- tag -->
+                                    <div class="tag admin">
+                                        <p class="sm_p58">#TAG_01</p>
+                                        <a class="btn_x"></a>
+                                    </div>
+                                    <!-- //tag -->
+                                    <!-- tag -->
+                                    <div class="tag admin">
+                                        <p class="sm_p58">#TAG_02</p>
+                                        <a class="btn_x"></a>
+                                    </div>
+                                    <!-- //tag -->
+                                    <!-- tag -->
+                                    <div class="tag admin">
+                                        <p class="sm_p58">#TAG_03</p>
+                                        <a class="btn_x"></a>
+                                    </div>
+                                    <!-- //tag -->
+                                    <!-- 할당 btn -->
+                                    <a class="btn_add">+ 태그 추가</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- //legal_advice_info_box -->
+                </div>
+                <!-- //legal_advice_info_wrap -->
+                <!-- legal_advice_view -->
+                <div class="legal_advice_view">
+                    <!-- legal_advice_view_hd -->
+                    <div class="legal_advice_view_hd">
+                        <!-- 질문사항 제목 h1 -->
+                        <h1 class="legal_h1">어린이를 위한 포장 디자인 논문의 연구 동향 자문</h1>
+                    </div>
+                    <!-- //legal_advice_view_hd -->
+                    <!-- legal_advice_view_content -->
+                    <div class="legal_advice_view_content">
+                        <!-- view_content -->
+                        <div class="view_content">
+                            <!-- 질문사항 내용 -->
+                            <p>
+                                대한민국에서는 모든 법률 분야에 대한 유로 법률자문은 변호사, 법무사만이 할 수 있다. 세법에 대해서는 세무사, 공인회계사가, 특허법에 대해
+                                서는 변리사가, 부동산중개에 대해서는 공인중개사가 법률자문을 유료로 해줄 수 있다. 그 이외에 무자격자는 무료 법률상담만 해줄 수 있다.<br><br>
+                                최근 한미 FTA와 한EU FTA 체결로, 법률시장이 개방되어 외국법 자문은 외국 변호사가 유료 법률자문을 해 줄 수 있다. 2014년 외국 로펌은
+                                국내에서 외국법과 한국법이 혼재된 사건의 유로 법률자문을 해줄 수 있다. 2017년에는 외국 로펌이 국내에서 국내 변호사를 고용할 수 있다.
+                                외국 로펌에 모든 유로 법률자문이 허용된다. 세계에서 가장 대규모의 법률자문 로펌들은 대부분이 미국과 영국인데, 한미 FTA로 미국 로펌에,
+                                한EU FTA로 영국 로펌에 한국 법률시장이 개방되었다.<br><br>
+                                법률고문의 법률자문은 판사에게 법률상 법적 구속력은 없는 단순한 조언이다. 즉, 법원에 변호사의 상담이 이러했다고 항변해도, 받아들여지지
+                                않을 수 있다. 그러나 판사가 아닌 이들에게는 사실상 법적 구속력이 있다. [출처 필요] 예를 들어, 회장이나 장관 또는 일반 서민에게, 변호사가
+                                '이렇게 하면 형사처벌된다'고 몇백만원을 받고 법률자문을 해주면, 판결문이 아니어서 법률상 법적 구속력은 없지만, 거액의 법률자문료를 지불하
+                                고 상담받은 그 변호사 충고를 어기고 그 행위를 할 사람은 사실상 없어서, 사실상 법적 구속력이 있다. [출처 필요] 법률상 법적 구속력은 없지만
+                                사실상법적 구속력이 있는 권고(recommendation)로 구성된 법질서를 연성법(Soft law) 질서라고 한다.<br><br>
+                                공무원의 경우도, 미국 관타나모 수용소의 고문 메모와 같이, 법무부 변호사가 고문이 형법적으로 허용된다고 상담해 준 것은, 미리 형사법원의
+                                판결문을 받아보고 공무원이 조치를 취할 수는 없기 때문에, 법무장관 법률고문의 고문 메모가, 사실상 판결문으로 작용한다.[출처 필요]
+                                미국계 투자은행인 모건 스탠리는 대형로펌의 세법 법률자문으로 전세계 조세피난처를 통한 절세를 많이 하는데, 이러한 대형로펌의 법률자문
+                                으로 절세를 한 행위가, 각국의 법원에서 유죄로 판결되어 형사처벌, 조세처분을 받는 경우도 상당히 존재한다.
+                            </p>
+                        </div>
+                        <!-- //view_content -->
+                        <!-- attachment_wrap -->
+                        <div class="attachment_wrap">
+                            <label class="label_item">첨부파일 (2)</label>
+                            <ul data-brackets-id="1446" class="attachment_list">
+                            <li data-brackets-id="1447">
+                                <p data-brackets-id="1451">수정 불가능한 첨부파일</p>
+                            </li>
+                            <li data-brackets-id="1447">
+                                <p data-brackets-id="1451">수정 불가능한 첨부파일</p>
+                            </li>
+                            <li data-brackets-id="1447">
+                                <p data-brackets-id="1451">수정 불가능한 첨부파일</p>
+                            </li>
+                            </ul>
+                        </div>
+                        <!-- //attachment_wrap -->
+                    </div>
+                    <!-- //legal_advice_view_content -->
+                    <!-- //legal_advice_reply -->
+                    <div class="legal_advice_reply">
+                        <label class="label_item">댓글 (1)</label>
+                        <ul class="reply_ul">
+                        <li class="reply_new">
+                            <div class="reply_hd">
+                                <div class="fl">
+                                    <p class="reply_writer_badge sm_p">홍길동 법무검토자</p>
+                                </div>
+                                <div class="fr">
+                                    <p class="fl sm_pb4 reply_date">19.02.01 13:19</p>
+                                    <div class="fl reply_btn_wrap">
+                                        <a class="btn_replay_s">수정</a><a class="btn_replay_s">삭제</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="reply_content">
+                                <p class="sm_p58">
+                                   법률고문의 법률자문은 판사에게 법률상 법적 구속력은 없는 단순한 조언이다. 즉, 법원에 변호사의 상담이 이러했다고 항변해도, 받아들여지지 않을 수
+                                    있다. 그러나 판사가 아닌 이들에게는 사실상 법적 구속력이 있다.
+                                    법률자문을 해주면 사실상 법적 구속력이 있다
+                                </p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="reply_hd">
+                                <div class="fl">
+                                    <p class="reply_writer_badge sm_p">홍길동 법무검토자</p>
+                                </div>
+                                <div class="fr">
+                                    <p class="fl sm_pb4 reply_date">19.02.01 13:19</p>
+                                    <div class="fl reply_btn_wrap">
+                                        <a class="btn_replay_s">수정</a><a class="btn_replay_s">삭제</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="reply_content">
+                                <p class="sm_p58">
+                                   법률고문의 법률자문은 판사에게 법률상 법적 구속력은 없는 단순한 조언이다. 즉, 법원에 변호사의 상담이 이러했다고 항변해도, 받아들여지지 않을 수
+                                    있다. 그러나 판사가 아닌 이들에게는 사실상 법적 구속력이 있다.
+                                    법률자문을 해주면 사실상 법적 구속력이 있다
+                                </p>
+                            </div>
+                        </li>
+                        </ul>
+                        <div class="reply_textarea_wrap">
+                            <textarea class="textarea" placeholder="자문에 대한 코멘트를 입력해주세요"></textarea>
+                            <div class="textarea_btn_wrap tr">
+                                <a class="btn__n btn_s">등록</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- //legal_advice_reply -->
+                </div>
+                <!-- //legal_advice_view -->
+            </section>
+            <!-- //section__legal_advice -->
+
+            <!-- section__legal_advice -->
+            <section class="section__legal_advice">
+                <!-- legal_advice_answer_writing -->
+                <div class="legal_advice_answer_writing">
+                    <label class="label_item">답변 등록</label>
+                    <textarea class="textarea_writing" placeholder="자문에 대한 코멘트를 입력해주세요"></textarea>
+                    <!-- attachment_wrap -->
+                    <div class="attachment_wrap">
+                        <label class="label_item">첨부파일 (2)</label>
+                        <ul data-brackets-id="1446" class="attachment_list admin">
+                        <li>
+                            <p>관리자 및 본인이 추가했을 경우 (삭제 가능 상태)</p>
+                            <div class="btn_x"></div>
+                        </li>
+                        </ul>
+                        <a class="btn_add">+ 추가하기</a>
+                    </div>
+                    <!-- //attachment_wrap -->
+                    <div class="textarea_btn_wrap__tr">
+                        <a class="btn__f btn_s">취소</a><a class="btn__n btn_s">등록</a>
+                    </div>
+                </div>
+                <!-- //legal_advice_answer_writing -->
+                <!-- legal_advice_answer_view -->
+                <div class="legal_advice_answer_view" id="reading_answer"><!-- id="reading_answer" 회람 시에만 추가: section__head에서 이동 용도 -->
+                    <div class="legal_advice_answer_hd clearfix">
+                        <div class="fl">
+                            <label class="label_item_legal label_item">답변 사항 (1)</label>
+                        </div>
+                        <div class="fr">
+                            <div class="textarea_btn_wrap__tr">
+                                <a class="btn__b btn_s">자문 완료</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- legal_advice_answer_writer -->
+                    <div class="legal_advice_answer_view_hd">
+                        <div class="clearfix"><p class="sm_b">김태희 변호사</p></div>
+                        <div class="clearfix">
+                            <div class="fl">
+                                <p class="sm_pa2">hong_test1234@gmail.com</p>
+                            </div>
+                            <div class="fr">
+                                <p class="fl sm_pb4 reply_date">19.02.01 13:19</p>
+                                <div class="fl reply_btn_wrap">
+                                    <a class="btn_replay_s">수정</a><a class="btn_replay_s">삭제</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- //legal_advice_answer_writer -->
+
+                    <!-- legal_advice_reading_box -->
+                    <div class="legal_advice_reading_box">
+                        <div class="legal_advice_reading_hd clearfix">
+                            <div class="fl">
+                                <label class="label_item">회람 의견 (2)</label>
+                            </div>
+                            <div class="fr">
+                                <div class="textarea_btn_wrap__tr">
+                                    <a class="btn__n btn_s">답변 변경 요청</a><a class="btn__y btn_s">회람 완료</a>
+                                </div>
+                            </div>
+                        </div>
+                        <ul class="legal_advice_reading_ul">
+                            <!-- reading_request 변경 요청 상태 -->
+                            <li class="reading_request">
+                                <div class="reply_hd">
+                                    <div class="fl">
+                                        <p class="reply_writer_badge sm_p">이유진 법무검토자</p>
+                                    </div>
+                                    <div class="fr">
+                                        <p class="fl sm_pb4 reply_date">19.02.01 13:19</p>
+                                        <p class="fl sm_b reading_state">변경 요청</p>
+                                    </div>
+                                </div>
+                                <div class="reply_content">
+                                    <p class="sm_p58">
+                                        법률고문의 법률자문은 판사에게 법률상 법적 구속력은 없는 단순한 조언이다. 즉, 법원에 변호사의 상담이 이러했다고 항변해도, 받아들여지지 않을 수
+                                        있다. 그러나 판사가 아닌 이들에게는 사실상 법적 구속력이 있다.
+                                        법률자문을 해주면 사실상 법적 구속력이 있다
+                                    </p>
+                                </div>
+                            </li>
+                            <!-- reading_approve 회람 완료 상태 -->
+                            <li class="reading_approve">
+                                <div class="reply_hd">
+                                    <div class="fl">
+                                        <p class="reply_writer_badge sm_p">정의진 법무검토자</p>
+                                    </div>
+                                    <div class="fr">
+                                        <p class="fl sm_pb4 reply_date">19.02.01 13:19</p>
+                                        <div class="fl">
+                                            <p class="sm_b reading_state">회람 완료</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="reply_content">
+                                    <p class="sm_p58">
+                                        이견 없음.
+                                    </p>
+                                </div>
+                            </li>
+                            <!-- reading_yet 대기중 상태 -->
+                            <li class="reading_yet">
+                                <div class="reply_hd">
+                                    <div class="fl">
+                                        <p class="reply_writer_badge sm_p">김우석 법무검토자</p>
+                                    </div>
+                                    <div class="fr">
+                                        <p class="sm_b reading_state">대기중</p>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- //legal_advice_reading_box -->
+
+                    <!-- legal_advice_view_content -->
+                    <div class="legal_advice_view_content view_content">
+                        <p>
+                            대한민국에서는 모든 법률 분야에 대한 유로 법률자문은 변호사, 법무사만이 할 수 있다. 세법에 대해서는 세무사, 공인회계사가, 특허법에 대해
+                            서는 변리사가, 부동산중개에 대해서는 공인중개사가 법률자문을 유료로 해줄 수 있다. 그 이외에 무자격자는 무료 법률상담만 해줄 수 있다.<br><br>
+                            최근 한미 FTA와 한EU FTA 체결로, 법률시장이 개방되어 외국법 자문은 외국 변호사가 유료 법률자문을 해 줄 수 있다. 2014년 외국 로펌은
+                            국내에서 외국법과 한국법이 혼재된 사건의 유로 법률자문을 해줄 수 있다. 2017년에는 외국 로펌이 국내에서 국내 변호사를 고용할 수 있다.
+                            외국 로펌에 모든 유로 법률자문이 허용된다. 세계에서 가장 대규모의 법률자문 로펌들은 대부분이 미국과 영국인데, 한미 FTA로 미국 로펌에,
+                            한EU FTA로 영국 로펌에 한국 법률시장이 개방되었다.<br><br>
+                            법률고문의 법률자문은 판사에게 법률상 법적 구속력은 없는 단순한 조언이다. 즉, 법원에 변호사의 상담이 이러했다고 항변해도, 받아들여지지
+                            않을 수 있다. 그러나 판사가 아닌 이들에게는 사실상 법적 구속력이 있다. [출처 필요] 예를 들어, 회장이나 장관 또는 일반 서민에게, 변호사가
+                            '이렇게 하면 형사처벌된다'고 몇백만원을 받고 법률자문을 해주면, 판결문이 아니어서 법률상 법적 구속력은 없지만, 거액의 법률자문료를 지불하
+                            고 상담받은 그 변호사 충고를 어기고 그 행위를 할 사람은 사실상 없어서, 사실상 법적 구속력이 있다. [출처 필요] 법률상 법적 구속력은 없지만
+                            사실상법적 구속력이 있는 권고(recommendation)로 구성된 법질서를 연성법(Soft law) 질서라고 한다.<br><br>
+                            공무원의 경우도, 미국 관타나모 수용소의 고문 메모와 같이, 법무부 변호사가 고문이 형법적으로 허용된다고 상담해 준 것은, 미리 형사법원의
+                            판결문을 받아보고 공무원이 조치를 취할 수는 없기 때문에, 법무장관 법률고문의 고문 메모가, 사실상 판결문으로 작용한다.[출처 필요]
+                            미국계 투자은행인 모건 스탠리는 대형로펌의 세법 법률자문으로 전세계 조세피난처를 통한 절세를 많이 하는데, 이러한 대형로펌의 법률자문
+                            으로 절세를 한 행위가, 각국의 법원에서 유죄로 판결되어 형사처벌, 조세처분을 받는 경우도 상당히 존재한다.
+                        </p>
+                        <!-- attachment_wrap -->
+                        <div class="attachment_wrap">
+                            <label class="label_item">첨부파일 (2)</label>
+                            <ul data-brackets-id="1446" class="attachment_list">
+                                <li data-brackets-id="1447">
+                                    <p data-brackets-id="1451">수정 불가능한 첨부파일</p>
+                                </li>
+                                <li data-brackets-id="1452">
+                                    <p data-brackets-id="1456">수정 불가능한 첨부파일</p>
+                                </li>
+                                <li data-brackets-id="1457">
+                                    <p data-brackets-id="1461">수정 불가능한 첨부파일</p>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- //attachment_wrap -->
+                    </div>
+                    <!-- //legal_advice_view_content -->
+                    <!-- legal_advice_reply -->
+                    <div class="legal_advice_reply">
+                        <label class="label_item">댓글 (1)</label>
+                        <ul class="reply_ul">
+                        <li>
+                            <div class="reply_hd">
+                                <div class="fl">
+                                    <p class="reply_writer_badge sm_p">홍길동 법무검토자</p>
+                                </div>
+                                <div class="fr">
+                                    <p class="fl sm_pb4 reply_date">19.02.01 13:19</p>
+                                    <div class="fl reply_btn_wrap">
+                                        <a class="btn_replay_s">수정</a><a class="btn_replay_s">삭제</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="reply_content">
+                                <p class="sm_p58">
+                                    법률고문의 법률자문은 판사에게 법률상 법적 구속력은 없는 단순한 조언이다. 즉, 법원에 변호사의 상담이 이러했다고 항변해도, 받아들여지지 않을 수
+                                    있다. 그러나 판사가 아닌 이들에게는 사실상 법적 구속력이 있다.
+                                    법률자문을 해주면 사실상 법적 구속력이 있다
+                                </p>
+                            </div>
+                        </li>
+                        </ul>
+                        <div class="reply_textarea_wrap">
+                            <textarea class="textarea" placeholder="자문에 대한 코멘트를 입력해주세요"></textarea>
+                            <div class="textarea_btn_wrap tr">
+                                <a class="btn__n btn_s">등록</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- //legal_advice_reply -->
+                </div>
+                <!-- //legal_advice_answer_view -->
+            </section>
+            <!-- //section__legal_advice -->
+        </section>
+        <!-- //section__legal -->
+    </div>
+    <!-- //content -->
+    <!-- ================================= //content ================================= -->
+    
+</div>
+<!-- //wrap -->
+<footer id="footer">
+
+</footer>
+</body>
+</html>
+ 

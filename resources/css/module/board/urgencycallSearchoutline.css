@@ -1,0 +1,53 @@
+.xans-mall-urgencycallsearchoutline { overflow:hidden; position:absolute; top:50%; left:50%; z-index:1000; width:600px; margin:-300px 0 0 -300px; color:#757575; }
+.xans-mall-urgencycallsearchoutline h1 { height:35px; padding:0 35px 0 19px; color:#fff; font-size:14px; line-height:35px; background-color:#495164; }
+.xans-mall-urgencycallsearchoutline .content { min-height:470px; padding:20px; border-left:1px solid #757575; border-right:1px solid #757575; background-color:#fff; }
+.xans-mall-urgencycallsearchoutline .close { position:absolute; right:20px; top:10px; }
+.xans-mall-urgencycallsearchoutline .close img { cursor:pointer; }
+.xans-mall-urgencycallsearchoutline .btnArea { padding:10px 0; border:1px solid #757575; border-top:1px solid #d7d5d5; text-align:center; background-color:#fbfafa; }
+
+.xans-mall-urgencycallsearchoutline .tab { position:relative; margin:0 0 20px; line-height:1.5; }
+.xans-mall-urgencycallsearchoutline .tab ul { border:1px solid #cbcdce; border-bottom-color:#292929; height:38px; border-left:0; background:#f0f2f2; *zoom:1; }
+.xans-mall-urgencycallsearchoutline .tab ul:after { content:""; display:block; clear:both; }
+.xans-mall-urgencycallsearchoutline .tab ul li { float:left; }
+.xans-mall-urgencycallsearchoutline .tab ul li a { display:block; min-width:168px; height:38px; padding:0 15px; border-right:1px solid #cbcdce; border-left:1px solid #cbcdce; color:#757575; line-height:38px; text-decoration:none; text-align:center; background:#f0f2f2; }
+.xans-mall-urgencycallsearchoutline .tab ul li.selected a { position:relative; top:-1px; margin:0 0 -1px; border:1px solid #292929; color:#fff; font-weight:bold; background:#4a5164; }
+
+
+.xans-mall-urgencycallsearchoutline .result { margin:18px 0 8px; padding:0 0 0 16px; background:url("http://img.echosting.cafe24.com/skin/base_ko_KR/board/bul_urgency.gif") no-repeat 9px 4px; }
+.xans-mall-urgencycallsearchoutline .result strong { color:#000; }
+
+.xans-mall-urgencycallsearchoutline .boardSearch { table-layout:fixed; border:1px solid #d8d8d8; color:#777; font-size:11px; line-height:20px; }
+.xans-mall-urgencycallsearchoutline .boardSearch th { width:100px; padding:8px 0 8px; border-top:1px solid #e9e9e9; border-right:1px solid #e8e8e8; font-weight:normal; background:#f6f6f6; }
+.xans-mall-urgencycallsearchoutline .boardSearch td { width:auto; padding:8px 0 8px 15px; border-top:1px solid #e9e9e9; vertical-align:middle; }
+.xans-mall-urgencycallsearchoutline .boardSearch tr:first-child th,
+.xans-mall-urgencycallsearchoutline .boardSearch tr:first-child td { border-top:0; }
+.xans-mall-urgencycallsearchoutline .boardSearch img { vertical-align:middle; }
+.xans-mall-urgencycallsearchoutline .boardSearch select { height:24px; }
+.xans-mall-urgencycallsearchoutline .boardSearch input { width:340px; height:14px; padding:3px; border:1px solid #d9d9d9; color:#000; font-size:12px; font-weight:bold; }
+
+.xans-mall-urgencycallsearchoutline .boardList { border:1px solid #d7d5d5; color:#353535; font-size:12px; line-height:140%;}
+.xans-mall-urgencycallsearchoutline .boardList th { padding:5px 0; border-right:1px solid #e3e3e3; background:#fbfafa; font-weight:normal; vertical-align:middle; }
+.xans-mall-urgencycallsearchoutline .boardList td { padding:6px 3px 4px; border-top:1px solid #e3e3e3; border-right:1px solid #e3e3e3; text-align:center; vertical-align:middle; }
+.xans-mall-urgencycallsearchoutline .boardList th:last-child,
+.xans-mall-urgencycallsearchoutline .boardList td:last-child{ border-right:0; }
+.xans-mall-urgencycallsearchoutline .boardList th.select select { height:24px; }
+.xans-mall-urgencycallsearchoutline .boardList .typeBody { overflow-x:hidden; overflow-y:scroll; max-height:285px; min-height:35px; }
+.xans-mall-urgencycallsearchoutline .boardList .typeBody.xans-mall-urgencycallordresult {  max-height:365px; }
+.xans-mall-urgencycallsearchoutline .boardList td.product { overflow:hidden; padding-left:10px; text-align:left; vertical-align:top; }
+.xans-mall-urgencycallsearchoutline .boardList td.product a { color:#747474; }
+.xans-mall-urgencycallsearchoutline .boardList td.product p { padding:0 0 0 55px; }
+.xans-mall-urgencycallsearchoutline .boardList td.product .thumb { float:left; }
+.xans-mall-urgencycallsearchoutline .boardList td.product .thumb img { width:46px; }
+.xans-mall-urgencycallsearchoutline .boardList .empty td { padding:130px 0; }
+
+
+.xans-mall-urgencycallsearchoutline .pagenate { padding:30px 0 0; text-align:center; }
+.xans-mall-urgencycallsearchoutline .pagenate p { display:inline-block; vertical-align:top; *display:inline; *zoom:1; }
+.xans-mall-urgencycallsearchoutline .pagenate ol { display:inline-block; margin:0 -4px; font-size:0; line-height:0; vertical-align:top; *display:inline; *zoom:1; *margin:0; }
+.xans-mall-urgencycallsearchoutline .pagenate li { display:inline-block; margin:0 0 0 -1px; border:1px solid #d7d5d5; font-size:12px; color:#757575; vertical-align:top; *display:inline; *zoom:1; }
+.xans-mall-urgencycallsearchoutline .pagenate li:first-child { margin-left:0; }
+.xans-mall-urgencycallsearchoutline .pagenate img { vertical-align:top; }
+.xans-mall-urgencycallsearchoutline .pagenate li a { display:block; width:33px; padding:9px 0; font-weight:bold; color:#939393; line-height:14px; background:#fff; }
+.xans-mall-urgencycallsearchoutline .pagenate li a:hover { text-decoration:none; background:#f0f2f2; }
+.xans-mall-urgencycallsearchoutline .pagenate li a.this { padding-bottom:6px; border-bottom:3px solid #495164; color:#495164; }
+.xans-mall-urgencycallsearchoutline .pagenate a.nolink { cursor:default; }

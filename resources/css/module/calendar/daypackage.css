@@ -1,0 +1,26 @@
+.xans-calendar-daypackage {}
+.xans-calendar-daypackage .tab { position:relative; margin:20px 0 30px; height:34px; border-bottom:1px solid #d6d6d6; }
+.xans-calendar-daypackage .tab ul { border:1px solid #cbcdce; border-bottom-color:#292929; height:38px; border-left:0; background:#f0f2f2; *zoom:1; }
+.xans-calendar-daypackage .tab ul:after { content:""; display:block; clear:both; }
+.xans-calendar-daypackage .tab li { float:left; }
+.xans-calendar-daypackage .tab li a { display:block; min-width:168px; height:38px; margin:0 0 0 -1px; padding:0 15px; border-right:1px solid #cbcdce; border-left:1px solid #cbcdce; color:#757575; line-height:38px; text-decoration:none; text-align:center; background:#f0f2f2; }
+.xans-calendar-daypackage .tab li.selected a { position:relative; top:-1px; margin:0 0 -1px; border:1px solid #292929; color:#fff; font-weight:bold; background:#4a5164; }
+.xans-calendar-daypackage .tab p.addType { position:absolute; top:8px; right:10px; }
+
+.xans-calendar-headday { position:relative; height:70px; text-align:center; }
+.xans-calendar-headday .date { display:inline; color:#d9bca0; font-size:30px; letter-spacing:-1px; font-family:Lucida Sans, sans-serif; }
+.xans-calendar-headday .date img { vertical-align:middle; }
+.xans-calendar-headday .btn { position:absolute; right:0; top:0px; }
+
+.xans-calendar-category { padding:0 0 20px; }
+
+.xans-calendar-listdayhead th { border-top:1px solid #d9bca0; font-size:11px; color:#d9bca0; background:url("http://img.echosting.cafe24.com/skin/base_ko_KR/calendar/bg_thead.gif") right 0 no-repeat; }
+.xans-calendar-listdayhead th span { display:block; padding:8px 0; }
+.xans-calendar-listdayhead th.time span { background:url("http://img.echosting.cafe24.com/skin/base_ko_KR/calendar/bg_thead.gif") 0 0 no-repeat; }
+
+.xans-calendar-listday th,
+.xans-calendar-listday td { padding:8px 15px; border:1px solid #fff; background:#f1f4e6; font-size:11px; }
+.xans-calendar-listday th { width:60px; text-align:center; color:#8f8f8f; font-weight:normal; }
+.xans-calendar-listday td li { }
+.xans-calendar-listday td li a,
+.xans-calendar-listday td li a:hover { line-height:18px; color:#96aa4b; }

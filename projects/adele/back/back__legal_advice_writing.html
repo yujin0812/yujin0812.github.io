@@ -1,0 +1,185 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8" />
+<title></title>
+<!-- STYLE CSS -->
+<link href="css/application.css" rel="stylesheet" type="text/css">
+<link href="css/style.css" rel="stylesheet" type="text/css">
+<link href="css/reset.css" rel="stylesheet" type="text/css">
+<!-- SCRIPT -->
+<script src="scripts/jquery-3.4.1.min.js"></script>
+<script src="scripts/jquery.nice-select.min.js"></script>
+<script src="scripts/main.js"></script>
+</head>
+<body>
+<!-- wrap -->
+<div id="wrap">
+    <!-- header -->
+    <header id="header">
+        <!-- header_inner -->
+        <div class="header_inner">
+            <!-- logo -->
+            <div class="logo"><a href="ui_guide.html"><img src='http://www.stickpng.com/assets/images/580b57fcd9996e24bc43c513.png'></a></div>
+            <!-- //logo -->
+            <!-- hd_user_wrap -->
+            <div class="hd_user_wrap">
+                <!-- hd_user -->
+                <div class="hd_user">
+                    <p class="hd_user_name">이유진님</p>
+                    <!-- hd_user_ul -->
+                    <ul class="hd_user_ul">
+                        <li><a href="mypage_user_info.html">내 정보 보기</a></li>
+                        <li><a href="login.html">로그아웃</a></li>
+                    </ul>
+                    <!-- //hd_user_ul -->
+                </div>
+                <!-- //hd_user -->
+                <div class="hd_user_img"><img src="https://img1.daumcdn.net/thumb/R720x0.q80/?scode=mtistory&fname=http%3A%2F%2Fcfile10.uf.tistory.com%2Fimage%2F99530A3B5BE7C1803380DF"></div>
+            </div>
+            <!-- //hd_user_wrap -->
+            <!-- gnb_wrap -->
+            <div class="gnb_wrap">
+                <!-- gnb -->
+                <ul class="gnb">
+                    <li>
+                        <a href="index.html">계약관리</a>
+                    </li>
+                    <li class="active">
+                        <a href="legal_advice_list.html">법률자문</a>
+                    </li>
+                </ul>
+                <!-- //gnb -->
+                <!-- gnb_admin -->
+                <ul class="gnb_admin">
+                    <li><a href="notice.html">공지사항</a></li>
+                    <li><a href="group_list.html">그룹 관리자</a></li>
+                    <li><a href="admin_workflow_list.html">관리자</a></li>
+                </ul>
+                <!-- //gnb_admin -->
+            </div>
+            <!-- //gnb_wrap -->
+        </div>
+        <!-- //header_inner -->
+    </header>
+    <!-- //header -->
+
+    <!-- ================================= content ================================= -->
+    
+    <!-- snb -->
+    <nav class="snb legal_create_wrap">
+        <a href="legal_advice_writing.html" class="btn__active">신규 자문 생성</a>
+    </nav>
+    <!-- //snb -->
+
+    <!-- content -->
+    <div class="content">
+        <!-- section_legal -->
+        <section class="section_legal">
+            <!-- section__legal_advice -->
+            <section class="section__legal_advice legal_advice_writing">
+                <!-- section_head -->
+                <div class="section_head">
+                    <div class="table_cell">
+                        <h1 class="section_h1">신규 자문 생성</h1>
+                    </div>
+                </div>
+                <!-- //section_head -->
+                <!-- legal_advice_info_wrap -->
+                <div class="legal_advice_info_wrap">
+                    <div class="legal_advice_info_hd clearfix">
+                        <p class="fl b">질문 등록 정보</p>
+                        <p class="fr sm_pb4">2019.01.09 09:30</p>
+                    </div>
+                    <!-- legal_advice_info_box -->
+                    <div class="legal_advice_info_box">
+                        <div class="legal_advice_info1">
+                            <p class="m_p58">이유진 / testmail@gmail.com</p>
+                        </div>
+                        <ul class="legal_advice_setting_ul clearfix_ul">
+                            <li>
+                                <label class="fl m_p58_b">부서장</label>
+                                <div class="fr">
+                                    <div class="user">
+                                        <p class="sm_p58">홍길동 부서장</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <label class="fl m_p58_b">검토자</label>
+                                <div class="fr">
+                                    <div class="user admin">
+                                        <p class="sm_p58">홍길동 부서장</p>
+                                        <a class="btn_x"></a>
+                                    </div>
+                                    <a class="btn_add">+ 검토자 할당</a>
+                                </div>
+                            </li>
+                            <li>
+                                <label class="fl m_p58_b">관련자</label>
+                                <div class="fr">
+                                    <a class="btn_add">+ 관련자 추가</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- //legal_advice_info_box -->
+                </div>
+                <!-- //legal_advice_info_wrap -->
+
+                <!-- legal_advice_notify -->
+                <div class="legal_advice_notify">
+                    <p class="sm_b">“정확한 답변”은 “정확한 질문”으로 부터 나옵니다.</p>
+                    <p class="sm_p58">
+                        - 문의하시는 내용을 육하원칙에 맞게 상세히 설명해주세요.<br>
+                        - 문의 관련 추진하게 되는 배경/사업/프로젝트를 설명해주세요. (관련지식이 있어야 더 정확한 법률적 분석이 가능합니다.)<br>
+                        - 답변자가 참조할 수 있는 자료를 첨부해주세요.
+                    </p>
+                </div>
+                <!-- //legal_advice_notify -->
+
+                <!-- legal_advice_writing -->
+                <div class="legal_advice_writing">
+                    <div class="form_group">
+                        <label class="b">자문 제목</label>
+                        <input type="text" class="input" placeholder="제목을 입력해주세요">
+                    </div>
+                    <textarea class="textarea_writing"></textarea>
+                    <!-- attachment_wrap -->
+                    <div class="attachment_wrap">
+                        <label class="label_item">첨부파일 (2)</label>
+                        <ul data-brackets-id="1446" class="attachment_list admin">
+                            <!-- 첨부파일
+                            <li>
+                                <p>관리자 및 본인이 추가했을 경우 (삭제 가능 상태)</p>
+                                <div class="btn_x"></div>
+                            </li>
+                            -->
+                        </ul>
+                        <div class="clearfix">
+                            <a class="btn_add">+ 추가하기</a>
+                        </div>
+                    </div>
+                    <!-- //attachment_wrap -->
+                    <div class="legal_advice_writing_btn">
+                        <a class="btn__active">등록</a><a class="btn__cancel">취소</a>
+                    </div>
+                </div>
+                <!-- //legal_advice_writing -->
+
+            </section>
+            <!-- //section__legal_advice_writing -->
+        </section>
+        <!-- //section_legal -->
+
+    </div>
+    <!-- //content -->
+    <!-- ================================= //content ================================= -->
+</div>
+<!-- //wrap -->
+<footer id="footer">
+
+</footer>
+</body>
+</html>
+ 

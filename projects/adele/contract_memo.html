@@ -1,0 +1,1807 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8" />
+<title></title>
+<!-- STYLE CSS -->
+<link href="css/application.css" rel="stylesheet" type="text/css">
+<link href="css/style.css" rel="stylesheet" type="text/css">
+<link href="css/reset.css" rel="stylesheet" type="text/css">
+<!-- SCRIPT -->
+<script src="scripts/jquery-3.4.1.min.js"></script>
+<script src="scripts/jquery.nice-select.min.js"></script>
+<script src="scripts/dropzone.js"></script>
+<script src="scripts/main.js"></script>
+<script>
+$(document).ready(function(){
+    // 필수 적용: label select top 위치 계산 css
+    function btSelect2LabelTop() {
+        var select2ViewHeight = $(".select2_view").height();
+        var btSelect2Top = select2ViewHeight + 30;
+        $(".bt_select2").css("top", btSelect2Top);
+    }
+    btSelect2LabelTop();
+    // label select 토글효과
+    $(document).on("click", ".select2_view .clearfix_ul", function(){
+        $(".bt_select2").slideToggle("fast");
+    });
+    $(document).on("click", ".bt_select2 .select2_results>li", function(){
+        $(".bt_select2").slideUp("fast");
+    });
+
+    // 190806 공지사항 추가 수직 슬라이더
+    $(function() {
+        // Verical Slider
+        var $row = $('.vertical-slider__item'),
+            $container = $('.vertical-slider');
+        currentMarginTop = 0,
+            itemHeight = $row.height(),
+            rowsNr = $row.length, 
+            maxPadd = (rowsNr-1) * itemHeight;
+        console.log(itemHeight);
+
+        function setHeight() {
+            console.log(itemHeight);
+            $('.header_notice__dynamic').css({
+                'height' : itemHeight
+            });
+        }
+        function animateSlider () {
+            //setInterval(moveRows,2000);
+            setHeight();
+            function moveRows () {
+                $container.animate({
+                    'margin-top' : currentMarginTop - itemHeight  
+                },500);
+                currentMarginTop -= itemHeight;
+            }
+            if (currentMarginTop == -(maxPadd)) {
+                $container.css({
+                    'margin-top' : 0
+                })
+                currentMarginTop = 0;
+                // moveRows();
+            } else {
+                moveRows();
+            }
+        }
+        function automateSlider (interval) {
+            setInterval(animateSlider,interval);  
+        }
+        automateSlider(3000);
+    });
+});
+</script>
+<style>
+.memo::after {
+    content: "";
+    position: absolute;
+    top: -5px;
+    left: -6px;
+    width: 11px;
+    height: 11px;
+    background: url(imgs/icon_editor_memo.svg) no-repeat center;
+    background-size: 11px 10px;
+    z-index: 2;
+}
+.memo.active::after {
+    display: none;
+}
+.memo_box {
+    position: absolute;
+    top: 20px;
+    left: 0;
+    z-index: 2;
+}
+.memo_box_x {
+    margin-left: 0;
+}
+    .ProseMirror {
+        min-height: 650px;
+        max-width: 793px !important;
+        min-height: 650px;
+        margin: 20px auto !important;
+        padding: 0;
+        font-size: 16px;
+        line-height: 1.6 !important;
+    }
+    /* 전자 서명란 */
+    .signing_box_ul {
+        margin: 20px -20px 0;
+        display: flex;
+        display: -ms-flex;
+        display: -moz-flex;
+        display: -webkit-flex;
+        align-items: flex-start;
+        flex-wrap: wrap;
+    }
+    .signing_box_ul>li {
+        width: 50%;
+        padding: 0 20px;
+        margin-bottom: 20px;
+    }
+    .signing_line_wrap {
+        display: flex;
+        display: -ms-flex;
+        display: -moz-flex;
+        display: -webkit-flex;
+        align-items: flex-end;
+        flex-direction: column;
+    }
+    .signing_box_ul>li .signing_line {
+        width: 100%;
+        padding: 10px 0 8px;
+        border-bottom: 1px solid #d0d2db;
+    }
+    .signing_box_ul>li .signing_line .p_s_9b {
+        float: left;
+        width: 70px;
+        color: #9b9b9b;
+        font-size: 13px;
+    }
+    .signing_box_ul>li .signing_line .signing_p {
+        float: left;
+        width: calc(100% - 70px);
+        font-size: 13px;
+    }
+    .signing_area {
+        height: 60px;
+        margin-top: 27px;
+        border: 1px solid #fbfbfb;
+    }
+    .signing_line_date {
+        padding: 10px 0 8px;
+    }
+    .signing_line_date_p {
+        width: 100%;
+        text-align: right;
+        color: #b4b4b4;
+        font-size: 13px;
+        letter-spacing: 0;
+    }
+
+    /* ProseMirror Editor */
+    .ProseMirror-menubar-wrapper {
+        border-radius: 5px;
+        border: 1px solid #d0d2db;
+        background-color: #ffffff;
+    }
+    .ProseMirror-menubar-wrapper .ProseMirror-menubar {
+        padding: 15px 17px;
+        border-bottom: 1px solid #d0d2db;
+    }
+    .ProseMirror-menubar-wrapper .ProseMirror-menubar .clearfix {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    .ProseMirror-menubar-wrapper .ProseMirror.ProseMirror-example-setup-style {
+        min-height: 650px;
+    }
+    .ProseMirror-menuitem {
+        display: inline-block;
+        margin-right: 1px;
+    }
+    .ProseMirror-icon {
+        display: block;
+        width: 24px;
+        height: 24px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: all .3s;
+        cursor: pointer;
+    }
+    .ProseMirror-icon:hover {
+        background-color: #e5e5e5;
+        border-radius: 4px;
+    }
+    .ProseMirror-icon object {
+        display: block;
+        margin: auto;
+    }
+    .btn_memo_add {
+        display: inline-block;
+        margin-top: 15px;
+        color: #3b4ce4;
+        font-size: 13px;
+        font-weight: bold;
+        text-decoration: underline;
+        cursor: pointer;
+    }
+    .ProseMirror {
+        min-height: 650px;
+    }
+    .ProseMirror-menu-dropdown {
+        padding-right: 15px;
+    }
+    .ProseMirror-menu-dropdown:after {
+        content: "";
+        border-left: 4px solid transparent;
+        border-right: 4px solid transparent;
+        border-top: 4px solid #000;
+        opacity: .6;
+        position: absolute;
+        right: 4px;
+        top: calc(50% - 2px);
+    }
+    .ProseMirror-tableSet {
+        position: relative;
+        height: 24px;
+        padding-left: 16px;
+        background: url(imgs/editor_23.svg) no-repeat left center;
+        background-size: 14px 14px;
+    }
+    .ProseMirror-tableSet.ProseMirror-menu-dropdown:after {
+        border-top: 4px solid #364aed;
+    }
+</style>
+</head>
+<body>
+<!-- ================================= header ================================= -->
+<!-- wrap -->
+<div id="wrap">
+    <!-- header -->
+    <header id="header">
+        <div class="in">
+            <!-- logo -->
+            <div class="logo"><a href="ui_guide.html"><img src='https://image.gsshop.com/ui/gsshop/pc/common/images/logo.png'></a></div>
+            <!-- gnb -->
+            <ul class="gnb">
+                <li class="active">
+                    <a href="index.html">계약관리</a>
+                    <!-- lnb -->
+                    <div class="lnb">
+                        <ul>
+                            <li class="active"><a href="index.html">전체 계약</a></li>
+                            <li><a href="index_my.html">나의 계약</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <a href="legal_advice_list.html">법률자문</a>
+                </li>
+                <li>
+                    <a href="official_note_list.html">공문 발송</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="header_notice">
+            <div class="header_notice__dynamic">
+                <div class="vertical-slider">
+                    <h2 class="vertical-slider__item">김영란법 개정으로 인해 외식 시 필독!김영란법 개정으로 인해 외식 시 필독!김영란법 개정으로 인해 외식 시 필독!김영란법 개정으로 인해 외식 시 필독!</h2>
+                    <h2 class="vertical-slider__item">법률자문 올리기 전 확인하세요.</h2>
+                    <h2 class="vertical-slider__item">가맹계약서 양식입니다.</h2>
+                </div>
+            </div>
+        </div>
+
+        <div class="in in_admin">
+            <div class="in_admin_inner">
+                <div class="number_approval">
+                    <a class="approval_on">결재건수</a>
+                    <p class="badge">7</p>
+                    <ul class="number_approval_view clearfix_ul">
+                        <li>
+                            <p class="xs_p58 elipsis">1.4분기 계약관리 시스템 교체 스템 교체 계약교체 스템 교체 계약</p>
+                            <a class="btn__f btn_xs">바로가기</a>
+                        </li>
+                        <li>
+                            <p class="xs_p58 elipsis">1.4분기 계약관리 시스템 교체 계약</p>
+                            <a class="btn__f btn_xs">바로가기</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="home">
+                    <a href="dashboard.html"></a>
+                </div>
+                <div class="hd_user_wrap">
+                    <div class="hd_user">
+                        <p class="hd_user_name">이유진님</p>
+                        <ul class="hd_user_ul">
+                            <li><a href="mypage_user_info.html">내 정보 보기</a></li>
+                            <li><a href="login.html">로그아웃</a></li>
+                        </ul>
+                    </div>
+                    <div class="hd_user_img"><img src="https://img1.daumcdn.net/thumb/R720x0.q80/?scode=mtistory&fname=http%3A%2F%2Fcfile10.uf.tistory.com%2Fimage%2F99530A3B5BE7C1803380DF"></div>
+                </div>
+            </div>
+            <!-- header_sub -->
+            <div class="header_sub">
+                <ul class="gnb_admin">
+                    <li><a href="notice.html">공지사항</a></li>
+                    <li><a href="group_list.html">그룹 관리자</a></li>
+                    <li>
+                        <a href="admin_workflow_list.html">관리자</a>
+                        <!-- lnb -->
+                        <div class="lnb">
+                            <ul class="lnb_admin">
+                                <li class="active"><a href="admin_workflow_list.html">워크플로우</a></li>
+                                <li><a href="admin_template_list.html">템플릿 관리</a></li>
+                                <li><a href="admin_user.html">유저 관리</a></li>
+                                <li><a href="admin_notify.html">공지사항 관리</a></li>
+                                <li><a href="admin_contract_counterpart.html">외부업체관리</a></li>
+                                <li><a href="admin_group.html">그룹</a></li>
+                                <li><a href="admin_tag.html">TAG</a></li>
+                                <li><a href="admin_company_info.html">회사 정보</a></li>
+                                <li><a href="admin_digital_seal.html">디지털 직인 관리</a></li>
+                                <li><a href="admin_legal_setting.html">법률 자문</a></li>
+                                <li><a href="admin_official_note.html">공문 발송</a></li>
+                                <li><a href="admin_label.html">라벨</a></li>
+                                <li><a href="admin_empowerment.html">권한 위임</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <!-- //header_sub -->
+        </div>
+    </header>
+    <!-- //header -->
+    <!-- ================================= //header ================================= -->
+
+    <!-- ================================= content ================================= -->
+
+    <!-- content -->
+    <div class="content">
+
+        <!-- section_contract_view -->
+        <section class="section_contract_view clearfix">
+            <div class="top_notification_area">
+                <div class="top_notification notification_aprvl">
+                    <div class="left">
+                        <p class="sm_b">승인 요청</p>
+                        <p class="sm_p58">승인 의견을 등록해주세요.</p>
+                    </div>
+                    <div class="right">
+                        <a class="btn__y btn_xs" id="modalOnWriting">등록</a>
+                    </div>
+                </div>
+                <div class="top_notification notification_opinion">
+                    <div>
+                        <p class="sm_b">승인 의견</p>
+                        <p class="sm_p58">계약내용에 대해서 확인 했으며, 적당한 내용이라고 생각합니다. 승인합니다.</p>
+                    </div>
+                </div>
+                <div class="top_notification notification_return">
+                    <div>
+                        <p class="sm_b">부결<span class="sm_pb4">자문을 다시 생성해주세요.</span></p>
+                        <p class="sm_p58">계약내용에 대해서 확인 했으며, 적당한 내용이라고 생각합니다. 승인합니다.</p>
+                    </div>
+                </div>
+                <!-- 190904 수정됨 -->
+                <div class="top_notification">
+                    <div class="clearfix">
+                        <p class="fl sm_p58">첨부파일명이 노출되는 영역입니다.docx</p>
+                        <div class="fr tr">
+                            <a class="btn__f btn_xs">다운로드</a>
+                            <a class="btn__y btn_xs">스캔본 재등록</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- 190904 수정됨 -->
+                <div class="top_notification">
+                    <div class="clearfix">
+                        <p class="fl sm_p58">본 계약은 원본 회수 요청 상태입니다.</p>
+                        <div class="fr tr">
+                            <a class="btn__y btn_xs">원본 회수</a>
+                        </div>
+                    </div>
+                </div>
+                
+                
+                <!-- 190904 담당자 -->
+                <div class="top_notification">
+                    <div class="clearfix">
+                        <!-- 문구 -->
+                        <p class="fl sm_p58">본 계약은 원본 회수 요청상태입니다. 날인이 완료된 계약서를 담당자에게 직접 전달해주세요.</p>
+                        <div class="fr tr">
+                            <!-- 버튼 -->
+                            <a class="btn__f btn_xs">다운로드</a>
+                            <a class="btn__y btn_xs">원본 회수</a>
+                        </div>
+                    </div>
+                    <!-- 2줄의 정보 영역: 내용 없을 시 display: none 해주세요 -->
+                    <p class="prs_chr sm_p58">담당자 : 홍길동 (test_bubtle@gmail.com)</p>
+                </div>
+                
+                
+                <div class="top_notification">
+                    <div class="prs_chr_wrap">
+                        <div class="clearfix">
+                            <p class="sm_p58 fl">검토 의견 / 이유진</p>
+                            <a class="btn__f btn_xs fr">수정</a>
+                       </div>
+                        <div class="prs_chr">
+                            <p class="m_p b">이대로 진행하세요.</p>
+                            <p class="sm_p58">계약내용에 대해서 확인 했으며, 적당한 내용이라고 생각합니다. 승인합니다.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- 190830 검토 의견 -->
+                <div class="top_notification">
+                    <div class="prs_chr_wrap">
+                        <div class="clearfix">
+                            <p class="sm_p58 fl">검토 의견 / 이유진</p>
+                            <a class="btn__f btn_xs fr">수정</a>
+                        </div>
+                        <p class="m_p b">이대로 진행하세요.</p>
+                        <p class="m_p58">계약내용에 대해서 확인 했으며, 적당한 내용이라고 생각합니다. 승인합니다.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- ==================== 모달 =================== -->
+            <!-- 모달: 의견 작성 -->
+            <!-- modal_fixed -->
+            <div class="modal_fixed modal_writing" id="modalOnWritingLayout">
+                <!-- dis_table -->
+                <div class="dis_table">
+                    <!-- table_cell -->
+                    <div class="table_cell">
+                        <!-- modal_section -->
+                        <section class="modal_section">
+                            <!-- modal_title -->
+                            <div class="modal_title bor_btm" style="margin-bottom: 20px">
+                                <p class="lg_p">승인 의견</p>
+                            </div>
+                            <!-- //modal_title -->
+                            <div>
+                                <textarea class="txtr_writing"></textarea>
+                            </div>
+                            <!-- btn_wrap -->
+                            <div class="btn_wrap tr">
+                                <a class="btn__y">확인</a>
+                                <a class="btn__f modal_off">취소</a>
+                            </div>
+                            <!-- //btn_wrap -->
+                        </section>
+                        <!-- //modal_section -->
+                    </div>
+                    <!-- //dis_table -->
+                </div>
+                <!-- //dis_table -->
+            </div>
+            <!-- //modal_fixed -->
+            <!-- ==================== //모달 =================== -->
+            
+            
+            <!-- contract_view -->
+            <section class="contract_view">
+                <!-- contract_top -->
+                <div class="contract_top">
+                    <div class="section_view_head">
+                        <!-- 190628 계약 ID 위치 변경 -->
+                        <p class="section_view_info_p sm_pb4">20190119-00001998</p>
+                        <!-- 190628 h1 class 추가 -->
+                        <h1 class="section_view_h1">서울특별시 노원구 공릉동</h1>
+                        <p class="sm_p58">계약 상대 : 임의회사명 대표이사 김강강</p>
+                        
+
+                        <!-- 190905 기안자 상태 추가 -->
+                        <div class="section_view_head_user clearfix" style="margin-top: 20px">
+                            <div class="line">
+                                <p class="sm_p58_b dis_inb" style="margin-right: 12px;">기안자</p>
+                                <div class="user">
+                                    <p class="sm_p58">홍길동 부서장<span class="btn_sub_up">서명하기</span></p>
+                                </div>
+                            </div>
+                            <div class="line clearfix">
+                                <p class="sm_p58_b dis_inb mar6" style="margin-right: 12px;">서명자</p>
+                                <div class="user">
+                                    <p class="sm_p58">홍길동 부서장<span class="btn_sub_up">서명하기</span></p>
+                                    <a class="btn_x"></a>
+                                </div>
+                                <div class="user">
+                                    <p class="sm_p58">홍길동<span class="btn_sub_cmplt">서명완료</span></p>
+                                    <a class="btn_x"></a>
+                                </div>
+                                <div class="user">
+                                    <p class="sm_p58">홍길동<span class="btn_sub_wait">서명대기</span></p>
+                                    <a class="btn_x"></a>
+                                </div>
+                                <!-- 190809 추가 -->
+                                <a class="btn_add mar6">+ 서명자 추가</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- section_view_head_btn_wrap -->
+                    <div class="section_view_head_btn_wrap clearfix" style="margin-top: 20px;">
+                        <div class="fl tl">
+                            <a class="btn__f btn_m">삭제</a>
+                            <a class="btn__f btn_m">임시저장</a>
+                        </div>
+                        <div class="fr tr">
+                            <a class="btn__y btn_m">법무팀 계약서 작성 재요청</a>
+                            <a class="btn__b btn_m">법무팀 작성 완료</a>
+                        </div>
+                    </div>
+
+                    <!-- drop_wrap -->
+                    <div class="drop_wrap">
+                        <!-- dropzone -->
+                        <div id="dropzone1">
+                            <form class="dropzone needsclick" id="demo-upload" action="/upload">
+                                <p class="drop_p sm_p58 dz-message">수정버전을 여기로 드래그 해주세요</p>
+                            </form>
+                        </div>
+                        <!-- //dropzone -->
+
+                        <!-- 190628 드롭존 업로드 상태 삭제/업로드 버튼  
+                        <!-- dropzone 
+                        <div id="dropzone1">
+                        <form class="dropzone needsclick" id="demo-upload" action="/upload">
+                        <div class="" style="text-align: center;">
+                        <p class="sm_p58 dz-default dz-message" style="margin-bottom: 5px;">보안계약서.docx (85.34KB)</p>
+                        <div class="tc">
+                        <a class="btn__e btn_s">삭제</a>
+                        <a class="btn__y btn_s">업로드</a>
+                        </div>
+                        </div>
+                        </form>
+                        </div>
+                        <!-- //dropzone -->
+
+                        <!-- btn_wrap -->
+                        <div class="clearfix btn_wrap">
+                            <div class="fl">
+                                <a class="btn_add">+ 파일첨부</a>
+                            </div>
+                            <div class="fr">
+                                <a class="btn_add">문서를 웹에서 수정</a>
+                            </div>
+                        </div>
+                        <!-- //btn_wrap -->
+                    </div>
+                    <!-- //drop_wrap -->
+
+                    <!-- 190807 다중 계약 추가 id="modalOnTmplPrvw" 샘플 삭제 -->
+                    <!-- mltpl_wrap -->
+                    <div class="mltpl_wrap">
+                        <div class="bt_title">
+                            다중 계약 수신인 : (본 계약은 하기 수신인들과 “각각” 계약 체결됩니다.)
+                        </div>
+
+                        <!-- 190906 추가 -->
+                        <div class="mltpl_top_btn">
+                            <a class="btn__y btn_s" id="modalOnAddMultiple">수신인 추가</a>
+                            <a class="btn__f btn_s">엑셀로 업로드</a>
+                            <a class="btn__f btn_s">양식 다운로드</a>
+                        </div>
+
+                        <!-- 190906 추가 -->
+                        <div class="clearfix" style="margin-bottom: 10px;">
+                            <div class="fl">
+                                <a class="btn__f btn_xs">전체 선택</a>
+                            </div>
+                            <div class="fr">
+                                <a class="btn__f btn_xs">PDF 다운로드</a>
+                                <a class="btn__f btn_xs">엑셀 다운로드</a>
+                            </div>
+                        </div>
+                        <ul class="mltpl_list">
+                            <li>
+                                <div class="flex_align">
+                                    <div class="list1">
+                                        <input type="checkbox"><label class="fl"></label>
+                                        <div class="fl">11</div>
+                                    </div>
+                                    <div class="list2 mltpl_li_top">
+                                        <div class="state__workflow">서명중</div>
+                                        <p class="b">주식회사 밥플러스</p>
+                                        <p class="sm_p58 dis_inb">
+                                            <span>이유진</span><span>test_bubtle_plus@gmail.com</span><span>010-0000-0000</span></p>
+                                    </div>
+                                    <div class="list3">
+                                        <div class="mltpl_list_btn_wrap clearfix">
+                                            <div class="mltpl_li_btn btn_contract" id="modalOnMltplContract"></div>
+                                            <div class="mltpl_li_btn btn_print"></div>
+                                            <!-- 190906 추가 -->
+                                            <div class="mltpl_li_btn btn_del"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="mb-20 multiple_receivers_editable_elements" style="">
+                            <!-- 190222 수정됨 -->
+                            <span class="input-sm multiple_label" style="">외부 수신인 서명 설정</span>
+                            <input id="comp_sign" class="multiple_receivers_editable_elements magic-checkbox" name="sign_methods" type="checkbox" value="1"><label for="comp_sign">회사서명</label>
+                            <input id="pri_sign" class="multiple_receivers_editable_elements magic-checkbox" name="sign_methods" type="checkbox" value="0"><label for="pri_sign">개인서명</label>
+                            <!-- 190222 수정됨 -->
+                        </div>
+                    </div>
+                    <!-- //mltpl_wrap -->
+                    <div class="contract_setting_btn clearfix">
+                        <div class="fl">
+                            <label class="sm_p58 swich_label">메모보기</label>
+                            <div class="swich_wrap">
+                                <input type="checkbox" id="swich" class="swich fl">
+                                <label for="swich"></label>
+                            </div>
+                        </div>
+                        <div class="fr contract_btn_p_d">
+                            <a class="mltpl_li_btn btn_down"></a>
+                            <a class="mltpl_li_btn btn_print"></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- //contract_top -->
+
+                <!-- 190812 추가 ProseMirror Editor -->
+                <div id="editor_div">
+                    <!-- ProseMirror-menubar-wrapper -->
+                    <div class="ProseMirror-menubar-wrapper">
+                        <!-- ProseMirror-menubar -->
+                        <div class="ProseMirror-menubar" style="min-height: 54px;">
+                            <div class="clearfix">
+                                <span class="ProseMirror-menuitem">
+                                    <div class="ProseMirror-icon" title="Toggle strong style">
+                                        <img src="imgs/editor_01.svg" width="9" height="14">
+                                    </div>
+                                </span>
+                                <span class="ProseMirror-menuitem">
+                                    <div class="ProseMirror-icon" title="">
+                                        <img src="imgs/editor_02.svg" width="10" height="14">
+                                    </div>
+                                </span>
+                                <span class="ProseMirror-menuitem">
+                                    <div class="ProseMirror-icon" title="Toggle strong style">
+                                        <img src="imgs/editor_03.svg" width="14" height="14">
+                                    </div>
+                                </span>
+                                <span class="ProseMirror-menuitem">
+                                    <div class="ProseMirror-icon" title="">
+                                        <img src="imgs/editor_04.svg" width="14" height="14">
+                                    </div>
+                                </span>
+                                <span class="ProseMirror-menuitem">
+                                    <div class="ProseMirror-icon" title="Toggle strong style">
+                                        <img src="imgs/editor_05.svg" width="14" height="14">
+                                    </div>
+                                </span>
+                                <span class="ProseMirror-menuitem">
+                                    <div class="ProseMirror-icon" title="">
+                                        <img src="imgs/editor_06.svg" width="14" height="14">
+                                    </div>
+                                </span>
+                                <span class="ProseMirror-menuitem">
+                                    <div class="ProseMirror-icon" title="Toggle strong style">
+                                        <img src="imgs/editor_07.svg" width="14" height="14">
+                                    </div>
+                                </span>
+                                <span class="ProseMirror-menuitem">
+                                    <div class="ProseMirror-icon" title="">
+                                        <img src="imgs/editor_08.svg" width="14" height="14">
+                                    </div>
+                                </span>
+                                <span class="ProseMirror-menuitem">
+                                    <div class="ProseMirror-icon" title="">
+                                        <img src="imgs/editor_09.svg" width="14" height="9">
+                                    </div>
+                                </span>
+                                <span class="ProseMirror-menuitem">
+                                    <div class="ProseMirror-icon" title="">
+                                        <img src="imgs/editor_10.svg" width="14" height="9">
+                                    </div>
+                                </span>
+                                <span class="ProseMirror-menuitem">
+                                    <div class="ProseMirror-icon" title="">
+                                        <img src="imgs/editor_11.svg" width="14" height="10">
+                                    </div>
+                                </span>
+                                <span class="ProseMirror-menuitem">
+                                    <div class="ProseMirror-icon" title="">
+                                        <img src="imgs/editor_12.svg" width="14" height="11">
+                                    </div>
+                                </span>
+                                <span class="ProseMirror-menuitem">
+                                    <div class="ProseMirror-icon" title="">
+                                        <img src="imgs/editor_13.svg" width="14" height="11">
+                                    </div>
+                                </span>
+                                <span class="ProseMirror-menuitem">
+                                    <div class="ProseMirror-icon" title="">
+                                        <img src="imgs/editor_14.svg" width="14" height="14">
+                                    </div>
+                                </span>
+                                <span class="ProseMirror-menuitem">
+                                    <div class="ProseMirror-icon" title="">
+                                        <img src="imgs/editor_15.svg" width="14" height="14">
+                                    </div>
+                                </span>
+                                <span class="ProseMirror-menuitem">
+                                    <div class="ProseMirror-icon" title="">
+                                        <img src="imgs/editor_16.svg" width="14" height="12">
+                                    </div>
+                                </span>
+                                <span class="ProseMirror-menuitem">
+                                    <div class="ProseMirror-icon" title="">
+                                        <img src="imgs/editor_17.svg" width="13" height="13">
+                                    </div>
+                                </span>
+                                <span class="ProseMirror-menuitem">
+                                    <div class="ProseMirror-icon" title="">
+                                        <img src="imgs/editor_18.svg" width="14" height="14">
+                                    </div>
+                                </span>
+                                <span class="ProseMirror-menuitem">
+                                    <div class="ProseMirror-icon" title="">
+                                        <img src="imgs/editor_19.svg" width="14" height="14">
+                                    </div>
+                                </span>
+                                <span class="ProseMirror-menuitem">
+                                    <div class="ProseMirror-icon" title="">
+                                        <img src="imgs/editor_20.svg" width="14" height="12">
+                                    </div>
+                                </span>
+                                <span class="ProseMirror-menuitem">
+                                    <div class="ProseMirror-icon" title="">
+                                        <img src="imgs/editor_21.svg" width="14" height="12">
+                                    </div>
+                                </span>
+                                <!-- 191004 Editor Icon 추가 -->
+                                <span class="ProseMirror-menuitem">
+                                    <div class="ProseMirror-icon" title="">
+                                        <img src="imgs/editor_22.svg" width="14" height="14">
+                                    </div>
+                                </span>
+                                <span class="ProseMirror-menu-dropdown ProseMirror-tableSet"></span>
+                                <span class="ProseMirror-menuitem">
+                                    <div class="ProseMirror-icon" title="">
+                                        <img src="imgs/editor_24.svg" width="14" height="12">
+                                    </div>
+                                </span>
+                            </div>
+                            <div class="btn_memo tr">
+                                <span class="btn_memo_add">메모 남기기</span>
+                            </div>
+                        </div>
+                        <!-- //ProseMirror-menubar -->
+                        <!-- ProseMirror -->
+                        <div class="contract_area ProseMirror">
+                            <p>
+                             체크박스 테스트 <span class="tmpl_checkbox"><input type="checkbox"><label></label></span><br><br>
+
+                            전날(7일) 헬멧에 공을 강타당한 KIA 박찬호(24)는 <span class="memo">평소와 다름 없이 훈련을</span> 소화하고 특유의 미소를 잃지 않았다.
+                            박찬호는 7일 광주 LG전 2사 주자 없는 상황에서 상대 투수 여건욱이 던진 143㎞ 직구에 헬멧을 강타당했다.
+                            <span class="memo_resolved active">평소와 다름 없이 훈련을
+                            </span>
+                            그라운드에 쓰러져있던 박찬호는 잠시 후 유니폼을 털고 일어나 1루로 향해 걸어갔다. <span class="added">평소와 다름 없이 훈련을</span>
+                            그동안 많은 선수들이 헤드샷 후유증으로 고생했다.
+                            <span class="memo active">평소와 다름 없이 훈련을
+                                <span class="memo_box">
+                                    코멘트 관련 내용들이 주구구구구구 기타등등 하여 나오고
+                                    <span class="clearfix">
+                                        <a class="memo_box_x" href="#">삭제</a>
+                                    </span>
+                                </span>
+                            </span>
+                            하지만 박찬호는 "헬멧이 좋아서 괜찮다"라고 웃었다. 하지만 박찬호는 "헬멧이 좋아서 괜찮다"라고 웃었다. 하지만 박찬호는 "헬멧이 좋아서 괜찮다"라고 웃었다. 하지만 박찬호는 "헬멧이 좋아서 괜찮다"라고 웃었다. 하지만 박찬호는 "헬멧이 좋아서 괜찮다"라고 웃었다. 박흥식 KIA 감독대행도 "박찬호의 상태를 걱정했는데 미국산 헬멧이 굉장히 좋은 것 같더라"라고 말했다. 하지만 박찬호는 "헬멧이 좋아서 괜찮다"라고 웃었다. 박흥식 KIA 감독대행도 "박찬호의 상태를 걱정했는데 미국산 헬멧이 굉장히 좋은 것 같더라"라고 말했다. 미국산 헬멧이 굉장히 좋은 것 같더라"라고 말했다.
+                            <span class="memo_resolved active">평소와 다름 없이 훈련을
+                                <span class="memo_box_resolved">
+                                    코멘트 관련 내용들이 주구구구구구 기타등등 하여 나오고
+                                    <span class="clearfix">
+                                        <a class="memo_box_x" href="#">삭제</a>
+                                    </span>
+                                </span>
+                            </span>
+                            하지만 박찬호는 "헬멧이 좋아서 괜찮다"라고 웃었다. 박흥식 KIA 감독대행도 "박찬호의 상태를 걱정했는데 미국산 헬멧이 굉장히 좋은 것 같더라"라고 말했다.
+
+                            박찬호는 이어 시즌 26번째 도루에 성공했고, 후속 황윤호의 적시타 때 10-5로 앞서가는 득점까지 올렸다. 헤드샷을 당했지만 평소처럼 열심히 뛰어 팀에 소중한 득점을 안긴 것이다. 그는 "헤드샷을 당하고 1루로 걸어 나가면서 바뀐 투수가 견제하지 않을 것 같아 '무조건 2루로 뛰어야겠다'라는 생각을 가졌다"고 밝혔다.<span class="deleted">평소와 다름 없이 훈련을</span>
+
+                            이날 정상적으로 훈련을 마친 박찬호는 1번 타자·3루수로 선발 라인업에 이름을 올렸다
+                            </p>
+                        </div>
+                        <!-- //ProseMirror -->
+                    </div>
+                    <!-- //ProseMirror-menubar-wrapper -->
+                </div>
+                <!-- //editor_div -->
+                <!-- // 여기까지 190812 추가 ProseMirror Editor -->
+                
+                <!-- signing_box_wrap -->
+                <div class="signing_box_wrap">
+                    <!-- box -->
+                    <div class="signing_box">
+                        <div class="signing_line_wrap">
+                            <div class="signing_line">
+                                <p class="pdf_p_s_9b">회사명</p>
+                                <p class="pdf_p">STG Company</p>
+                            </div>
+                            <div class="signing_line">
+                                <p class="pdf_p_s_9b">서명자</p>
+                                <p class="pdf_p">홍길동</p>
+                            </div>
+                        </div>
+                        <div class="signing_area"><img src="imgs/sample/stamp_01.png"></div>
+                        <div class="signing_line_date">
+                            <p class="signing_line_date_p">전자서명 / 2019/04/26 12:33:18</p>
+                        </div>
+                    </div>
+                    <!-- box -->
+                    <div class="signing_box">
+                        <div class="signing_line_wrap">
+                            <div class="signing_line">
+                                <p class="pdf_p_s_9b">이메일</p>
+                                <p class="pdf_p">bubtle_test@gmail.com</p>
+                            </div>
+                        </div>
+                        <div class="signing_area">
+                            <div class="stamp_trad">
+                                <span> 일이삼사오륙칠팔구십일 </span><br><span class="pdf_sign_stamp">디지털직인</span>
+                            </div>
+                        </div>
+                        <div class="signing_line_date">
+                            <p class="signing_line_date_p">전자서명 / 2019/04/26 12:33:18</p>
+                        </div>
+                    </div>
+                    <!-- box -->
+                    <div class="signing_box">
+                        <div class="signing_line_wrap">
+                            <div class="signing_line">
+                                <p class="pdf_p_s_9b">회사명</p>
+                                <p class="pdf_p">STG Company</p>
+                            </div>
+                        </div>
+                        <div class="signing_area">
+                            <div class="stamp_trad">
+                                <span> 일이삼사오륙칠팔구십일 </span><br><span class="pdf_sign_stamp">디지털직인</span>
+                            </div>
+                        </div>
+                        <div class="signing_line_date">
+                            <p class="signing_line_date_p">전자서명 / 2019/04/26 12:33:18</p>
+                        </div>
+                    </div>
+                    <!-- box -->
+                    <div class="signing_box">
+                        <div class="signing_line_wrap">
+                            <div class="signing_line">
+                                <p class="pdf_p_s_9b">이메일</p>
+                                <p class="pdf_p">bubtle_test@gmail.com</p>
+                            </div>
+                            <div class="signing_line">
+                                <p class="pdf_p_s_9b">서명자</p>
+                                <p class="pdf_p">홍길동</p>
+                            </div>
+                        </div>
+                        <div class="signing_area"><img src="imgs/sample/stamp_01.png"></div>
+                        <div class="signing_line_date">
+                            <p class="signing_line_date_p">전자서명 / 2019/04/26 12:33:18</p>
+                        </div>
+                    </div>
+                    <!-- box -->
+                    <div class="signing_box">
+                        <div class="signing_line_wrap">
+                            <div class="signing_line">
+                                <p class="pdf_p_s_9b">회사명</p>
+                                <p class="pdf_p">STG Company</p>
+                            </div>
+                            <div class="signing_line">
+                                <p class="pdf_p_s_9b">서명자</p>
+                                <p class="pdf_p">홍길동</p>
+                            </div>
+                        </div>
+                        <div class="signing_area"><img src="imgs/sample/stamp_01.png"></div>
+                        <div class="signing_line_date">
+                            <p class="signing_line_date_p">전자서명 / 2019/04/26 12:33:18</p>
+                        </div>
+                    </div>
+                    <!-- box -->
+                    <div class="signing_box">
+                        <div class="signing_line_wrap">
+                            <div class="signing_line">
+                                <p class="pdf_p_s_9b">이메일</p>
+                                <p class="pdf_p">bubtle_test@gmail.com</p>
+                            </div>
+                            <div class="signing_line">
+                                <p class="pdf_p_s_9b">서명자</p>
+                                <p class="pdf_p">홍길동</p>
+                            </div>
+                        </div>
+                        <div class="signing_area"><img src="imgs/sample/stamp_02.png"></div>
+                        <div class="signing_line_date">
+                            <p class="signing_line_date_p">전자서명 / 2019/04/26 12:33:18</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- //signing_box_wrap -->
+            </section>
+            <!-- //contract_view -->
+            <!-- contract_view_detail -->
+            <section class="contract_view_detail">
+                
+                <div class="progress_area">
+                    <div class="clearfix">
+                        <p class="fl m_p">진행상황</p>
+                        <!-- 190823 검토의견 버튼
+                        <span class="fr btn__e btn_height_on"></span>
+                        -->
+                    </div>
+                    <ul class="tab_progress_ul clearfix_ul">
+                        <!-- 190823 검토의견 -->
+                        <li>
+                            <div class="clearfix">
+                                <div class="fl check">
+                                    <input type="checkbox" id="check2">
+                                    <label for="check2"></label>
+                                </div>
+                                <div class="fl check_progress">
+                                    <div class="clearfix">
+                                        <div class="fl info">
+                                            <!-- 190823 검토의견 상태 addClass "opinion_p" -->
+                                            <p class="sm_p58_b elipsis opinion_p">법무팀 검토</p>
+                                            <p class="sm_pb4">2019.02.10 10:34 / 홍길동</p>
+                                        </div>
+                                        <div class="fl down">
+                                            <a class="btn__f btn_xs">다운로드</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 190823 검토의견 content -->
+                            <div class="progress_opinion">
+                                <div id="opinionView" class="opinion_content">
+                                    <p class="sm_p58">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nisi ligula, dapibus a volutpat sit amet, mattis et dui. Nunc porttitor accumsan orci id luctus. Phasellus ipsum metus, tincidunt non rhoncus id, dictum a lectus. Nam sed ipsum a lacus sodales eleifend. Vestibulum lorem felis, rhoncus elementum vestibulum eget, dictum ut velit. Nullam venenatis, elit in suscipit imperdiet, orci purus posuere mauris, quis adipiscing ipsum urna ac quam. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nisi ligula, dapibus a volutpat sit amet, mattis et dui. Nunc porttitor accumsan orci id luctus. Phasellus ipsum metus, tincidunt non rhoncus id, dictum a lectus. Nam sed ipsum a lacus sodales eleifend. Vestibulum lorem felis, rhoncus elementum vestibulum eget, dictum ut velit. Nullam venenatis, elit in suscipit imperdiet, orci purus posuere mauris, quis adipiscing ipsum urna ac quam.</p>
+                                </div>
+                                <!-- 190827 검토의견 버튼 위치 변경 -->
+                                <div class="tr">
+                                    <div class="btn__e btn_height_on"></div>
+                                </div>
+                            </div>
+                            <!-- 190823 검토의견 JS -->
+                            <script>
+                                // 계약 상세 > 검토의견 ellipsis, height auto
+                                var $p = $('#opinionView p');
+                                var divh = $('#opinionView').height();
+                                var $ptext = $p.html();
+                                function opinionText(){
+                                    while ($p.outerHeight() > divh) {
+                                        $p.text(function (index, text) {
+                                            return text.replace(/\W*\s(\S)*$/, '...');
+                                        });
+                                    }
+                                }
+                                opinionText();
+                                $(document).on("click", ".btn_height_on", function(){
+                                    if( $(".progress_area").hasClass("height_on") ) {
+                                        $(".progress_area").removeClass("height_on");
+                                        opinionText();
+                                    } else {
+                                        $(".progress_area").addClass("height_on");
+                                        $p.html($ptext);
+                                    }
+                                });
+                            </script>
+                        </li>
+                        <!-- //190823 검토의견 -->
+                        <li>
+                            <div class="fl check">
+                                <input type="checkbox" id="check2">
+                                <label for="check2"></label>
+                            </div>
+                            <div class="fl check_progress">
+                                <div class="clearfix">
+                                    <div class="fl info">
+                                        <p class="sm_p58_b elipsis">부서장 승인 요청 / 김동진</p>
+                                        <p class="sm_pb4">2019.02.10 10:34</p>
+                                    </div>
+                                    <div class="fl down">
+                                        <p class="change">변경</p>
+                                        <a class="btn__f btn_xs">다운로드</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="fl check">
+                                <input type="checkbox" id="check2">
+                                <label for="check2"></label>
+                            </div>
+                            <div class="fl check_progress">
+                                <div class="clearfix">
+                                    <div class="fl info">
+                                        <p class="sm_p58_b elipsis">부서장 승인 요청 / 김동진</p>
+                                        <p class="sm_pb4">2019.02.10 10:34</p>
+                                    </div>
+                                    <div class="fl down">
+                                        <p class="change">변경</p>
+                                        <a class="btn__f btn_xs">다운로드</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="fl check">
+                                <input type="checkbox" id="check2">
+                                <label for="check2"></label>
+                            </div>
+                            <div class="fl check_progress">
+                                <div class="clearfix">
+                                    <div class="fl info">
+                                        <p class="sm_p58_b elipsis">법무팀 검토 / 김변호</p>
+                                        <p class="sm_pb4">2019.02.10 10:34</p>
+                                    </div>
+                                    <div class="fl down">
+                                        <p class="change">변경</p>
+                                        <a class="btn__f btn_xs">다운로드</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="fl check">
+                                <input type="checkbox" id="check2">
+                                <label for="check2"></label>
+                            </div>
+                            <div class="fl check_progress">
+                                <div class="clearfix">
+                                    <div class="fl info">
+                                        <p class="sm_p58_b elipsis">법무팀 검토</p>
+                                        <p class="sm_pb4">2019.02.10 10:34 / 김변호</p>
+                                    </div>
+                                    <div class="fl down">
+                                        <a class="btn__f btn_xs">다운로드</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="fl check">
+                                <input type="checkbox" id="check2">
+                                <label for="check2"></label>
+                            </div>
+                            <div class="fl check_progress">
+                                <div class="clearfix">
+                                    <div class="fl info">
+                                        <p class="sm_p58_b elipsis">계약 생성</p>
+                                        <p class="sm_pb4">2019.02.10 10:34 / 이유진</p>
+                                    </div>
+                                    <div class="fl down">
+                                        <a class="btn__f btn_xs">다운로드</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="btn_wrap clearfix">
+                        <p class="fl xs_p58">선택한 2개의 계약버전 비교</p>
+                        <a href="contract_view_cmprs.html" class="fr btn__b btn_m">계약내용 비교하기</a>
+                    </div>
+                </div>
+
+                <!-- bt_tab contract_tab_wrap -->
+                <div class="bt_tab contract_tab" id="tab_contract" style="margin-top: 25px;">
+                    <!-- tabs -->
+                    <div class="tabs">
+                        <div class="tab active">메모</div>
+                        <div class="tab">첨부파일</div>
+                        <div class="tab">코멘트</div>
+                    </div>
+                    <!-- //tabs -->
+                    <!-- tviews -->
+                    <div class="tviews">
+                        <!-- tview -->
+                        <div class="tview active">
+                            <!--
+                            .contract_memo_ul>li addClass
+                                선택: active
+                                해결: resolve
+                            -->
+                            <!-- contract_memo_ul -->
+                            <ul class="contract_memo_ul">
+                                <li>
+                                    <div class="cont_memo_box">
+                                        <div class="cont_memo_hd clearfix">
+                                            <p class="sm_p">정의진 법무검토자</p>
+                                            <p class="sm_pb4">19.02.01 13:19</p>
+                                        </div>
+                                        <div class="cont_memo_text">
+                                            <p class="sm_p58">
+                                                이견 없음.
+                                            </p>
+                                        </div>
+                                        <div class="cont_memo_btn clearfix">
+                                            <div class="fl reply_btn_wrap">
+                                                <p class="btn_replay_s">수정</p>
+                                                <p class="btn_replay_s">삭제</p>
+                                            </div>
+                                            <div class="fr reply_btn_wrap">
+                                                <p class="btn_replay_s">회신</p>
+                                                <p class="btn_replay_s resolve">해결</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <ul class="contract_memo_replay">
+                                        <li>
+                                            <div class="cont_memo_box">
+                                                
+                                                <div class="cont_memo_hd clearfix">
+                                                    <p class="sm_p">정의진 법무검토자</p>
+                                                    <p class="sm_pb4">19.02.01 13:19</p>
+                                                </div>
+                                                <div class="cont_memo_text">
+                                                    <p class="sm_p58">
+                                                        이견 없음.
+                                                    </p>
+                                                </div>
+                                                <div class="cont_memo_btn clearfix">
+                                                    <div class="fl reply_btn_wrap">
+                                                        <p class="btn_replay_s">수정</p>
+                                                        <p class="btn_replay_s">삭제</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="active">
+                                    <div class="cont_memo_box">
+                                        <div class="cont_memo_hd clearfix">
+                                            <p class="sm_p">정의진 법무검토자</p>
+                                            <p class="sm_pb4">19.02.01 13:19</p>
+                                        </div>
+                                        <div class="cont_memo_text">
+                                            <p class="sm_p58">
+                                                이견 없음.
+                                            </p>
+                                        </div>
+                                        <div class="cont_memo_btn clearfix">
+                                            <div class="fl reply_btn_wrap">
+                                                <p class="btn_replay_s">수정</p>
+                                                <p class="btn_replay_s">삭제</p>
+                                            </div>
+                                            <div class="fr reply_btn_wrap">
+                                                <p class="btn_replay_s">회신</p>
+                                                <p class="btn_replay_s resolve">해결</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <ul class="contract_memo_replay">
+                                        <li>
+                                            <div class="cont_memo_box">
+                                                
+                                                <div class="cont_memo_hd clearfix">
+                                                    <p class="sm_p">정의진 법무검토자</p>
+                                                    <p class="sm_pb4">19.02.01 13:19</p>
+                                                </div>
+                                                <div class="cont_memo_text">
+                                                    <p class="sm_p58">
+                                                        이견 없음.
+                                                    </p>
+                                                </div>
+                                                <div class="cont_memo_btn clearfix">
+                                                    <div class="fl reply_btn_wrap">
+                                                        <p class="btn_replay_s">수정</p>
+                                                        <p class="btn_replay_s">삭제</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="resolve">
+                                    <div class="cont_memo_box">
+                                        <div class="cont_memo_hd clearfix">
+                                            <p class="sm_p">정의진 법무검토자</p>
+                                            <p class="sm_pb4">19.02.01 13:19</p>
+                                        </div>
+                                        <div class="cont_memo_text">
+                                            <p class="sm_p58">
+                                                이견 없음.
+                                            </p>
+                                        </div>
+                                        <div class="cont_memo_btn clearfix">
+                                            <div class="fl reply_btn_wrap">
+                                                <p class="btn_replay_s">삭제</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <ul class="contract_memo_replay">
+                                        <li>
+                                            <div class="cont_memo_box">
+                                                
+                                                <div class="cont_memo_hd clearfix">
+                                                    <p class="sm_p">정의진 법무검토자</p>
+                                                    <p class="sm_pb4">19.02.01 13:19</p>
+                                                </div>
+                                                <div class="cont_memo_text">
+                                                    <p class="sm_p58">
+                                                        이견 없음.
+                                                    </p>
+                                                </div>
+                                                <div class="cont_memo_btn clearfix">
+                                                    <div class="fl reply_btn_wrap">
+                                                        <p class="btn_replay_s">삭제</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <!-- //contract_memo_ul -->
+                        </div>
+                        <!-- //tview -->
+                        <!-- tview -->
+                        <div class="tview">
+                            <!-- attachment_wrap -->
+                            <div class="attachment_wrap">
+                                <ul class="attachment_list admin">
+                                    <li>
+                                        <p>관리자 및 본인이 추가했을 경우 (삭제 가능 상태)</p>
+                                        <div class="btn_x"></div>
+                                    </li>
+                                </ul>
+                                <div class="clearfix">
+                                    <a class="btn_add fl">+ 추가하기</a>
+                                    <a class="btn_add fr">업로드</a>
+                                </div>
+                            </div>
+                            <!-- //attachment_wrap -->
+                            <!-- tab_attachment_ul -->
+                            <ul class="tab_attachment_ul clearfix_ul">
+                            <li>
+                                <div class="fl check">
+                                    <input type="checkbox" id="check2">
+                                    <label for="check2"></label>
+                                </div>
+                                <div class="fl check_attachment">
+                                    <p class="sm_p58">기본용역계약서.docx</p>
+                                    <p class="sm_pb4">2019.02.10 10:34</p>
+                                </div>
+                            </li>
+                            </ul>
+                            <!-- //tab_attachment_ul -->
+                            <div class="btn_wrap">
+                                <a class="btn__f btn_xs">선택삭제</a>
+                            </div>
+                        </div>
+                        <!-- //tview -->
+                        <!-- tview -->
+                        <div class="tview tv_comment">
+                            <!-- contract_detail_comment -->
+                            <div class="contract_detail_comment">
+                                <div class="comment_notify">
+                                    <div class="icon_comment_notify">
+                                        <img src="imgs/icon_notify.svg">
+                                    </div>
+                                    <p>
+                                        이 계약에 대해 유관 부서 간에 토론하는 공간입니다.<br>
+                                        논의가 필요한 사항, 관련 히스토리 등을 올려주세요.
+                                    </p>
+                                </div>
+                                <!-- comment_ul -->
+                                <ul class="comment_ul">
+                                <li class="comment_my">
+                                    <div class="comment_area">
+                                        문의사항을 이야기 하는 부분을 나타내는 영역
+                                        입니다
+                                    </div>
+                                    <div class="comment_date">19/02/01 13:19</div>
+                                    <div class="clearfix">
+                                        <div class="comment_writer">
+                                            <div class="comment_writerprofile">
+                                                <p class="name">이유진</p>
+                                                <p class="email">sample@naver.com</p>
+                                            </div>
+                                            <div class="comment_profile_img"><img src=""></div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="comment_area">
+                                        문의사항을 이야기 하는 부분을 나타내는 영역
+                                        입니다
+                                    </div>
+                                    <div class="comment_date">19/02/01 13:19</div>
+                                    <div class="clearfix">
+                                        <div class="comment_writer">
+                                            <div class="comment_profile_img"><img src=""></div>
+                                            <div class="comment_writerprofile">
+                                                <p class="name">이유진</p>
+                                                <p class="email">sample@naver.com</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                </ul>
+                                <!-- //comment_ul -->
+                                <!-- comment_send -->
+                                <div class="comment_send">
+                                    <textarea class="comment_send_textarea auto_textarea" placeholder="코멘트를 남겨주세요"></textarea>
+                                    <div class="btn_comment_send"></div>
+                                </div>
+                                <!-- //comment_send -->
+                            </div>
+                            <!-- //contract_detail_comment -->
+                        </div>
+                        <!-- //tview -->
+                    </div>
+                    <!-- //tviews -->
+                </div>
+                <!-- //bt_tab contract_tab_wrap -->
+                
+            </section>
+            <!-- //contract_view_detail -->
+        </section>
+        <!-- //section_contract_view -->
+    </div>
+    <!-- //content -->
+    
+
+    <!-- ================================= 모달 ================================= -->
+    <!-- 공용 모달: 라벨 선택 -->
+    <!-- modal_fixed -->
+    <div class="modal_fixed modal_label_select" id="modalOnLabelSelLayout">
+        <!-- dis_table -->
+        <div class="dis_table">
+            <!-- table_cell -->
+            <div class="table_cell">
+                <!-- modal_section -->
+                <section class="modal_section">
+                    <div class="modal_title bor_btm clearfix">
+                        <p class="fl" style="line-height: 30px">라벨 선택</p>
+                        <a class="fr btn__b btn_m">라벨 추가</a>
+                    </div>
+                    <div class="clearfix mar15">
+                        <div class="input_search">
+                            <div class="icon_search"></div>
+                            <input type="text" class="input" placeholder="회사명 또는 사업자등록번호 검색">
+                        </div>
+                    </div>
+                    <ul class="clearfix modal_label_sel">
+                        <li class="cont_label pblc_01">라벨 내용<p class="btn_x"></p></li>
+                        <li class="cont_label prvt_02">신규 계약 작성 후 문제 있음<p class="btn_x"></p></li>
+                        <li class="cont_label pblc_01">라벨 내용<p class="btn_x"></p></li>
+                        <li class="cont_label prvt_02">신규 계약 작성 후 문제 있음<p class="btn_x"></p></li>
+                        <li class="cont_label pblc_01">라벨 내용<p class="btn_x"></p></li>
+                        <li class="cont_label prvt_02">신규 계약 작성 후 문제 있음<p class="btn_x"></p></li>
+                        <li class="cont_label pblc_01">라벨 내용<p class="btn_x"></p></li>
+                        <li class="cont_label prvt_02">신규 계약 작성 후 문제 있음<p class="btn_x"></p></li>
+                        <li class="cont_label pblc_01">라벨 내용<p class="btn_x"></p></li>
+                        <li class="cont_label prvt_02">신규 계약 작성 후 문제 있음<p class="btn_x"></p></li>
+                    </ul>
+                    <div class="modal_label_wrap">
+                        <p class="m_p b">공개 라벨</p>
+                        <ul class="modal_cont_label_ul clearfix_ul">
+                            <li class="pblc_01">라벨 네임 샘플 네임 샘플 샘플</li>
+                            <li class="pblc_02">라벨 샘플</li>
+                            <li class="pblc_03">라벨 네임 샘플</li>
+                            <li class="pblc_04">라벨 네임 샘플</li>
+                            <li class="pblc_05">라벨 네임 샘플</li>
+                        </ul>
+                    </div>
+                    <div class="modal_label_wrap">
+                        <p class="m_p b">비공개 라벨</p>
+                        <ul class="modal_cont_label_ul clearfix_ul">
+                            <li class="prvt_01">라벨 네임 샘플 네임 샘플 샘플</li>
+                            <li class="prvt_02">라벨 샘플</li>
+                            <li class="prvt_03">라벨 네임 샘플</li>
+                            <li class="prvt_04">라벨 네임 샘플</li>
+                            <li class="prvt_05">라벨 네임 샘플</li>
+                        </ul>
+                    </div>
+                    <!-- btn_wrap -->
+                    <div class="active_btn_wrap tc bor_top">
+                        <a class="btn__active btn_m">확인</a>
+                        <a class="btn__cancel btn_m modal_off">취소</a>
+                    </div>
+                    <!-- //btn_wrap -->
+                </section>
+                <!-- //modal_section -->
+            </div>
+            <!-- //dis_table -->
+        </div>
+        <!-- //dis_table -->
+    </div>
+    <!-- //modal_fixed -->
+
+    
+    <!-- fixed_layout2 -->
+    <div class="fixed_layout2">
+        <div class="btn_chevron_double"></div>
+        <!-- fixed_inner contract_info_view -->
+        <div class="fixed_inner contract_info_view">
+            <!-- contract_detail -->
+            <div class="contract_detail" style="display: block;">
+                <div class="contract_detail_hd contract_detail_line" style="margin-bottom: 20px; padding: 15px 0 30px;">
+                    <div class="ghs_elm"></div>
+                </div>
+                <!-- ghs_elm_ul -->
+                <ul class="ghs_elm_ul clearfix">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+                <!-- //ghs_elm_ul -->
+            </div>
+            <!-- //contract_detail -->
+            
+            <div class="contract_detail" style="display: block; margin-top: 30px; padding-top: 50px;">
+                <!-- ghs_comment -->
+                <div class="ghs_comment">
+                    <div class="clearfix">
+                        <ul class="ghs_elm_ul fl ghs_profile">
+                            <li></li>
+                            <li></li>
+                        </ul>
+                        <div class="fr comment_profile_img ghs_bg"></div>
+                    </div>
+                    <div class="clearfix">
+                        <ul class="ghs_elm_ul fr ghs_profile tr">
+                            <li></li>
+                            <li></li>
+                        </ul>
+                        <div class="fl comment_profile_img ghs_bg"></div>
+                    </div>
+                </div>
+                <!-- //ghs_comment -->
+            </div>
+        </div>
+        <!-- //fixed_inner contract_info_view -->
+    </div>
+    <!-- //fixed_layout2 -->
+
+    <!-- ================================= 모달 ================================= -->
+
+
+    <!-- 190906 추가 -->
+    <!-- 모달: 계약 관리 - 다중발송 수신인 추가 -->
+    <!-- modal_fixed -->
+    <div class="modal_fixed" id="modalOnAddMultipleLayout">
+        <!-- dis_table -->
+        <div class="dis_table">
+            <!-- table_cell -->
+            <div class="table_cell">
+                <!-- modal_section -->
+                <section class="modal_section">
+                    <!-- modal_title -->
+                    <div class="modal_title bor_btm">
+                        <p class="lg_p">수신인 추가</p>
+                    </div>
+                    <!-- //modal_title -->
+                    <!-- modal_top -->
+                    <div class="modal_top">
+                        <!-- form_wrap -->
+                        <ul class="form_wrap">
+                            <li>
+                                <label class="sm_label">이름</label>
+                                <input type="text" class="input">
+                            </li>
+                            <li>
+                                <label class="sm_label">회사명</label>
+                                <input type="text" class="input">
+                            </li>
+                            <li>
+                                <label class="sm_label">사업자등록번호</label>
+                                <input type="text" class="input">
+                            </li>
+                            <li>
+                                <label class="sm_label">이메일 주소</label>
+                                <input type="text" class="input">
+                            </li>
+                            <li>
+                                <label class="sm_label">전화번호</label>
+                                <input type="text" class="input">
+                            </li>
+                        </ul>
+                        <!-- //form_wrap -->
+                        <!-- btn_wrap -->
+                        <div class="active_btn_wrap tr">
+                            <a class="btn__y">확인</a>
+                            <a class="btn__f modal_off">취소</a>
+                        </div>
+                        <!-- //btn_wrap -->
+                    </div>
+                    <!-- //modal_top -->
+                </section>
+                <!-- //modal_section -->
+            </div>
+            <!-- //dis_table -->
+        </div>
+        <!-- //dis_table -->
+    </div>
+    <!-- //modal_fixed -->
+
+
+    <!-- 190906 추가 -->
+    <!-- 공용 모달: 다중 계약서 보기 -->
+    <!-- modal_fixed -->
+    <div class="modal_fixed modal3" id="modalOnMltplContractLayout">
+        <!-- dis_table -->
+        <div class="dis_table">
+            <!-- table_cell -->
+            <div class="table_cell">
+                <!-- modal_section -->
+                <section class="modal_section modal_contract">
+                    <!-- modal_title -->
+                    <div class="modal_title bor_btm clearfix">
+                        <p class="lg_p fl">계약서 보기</p>
+                        <div class="mltpl_li_btn btn_print fr"></div>
+                    </div>
+                    <!-- //modal_title -->
+                    <!-- template_preview_wrap -->
+                    <div class="template_preview_wrap">
+                        <p class="prewrap">연합군의 오해 제2차 세계대전 당시 폴란드군과 연합군이 ‘거수경례’로 오해가 생긴 일화가 전해집니다. 두 손가락만 들고 거수경례를 하는 폴란드군의 경례 전통을 오해한 연합군 장교가 폴란드 군인들과 언쟁을 벌였다는데요. 거수경례는 대다수 국가에서 다섯 손가락을 모두 편 채 손의 날이 보이도록 하기 때문에 연합군 장교 입장에서는 폴란드식 경례가 자신을 조롱하는 것이라 오해했던 것이지요.<br><br>연합군의 오해 제2차 세계대전 당시 폴란드군과 연합군이 ‘거수경례’로 오해가 생긴 일화가 전해집니다. 두 손가락만 들고 거수경례를 하는 폴란드군의 경례 전통을 오해한 연합군 장교가 폴란드 군인들과 언쟁을 벌였다는데요. 거수경례는 대다수 국가에서 다섯 손가락을 모두 편 채 손의 날이 보이도록 하기 때문에 연합군 장교 입장에서는 폴란드식 경례가 자신을 조롱하는 것이라 오해했던 것이지요.<br><br>연합군의 오해 제2차 세계대전 당시 폴란드군과 연합군이 ‘거수경례’로 오해가 생긴 일화가 전해집니다. 두 손가락만 들고 거수경례를 하는 폴란드군의 경례 전통을 오해한 연합군 장교가 폴란드 군인들과 언쟁을 벌였다는데요. 거수경례는 대다수 국가에서 다섯 손가락을 모두 편 채 손의 날이 보이도록 하기 때문에 연합군 장교 입장에서는 폴란드식 경례가 자신을 조롱하는 것이라 오해했던 것이지요.
+                        </p>
+                        <div class="signing_box_wrap">
+                            <!-- box -->
+                            <div class="signing_box">
+                                <div class="signing_line_wrap">
+                                    <div class="signing_line">
+                                        <p class="pdf_p_s_9b">회사명</p>
+                                        <p class="pdf_p">STG Company</p>
+                                    </div>
+                                    <div class="signing_line">
+                                        <p class="pdf_p_s_9b">서명자</p>
+                                        <p class="pdf_p">홍길동</p>
+                                    </div>
+                                </div>
+                                <div class="signing_area"></div>
+                                <div class="signing_line_date">
+                                    <p class="signing_line_date_p">전자서명 / 2019/04/26 12:33:18</p>
+                                </div>
+                            </div>
+                            <!-- box -->
+                            <div class="signing_box">
+                                <div class="signing_line_wrap">
+                                    <div class="signing_line">
+                                        <p class="pdf_p_s_9b">이메일</p>
+                                        <p class="pdf_p">bubtle_test@gmail.com</p>
+                                    </div>
+                                </div>
+                                <div class="signing_area">
+                                    <div class="stamp_trad">
+                                        <span> 일이삼사오륙칠팔구십일 </span><br><span class="pdf_sign_stamp">디지털직인</span>
+                                    </div>
+                                </div>
+                                <div class="signing_line_date">
+                                    <p class="signing_line_date_p">전자서명 / 2019/04/26 12:33:18</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- //template_preview_wrap -->
+                    <!-- btn_wrap -->
+                    <div class="active_btn_wrap tr">
+                        <a class="btn__f modal_off">닫기</a>
+                    </div>
+                    <!-- //btn_wrap -->
+                </section>
+                <!-- //modal_section -->
+            </div>
+            <!-- //dis_table -->
+        </div>
+        <!-- //dis_table -->
+    </div>
+    <!-- //modal_fixed -->
+   
+   
+   
+    <!-- 모달: 서명하기 내부인 -->
+    <!-- modal_fixed -->
+    <div class="modal_fixed modal_sign" id="modalOnSignLayout">
+        <!-- dis_table -->
+        <div class="dis_table">
+            <!-- table_cell -->
+            <div class="table_cell">
+                <!-- modal_section -->
+                <section class="modal_section">
+                    <!-- modal_title -->
+                    <div class="modal_title">
+                        <p class="lg_p">서명하기</p>
+                    </div>
+                    <!-- //modal_title -->
+                    <!-- tab_sign_top -->
+                    <div class="clearfix modal_sign_top">
+                        <div class="fl">
+                            <input type="radio" id="modalSignRadio1" name="sign_type" value="0" checked>
+                            <label for="modalSignRadio1">회사 서명</label>
+                        </div>
+                        <div class="fl">
+                            <input type="radio" id="modalSignRadio2" name="sign_type" value="1">
+                            <label for="modalSignRadio2">개인 서명</label>
+                        </div>
+                    </div>
+                    <!-- //tab_sign_top -->
+                    <!-- sign_info -->
+                    <div class="sign_info">
+                        <div class="sign_notice">전자서명은 계약서에 도장을 찍는 것과 같은 법적 행위입니다.</div>
+                        <!-- sign_box -->
+                        <div class="sign_box">
+                            <!-- sign_contract_info -->
+                            <ul class="sign_contract_info clearfix_ul">
+                                <li>
+                                    <label class="sm_p58_b">계약명</label>
+                                    <p class="sm_p58">서명 테스트를 위한 계약서</p>
+                                </li>
+                                <li>
+                                    <label class="sm_p58_b">회사명</label>
+                                    <p class="sm_p58">위시켓</p>
+                                </li>
+                                <li>
+                                    <label class="sm_p58_b">주소</label>
+                                    <p class="sm_p58">성수일로 89</p>
+                                </li>
+                                <li>
+                                    <label class="sm_p58_b">사업자등록번호</label>
+                                    <p class="sm_p58">11022301048</p>
+                                </li>
+                                <li>
+                                    <label class="sm_p58_b">계약 진행자</label>
+                                    <p class="sm_p58">이이(tadkdldl@naver.com)<br>홍길동(dldl@naver.com)</p>
+                                </li>
+                            </ul>
+                            <!-- //sign_contract_info -->
+                        </div>
+                        <!-- //sign_box -->
+                    </div>
+                    <!-- //sign_info -->
+
+                    <!-- modal_sign_views -->
+                    <div class="modal_sign_views">
+                        <!-- modal_sign_view 회사 서명 -->
+                        <div class="modal_sign_view active">
+                            <!-- bt_tab tab_sign -->
+                            <div class="bt_tab" id="tab_sign1">
+                                <!-- tabs -->
+                                <div class="tabs">
+                                    <div class="tab active">디지털직인</div>
+                                    <div class="tab">공인인증서</div>
+                                </div>
+                                <!-- //tabs -->
+                                <!-- tviews -->
+                                <div class="tviews">
+                                    <!-- tview 디지털직인 -->
+                                    <div class="tview active">
+                                        <!-- sign_box -->
+                                        <div class="sign_box">
+                                            <!-- sign_contract_info -->
+                                            <ul class="sign_contract_info clearfix_ul">
+                                                <li>
+                                                    <div class="sign_zone">
+
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <p class="icon_notify_p fl">디지털직인으로 서명하게 됩니다.</p>
+                                                    <a class="fr btn__f btn_xs">디지털 직인이란?</a>
+                                                </li>
+                                                <!-- 서명 영역 -->
+                                                <li class="sign_agree">
+                                                    <input type="checkbox" id="checkbox1">
+                                                    <label class="sm_p58" for="checkbox1">저 이유진은 STG의 디지털 직인을 사용하여 회사 명의로 서명합니다.</label>
+                                                </li>
+                                            </ul>
+                                            <!-- //sign_contract_info -->
+                                        </div>
+                                        <!--//sign_box -->
+                                    </div>
+                                    <!-- //tview 디지털직인 -->
+                                    <!-- tview 공인인증서 -->
+                                    <div class="tview">
+                                        <!-- sign_box -->
+                                        <div class="sign_box">
+                                            <!-- sign_contract_info -->
+                                            <ul class="sign_contract_info clearfix_ul">
+                                                <li class="sign_line">
+                                                    <label class="sm_p58_b">회사명</label>
+                                                    <p class="sm_p58"><input type="text"></p>
+                                                </li>
+                                                <li>
+                                                    <!-- 서명 영역 -->
+                                                    <div class="sign_zone">
+                                                        <p class="sm_p58_b">범용 공인인증서로 계약서 서명을 진행합니다.</p>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <p class="icon_notify_p">개인 법인이 계약서에 전자 서명 시에는 법률상 유료 범용 공인인증서를 사용하셔야 합니다.</p>
+                                                </li>
+                                            </ul>
+                                            <!-- //sign_contract_info -->
+                                        </div>
+                                        <!--//sign_box -->
+                                    </div>
+                                    <!-- //tview 공인인증서 -->
+                                </div>
+                                <!-- //tviews -->
+                            </div>
+                            <!-- //bt_tab tab_sign -->
+                        </div>
+                        <!-- //modal_sign_view 회사 서명 -->
+
+                        <!-- modal_sign_view 개인 서명 -->
+                        <div class="modal_sign_view">
+                            <!-- bt_tab tab_sign -->
+                            <div class="bt_tab" id="tab_sign2">
+                                <!-- tabs -->
+                                <div class="tabs">
+                                    <div class="tab active">휴대폰인증</div>
+                                    <div class="tab">수기</div>
+                                </div>
+                                <!-- //tabs -->
+                                <!-- tviews -->
+                                <div class="tviews">
+                                    <!-- tview 휴대폰인증 -->
+                                    <div class="tview active">
+                                        <!-- sign_box -->
+                                        <div class="sign_box">
+                                            <!-- sign_contract_info -->
+                                            <ul class="sign_contract_info clearfix_ul">
+                                                <li>
+                                                    <!-- 서명 영역 -->
+                                                    <div class="sign_zone"></div>
+                                                </li>
+                                                <li>
+                                                    <p class="icon_notify_p">이유진님 개인 명의로 서명합니다.</p>
+                                                </li>
+                                            </ul>
+                                            <!-- //sign_contract_info -->
+                                        </div>
+                                        <!--//sign_box -->
+                                    </div>
+                                    <!-- //tview 휴대폰인증 -->
+                                    <!-- tview 수기 -->
+                                    <div class="tview">
+                                        <!-- sign_box -->
+                                        <div class="sign_box">
+                                            <!-- sign_contract_info -->
+                                            <ul class="sign_contract_info clearfix_ul">
+                                                <li class="sign_line">
+                                                    <label class="sm_p58_b">대표자</label>
+                                                    <p class="sm_p58"><input type="text" value="이유진" disabled></p>
+                                                </li>
+                                                <li>
+                                                    <!-- 서명 영역 -->
+                                                    <div class="sign_zone"></div>
+                                                </li>
+                                                <li>
+                                                    <p class="icon_notify_p">이유진님이 회사 대표자로 서명합니다.</p>
+                                                </li>
+                                            </ul>
+                                            <!-- //sign_contract_info -->
+                                        </div>
+                                        <!--//sign_box -->
+                                    </div>
+                                    <!-- //tview 수기 -->
+                                </div>
+                                <!-- //tviews -->
+                            </div>
+                            <!-- //bt_tab tab_sign -->
+                        </div>
+                        <!-- //modal_sign_view 개인 서명 -->
+                    </div>
+                    <!-- //modal_sign_views -->
+                    <!-- btn_wrap -->
+                    <div class="btn_wrap tr">
+                        <a class="btn__y">서명하기</a>
+                        <a class="btn__f modal_off">취소</a>
+                    </div>
+                    <!-- //btn_wrap -->
+                </section>
+                <!-- //modal_section -->
+            </div>
+            <!-- //dis_table -->
+        </div>
+        <!-- //dis_table -->
+    </div>
+    <!-- //modal_fixed -->
+
+    <!-- ================================= //content ================================= -->
+    
+</div>
+<!-- //wrap -->
+<footer id="footer"></footer>
+<div id="toTop"></div>
+</body>
+</html>
+

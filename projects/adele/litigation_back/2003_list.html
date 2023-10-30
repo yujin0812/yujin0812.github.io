@@ -1,0 +1,398 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8" />
+<title></title>
+<!-- STYLE CSS -->
+<link href="css/application.css" rel="stylesheet" type="text/css">
+<link href="css/style.css" rel="stylesheet" type="text/css">
+<link href="css/reset.css" rel="stylesheet" type="text/css">
+<!-- SCRIPT -->
+<script src="scripts/jquery-3.4.1.min.js"></script>
+<script src="scripts/jquery.nice-select.min.js"></script>
+<script src="scripts/main.js"></script>
+<script>
+$(document).ready(function(){
+    // #modalOnCreateLegalLayout 열기: 법률자문 > 자문 생성
+    $(document).on("click", "#modalOnLitigtionCreate", function(){
+        fixedLayoutOn();
+    });
+    
+    
+    // accordion Toggle
+    $(document).on("click", ".accordion", function(){
+        $(this).children(".accordion_head").next(".accordion_section").slideToggle("fast");
+        if( $(this).hasClass("active") ){
+            $(this).removeClass("active");
+        } else {
+            $(this).addClass("active");
+        }
+    });
+    
+});
+</script>
+<style>
+    .btn__f {
+        display: block;
+        width: 120px;
+        margin: auto;
+        margin-bottom: 10px;
+    }
+</style>
+</head>
+<body>
+<!-- ================================= header ================================= -->
+<!-- wrap -->
+<div id="wrap">
+    <!-- header -->
+    <header id="header">
+        <div class="in">
+            <!-- logo -->
+            <div class="logo"><a href="ui_guide.html"><img src='https://image.gsshop.com/ui/gsshop/pc/common/images/logo.png'></a></div>
+            <!-- gnb -->
+            <ul class="gnb">
+                <li class="active">
+                    <a href="index.html">계약관리</a>
+                    <!-- lnb -->
+                    <div class="lnb">
+                        <ul>
+                            <li class="active"><a href="index.html">전체 계약</a></li>
+                            <li><a href="index_my.html">나의 계약</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <a href="legal_advice_list.html">법률자문</a>
+                </li>
+                <li>
+                    <a href="official_note_list.html">공문 발송</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="header_notice">
+            <div class="header_notice__dynamic">
+                <div class="vertical-slider">
+                    <h2 class="vertical-slider__item">김영란법 개정으로 인해 외식 시 필독!김영란법 개정으로 인해 외식 시 필독!김영란법 개정으로 인해 외식 시 필독!김영란법 개정으로 인해 외식 시 필독!</h2>
+                    <h2 class="vertical-slider__item">법률자문 올리기 전 확인하세요.</h2>
+                    <h2 class="vertical-slider__item">가맹계약서 양식입니다.</h2>
+                </div>
+            </div>
+        </div>
+
+        <div class="in in_admin">
+            <div class="in_admin_inner">
+                <div class="number_approval">
+                    <a class="approval_on">결재건수</a>
+                    <p class="badge">7</p>
+                    <ul class="number_approval_view clearfix_ul">
+                        <li>
+                            <p class="xs_p58 elipsis">1.4분기 계약관리 시스템 교체 스템 교체 계약교체 스템 교체 계약</p>
+                            <a class="btn__f btn_xs">바로가기</a>
+                        </li>
+                        <li>
+                            <p class="xs_p58 elipsis">1.4분기 계약관리 시스템 교체 계약</p>
+                            <a class="btn__f btn_xs">바로가기</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="home">
+                    <a href="dashboard.html"></a>
+                </div>
+                <div class="hd_user_wrap">
+                    <div class="hd_user">
+                        <p class="hd_user_name">이유진님</p>
+                        <ul class="hd_user_ul">
+                            <li><a href="mypage_user_info.html">내 정보 보기</a></li>
+                            <li><a href="login.html">로그아웃</a></li>
+                        </ul>
+                    </div>
+                    <div class="hd_user_img"><img src="https://img1.daumcdn.net/thumb/R720x0.q80/?scode=mtistory&fname=http%3A%2F%2Fcfile10.uf.tistory.com%2Fimage%2F99530A3B5BE7C1803380DF"></div>
+                </div>
+            </div>
+            <!-- header_sub -->
+            <div class="header_sub">
+                <ul class="gnb_admin">
+                    <li><a href="notice.html">공지사항</a></li>
+                    <li><a href="group_list.html">그룹 관리자</a></li>
+                    <li>
+                        <a href="admin_workflow_list.html">관리자</a>
+                        <!-- lnb -->
+                        <div class="lnb">
+                            <ul class="lnb_admin">
+                                <li class="active"><a href="admin_workflow_list.html">워크플로우</a></li>
+                                <li><a href="admin_template_list.html">템플릿 관리</a></li>
+                                <li><a href="admin_user.html">유저 관리</a></li>
+                                <li><a href="admin_notify.html">공지사항 관리</a></li>
+                                <li><a href="admin_contract_counterpart.html">외부업체관리</a></li>
+                                <li><a href="admin_group.html">그룹</a></li>
+                                <li><a href="admin_tag.html">TAG</a></li>
+                                <li><a href="admin_company_info.html">회사 정보</a></li>
+                                <li><a href="admin_digital_seal.html">디지털 직인 관리</a></li>
+                                <li><a href="admin_legal_setting.html">법률 자문</a></li>
+                                <li><a href="admin_official_note.html">공문 발송</a></li>
+                                <li><a href="admin_label.html">라벨</a></li>
+                                <li><a href="admin_empowerment.html">권한 위임</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <!-- //header_sub -->
+        </div>
+    </header>
+    <!-- //header -->
+    <!-- ================================= //header ================================= -->
+
+    <!-- ================================= content ================================= -->
+    
+    <!-- content -->
+    <div class="content">
+        <!-- section__litigation -->
+        <section class="section__litigation pad30">
+            <div class="btn__b" id="modalOnLitigtionCreate">소송 생성</div>
+        </section>
+        <!-- //section__litigation -->
+        <!-- section__litigation -->
+        <section class="section__litigation pad30">
+            <a href="2003_litigation_folder_view.html" class="btn__f">폴더뷰</a>
+            <a href="2003_litigation_document.html" class="btn__f">문서관리</a>
+            <a href="2003_litigation_document_back.html" class="btn__f">문서관리_back</a>
+            <a href="2003_litigation_note_edit.html" class="btn__f">노트 edit</a>
+        </section>
+        <!-- //section__litigation -->
+    </div>
+    <!-- //content -->
+    
+    <!-- ================================= 소송 생성 모달 ================================= -->
+    <!-- fixed_layout -->
+    <div class="fixed_layout litigation_create_layout" id="modalOnLitigtionCreateLayout">
+        <!-- fixed_content_wrap -->
+        <div class="fixed_content_wrap">
+            <!-- fixed_content -->
+            <div class="fixed_content">
+                <!-- modal_title -->
+                <div class="modal_title bor_btm">
+                    <p class="lg_p">소송 상세 정보</p>
+                </div>
+                <!-- //modal_title -->
+
+                <!-- form_wrap_ul -->
+                <ul class="form_wrap_ul">
+                    <li>
+                        <label class="sm_label">제목</label>
+                        <input type="text">
+                    </li>
+                    <li class="clearfix litigation_create_form">
+                        <div class="divide__2">
+                            <label class="sm_label">상대 회사</label>
+                            <div class="litigation_create_info">
+                                <p class="m_p58 dis_inb lh30">상대회사명</p>
+                                <a class="btn_add dis_inb">+ 추가</a>
+                            </div>
+                        </div>
+                        <div class="divide__2">
+                            <label class="sm_label">관련 소송</label>
+                            <div class="litigation_create_info">
+                                <p class="m_p58 dis_inb lh30">관련 소송명</p>
+                                <a class="btn_add dis_inb">+ 추가</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="clearfix">
+                        <div class="divide__2">
+                            <label class="sm_label">법무팀 담당자</label>
+                            <div class="clearfix">
+                                <div class="user">
+                                    <p class="sm_p58">홍길동 부서장</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="divide__2">
+                            <label class="sm_label">당사</label>
+                            <div class="clearfix">
+                                <div class="fl cont_detail_radio">
+                                    <input type="radio" id="radio1">
+                                    <label for="radio1">원고</label>
+                                </div>
+                                <div class="fl cont_detail_radio">
+                                    <input type="radio" id="radio2">
+                                    <label for="radio2">피고</label>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <label class="sm_label">관련인</label>
+                        <div class="clearfix">
+                            <div class="user admin">
+                                <p class="sm_p58">김민현 과장</p>
+                                <a class="btn_x"></a>
+                            </div>
+                            <a class="btn_add  mar6">+ 관련인 추가</a>
+                        </div>
+                    </li>
+                    <li>
+                        <label class="sm_label">설명</label>
+                        <div class="notify_line">
+                            <p class="sm_b">법무 담당자가 상세히 이해할 수 있는 설명이어야 승소 가능성이 높아집니다.</p>
+                        </div>
+                        <textarea class="txtr_writing"></textarea>
+                    </li>
+                    <li>
+                        <label class="sm_label">소송 금액</label>
+                        <input type="text">
+                    </li>
+                    <li>
+                        <label class="sm_label">소송 관련 자료</label>
+                        <div class="notify_line">
+                            <p class="sm_b">당사가 피고일 경우 소장은 반드시 등록해 주세요.</p>
+                        </div>
+                        <!-- litigation_related_data_wrap -->
+                        <div class="litigation_related_data_wrap">
+                            <!-- dropzone -->
+                            <div id="dropzoneLitigation">
+                                <form class="dropzone needsclick dz-clickable" id="demo-upload" action="/upload">
+                                    <p class="drop_p sm_p58 dz-message">수정버전을 여기로 드래그 해주세요</p>
+                                </form>
+                            </div>
+                            <!-- //dropzone -->
+
+                            <!-- litigation_related_data_box -->
+                            <div class="litigation_related_data_box edit_zone">
+
+                                <!-- ltg_related_data_folder -->
+                                <div class="ltg_related_data_folder">
+                                    <p class="item_p">2019년 자료</p>
+                                    <!-- ltg_related_data_ul -->
+                                    <ul class="ltg_related_data_ul ltg_related_data_depth_ul clearfix_ul">
+                                        <li>
+                                            <div class="checkbox_wrap">
+                                                <input type="checkbox" id="checkbox">
+                                                <label for="checkbox"></label>
+                                            </div>
+                                            <div class="ltg_related_data_item">
+                                                <div class="clearfix">
+                                                    <p class="fl sm_p">유출된 개인정보 파일 저장 경로</p>
+                                                    <p class="fr xs_p58">생성자: 김철수</p>
+                                                </div>
+                                                <div class="clearfix">
+                                                    <p class="fl xs_p58">생성일 160103</p>
+                                                    <p class="fr xs_p58">기술자료</p>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    <!-- //ltg_related_data_ul -->
+                                </div>
+                                <!-- //ltg_related_data_folder -->
+
+                                <script>
+                                    $(document).ready(function(){
+                                        // ltg_related_data_folder On/Off
+                                        $(document).on('click', '.ltg_related_data_folder .item_p', function() {
+                                            if($(this).parents('.ltg_related_data_folder').hasClass('on')) {
+                                                $(this).parents('.ltg_related_data_folder').removeClass('on');
+                                            } else {
+                                                $(this).parents('.ltg_related_data_folder').addClass('on');
+                                            }
+                                        });
+                                    });
+                                </script>
+
+                                <!-- ltg_related_data_ul on -->
+                                <ul class="ltg_related_data_ul clearfix_ul">
+                                    <li>
+                                        <div class="checkbox_wrap">
+                                            <input type="checkbox" id="checkbox">
+                                            <label for="checkbox"></label>
+                                        </div>
+                                        <div class="ltg_related_data_item">
+                                            <div class="clearfix">
+                                                <p class="fl sm_p">유출된 개인정보 파일 저장 경로</p>
+                                                <p class="fr xs_p58">생성자: 김철수</p>
+                                            </div>
+                                            <div class="clearfix">
+                                                <p class="fl xs_p58">생성일 160103</p>
+                                                <p class="fr xs_p58">기술자료</p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <!-- //ltg_related_data_ul on -->
+
+                                <!-- edit 메뉴 -->
+                                <div class="edit_menu edit_menu2 edit_fixed">
+                                    <ul class="edit_menu_ul">
+                                        <li class="edit_item"><a href="#">Add Folder</a></li>
+                                        <li class="edit_item"><a href="#">Download</a></li>
+                                        <li class="edit_item"><a href="#">Rename</a></li>
+                                        <li class="edit_item"><a href="#">Copy</a></li>
+                                        <li class="edit_item"><a href="#">Paste</a></li>
+                                        <li class="edit_item"><a href="#">Delete</a></li>
+                                        <li class="edit_item bor_top"><a href="#">File Upload</a></li>
+                                    </ul>
+                                </div>
+                                <!-- //edit_menu -->
+                                <script>
+                                    $(document).ready(function(){
+                                        // Edit On: 우클릭 시
+                                        $(document).on('contextmenu', '.edit_zone', function() {
+                                            event.preventDefault();
+                                            $(this).children(".edit_fixed").addClass("active");
+                                            $(this).children(".edit_fixed").css("left", event.clientX);
+                                            $(this).children(".edit_fixed").css("top", event.clientY);
+                                        });
+                                        // Edit Off: edit_fixed 이외 영역 클릭 시
+                                        $(document).click(function(e){
+                                            if (!$('.edit_fixed').is(e.target) && $('.edit_fixed').has(e.target).length === 0){
+                                                $('.edit_fixed').removeClass('active');
+                                            }
+                                        });
+                                    });
+                                </script>
+                            </div>
+                            <!-- //litigation_related_data_box -->
+
+
+                            <p class="icon_notify_p_r" style="margin-top: 12px;">당사가 피고일 경우 소장은 반드시 등록해 주세요.</p>
+
+                            <!-- drop_btn_wrap -->
+                            <div class="clearfix ltg_drop_btn_wrap">
+                                <div class="fl">
+                                    <a class="btn_add">+ 파일첨부</a>
+                                </div>
+                                <div class="fr">
+                                    <a class="btn_add">선택 자료 삭제</a>
+                                </div>
+                            </div>
+                            <!-- //drop_btn_wrap -->
+
+                        </div>
+                        <!-- //litigation_related_data_wrap -->
+                    </li>
+                </ul>
+                <!-- //form_wrap_ul -->
+
+                <!--active_btn_wrap -->
+                <div class="active_btn_wrap tc">
+                    <a class="btn__active">생성</a>
+                    <a class="btn__cancel" id="modalOncontractCreate">취소</a>
+                </div>
+                <!-- //active_btn_wrap -->
+            </div>
+            <!-- //fixed_content -->
+        </div>
+        <!-- //fixed_content_wrap -->
+    </div>
+    <!-- //fixed_layout -->
+
+    <!-- ================================= //content ================================= -->
+</div>
+<!-- //wrap -->
+<!-- footer -->
+<footer id="footer"></footer>
+<!-- //footer -->
+</body>
+</html>
+ 

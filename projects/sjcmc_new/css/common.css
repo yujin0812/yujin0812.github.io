@@ -1,0 +1,47 @@
+@charset "utf-8";
+/* CSS Document */
+@import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
+
+
+
+div section { overflow: hidden; }
+body {
+    margin: 0;
+    min-width: 320px;
+    text-size-adjust: none;
+	-webkit-text-size-adjust: none;
+	-moz-text-size-adjust: none;
+	-ms-text-size-adjust: none;
+}
+html, body { height: 100%; }
+div, nav, section, header, footer { position: relative; }
+img { vertical-align: top; width: 100%; }
+a { text-decoration: none; color: inherit; display: block; }
+* { margin:0; padding:0; }
+ul, li { list-style:none; }
+section { height: auto; overflow: hidden; margin: auto; } /* padding 모바일 제외시 class */
+select::-ms-expand { display: none; }
+select { 
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+}
+th { font-weight: 400; }
+* { font-family: 'Noto Sans KR'; font-weight: 300; }
+
+
+
+input, select, textarea, button { font: inherit; color: inherit; }
+
+article, aside, details, figcaption, figire, footer, header, hgroup, menu, nav, section {display:block;}
+table {border-collapse:collapse; border-spacing:0;}
+input, select {vertical-align:middle;}
+lable {cursor:pointer;}
+.blind, legend, hr, caption {display:block; position:absolute; left:1000em; top:0; overflow:hidden;}
+i, em, address {font-style:normal; font-weight:normal;}
+
+body, h1,h2,h3,h4,h5,h6, p,ul,ol,dl,dt,dd,li,table,th,td, form,address,pre,caption,cite,code,dfn,var { font-size: 100%; font-style: normal; font-weight: normal; margin: 0; padding: 0; text-decoration: none; }
+
+
+
+.no-input-style { border:0px; background:none; cursor: pointer; }

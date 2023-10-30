@@ -1,0 +1,227 @@
+<!DOCTYPE HTML5>
+<html>
+<head>
+<meta charset="utf-8" />
+
+<title>거래소</title>
+<!-- GOOGLE FONTS -->
+<link href="http://fonts.googleapis.com/earlyaccess/notosanskr.css" rel="stylesheet">
+<link href="http://fonts.googleapis.com/earlyaccess/nanumgothic.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Titillium+Web:300,400,500,700" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
+
+<!-- STYLE CSS -->
+<link href="hycon/css/index.css" rel="stylesheet" type="text/css">
+<link href="hycon/css/media.css" rel="stylesheet" type="text/css">
+<link href="hycon/css/reset.css" rel="stylesheet" type="text/css">
+<!-- WOW STYLE CSS -->
+<link href="hycon/css/animate.min.css" rel="stylesheet" />
+<!-- SCRIPT -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="hycon/scripts/main.js"></script>
+<!-- WOW SCRIPT -->
+<script src="hycon/scripts/wow.min.js"></script>
+<script>
+	new WOW().init();
+</script>
+</head>
+
+<body>
+    <header>
+        <div class="header">
+            <div class="header-inner">
+                <div class="header-logo">
+                    <a href="index.html"><img src="hycon/imgs/header_logo.png" /></a>
+                </div>
+                <div class="header-menu">
+                    <ul class="gnb">
+                        <li class="gnb-list gnb-list-sel">
+                            <a href="index.html">홈</a>
+                        </li>
+                        <li class="gnb-list">
+                            <a href="transaction-list.html">거래</a>
+                        </li>
+                        <li class="gnb-list">
+                            <a href="chart.html">차트</a>
+                            <div class="drop-menu">
+                                <a href="faq.html">FAQ</a>
+                                <a href="notice.html">공지사항</a>
+                                <a href="contact.html">1:1문의</a>
+                                <a href="information.html">이용안내</a>
+                            </div>
+                        </li>
+                        <li class="gnb-list">
+                            <a href="wallet.html">지갑</a>
+                        </li>
+                        <li class="gnb-list">
+                            <a href="">고객지원</a>
+                            <div class="drop-menu">
+                                <a href="notice.html">공지사항</a>
+                                <a href="contact.html">1:1문의</a>
+                                <a href="faq.html">FAQ</a>
+                                <a href="information.html">이용안내</a>
+                            </div>
+                        </li>
+                    </ul>
+                    <ul class="header-login">
+                        <li class="hd-user"><p>LEE DONG JU</p></li>
+                        <li class="hd-mypage"><a href="mypage.html"></a></li>
+                        <li class="hd-logout"><a href="index.html"></a></li>
+                        <li class="hd-language">
+                            <select class="hd-select" id="language" name="language" onchange="i18next.changeLanguage(this.value);">	
+                                <option class="selop" value="ko">KOR</option>
+                                <option class="selop" value="ko">EN</option>
+                            </select>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="coin-info-wrap">
+          <div class="coin-info-inner">
+              <div class="coin-info">
+                  <p class="coininfo-p1">총합</p>
+                  <select class="coin-info-select">
+                      <option value="">10,215원</option>
+                      <option value="">10,215원</option>
+                  </select>
+              </div>
+              <div class="coin-info">
+                  <p class="coininfo-p1">KRW</p>
+                  <p class="coininfo-p2">0.00000000</p>
+              </div>
+              <div class="coin-info">
+                  <p class="coininfo-p1">BTC</p>
+                  <p class="coininfo-p2">0.00000000</p>
+              </div>
+              <div class="coin-info">
+                  <p class="coininfo-p1">ETH</p>
+                  <p class="coininfo-p2">0.00000000</p>
+              </div>
+              <div class="coin-info">
+                  <p class="coininfo-p1">ETC</p>
+                  <p class="coininfo-p2">0.00000000</p>
+              </div>
+              <div class="coin-info">
+                  <p class="coininfo-p1">LTC</p>
+                  <p class="coininfo-p2">0.00000000</p>
+              </div>
+              <div class="coin-info">
+                  <p class="coininfo-p1">ZEC</p>
+                  <p class="coininfo-p2">0.00000000</p>
+              </div>
+          </div>
+        </div>
+    </header>
+    <div class="body-wrap noise-body">
+        <nav class="notice-nav">
+            <a href="notice.html">공지사항</a>
+            <a href="contact.html">1&#58;1 문의</a>
+            <a href="faq.html">FAQ</a>
+            <a href="information.html" class="notice-sel">이용안내</a>
+        </nav>
+        <section class="information-section">
+            <div class="information-top">
+                <div class="information-text1">
+                    <p class="information-h1">회원가입은 어떻게 하나요?</p>
+                    <div class="information-pbox">
+                        <p class="information-p info-p1">E-mail주소는 회원님의 로그인 ID로 사용됩니다.</p>
+                        <p class="information-p info-p2">비밀번호는 영문 대,소문자,숫자,특수문자를 혼합하여 사용해주세요.</p>
+                        <p class="information-p info-p3">회원님의 이름과 휴대폰 번호를 인증번호로 확인합니다.</p>
+                        <p class="information-p info-p4">이용약관과 개인정보취금방침에 동의 하시면 해당 박스를 체크합니다.</p>
+                        <p class="information-p info-p5">회원님의 이름과 휴대폰 번호를 인증번호로 확인합니다.</p>
+                    </div>
+                    <div class="information-box">
+                        &#42;필수 가입하신 E-mail로 회원가입 인증 메일이 발송되었습니다.<br />
+                        E-mail 링크를 확인하시면 회원가입이 완료됩니다! 
+                    </div>
+                    <button class="information-btn info-btn-right"><a href="join.html">회원가입 하러가기</a></button>
+                </div>
+            </div>
+            <div class="information-bottom">
+                <div class="information-text2">
+                    <p class="information-h1">원화(KRW)충전과 환급은 어떻게 신청 하나요?</p>
+                    <div class="information-pbox">
+                        <p class="information-p info-p1">지갑관리 메뉴를 클릭 합니다.</p>
+                        <p class="information-p info-p2">
+                        원화 충전 : 입금정보 입력 및 원화충전 요청 후 코인링크 계좌로 입금하시면 충전이 진행됩니다.<br />
+                        원화 환급 : 보유하고 있는 KRW와 코인을 이용해 얻은 원화를 즉시 환급 신청 할 수 있습니다.
+                       </p>
+                        <p class="information-p info-p3">
+                        우리 거래소는 회원본인인증 외 별도 입출금 제한을 두고 있지 않습니다.<br />
+                        단, 비정상 거래로 판단되는 경우, 입출금 서비스가 제한될 수 있습니다.
+                       </p>
+                    </div>
+                    <div class="information-box">
+                        &#42;우리 거래소는 은행 서버 점검 시간 외 365일 24시간 입출금 지원을<br />드리기 위해 노력하고 있습니다.<br />
+                        단, 비정상 거래로 판단되는 경우, 입출금 서비스가 제한될 수 있습니다. 
+                    </div>
+                    <button class="information-btn info-btn-left"><a href="#">원화충전/환급 하러가기</a></button>
+                </div>
+                <div class="information-text3">
+                    <p class="information-h1">코인 환전(사실 때/파실 때)은 어떻게 이용 하나요?</p>
+                    <div class="information-pbox">
+                        <p class="information-p info-p1">원하는 코인의 환전 메뉴를 클릭 합니다.</p>
+                        <p class="information-p info-p2">
+                        코인 환전 (사실 때) : 보유하고 있는 KRW를 코인으로 즉시 구매 하고자 할 경우<br />
+                        코인 환전 (파실 때) : 보유하고 있는 코인을 KRW로 즉시 판매 하고자 할 경우
+                       </p>
+                        <p class="information-p info-p3">
+                        코인 환전은 코인 거래와는 다르게, 구매 및 판매거래 대기 물량(사람)을 기다리지 않고 즉시 환전이 가능합니다.<br />
+                        </p>
+                        <p class="information-p info-p4">
+                        해외 거래소(OK-KOIN) 종합시세를 기준 가격으로 설정하므로 한국 시세와 환전 가격이 차이가 있습니다.
+                        </p>
+                    </div>
+                    <div class="information-box">
+                        &#42;필수 가입하신 E-mail로 회원가입 인증 메일이 발송되었습니다.<br />
+                        E-mail 링크를 확인하시면 회원가입이 완료됩니다! 
+                    </div>
+                    <button class="information-btn info-btn-right"><a href="join.html">회원가입 하러가기</a></button>
+                </div>
+            </div>
+        </section>
+    </div><!-- body-wrap -->
+    <footer>
+        <ul class="footer-inner">
+            <li class="footer-news">
+                <img class="footer-icon1" src="hycon/imgs/icon_1.png" />
+                <p class="footer-p1">NEWS</p>
+                <div class="footnews">
+                    <p class="footnews1"><a href="#">new notice new notice</a></p>
+                    <p class="footnews2">June 27,2017</p>
+                </div>
+                <div class="footnews">
+                    <p class="footnews1"><a href="#">new notice new notice new notice new notice</a></p>
+                    <p class="footnews2">June 27,2017</p>
+                </div>
+            </li>
+            <li class="footer-contact">
+                <img class="footer-icon2" src="hycon/imgs/icon_2.png" />
+                <p class="footer-p1">CONTACT US</p>
+                <p class="footer-p2">
+                    (주)써트온<br />
+                    서울 강남구 도산대로 207 성도발당 7층<br />
+                    대표 김승기 박경옥<br />
+                    사업자등록번호 000-00-00000<br />
+                    사업자등록번호확인<br />
+                    통신판매업신고번호 제2016-서울강남-000000호<br />
+                    contact@certon.co.kr
+                </p>
+            </li>
+            <li class="footer-customer">
+                <img class="footer-icon3" src="hycon/imgs/icon_3.png" />
+                <p class="footer-p1">CUSTOMER CENTER</p>
+                <p class="footer-p2">
+                월요일-금요일 9:30am - 16:30pm<br />
+                고객센터 0000-0000
+                </p>
+            </li>
+        </ul>
+        <div class="footer-bottom">Dashboard©company inc, 2017. All rights reserved.</div>
+    </footer>
+    
+    <div class="top" id="toTop"><i class="fa fa-angle-double-up fa-5x"></i></div>
+</body>
+</html>
+ 

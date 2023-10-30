@@ -1,0 +1,34 @@
+.xans-product-listcompare .boardWrite { table-layout:fixed; border-bottom:1px solid #e9e9e9; border-left:1px solid #e9e9e9; color:#353535; line-height:1.5; }
+.xans-product-listcompare .boardWrite th { width:116px; padding:11px 0 10px 8px; border-top:1px solid #e9e9e9; border-right:1px solid #e9e9e9; font-weight:normal; text-align:left; background:#fbfafa; }
+.xans-product-listcompare .boardWrite td { width:auto; padding:11px 12px 10px; border-top:1px solid #e9e9e9; border-right:1px solid #e9e9e9; background:#fff; word-wrap:break-word; word-break:break-all; }
+.xans-product-listcompare .boardWrite em { font-style:normal; }
+.xans-product-listcompare .boardWrite img { vertical-align:middle; }
+.xans-product-listcompare .boardWrite .prdName { font-weight:bold; color:#2e2e2e; }
+.xans-product-listcompare .boardWrite .prdPrice { color:#008bcc; }
+.xans-product-listcompare .boardWrite .prdPrice em { font-weight:bold; }
+.xans-product-listcompare .boardWrite .inputWrap { display:block; padding:0 4px; border:1px solid #d5d5d5; }
+
+.xans-product-listcompare .xans-product-productimagetiny img { max-width:129px; border:1px solid #d6d6d6; vertical-align:top; }
+.xans-product-listcompare .xans-product-productimagetiny td { padding:19px 12px 18px; text-align:center; }
+.xans-product-listcompare .xans-product-productimagetiny .thumb { display:block; margin:0 0 6px; }
+
+.xans-product-listcompare .optionName { display:block; margin:3px 0 0; }
+
+.xans-product-listcompare .quantity { display:inline-block; position:relative; width:50px; vertical-align:top; *margin:0 4px 0 0; }
+.xans-product-listcompare .quantity input { width:22px; height:23px; padding:0 2px 0 3px; line-height:23px; border:1px solid #d4d8d9; border-radius:3px 0 0 3px; *margin-top:-1px; }
+.xans-product-listcompare .quantity .up { position:absolute; left:28px; top:0; }
+.xans-product-listcompare .quantity .down { position:absolute; left:28px; top:12px; }
+
+.xans-product-listcompare .xans-product-compareoptionlist input { height:22px; border:0; line-height:22px; }
+.xans-product-listcompare .xans-product-compareoptionlist select { width:100%; margin:2px 0; white-space:nowrap; }
+.xans-product-listcompare .xans-product-compareoptionlist .inputWrap { margin:2px 0 0; }
+
+.xans-product-listcompare ul.item { margin:3px 0 0; color:#757575; }
+.xans-product-listcompare ul.item li { margin:2px 0 0; line-height:18px; }
+.xans-product-listcompare .mileage { display:block; margin:3px 0;}
+.xans-product-listcompare .description { padding:5px 0 0; color:#008bcc; }
+
+.xans-product-listcompare .btnArea { overflow:hidden; margin:20px 0; text-align:right; font-size:0; line-height:0; }
+.xans-product-listcompare .btnArea.center { text-align:center; }
+.xans-product-listcompare .btnArea img { margin:0 0 0 5px; font-size:12px; line-height:18px; cursor:pointer; }
+.xans-product-listcompare .btnArea span.left { float:left; margin:0 0 0 -5px; text-align:left; }

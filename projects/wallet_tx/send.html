@@ -1,0 +1,105 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title></title>
+<!-- GOOGLE FONTS -->
+<link href="http://fonts.googleapis.com/earlyaccess/notosanskr.css" rel="stylesheet">
+<!-- STYLE CSS -->
+<link href="css/index.css" rel="stylesheet" type="text/css">
+<link href="css/reset.css" rel="stylesheet" type="text/css">
+<!-- SCRIPT -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="scripts/main.js"></script>
+</head>
+
+<body>
+    <header class="header">
+        <div class="header_inner">
+            <ul class="gnb">
+            <li class="gnb_wallet"><a href="index.html">지갑</a></li>
+            <li class="gnb_send gnb_sel"><a href="send.html">송금</a></li>
+            <li class="gnb_contract"><a href="contract.html">컨트랙트</a></li>
+            </ul>
+            <ul class="hd_right">
+            <li>
+            <div class="flex_wrap">
+                <p class="hycon_count"><span class="hycon">0,00</span>HYCON</p>
+            </div>
+            </li>
+            <li>
+                <div class="header_net"></div>
+                <ul class="head_drop">
+                    <li>255.255.255.0</li>
+                    <li>255.255.255.0</li>
+                    <li>255.255.255.0</li>
+                    <li>255.255.255.0</li>
+                </ul>
+            </li>
+            </ul>
+        </div>
+    </header>
+    
+    <div class="wrap">
+        <section class="send_section">
+            <div class="section_head">
+                <div class="section_head_icon setion_send"></div>
+                <h1 class="section_h1">송금</h1>
+            </div>
+            <div class="send_wrap">
+                <div class="send_input_wrap">
+                    <label class="send_input_label">송신처</label>
+                    <input type="text" class="send_input">
+                </div>
+                <div class="send_input_wrap">
+                    <label class="send_input_label">수신처</label>
+                    <input type="text" class="send_input">
+                </div>
+                <div class="send_input_wrap">
+                    <label class="send_input_label">금액</label>
+                    <div>
+                        <input type="text" class="send_input">
+                        <button class="send_all_btn">모두 보내기</button>
+                    </div>
+                    <p class="send_hycon_p">보내실 금액은 <span>8000<span class="span2"> HYCON</span></span> 입니다.</p>
+                </div>
+                <div class="send_input_wrap">
+                    <div class="send_hycon_inner">
+                        <div class="send_logo"><img src="images/hycon_logo.png"></div>
+                        <div class="send_view">
+                            <p class="send_hycon">9000</p>
+                            <p class="send_coin">HYCON</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="send_wrap">
+                <div class="info_box_wrap">
+                    <div class="info_box">
+                        <span class="info_line"></span>
+                        <p class="info_p">수수료 선택</p>
+                        <div class="send_view">
+                            <p class="send_hycon">9000</p>
+                            <p class="send_coin">HYCON</p>
+                        </div>
+                        <div class="sample delete" style="width: 100%; height: 5px; background-color: #fff;"></div>
+                    </div>
+                    <div class="info_box">
+                        <span class="info_line"></span>
+                        <p class="info_p">이것은 이 트랜젝션을 처리하기 위해 사용될 최대 금액입니다. 당신의 트랜잭션은 대략 30초 이내에 블록체인에 등록될 것입니다.</p>
+                    </div>
+                </div>
+                <div class="send_commission_view">
+                    <p class="send_total_p">총</p>
+                    <p class="send_hycon">9000</p>
+                    <p class="send_coin">HYCON</p>
+                </div>
+                <div class="confirm_btn">보내기</div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
+ 

@@ -1,0 +1,18 @@
+.xans-myshop-orderoldhistorylist .title { margin:40px 0 10px 10px; }
+.xans-myshop-orderoldhistorylist .title h3 { color:#353535; font-size:12px; }
+
+.xans-myshop-orderoldhistorylist table .empty { padding:50px 0; text-align:center; font-weight:bold; color:#757575; }
+
+.xans-myshop-orderoldhistorylist table { border:1px solid #d7d5d5; color:#353535; line-height:1.5; }
+.xans-myshop-orderoldhistorylist table th { padding:11px 0 9px; border-left:1px solid #e9e9e9; font-weight:normal; vertical-align:middle; background:#fbfafa; }
+.xans-myshop-orderoldhistorylist table th:first-child { border-left:0; }
+.xans-myshop-orderoldhistorylist table td { padding:8px 0 5px; border-top:1px solid #e9e9e9; text-align:center; vertical-align:middle; }
+.xans-myshop-orderoldhistorylist table td a { color:#353535; }
+.xans-myshop-orderoldhistorylist table .number { width:125px; }
+.xans-myshop-orderoldhistorylist table .product { width:auto; }
+.xans-myshop-orderoldhistorylist table .price { width:110px; }
+.xans-myshop-orderoldhistorylist table .state { width:110px; }
+.xans-myshop-orderoldhistorylist table td .line { text-decoration:underline; }
+.xans-myshop-orderoldhistorylist table td.product { padding-left:10px; text-align:left; vertical-align:top; }
+.xans-myshop-orderoldhistorylist table td.state { color:#008bcc; }
+.xans-myshop-orderoldhistorylist table td.price { font-family:verdana,sans-serif; }

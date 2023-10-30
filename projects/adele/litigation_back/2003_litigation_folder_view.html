@@ -1,0 +1,527 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8" />
+<title></title>
+<!-- STYLE CSS -->
+<link href="css/application.css" rel="stylesheet" type="text/css">
+<link href="css/style.css" rel="stylesheet" type="text/css">
+<link href="css/reset.css" rel="stylesheet" type="text/css">
+<!-- SCRIPT -->
+<script src="scripts/jquery-3.4.1.min.js"></script>
+<script src="scripts/jquery.nice-select.min.js"></script>
+<script src="scripts/main.js"></script>
+
+
+
+
+
+<!-- SCRIPT -->
+<script src="http://test1.buptlestg.com/static/tenant/js/jquery-3.3.1.min.js"></script>
+
+<script src="http://test1.buptlestg.com/static/adele/scripts/jquery-ui.min.js"></script>
+<!--<script src="/static/adele/scripts/main.js"></script>-->
+
+<script src="http://test1.buptlestg.com/static/tenant/js/jquery-nice-select/jquery.nice-select.min.js"></script>
+<script src="http://test1.buptlestg.com/static/tenant/js/pagination/jquery.simplePagination.js?version=2020041401"></script>
+
+
+    
+    
+    
+    
+</head>
+<body>
+
+
+
+<!-- 스타일 -->
+<link rel="stylesheet" href="http://test1.buptlestg.com/static/tenant/lib/jstree/themes/default/style.min.css" />
+<style>
+
+	 #jstree_demo_div_2 .jstree-ocl { display: none !important; }
+</style>
+
+<!-- 스크립트 -->
+<script src="http://test1.buptlestg.com/static/tenant/lib/jstree/jstree.js"></script>
+
+
+
+
+<!-- ================================= header ================================= -->
+<!-- wrap -->
+<div id="wrap">
+    <!-- header -->
+    <header id="header">
+        <div class="in">
+            <!-- logo -->
+            <div class="logo"><a href="ui_guide.html"><img src='https://image.gsshop.com/ui/gsshop/pc/common/images/logo.png'></a></div>
+            <!-- gnb -->
+            <ul class="gnb">
+                <li class="active">
+                    <a href="index.html">계약관리</a>
+                    <!-- lnb -->
+                    <div class="lnb">
+                        <ul>
+                            <li class="active"><a href="index.html">전체 계약</a></li>
+                            <li><a href="index_my.html">나의 계약</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <a href="legal_advice_list.html">법률자문</a>
+                </li>
+                <li>
+                    <a href="official_note_list.html">공문 발송</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="header_notice">
+            <div class="header_notice__dynamic">
+                <div class="vertical-slider">
+                    <h2 class="vertical-slider__item">김영란법 개정으로 인해 외식 시 필독!김영란법 개정으로 인해 외식 시 필독!김영란법 개정으로 인해 외식 시 필독!김영란법 개정으로 인해 외식 시 필독!</h2>
+                    <h2 class="vertical-slider__item">법률자문 올리기 전 확인하세요.</h2>
+                    <h2 class="vertical-slider__item">가맹계약서 양식입니다.</h2>
+                </div>
+            </div>
+        </div>
+
+        <div class="in in_admin">
+            <div class="in_admin_inner">
+                <div class="number_approval">
+                    <a class="approval_on">결재건수</a>
+                    <p class="badge">7</p>
+                    <ul class="number_approval_view clearfix_ul">
+                        <li>
+                            <p class="xs_p58 elipsis">1.4분기 계약관리 시스템 교체 스템 교체 계약교체 스템 교체 계약</p>
+                            <a class="btn__f btn_xs">바로가기</a>
+                        </li>
+                        <li>
+                            <p class="xs_p58 elipsis">1.4분기 계약관리 시스템 교체 계약</p>
+                            <a class="btn__f btn_xs">바로가기</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="home">
+                    <a href="dashboard.html"></a>
+                </div>
+                <div class="hd_user_wrap">
+                    <div class="hd_user">
+                        <p class="hd_user_name">이유진님</p>
+                        <ul class="hd_user_ul">
+                            <li><a href="mypage_user_info.html">내 정보 보기</a></li>
+                            <li><a href="login.html">로그아웃</a></li>
+                        </ul>
+                    </div>
+                    <div class="hd_user_img"><img src="https://img1.daumcdn.net/thumb/R720x0.q80/?scode=mtistory&fname=http%3A%2F%2Fcfile10.uf.tistory.com%2Fimage%2F99530A3B5BE7C1803380DF"></div>
+                </div>
+            </div>
+            <!-- header_sub -->
+            <div class="header_sub">
+                <ul class="gnb_admin">
+                    <li><a href="notice.html">공지사항</a></li>
+                    <li><a href="group_list.html">그룹 관리자</a></li>
+                    <li>
+                        <a href="admin_workflow_list.html">관리자</a>
+                        <!-- lnb -->
+                        <div class="lnb">
+                            <ul class="lnb_admin">
+                                <li class="active"><a href="admin_workflow_list.html">워크플로우</a></li>
+                                <li><a href="admin_template_list.html">템플릿 관리</a></li>
+                                <li><a href="admin_user.html">유저 관리</a></li>
+                                <li><a href="admin_notify.html">공지사항 관리</a></li>
+                                <li><a href="admin_contract_counterpart.html">외부업체관리</a></li>
+                                <li><a href="admin_group.html">그룹</a></li>
+                                <li><a href="admin_tag.html">TAG</a></li>
+                                <li><a href="admin_company_info.html">회사 정보</a></li>
+                                <li><a href="admin_digital_seal.html">디지털 직인 관리</a></li>
+                                <li><a href="admin_legal_setting.html">법률 자문</a></li>
+                                <li><a href="admin_official_note.html">공문 발송</a></li>
+                                <li><a href="admin_label.html">라벨</a></li>
+                                <li><a href="admin_empowerment.html">권한 위임</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <!-- //header_sub -->
+        </div>
+    </header>
+    <!-- //header -->
+    <!-- ================================= //header ================================= -->
+
+    <!-- ================================= content ================================= -->
+    
+
+    <!-- content -->
+    <div class="content snb2_content">
+        
+        <!-- snb2_wrap -->
+        <div class="snb2_wrap">
+            <ul class="snb2">
+              <li class="snb2_item"><a href="2003_litigation_home.html" class="sub2_item_a">HOME</a></li>
+              <li class="snb2_item"><a href="2003_litigation_schedule.html" class="sub2_item_a">주요일정</a></li>
+              <li class="snb2_item"><a href="2003_litigation_document.html" class="sub2_item_a active">문서관리</a></li>
+              <li class="snb2_item"><a href="2003_litigation_note.html" class="sub2_item_a">노트</a></li>
+              <li class="snb2_item"><a href="#" class="sub2_item_a">관련업무</a></li>
+              <li class="snb2_item"><a href="2003_litigation_address.html" class="sub2_item_a">연락처</a></li>
+              <li class="snb2_item"><a href="#" class="sub2_item_a">판결문</a></li>
+              <li class="snb2_item"><a href="2003_list.html" class="sub2_item_a">2003 리스트</a></li>
+            </ul>
+        </div>
+        <!-- //snb2_wrap -->
+       
+        <!-- section__litigation -->
+        <section class="section litigation_note card">
+        
+            <!-- litigation_doc_table -->
+            <div class="litigation_doc_table clearfix">
+                <!-- litigation_doc_ctg -->
+                <div class="litigation_doc_ctg edit_zone">
+                    <div class="pad20">
+                        <a href="#" class="btn__b btn_w">+ 새 문서 등록하기</a>
+                    </div>
+
+                    <!-- litigation_doc_ctg_area -->
+                    <div class="litigation_doc_ctg_area">
+                        <!-- jstree_demo_div_1 -->
+                        <div id="jstree_demo_div_1">
+                            <ul>
+                                <li>폴더1
+                                    <ul>
+                                        <li>폴더2
+                                            <ul>
+                                                <li>폴더2
+                                                    <ul>
+                                                        <li>폴더2</li>
+                                                        <li><a>폴더3폴더3폴더3폴더3폴더3폴더3폴더3폴더3 폴더3폴더3폴더3폴더3폴더3폴더3폴더3폴더3</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li><a>폴더3</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a>폴더3</a></li>
+                                    </ul>
+                                </li>
+                                <li>폴더4</li>
+                            </ul>
+                        </div>
+                        <!-- //jstree_demo_div_1 -->
+                    </div>
+                    <!-- //litigation_doc_ctg_area --> 
+
+
+                    <!-- ==================== edit 메뉴 ==================== -->
+                    <!-- edit_menu -->
+                    <div class="edit_menu edit_menu2 edit_fixed">
+                        <ul class="edit_menu_ul">
+                            <li class="edit_item"><a href="#">Add Folder</a></li>
+                            <li class="edit_item"><a href="#">Download</a></li>
+                            <li class="edit_item"><a href="#">Rename</a></li>
+                            <li class="edit_item"><a href="#">Copy</a></li>
+                            <li class="edit_item"><a href="#">Paste</a></li>
+                            <li class="edit_item"><a href="#">Delete</a></li>
+                            <li class="edit_item bor_top"><a href="#">File Upload</a></li>
+                        </ul>
+                    </div>
+                    <!-- //edit_menu -->
+                    <script>
+                        $(document).ready(function(){
+                            // Edit On: 우클릭 시
+                            $(document).on('contextmenu', '.edit_zone', function() {
+                                event.preventDefault();
+                                $(".edit_fixed").removeClass("active");
+                                $(this).children(".edit_fixed").addClass("active");
+                                $(this).children(".edit_fixed").css("left", event.clientX);
+                                $(this).children(".edit_fixed").css("top", event.clientY);
+                            });
+                            // Edit Off: edit_fixed 이외 영역 클릭 시
+                            $(document).click(function(e){
+                                if (!$('.edit_fixed').is(e.target) && $('.edit_fixed').has(e.target).length === 0){
+                                    $('.edit_fixed').removeClass('active');
+                                }
+                            });
+                        });
+                    </script>
+                </div>
+                <!-- //litigation_doc_ctg -->
+                
+                
+                <!-- litigation_doc_list -->
+                <div class="litigation_doc_list">
+                    <!-- section_head2 -->
+                    <div class="section_head2">
+                        <h1 class="section_h1">소송제목</h1>
+                        <h2 class="section_h2">온라인 쇼핑몰 G사에 개인정보 유출 관련 소송 (이문식 과장)</h2>
+                        <div class="input_search" style="margin: 15px 0 20px;">
+                            <div class="icon_search"></div>
+                            <input type="text" class="input">
+                        </div>
+                    </div>
+                    <!-- //section_head2 -->
+                    
+                    <!-- litigation_doc_list_wrap -->
+                    <div class="litigation_doc_list_wrap edit_zone">
+
+                        <!-- jstree_demo_div_2 -->
+                        <div id="jstree_demo_div_2">
+                            <ul>
+                                <li>폴더5
+                                    <ul>
+                                        <li data-jstree='{"type": "file"}'>
+                                            <div class="ltg_related_data_item">
+                                                <div class="clearfix">
+                                                    <p class="fl sm_p">보안시스템 유출 원인 파악</p>
+                                                    <p class="fr sm_p">생성자 : 박효신</p>
+                                                </div>
+                                                <div class="clearfix">
+                                                    <p class="fl xs_p58">생성일/마지막수정일 160103/160104</p>
+                                                    <p class="fr sm_p">연결정보 : 사내회의13/12/01</p>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li data-jstree='{"type": "file"}'>
+                                    <div class="ltg_related_data_item">
+                                        <div class="clearfix">
+                                            <p class="fl sm_p">보안시스템 유출 원인 파악</p>
+                                            <p class="fr sm_p">생성자 : 박효신</p>
+                                        </div>
+                                        <div class="clearfix">
+                                            <p class="fl xs_p58">생성일/마지막수정일 160103/160104</p>
+                                            <p class="fr sm_p">연결정보 : 사내회의13/12/01</p>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- //jstree_demo_div_2 -->
+
+                        <!-- ==================== edit 메뉴 ==================== -->
+                        <!-- edit_menu -->
+                        <div class="edit_menu edit_menu2 edit_fixed">
+                            <ul class="edit_menu_ul">
+                                <li class="edit_item"><a href="#">Download</a></li>
+                                <li class="edit_item"><a href="#">Rename</a></li>
+                                <li class="edit_item"><a href="#">Copy</a></li>
+                                <li class="edit_item"><a href="#">Paste</a></li>
+                                <li class="edit_item"><a href="#">Delete</a></li>
+                                <li class="edit_item"><a href="#">Get Link</a></li>
+                                <li class="edit_item"><a href="#">File Upload</a></li>
+                            </ul>
+                        </div>
+                        <!-- //edit_menu -->
+                        
+                    </div>
+                    <!-- //litigation_doc_list_wrap -->
+                </div>
+                <!-- //litigation_doc_list -->
+            </div>
+            <!-- //litigation_note_table -->
+
+        </section>
+        <!-- //section__litigation -->
+    </div>
+    <!-- //content -->
+
+    <!-- ================================= //content ================================= -->
+    
+</div>
+<!-- //wrap -->
+<!-- footer -->
+<footer id="footer"></footer>
+<!-- //footer -->
+
+
+
+<script>
+
+	var L_TREE_ID = 'jstree_demo_div_1';
+	var R_TREE_ID = 'jstree_demo_div_2';
+
+	/**
+	 * FOLDER_VIEW_UTILS 작성 중.
+	 **/
+	var FOLDER_VIEW_UTILS = {
+	  get_node_by_id : function(tree_id, node_id){
+	    return $('#' + tree_id).jstree(true).get_node(node_id);
+	  },
+	  get_node_by_data_ref : function(data_reference){
+	    return this.get_tree_ref_by_data_ref(data_reference).get_node(data_reference);
+	  },
+	  is_file_type : function(node){
+	    return 'FILE'===node.type.toUpperCase();
+	  },
+	  get_parent_id : function(node){
+	    return node.parent;
+	  },
+	  get_tree_id_by_node : function(node){
+	    return $.jstree.reference(node).element[0].id
+	  },
+	  get_tree_ref_by_data_ref : function(data_reference){
+	    return $.jstree.reference(data_reference);
+	  }
+	};
+
+
+    var tree_core = {
+        "themes" : { "stripes" : false },
+        'check_callback' : function (operation, node, node_parent, node_position, more) {
+            // operation can be 'create_node', 'rename_node', 'delete_node', 'move_node', 'copy_node' or 'edit'
+            // in case of 'rename_node' node_position is filled with the new node name
+            //return operation === 'rename_node' ? true : false;
+            console.log("== [check_callback] ===========================");
+            console.log(operation);
+            console.log(node);
+            console.log(node_parent);
+            console.log(node_position);
+            console.log(more);
+            return true;
+        }
+    };
+
+    var tree_types = {
+      'file' : {
+        'icon': 'jstree-icon jstree-file',
+        'valid_children' : []
+      }
+    };
+
+
+	var _UT = FOLDER_VIEW_UTILS;
+	/**
+	 * Add Folder
+	 * Download
+	 * Rename
+	 * Copy
+	 * Paste
+	 * Delete
+	 * File Upload
+	 * */
+    var context_menu = {
+        "items": function () {
+            return {
+                "Create": {
+                    "label": "Add Folder",
+                    "action": function (data) {
+                      /** 우측폴더는 파일이냐 폴더냐에 따라서. 폴더가 생기는 타겟이 달라야 하기 때문에. 부모키를 항상 가져와야 한다. */
+                      var node = _UT.get_node_by_data_ref(data.reference);
+
+                      var target_id = node.id
+                      if(_UT.is_file_type(node)){
+                        //파일에서는 자기 부모를 가져와야 한다. 파일 하위에 폴더를 만들면 안되기 때문.
+                        target_id = node.parent;
+                      }
+
+                      var tree_inst = _UT.get_tree_ref_by_data_ref(data.reference);
+	                  var new_node = tree_inst.create_node(target_id, {"text":"새폴더","type":"folder"});
+	                  if(new_node) {
+	                    tree_inst.edit(new_node);
+	                  }
+                    }
+                },
+                "Download": {
+                    "label": "Download",
+                    "action": function (data) {
+                        alert('다운로드 기능 연결 중.');
+                    }
+                },
+                "Rename": {
+                    "label": "Rename",
+                    "action": function (data) {
+                      var tree_inst = _UT.get_tree_ref_by_data_ref(data.reference);
+                      var node = _UT.get_node_by_data_ref(data.reference);
+                      tree_inst.edit(node);
+                    }
+                },
+                "copy" : {
+					"separator_before"	: true,
+					"icon"				: false,
+					"separator_after"	: false,
+					"label"				: "Copy",
+					"action"			: function (data) {
+						var inst = $.jstree.reference(data.reference),
+							obj = inst.get_node(data.reference);
+						if(inst.is_selected(obj)) {
+							inst.copy(inst.get_top_selected());
+						}
+						else {
+							inst.copy(obj);
+						}
+					}
+				},
+				"paste" : {
+					"separator_before"	: false,
+					"icon"				: false,
+					"_disabled"			: function (data) {
+						return !$.jstree.reference(data.reference).can_paste();
+					},
+					"separator_after"	: true,
+					"label"				: "Paste",
+					"action"			: function (data) {
+						var inst = $.jstree.reference(data.reference),
+							obj = inst.get_node(data.reference);
+						inst.paste(obj);
+					}
+				},
+
+                "Delete": {
+                    "label": "Delete",
+                    "action": function (data) {
+                        var inst = $.jstree.reference(data.reference),
+							obj = inst.get_node(data.reference);
+						if(inst.is_selected(obj)) {
+							inst.delete_node(inst.get_selected());
+						}
+						else {
+							inst.delete_node(obj);
+						}
+                    }
+                }
+            };
+        }
+    };
+
+    var tree_opts_1 = {'core' : tree_core, 'types' : tree_types, "contextmenu" :context_menu, "state" : { "key" : L_TREE_ID },
+      "plugins":["dnd","contextmenu", "types", "state", "wholerow"]};
+    var tree_opts_2 = {'core' : tree_core, 'types' : tree_types, "contextmenu" :context_menu, "state" : { "key" : R_TREE_ID }, "checkbox" : {'keep_selected_style':false},
+      "plugins":["checkbox", "dnd","contextmenu", "types", "state", "wholerow"]};
+
+    var L_TREE = null;
+    var R_TREE = null;
+	$(document).ready(function(){
+
+	  L_TREE = $('#'+L_TREE_ID).jstree(tree_opts_1);
+	  R_TREE = $('#'+R_TREE_ID).jstree(tree_opts_2);
+
+	  $('#'+R_TREE_ID).on('open_node.jstree', function (e, data) {
+	    data.instance.close_node(data.node); //open 막음
+	    console.log('======= 폴더 진입으로 이동 =======');
+	    alert('======= 폴더 진입으로 이동 =======');
+	  });
+
+	});// end of ready
+
+	$('#'+L_TREE_ID).on("changed.jstree", function (e, data) {
+	  console.log(e);
+	  console.log(data);
+	  console.log(data.selected);
+	});
+
+	$('#'+R_TREE_ID).on("changed.jstree", function (e, data) {
+	  console.log(e);
+	  console.log(data);
+	  console.log(data.selected);
+	});
+
+
+
+
+</script>
+
+
+</body>
+</html>
+ 

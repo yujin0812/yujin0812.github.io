@@ -1,0 +1,14 @@
+.xans-board-read-11 { margin:0 0 20px; }
+.xans-board-read-11 table { table-layout:fixed; border:1px solid #d7d5d5; color:#353535; line-height:180%; }
+.xans-board-read-11 table th { width:110px; padding:10px 0 8px 20px; border-top:1px solid #e8e8e8; border-right:1px solid #e8e8e8; background-color:#fbfafa; text-align:left; font-weight:normal; }
+.xans-board-read-11 table td { width:auto; padding:10px 0 8px 10px; border-top:1px solid #e8e8e8; }
+.xans-board-read-11 table tr:first-child th,
+.xans-board-read-11 table tr:first-child td{ border-top:none; }
+
+.xans-board-read-11 table td img { vertical-align:middle; }
+.xans-board-read-11 table td.subject { word-break:break-all; }
+.xans-board-read-11 table tr.view td { padding:20px; }
+.xans-board-read-11 table tr.view ol,
+.xans-board-read-11 table tr.view ul { margin:15px 0; padding:0 0 0 40px; }
+.xans-board-read-11 table tr.view ol li { list-style:decimal; }
+.xans-board-read-11 table tr.view ul li { list-style:disc; }

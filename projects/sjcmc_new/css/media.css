@@ -1,0 +1,243 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+
+
+/*                새로운 css 적용               */
+
+@media (max-width: 999px) {
+    header { height: auto; overflow: hidden; }
+    .header-logo-wrap { float: none; }
+    .header-logo { width: 60px; margin: auto; margin-top: 20px;  }
+    .header-login { display: none; }
+    .gnb-wrap { position: relative; width: 60%; left: 0; margin: auto; margin-top: 20px;   }
+    .gnb { margin: 0; width: 25%; height: 50px; font-size: 13px; text-align: center; line-height: 50px; }
+    .gnb:last-child { display: none; }
+    .minheader-ham { display: block; }
+    .login-section { padding: 0 15px; }
+	.brand-video { padding-top: 47%; }
+	.brand-video-text { height: 120px; margin-top: -60px; }
+	.section-h1 { font-size: 30px; }
+	.brand03-wrap { margin-top: 120px; }
+	.brand03-what { width: 46%; }
+	.brand03-what.right { padding: 0 4%; }
+	.brand03-p1 { font-size: 16px; }
+    .main-h1 { font-size: 25px; }
+    .main-p { margin-bottom: 15px; font-size: 20px; }
+    .section-h1 { font-size: 20px; }
+    
+    .index-shop { padding: 70px 0 70px 0; }
+    /* 브랜드02 */
+    .brand02 {  padding: 70px 0 70px 0;  }
+    .brand02 .txt01 { margin-top: 40px; margin-bottom: 0px; font-size: 14px; }
+    .brand02 .txt02 { margin-top: 25px; font-size: 20px; }
+    .brand02 .txt03 { margin-top: 20px; font-size: 14px; }
+
+    /* 브랜드03 */
+    .brand03 { padding: 80px 0 0 0; }
+	.h1-bottom { width: 30px; height: 3px; margin-top: 15px; }
+    .brand03 .txt01 { margin-top: 30px; font-size: 20px; }
+    .brand03 .txt02 { margin-top: 20px; font-size: 15px; }
+    .brand03 .txt03 { margin-top: 15px; font-size: 15px; }
+    .brand03-wrap { margin-top: 60px; }
+	.brand-video { padding-top: 60.7%; margin-top: 70px; background-image: url(../images/brand_01_s.jpg); }
+
+	.brand03box { padding-left: 25px; margin-top: 15px; border-left: 1px solid #bbb; }
+	.brand03box.box2 { border-left: 0; }
+	.brand03-p2 { font-size: 14px; line-height: 20px; }
+	.brand03-p3 { margin-top: 15px; font-size: 12px; }
+	
+	.video-title { font-size: 20px; margin-bottom: 20px; }
+	.brand-box { width: 160px; height: 50px; font-size: 14px; line-height: 50px; }
+    .process01 { padding: 100px 0 40px 0; }
+    .process-tview-wrap { margin-top: 80px; }
+    .process-h1 { font-size: 30px; }
+    .process-p1 { font-size: 14px; }
+    .h1-top { width: 38px; height: 3px; margin-bottom: 10px; }
+    .ps-tab { margin-right: 5%; }
+    .ps-wrap { padding-top: 26%; }
+    .ps-h1 { font-size: 15px; }
+    .process-tview { padding: 0 5%; font-size: 13px; margin-top: 60px; }
+    
+    .process02 { padding: 80px 0 80px 0; }
+    .detail-wrap { margin-top: 60px; }
+    .detail { width: 28.33%; margin: 0 2.5%; margin-bottom: 20px; }
+    .detail-p1 { margin-top: 14px; padding-bottom: 16px; margin-bottom: 14px; font-size: 14px; }
+    .detail-text { font-size: 12px; padding-top: 45%; }
+    
+    .brand05 { padding-top: 85%; }
+    .brand-map { padding-top: 34%; }
+    
+    .h1-top2 { width: 30px; height: 4px; margin-bottom: 6px; }
+    .shop { padding: 70px 0 70px 0; }
+    .shop-tab { margin-top: 35px; }
+    .shop-p { font-size: 20px; }
+    .sp-h1 { font-size: 16px; }
+    .shop-img { padding: 0 8%; }
+    .shop-map { padding-top: 45%; margin-top: 50px; }
+    
+    .total { margin-top: 25px; }
+    .brand04 { padding: 70px 0 70px 0; }
+    .b-tab { font-size: 16px; }
+    .brand-tab-wrap { margin-top: 40px; }
+    .brand-tview { margin-top: 60px; }
+    .process03 { padding: 70px 0 70px 0; }
+    .process03-wrap { margin-top: 40px; }
+    
+    
+    .board-section { padding: 0 15px; }
+    .notice { margin: 40px 0 30px 0; }
+    .notice-h1 { font-size: 20px; }
+    .section-category { margin-top: 35px; }
+    .category li { height: 40px; font-size: 12px; line-height: 40px; }
+    .board-none { height: 48px; line-height: 50px; font-size: 12px; }
+    .board-box { height: 48px; line-height: 50px; font-size: 12px; }
+    .write-btn a { width: 70px; height: 40px; margin-top: 20px; font-size: 12px; line-height: 40px; }
+    
+    .board-search { height: 35px; margin-right: 63px; }
+    .input-search { height: 35px; }
+    .search-btn { width: 55px; height: 37px; line-height: 37px; font-size: 12px; }
+    
+    
+    .product-nav {  padding: 30px 0 25px 0; background-color: #000; }
+    .pd-top { width: 26px; height: 4px; margin-bottom: 10px; }
+    .pd-category { font-size: 14px; }
+    
+/* -------------------------------- faq 아코디언-------------------------------- */
+
+
+.faq-product {  /* faq 카테고리 부분 */
+    height: auto;
+    overflow: hidden;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.faq-p { font-size: 14px; }
+.faq-category-wrap {  margin-top: 30px; }
+.faq-category { width: 25%;  font-size: 12px; }
+.faq-category.etc {  width: 25%; }
+.faq-category-sel {
+    color: #000;
+}
+.faq-top { width: 26px; height: 5px; margin-bottom: 10px; }
+.faq-exp { height: auto; overflow: hidden; padding: 20px 0; padding-left: 5.5%; line-height: normal; font-size: 12px; }
+.faq-wrap { margin-bottom: 70px; }
+.faq-write-section { padding: 5% 0; padding-left: 5.5%; line-height: 15px; font-size: 12px; }
+
+    .login-wrap { width: 305px; }
+    .login-title { font-size: 25px; }
+    .join-table { width: 100%; }
+    .join-th { font-size: 13px; }
+    .join-td { font-size: 13px; }
+    .login-find a { font-size: 12px; }
+    .join-btn a { width:  90px; height: 50px; line-height: 50px; font-size: 13px; }
+
+    /*회원가입 버튼, 찾기 페이지 공통사용*/
+    .joinpage-btn a { margin-top: 25px; font-size: 13px; }
+    .check-btn { font-size: 13px; }
+    
+    
+    
+    .ps-tab-sel { opacity: 1; }
+    .ps-tview-sel { display: block; }
+}
+@media (max-width: 640px) {
+    
+    .gnb-wrap { position: relative; width: 100%; left: 0; margin-left: 0; margin-top: 20px;   }
+    .brand05 { padding-top: 100%; }
+    .brand-map { padding-top: 38%; }
+    .process01 { padding: 80px 0 20px 0; }
+    .process-tview-wrap { margin-top: 50px; background-size: 75%; padding-bottom: 48%; }
+    .process-tview { margin-top: 50px; }
+    .process03-video { float: none; width: 97%; padding-top: 53%; margin: 0 1.5%; margin-bottom: 30px; }
+    .ps-wrap { width: 33.3%; padding-top: 40%; }
+    .ps-circle-3 { display: block; }
+    .detail-text { padding-top: 72%; }
+    .board-box .num { width: 50px; }
+    .board-box .subject { margin-left: 0; }
+    .board-box .date { width: 100px; }
+    .input-search { width: 100%; }
+    
+    .shop { padding: 60px 0 60px 0; }
+    .shop2 { margin-top: 40px; margin-bottom: 0px;}
+    .total { margin-top: 15px; }
+    .total-text { padding: 10px 0; margin-top: 5px; font-size: 12px; line-height: 15px; }
+    
+    
+
+    /* ---------------------------- 로그인 ---------------------------- */
+    .login-section { margin-top: 20px; }
+    .join-title { font-size: 30px; margin-top: 40px; margin-bottom: 0px; line-height: 40px; }
+    .login-text { margin-top: 60px; margin-bottom: 60px; }
+    /*로그인-인풋*/
+    .input-login { width: 100%; font-size: 18px; }
+
+    /* 아이디 비밀번호 찾기 */
+    .login-find { width: 100%; margin-top: 15px; }
+    .login-find a { height: 50px; line-height: 50px; }
+
+    /* 아직 회원이 아니신가요 */
+    .join-p { margin-top: 50px; margin-bottom: 20px; }
+
+    /* ---------------------------- 회원가입 ---------------------------- */
+
+    .find-title {
+        margin-top: 95px;
+        margin-bottom: 60px;
+        font-size: 40px;
+    }
+    .join-table { width: 100%; margin-top: 40px; }
+    .join-th { width: 26%; padding: 6px 0; padding-right: 5px; }
+
+    /* 회원가입 아이디 중복확인 */
+    .join-id { margin-right: 90px; }
+    .check-btn { position: absolute; top: 10px; right: 0; height: 40px; line-height: 40px; }
+
+    /*find id,pw 테이블 css 추가*/
+    .join-th.th02 { height: 50px; }
+    .join-table2 { margin-top: 60px; margin-bottom: 45px; }
+    .join-table2 td { height: 30px; }
+
+    /*input */
+    .input-join { width: 100%; height: 40px; }
+    .join-number { width: 28%; height: 40px; }
+    .phone-bar { float: left; width: 8%; margin: 0px; font-size: 14px; line-height: 40px; text-align: center; }
+    .join-mail { width: 46%; height: 40px; }
+    .accordion-email { width: 100%; height: 40px; margin-top: 15px; margin-left: 0px; background-position: 96% 50%; }
+
+    /*회원가입 테이블의 width값 조정*/
+    .join-box { width: 100%; height: 40px; }
+    
+    
+    .ps-tab-sel { opacity: 1; }
+    .ps-tview-sel { display: block; }
+    
+    
+    
+/*----------------------------------------footer-----------------------------------------*/
+    footer { padding: 25px 0 20px 0; }
+    .footersns { font-size: 13px; line-height: 10px; }
+    .footer-text { margin-top: 22px; }
+    .footer-text p {  font-size: 12px; }
+    .footer-copyright { font-size: 12px; }
+
+}
+    
+@media (max-width: 420px) {
+    .detail { width: 45%; }
+    .detail-text { padding-top: 90%; } 
+    .board-search { float: left; width: 94%; padding: 0 2%; }
+    .ps-wrap { padding-top: 58%; }
+    
+    
+    .ps-tab-sel { opacity: 1; }
+    .ps-tview-sel { display: block; }
+    
+    .brand-main-text { top: 15%; }
+    .pd-category { font-size: 12px; }
+    .pd-category { width: 21%; margin: 0 2%; }
+    .faq-category { width: 24%;  font-size: 12px; margin-right: 5%; }
+    .faq-category.etc { width: 18%; margin-right: 0; }
+    .faq-category.etc1 { width: 21%; margin-right: 0; }
+}

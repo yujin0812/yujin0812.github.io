@@ -1,0 +1,893 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title></title>
+<!-- STYLE CSS -->
+<link href="css/reset.css" rel="stylesheet" type="text/css">
+<link href="css/application.css" rel="stylesheet" type="text/css">
+<link href="css/main.css" rel="stylesheet" type="text/css">
+<!--<link href="css/style.css" rel="stylesheet" type="text/css">-->
+<!-- SCRIPT -->
+<script src="scripts/jquery-3.4.1.min.js"></script>
+<script src="scripts/jquery.nice-select.min.js"></script>
+<script src="scripts/main.js"></script>
+</head>
+<body>
+<!-- wrap -->
+<div id="wrap">
+    <!-- header -->
+    <header id="header">
+        <div class="section clearfix">
+            <!-- logo -->
+            <a class="logo" href="index.html"><img src="http://www.legalinsight.kr/_img/comn/logo_marshmallow.png" alt="마시멜로로고"></a>
+            <div class="header_menu">
+                <!-- gnb -->
+                <ul class="gnb">
+                    <li class="active"><a href="index.html">marshmallaw</a></li>
+                    <li><a href="how.html">HOW</a></li>
+                    <li><a href="notice.html">NOTICE</a></li>
+                    <li><a href="news.html">NEWS</a></li>
+                    <li><a href="qna.html">Q&amp;A</a></li>
+                    <!-- login -->
+                    <li><a href="mypage.html">MYPAGE</a></li>
+                </ul>
+                <!-- login display: none -->
+                <a class="btn__hd_menu">Login</a>
+            </div>
+            <div class="ham"><div class="ham_line"></div></div>
+        </div>
+    </header>
+    <!-- //header -->
+    
+    <!-- content -->
+    <div class="content">
+        <section class="section section1">
+            <h1 class="h1">계약서 작성</h1>
+            <h2 class="h2">세부내용 입력</h2>
+            <div class="content_area">
+                <div class="tab_wrap step_wrap">
+                    <ul class="tabs step_hd">
+                        <li class="tab">
+                            <p class="txt01 b">STEP 01</p>
+                            <p class="txt01">범죄유형 선택</p>
+                        </li>
+                        <li class="tab active">
+                            <p class="txt01 b">STEP 02</p>
+                            <p class="txt01">인정정보 입력</p>
+                        </li>
+                        <li class="tab">
+                            <p class="txt01 b">STEP 03</p>
+                            <p class="txt01">세부 피해사실 입력</p>
+                        </li>
+                        <li class="tab">
+                            <p class="txt01 b">STEP 04</p>
+                            <p class="txt01">신청내용 확인</p>
+                        </li>
+                        <li class="tab">
+                            <p class="txt01 b">STEP 05</p>
+                            <p class="txt01">프리뷰</p>
+                        </li>
+                    </ul>
+                    <ul class="tviews step_content">
+                        <!-- tview1 -->
+                        <li class="tview">
+                        </li>
+                        
+                        <!-- tview2 -->
+                        <li class="tview active">
+                            <!-- 인정정보 입력 -->
+                            <!-- cont_box -->
+                            <div class="cont_box">
+                                <ul class="clearfix_itm mar_r_last">
+                                    <li class="circle_num_itm active">1</li>
+                                    <li class="circle_num_itm">2</li>
+                                </ul>
+                                <!-- toggle_wrap -->
+                                <div class="toggle_wrap mar_top40">
+                                    <div class="toggle_hd active">
+                                        <p class="txt01">1. 인정정보 입력</p>
+                                        <p class="txt03 mar_top6">* 표시한 사항만 입력하셔도 작성이 가능합니다.</p>
+                                    </div>
+                                    <div class="toggle_cont clearfix_15 block mar_top10 mar_btm40">
+                                        <!-- dvs__2 -->
+                                        <div class="dvs__2">
+                                            <label class="b">투자자(갑) 정보 입력</label>
+                                            <ul class="form_ul clearfix_ul">
+                                                <li>
+                                                    <div class="li_hd">유형*</div>
+                                                    <div class="li_cont txt_s">
+                                                        <div class="dis_inb mar6" style="margin-right: 28px;">
+                                                            <input type="radio" id="">
+                                                            <label for="">법인</label>
+                                                        </div>
+                                                        <div class="dis_inb mar6">
+                                                            <input type="radio" id="">
+                                                            <label for="">개인</label>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="li_hd">상호*</div>
+                                                    <div class="li_cont">
+                                                        <input type="text" class="input_s" placeholder="*비고:사업자등록(법인등록증)의 상호 기재">
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="li_hd">주소</div>
+                                                    <div class="li_cont">
+                                                        <!-- 주석 form_wrap에 class 추가: form_adr -->
+                                                        <div class="form_wrap form_adr">
+                                                            <input type="text" class="input_s form_itm w03" disabled>
+                                                            <div class="btn__f xs">우편번호 검색</div>
+                                                        </div>
+                                                        <input type="text" class="form_wrap input_s" placeholder="기본주소" disabled>
+                                                        <input type="text" class="form_wrap input_s" placeholder="상세주소" disabled>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="li_hd">연락처</div>
+                                                    <div class="li_cont form_tilde_wrap">
+                                                        <input type="text" class="dvs__3 input_s">
+                                                        <div class="tilde_itm">-</div>
+                                                        <input type="text" class="dvs__3 input_s">
+                                                        <div class="tilde_itm">-</div>
+                                                        <input type="text" class="dvs__3 input_s">
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="li_hd">Fax</div>
+                                                    <div class="li_cont form_tilde_wrap">
+                                                        <input type="text" class="dvs__3 input_s">
+                                                        <div class="tilde_itm">-</div>
+                                                        <input type="text" class="dvs__3 input_s">
+                                                        <div class="tilde_itm">-</div>
+                                                        <input type="text" class="dvs__3 input_s">
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="li_hd">이메일</div>
+                                                    <div class="li_cont form_tilde_wrap">
+                                                        <input type="text" class="dvs__2 input_s">
+                                                        <div class="tilde_itm">@</div>
+                                                        <input type="text" class="dvs__2 input_s">
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="li_hd">대표자*</div>
+                                                    <div class="li_cont">
+                                                        <input type="text" class="input_s">
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <!-- //dvs__2 -->
+
+                                        <!-- dvs__2 -->
+                                        <div class="dvs__2">
+                                            <label class="b">발행회사(을) 정보입력</label>
+                                            <ul class="form_ul clearfix_ul">
+                                                <li>
+                                                    <div class="li_hd">유형*</div>
+                                                    <div class="li_cont txt_s">
+                                                        <div class="dis_inb mar6" style="margin-right: 28px;">
+                                                            <input type="radio" id="">
+                                                            <label for="">법인</label>
+                                                        </div>
+                                                        <div class="dis_inb mar6">
+                                                            <input type="radio" id="">
+                                                            <label for="">개인</label>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="li_hd">상호*</div>
+                                                    <div class="li_cont">
+                                                        <input type="text" class="input_s" placeholder="*비고:사업자등록(법인등록증)의 상호 기재">
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="li_hd">주소</div>
+                                                    <div class="li_cont">
+                                                        <!-- 주석 form_wrap에 class 추가: form_adr -->
+                                                        <div class="form_wrap form_adr">
+                                                            <input type="text" class="input_s form_itm w03" disabled>
+                                                            <div class="btn__f xs">우편번호 검색</div>
+                                                        </div>
+                                                        <input type="text" class="form_wrap input_s" placeholder="기본주소" disabled>
+                                                        <input type="text" class="form_wrap input_s" placeholder="상세주소" disabled>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="li_hd">연락처</div>
+                                                    <div class="li_cont form_tilde_wrap">
+                                                        <input type="text" class="dvs__3 input_s">
+                                                        <div class="tilde_itm">-</div>
+                                                        <input type="text" class="dvs__3 input_s">
+                                                        <div class="tilde_itm">-</div>
+                                                        <input type="text" class="dvs__3 input_s">
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="li_hd">Fax</div>
+                                                    <div class="li_cont form_tilde_wrap">
+                                                        <input type="text" class="dvs__3 input_s">
+                                                        <div class="tilde_itm">-</div>
+                                                        <input type="text" class="dvs__3 input_s">
+                                                        <div class="tilde_itm">-</div>
+                                                        <input type="text" class="dvs__3 input_s">
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="li_hd">이메일</div>
+                                                    <div class="li_cont form_tilde_wrap">
+                                                        <input type="text" class="dvs__2 input_s">
+                                                        <div class="tilde_itm">@</div>
+                                                        <input type="text" class="dvs__2 input_s">
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="li_hd">대표자*</div>
+                                                    <div class="li_cont">
+                                                        <input type="text" class="input_s">
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <!-- //dvs__2 -->
+                                    </div>
+                                </div>
+                                <!-- //toggle_wrap -->
+
+                                <!-- toggle_wrap -->
+                                <div class="toggle_wrap">
+                                    <div class="toggle_hd active">
+                                        <p class="txt01">2. 상세정보 입력</p>
+                                    </div>
+                                    <div class="toggle_cont block">
+                                        <label class="b">전환상환우선주 인수계약서</label>
+                                        
+                                        <!-- form_ul -->
+                                        <ul class="form_ul clearfix_ul txt_s">
+                                            <li>
+                                                <label class="mar_btm_s">1. 이 계약의 이해관계인(대주주 또는 대표이사 등)을 추가합니다.</label>
+                                                <div class="form_wrap">
+                                                    <div class="btn__f xs min">이해관계인 추가</div>
+                                                    <ul class="w06 mar_top mar_btm_li">
+                                                        <li class="clearfix_r15">
+                                                            <div class="dvs__3">
+                                                                <label class="txt_g2 lh26">이름</label>
+                                                                <input type="text" class="input_s">
+                                                            </div>
+                                                            <div class="dvs__3">
+                                                                <label class="txt_g2 lh26">생년월일</label>
+                                                                <input type="text" class="input_s">
+                                                            </div>
+                                                            <div class="dvs__3">
+                                                                <label class="txt_g2 lh26">연락처</label>
+                                                                <input type="text" class="input_s">
+                                                            </div>
+                                                        </li>
+                                                    </ul>
+                                                    <div class="mar_top">
+                                                        <!-- 주석 class 추가: form_adr_line -->
+                                                        <div class="form_wrap">
+                                                            <!-- 주석 요소 추가: dis_inb form_adr -->
+                                                            <div class="dis_inb form_adr">
+                                                                <!-- 주석 class 변경: w05 -> w03 -->
+                                                                <input type="text" class="input_s w03" disabled>
+                                                                <div class="btn__f xs">우편번호 검색</div>
+                                                            </div>
+                                                            <!-- 주석 요소 추가: dis_inb form_adr2 -->
+                                                            <div class="dis_inb form_adr2">
+                                                                <input type="text" class="input_s w05 mar_6" placeholder="기본주소" disabled>
+                                                                <input type="text" class="input_s w05" placeholder="상세주소" disabled>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="hd">
+                                                    <p class="b">[본건 주식의 발행 및 인수]</p>
+                                                    <label class="mar_btm_s">2. 이 계약에 따라 발행회사는 아래 내용과 같은 본건 주식을 발행하고, 투자자는 이를 인수하기로 합니다.</label>
+                                                </div>
+                                                <div class="table_wrap2">
+                                                    <table class="table_form_line">
+                                                        <colgroup>
+                                                            <col width="14%">
+                                                            <col width="22%">
+                                                            <col width="28%">
+                                                            <col width="36%">
+                                                        </colgroup>
+                                                        <thead>
+                                                            <th>관련사항</th>
+                                                            <th></th>
+                                                            <th>내용</th>
+                                                            <th>비고</th>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td rowspan="2" style="padding: 0;">발행회사의 <br>기존 주식 관련</td>
+                                                                <td>수권주식수<br>(발행할 주식의 총 수)</td>
+                                                                <!-- 주석 td에 class추가: td_input_type1 -->
+                                                                <td class="td_input_type1">
+                                                                    <input type="text" class="input_s w140">
+                                                                    <p class="dis_inb lh36 mar_l10">주</p>
+                                                                </td>
+                                                                <td><input type="text" class="input_s"></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>기 발행주식의 총 수</td>
+                                                                <!-- 주석 td에 class추가: td_input_type1 -->
+                                                                <td class="td_input_type1">
+                                                                    <div class="mar_btm5">
+                                                                        <input type="text" class="input_s w140" placeholder="보통주">
+                                                                        <p class="dis_inb lh36 mar_l10">주</p>
+                                                                    </div>
+                                                                    <div>
+                                                                        <input type="text" class="input_s w140" placeholder="우선주">
+                                                                        <p class="dis_inb lh36 mar_l10">주</p>
+                                                                    </div>
+                                                                </td>
+                                                                <td><input type="text" class="input_s"></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td rowspan="5" style="padding: 0;">본건 주식의<br>발행 관련</td>
+                                                                <td>신권의 종류와 수</td>
+                                                                <!-- 주석 td에 class추가: td_input_type1 -->
+                                                                <td class="td_input_type1">
+                                                                    <input type="text" class="input_s w140" placeholder="기명식 전환상환 우선주">
+                                                                    <p class="dis_inb lh36 mar_l10">주</p>
+                                                                </td>
+                                                                <td><input type="text" class="input_s"></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>1주당 액면금액</td>
+                                                                <!-- 주석 td에 class추가: td_input_type2 -->
+                                                                <td class="td_input_type2">
+                                                                    <p class="dis_inb lh36 mar_r10">금</p>
+                                                                    <input type="text" class="input_s w140">
+                                                                    <p class="dis_inb lh36 mar_l10">원</p>
+                                                                </td>
+                                                                <td><input type="text" class="input_s"></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>1주당 발행가액 (인수가액)</td>
+                                                                <!-- 주석 td에 class추가: td_input_type2 -->
+                                                                <td class="td_input_type2">
+                                                                    <p class="dis_inb lh36 mar_r10">금</p>
+                                                                    <input type="text" class="input_s w140">
+                                                                    <p class="dis_inb lh36 mar_l10">원</p>
+                                                                </td>
+                                                                <td><input type="text" class="input_s"></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>총 인수대금</td>
+                                                                <!-- 주석 td에 class추가: td_input_type2 -->
+                                                                <td class="td_input_type2">
+                                                                    <p class="dis_inb lh36 mar_r10">금</p>
+                                                                    <input type="text" class="input_s w140">
+                                                                    <p class="dis_inb lh36 mar_l10">원</p>
+                                                                </td>
+                                                                <td><input type="text" class="input_s"></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>본건 주식의 납입기일</td>
+                                                                <td>
+                                                                    <div class="dis_inb input_date">
+                                                                        <input type="text" class="input_s">
+                                                                        <span class="btn_input_date"></span>
+                                                                    </div>
+                                                                </td>
+                                                                <td><input type="text" class="input_s"></td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                                
+                                                <div>
+                                                    <div class="hd">
+                                                        <p class="b">[본건 주식의 발행 및 인수]</p>
+                                                        <label class="mar_btm_s">3. 이 계약에 따라 발행회사는 다음의 서류를 투자자에게 교부합니다.</label>
+                                                    </div>
+                                                    <ul class="ul_form_line lh16">
+                                                        <li>
+                                                            <p class="b mar_btm5">[서류1]</p>
+                                                            <div>
+                                                                1-1. 서류의 내용: 이 계약에 의한 주주권을 표창하는 주권. 주권을 발행하지 않기로 합의한 경우에는 주주임을 증명하는 주주권증서(주권미발행에 관한 확인 포함)<br>1-2. 교부시기: 납입기일 다음 영업일
+                                                                <p class="lh36 mar_top6">1-3. 비고 :
+                                                                    <input type="text" class="input_s w500 mar_l10">
+                                                                </p>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <p class="b mar_btm5">[서류2]</p>
+                                                            <div>
+                                                                2-1. 서류의 내용: 본건 주식의 인수대금 납입 영수증
+                                                                2-2. 교부시기: 납입기일
+                                                                <p class="lh36  mar_top6">2-3. 비고 :
+                                                                    <input type="text" class="input_s w500 mar_l10">
+                                                                </p>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <p class="b mar_btm5">[서류3]</p>
+                                                            <div>
+                                                                <p class="mar_btm10">3-1. 서류의 내용</p>
+                                                                신주인수계약서 및 부속서류<br>
+                                                                주주명부(본건 발행 직전 기준일 기재)<br>
+                                                                법인등기사항전부증명서(본건 발행 전)<br>
+                                                                법인인감증명서 3부<br>
+                                                                이해관계인 인감증명서<br>
+                                                                이해관계인의 주민등록등본 또는 주민등록증 사본<br>
+                                                                정관<br>
+                                                                이사회의사록(본건 발행 관련)<br>
+                                                                주주총회의사록(본건 발행 관련)<br>
+                                                                제 3자에 대한 통지나 제 3자의 동의가 필요한 경우 그러한 통지나 동의가 있었음을 증명하는 서류 등
+                                                                <p class="lh36  mar_top6">3-3. 비고 :
+                                                                    <input type="text" class="input_s w500 mar_l10">
+                                                                </p>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <p class="b mar_btm5">[서류4]</p>
+                                                            <div>
+                                                                4-1. 서류의 내용<br>
+                                                                주주명부(본건 발행 후 기준일 기재)<br>
+                                                                법인등기사항전부증명서(본건 발행 관련 등기 후)<br>
+                                                                주권미발행의 경우 주권미발행확인서
+                                                                <p class="lh36  mar_top6">4-3. 비고 :
+                                                                    <input type="text" class="input_s w500 mar_l10">
+                                                                </p>
+                                                            </div>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                
+                                                <div>
+                                                    <div class="hd">
+                                                        <p class="b">[발행회사 및 이해관계인의 진술 및 보장]</p>
+                                                        <label class="mar_btm_s">5. 발행회사 및 이해관계인은 이 계약의 체결일로부터 본건 주식에 대한 발행 및 인수절차의 종결일까지 다음의 내용이 진실되고, 정확한 것임을 진술하고 보장합니다.</label>
+                                                        <p class="txt_r mar_top6">*해당사항이 있는 정보만 선택하여 정보를 입력하세요.</p>
+                                                    </div>
+                                                    <ul>
+                                                        <li>
+                                                            <div class="clearfix mar_top mar_btm10">
+                                                                <div class="fl">
+                                                                    1) 자본에 관한 사항<br>
+                                                                    (1) 주주별 소유 주식수 *주식수는 숫자만 입력해주세요.
+                                                                </div>
+                                                                <div class="fr">
+                                                                    <div class="btn__f xs min">항목추가</div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="table_wrap2">
+                                                                <table class="table_form_line tb_pad_20">
+                                                                    <colgroup>
+                                                                        <col width="20%">
+                                                                        <col width="20%">
+                                                                        <col width="20%">
+                                                                        <col width="40%">
+                                                                    </colgroup>
+                                                                    <thead>
+                                                                        <th>주주명</th>
+                                                                        <th>주식수</th>
+                                                                        <th>지분율(%)</th>
+                                                                        <th>기타(담보설정여부, 최대주주 및 그 특수관계인 여부)</th>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <td><input type="text" class="input_s"></td>
+                                                                            <td><input type="text" class="input_s"></td>
+                                                                            <td><input type="text" class="input_s"></td>
+                                                                            <td><input type="text" class="input_s"></td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <div class="clearfix mar_top mar_btm10">
+                                                                <div class="fl lh36">(2) 전환사채 발행내역</div>
+                                                                <div class="fr">
+                                                                    <div class="btn__f xs min">항목추가</div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="table_wrap2">
+                                                                <table class="table_form_line tb_pad_20">
+                                                                    <colgroup>
+                                                                        <col width="25%">
+                                                                        <col width="25%">
+                                                                        <col width="25%">
+                                                                        <col width="25%">
+                                                                        <col width="25%">
+                                                                    </colgroup>
+                                                                    <thead>
+                                                                        <th>회수</th>
+                                                                        <th>총 발행가액</th>
+                                                                        <th>미 전환금액</th>
+                                                                        <th>전환가액</th>
+                                                                        <th>전환기간</th>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <td><input type="text" class="input_s"></td>
+                                                                            <td><input type="text" class="input_s"></td>
+                                                                            <td><input type="text" class="input_s"></td>
+                                                                            <td><input type="text" class="input_s"></td>
+                                                                            <td><input type="text" class="input_s"></td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <div class="clearfix mar_top mar_btm10">
+                                                                <div class="fl lh36">(3) 신주인수권부사채 발행내역</div>
+                                                                <div class="fr">
+                                                                    <div class="btn__f xs min">항목추가</div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="table_wrap2">
+                                                                <table class="table_form_line tb_pad_20">
+                                                                    <colgroup>
+                                                                        <col width="25%">
+                                                                        <col width="25%">
+                                                                        <col width="25%">
+                                                                        <col width="25%">
+                                                                        <col width="25%">
+                                                                    </colgroup>
+                                                                    <thead>
+                                                                        <th>회수</th>
+                                                                        <th>총 발행가액</th>
+                                                                        <th>미 행사금액</th>
+                                                                        <th>행사가액</th>
+                                                                        <th>행사기간</th>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <td><input type="text" class="input_s"></td>
+                                                                            <td><input type="text" class="input_s"></td>
+                                                                            <td><input type="text" class="input_s"></td>
+                                                                            <td><input type="text" class="input_s"></td>
+                                                                            <td><input type="text" class="input_s"></td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <div class="clearfix mar_top mar_btm10">
+                                                                <div class="fl lh36">(4) 주식매수선택권 발행내역</div>
+                                                                <div class="fr">
+                                                                    <div class="btn__f xs min">항목추가</div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="table_wrap2">
+                                                                <table class="table_form_line tb_pad_20">
+                                                                    <colgroup>
+                                                                        <col width="25%">
+                                                                        <col width="25%">
+                                                                        <col width="25%">
+                                                                        <col width="25%">
+                                                                        <col width="25%">
+                                                                    </colgroup>
+                                                                    <thead>
+                                                                        <th>부여받은 자</th>
+                                                                        <th>주식수</th>
+                                                                        <th>미 행사가액</th>
+                                                                        <th>행사기간</th>
+                                                                        <th>행사방법</th>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <td><input type="text" class="input_s"></td>
+                                                                            <td><input type="text" class="input_s"></td>
+                                                                            <td><input type="text" class="input_s"></td>
+                                                                            <td><input type="text" class="input_s"></td>
+                                                                            <td><input type="text" class="input_s"></td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <div class="clearfix mar_top30 mar_btm10">
+                                                                <div class="fl">2) 부채에 관한 사항<br>발행회사의 담보제공 및 입보 내역 </div>
+                                                                <div class="fr">
+                                                                    <div class="btn__f xs min">항목추가</div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="table_wrap2">
+                                                                <table class="table_form_line tb_pad_20">
+                                                                    <colgroup>
+                                                                        <col width="16.6666%">
+                                                                        <col width="16.6666%">
+                                                                        <col width="16.6666%">
+                                                                        <col width="16.6666%">
+                                                                        <col width="16.6666%">
+                                                                        <col width="16.6666%">
+                                                                    </colgroup>
+                                                                    <thead>
+                                                                        <th>금융기관</th>
+                                                                        <th>제공담보종류</th>
+                                                                        <th>제공담보설정액(실현가)</th>
+                                                                        <th>입보내역 한도</th>
+                                                                        <th>입보내역 사용액</th>
+                                                                        <th>비고</th>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <td><input type="text" class="input_s"></td>
+                                                                            <td><input type="text" class="input_s"></td>
+                                                                            <td><input type="text" class="input_s"></td>
+                                                                            <td><input type="text" class="input_s"></td>
+                                                                            <td><input type="text" class="input_s"></td>
+                                                                            <td><input type="text" class="input_s"></td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                        <!-- //form_ul -->
+                                        <ul class="ul_line">
+                                            <li>
+                                                <div class="hd mar_btm10">
+                                                    [의결권에관한 사항]<br>
+                                                    6. 본건 주식의 존속기간은
+                                                </div>
+                                                <div class="cont txt_s txt_g2 lh36">
+                                                    발행일로부터<input type="text" class="input_s w50 mar_6">년 으로 하고, 그 기간 내에 보통주로 전환되지 아니하는 경우, 존속기간 만료 다음 날에 본건 주식은 보통조로 전환됩니다.<br>
+                                                    다만, 투자자가 발행회사에 대하여 상환청구를 하는 경우에는 상환이 완료될 때까지 우선주로 존속합니다.
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="hd mar_btm10">
+                                                    [배당에 있어서 우선권에 대한 사항]<br>
+                                                    7. 본건 주식은 참가적, 누적적 우선주로서, 투자자는 본건 부식을 보유하는 동안
+                                                </div>
+                                                <div class="cont txt_s txt_g2">
+                                                    <p class="lh36 mar_btm5">1주간 발행가액 기준으로 연 <input type="text" class="input_s w50 mar_6">%의 배당을 보통주에 우선하여 배당을 받고, 보통주의 배당률이 본건 주식의 배당률을 초과하는 경우, 초과하는 부분에 대하여 보통주와 동일한 배당률로 참가하여 배당받기로 합니다.</p>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="hd mar_btm10">
+                                                    [청산, 잔여재산 분배에 있어서 우선권에 대한 사항]<br>
+                                                    8. 발행회사가 청산에 의하여 잔여재산을 분배하는 경우,
+                                                </div>
+                                                <div class="cont txt_s txt_g2 lh36">
+                                                    투자자는 주당 발행가액 및 이에 대하여 연복리<input type="text" class="input_s w50 mar_6">%의 비율로 산정한 금액을 합산한 금원에 대하여 보통주의 주주에 우선하여 잔여재산을 분배받을 권리가 있습니다.
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="hd mar_btm10">
+                                                    [전환권에 관한 사항]<br>
+                                                    9. 본건 주식에 대한 전환권 행사기간과 관련하여,
+                                                </div>
+                                                <div class="cont txt_s txt_g2 lh36">
+                                                    투자자는 그 납일기익 다음 날로부터<input type="text" class="input_s w50 mar_6">년이 되는 날의 전날까지 언제든지 본건 주식을 보통주로 전환할 수 있는 권리를 갖습니다.
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="hd mar_btm10">
+                                                    [전환권에 관한 사항]<br>
+                                                    10. 투자자가 본건 주식의 존속기간 만료일까지 전환권을 행사하지 않는 경우, 본건 주식은 그 만료일에
+                                                </div>
+                                                <div class="cont txt_s txt_g2 lh36">
+                                                    <div>
+                                                        <input type="radio" id="" checked>
+                                                        <label class="txt_s" for="">전환권이 소멸되고, 우선주의 형태로 존속하게 됩니다.</label>
+                                                    </div>
+                                                    <div>
+                                                        <input type="radio" id="">
+                                                        <label class="txt_s" for="">보통주로 자동전환됩니다.</label>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="hd mar_btm10">
+                                                    [전환권에 관한 사항]<br>
+                                                    11. 본건 주식에 대한 전환권 행사의 경우,
+                                                </div>
+                                                <div class="cont txt_s txt_g2 lh36">
+                                                    발행회사는 투자자로부터 우선주식전환청구서를 수령한 날로부터<input type="text" class="input_s w50 mar_6">영업일 이내에 명의개서, 주주명부 작성, 주권 교부 등 보통주 발행절차를 종료하여야 합니다.
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="hd mar_btm10">
+                                                    [상환권에 관한 사항]<br>
+                                                    12. 본건 주식에 대한 상환권 행사와 관련하여,
+                                                </div>
+                                                <div class="cont txt_s txt_g2 lh36">
+                                                    투자자는 거래완결일 다음 날부터<input type="text" class="input_s w50 mar_6">년이 경과하는 경우, 발행회사에 대하여 본건 주식의 전부 또는 일부의 상환을 청구할 권리를 가집니다.
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="hd mar_btm10">
+                                                    [상환권에 관한 사항]<br>
+                                                    13. 투자자가 상환청구를 하는 경우,
+                                                </div>
+                                                <div class="cont txt_s txt_g2 lh36">
+                                                    발행회사는 투자자의 본건 주식의 총 인수대금과 위 인수대금에 대하여 거래완결일부터 실제 상환일까지 연복리<input type="text" class="input_s w50 mar_6">%를 적용항 산출한 이자를 합산한 금액에서 위 기간동안 투자자에게 지급된 배당금을 공제한 상환금액으로 하여 이익잉여금 한도 내에서 상환하기로 합니다.
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="hd mar_btm10">
+                                                    [상환권에 관한 사항]<br>
+                                                    14. 투자자가 상환청구를 하는 경우,
+                                                </div>
+                                                <div class="cont txt_s txt_g2 lh36">
+                                                    발행회사는 투자자의 상환청구가 있는 날로부터<input type="text" class="input_s w50 mar_6">일 이내에 현금으로 상환하기로 합니다.
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="hd mar_btm10">
+                                                    [상환권에 관한 사항]<br>
+                                                    15. 투자자가 상환청구를 하는 경우,
+                                                </div>
+                                                <div class="cont txt_s txt_g2 lh36">
+                                                    발행회사가 상법 등 관련 법령의 제한 범위 내에서 상환을 할 수 있음에도 불구하고, 상환가액을 투자자에게 지급하지 아니하는 경우, 제 5항의 상환기한의 다음 날부터 실제 상환
+                                                    액에 대하여 연복리<input type="text" class="input_s w50 mar_6">%의 이율에 의한 지연배상금을 지급하여야 합니다.
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="hd mar_btm10">
+                                                    [투자금의 용도 및 제한]<br>
+                                                    16. 발행회사는 이 계약에 의하여 투자자로부터 바은 본건 주식에 대한 총 인수대금(이해”투자금”이라 합니다)을 아래 내용과 같은 전용계좌를 통하여 다음의 용도로만
+                                                    사용하여야 하고, 다른 용도로 사용하고자 하는 경우에는 투자자로부터 사전 서면동의를 받아야 합니다.
+                                                </div>
+                                                <div class="cont">
+                                                    <div class="mar_btm10 tr">
+                                                        <div class="btn__f xs min">항목추가</div>
+                                                    </div>
+                                                    <div class="table_wrap2">
+                                                        <table class="table_form_line tb_pad_20">
+                                                            <colgroup>
+                                                                <col width="25%">
+                                                                <col width="25%">
+                                                                <col width="25%">
+                                                                <col width="25%">
+                                                            </colgroup>
+                                                            <thead>
+                                                                <th>전용계좌</th>
+                                                                <th>용도</th>
+                                                                <th>금액</th>
+                                                                <th>비고</th>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td>
+                                                                        <input type="text" class="input_s" placeholder="은행명">
+                                                                        <input type="text" class="input_s mar6" placeholder="계좌번호">
+                                                                        <input type="text" class="input_s" placeholder="예금주">
+                                                                    </td>
+                                                                    <td><input type="text" class="input_s"></td>
+                                                                    <td><input type="text" class="input_s"></td>
+                                                                    <td><input type="text" class="input_s"></td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="hd mar_btm10">
+                                                    [통지]<br>
+                                                    26. 이 계약에 따른 발행회사 및 이해관계인, 투자자에 대한 통지는 다음 내용에 기재된 곳으로 합니다.
+                                                </div>
+                                                <div class="cont txt_g2">
+                                                    <p class="b mar_btm">(1) 발행회사에 대한 통지</p>
+                                                    <dl class="dl_95 lh36 dl_mar_btm w280">
+                                                        <dt>1) 주소</dt>
+                                                        <dd><input type="text" class="input_s"></dd>
+                                                        <dt>2) 전화번호</dt>
+                                                        <dd><input type="text" class="input_s"></dd>
+                                                        <dt>3) 팩스번호</dt>
+                                                        <dd><input type="text" class="input_s"></dd>
+                                                        <dt>4) 이메일</dt>
+                                                        <dd><input type="text" class="input_s"></dd>
+                                                        <dt>5) 담당자(직책)</dt>
+                                                        <dd><input type="text" class="input_s"></dd>
+                                                    </dl>
+                                                    
+                                                    <p class="b mar15">(2) 투자자에 대한 통지</p>
+                                                    <dl class="dl_95 lh36 dl_mar_btm w280">
+                                                        <dt>1) 주소</dt>
+                                                        <dd><input type="text" class="input_s"></dd>
+                                                        <dt>2) 전화번호</dt>
+                                                        <dd><input type="text" class="input_s"></dd>
+                                                        <dt>3) 팩스번호</dt>
+                                                        <dd><input type="text" class="input_s"></dd>
+                                                        <dt>4) 이메일</dt>
+                                                        <dd><input type="text" class="input_s"></dd>
+                                                        <dt>5) 담당자(직책)</dt>
+                                                        <dd><input type="text" class="input_s"></dd>
+                                                    </dl>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                        <div>
+                                            <div class="hd_line_big txt01">기타 첨부파일(최대 5개)</div>
+                                            <div class="form_wrap mar_btm30">
+                                                <div class="btn__f xs mar_btm">파일선택</div>
+                                                <ul class="attach_list s">
+                                                    <li>근로계약서_김응보.pdf</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <div class="hd_line_big txt01">기타 하실말씀</div>
+                                            <div class="cont">
+                                                <textarea class="txtr_s"></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- //toggle_cont -->
+                                </div>
+                                <!-- //toggle_wrap -->
+                            </div>
+                            <!-- //cont_box -->
+                            
+                            <div class="btn_wrap mar_top40">
+                                <div class="fr">
+                                    <div class="btn__cancel">이전</div>
+                                    <div class="btn__active">다음</div>
+                                </div>
+                            </div>
+                        </li>
+                        
+                        <!-- tview3 -->
+                        <li class="tview">
+                        </li>
+                        
+                        <!-- tview4 -->
+                        <li class="tview">
+                        </li>
+                        
+                        <!-- tview5 -->
+                        <li class="tview">
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </div>
+    <!-- //content -->
+
+    <!-- footer -->
+    <footer id="footer">
+        <div class="section">
+            <div class="footer_top">
+                <a href="#" class="foot_logo"><img src="http://www.legalinsight.kr/_img/comn/logo_marshmallow.png" alt="마시멜로로고"></a>
+                <div class="flex_box txt_g">
+                    <div class="box">
+                        <p>
+                            리걸인사이트 | 사업자등록번호: 530-81-00892 <span class="m_none">| </span><br class="m_block">이메일: support@legalinsight.kr<br>
+                            주소: 서울시 강남구 봉은사로 417(삼성동 구구빌딩) 4층 <span class="m_none">| </span><br class="m_block">Tel: 02-3445-6600 | Fax: 02-3445-6601
+                        </p>
+                    </div>
+                    <div class="box">© 2017 LEGAL INSIGHT. All Rights Reserved.</div>
+                </div>
+            </div>
+        </div>
+        <div class="footer_bottom bg_gray">
+            <div class="section">
+                <a href="#">리걸인사이트 소개</a>
+                <a href="#">면책공고</a>
+                <a href="#">이용약관</a>
+                <a href="#">개인정보취급방침</a>
+                <a href="#">오시는길</a>
+            </div>
+        </div>
+    </footer>
+    <!-- //footer -->
+</div>
+<!-- //wrap -->
+</body>
+</html>

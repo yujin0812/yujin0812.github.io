@@ -1,0 +1,6 @@
+#popup { width:450px; }
+.header h1 { height:45px; padding:0 0 0 20px; color:#fff; font-size:14px; line-height:45px; background:#495164; }
+.content { padding:20px 20px 60px; }
+.btnArea { position:fixed; bottom:0; left:0; width:100%; padding:10px 0; border-top:1px solid #d7d5d5; text-align:center; background:#fbfafa; }
+
+.xans-order-agreementdaum .agree { overflow:auto; width:400px; height:200px; padding:5px; line-height:1.5; border:1px solid #d9d9d9; }

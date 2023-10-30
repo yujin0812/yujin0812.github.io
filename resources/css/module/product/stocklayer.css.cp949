@@ -1,0 +1,15 @@
+/* 상품상세 > 재고수량 레이어 */
+.xans-product-stocklayer .layer { position:fixed; top:50%; left:50%; z-index:1000; width:450px; margin:-175px 0 0 -225px; background-color:#fff; }
+.xans-product-stocklayer .layer h1 { height:35px; padding:0 35px 0 19px; color:#fff; font-size:14px; line-height:35px; background:#495164; }
+.xans-product-stocklayer .layer .content { overflow-y:auto; max-height:300px; padding:20px; border:1px solid #757575; border-top:0; }
+.xans-product-stocklayer .layer .content p { line-height:1.4; }
+.xans-product-stocklayer .layer .table { margin:10px 0 0; }
+.xans-product-stocklayer .layer .table table { width:100%; table-layout:fixed; border:0; border-collapse:collapse; border-spacing:0; }
+.xans-product-stocklayer .layer .table th,
+.xans-product-stocklayer .layer .table td { padding:8px 10px 7px; font-size:12px; line-height:1.4; border:1px solid #d7d5d5; word-wrap:break-word; }
+.xans-product-stocklayer .layer .table th { font-weight:normal; text-align:center; background-color:#fafafa; }
+.xans-product-stocklayer .layer .table .left { text-align:left; }
+.xans-product-stocklayer .layer .table .center { text-align:center; }
+.xans-product-stocklayer .layer .table .right { text-align:right; }
+.xans-product-stocklayer .layer .close { position:absolute; right:20px; top:10px; }
+.xans-product-stocklayer .layer .close img { cursor:pointer; }

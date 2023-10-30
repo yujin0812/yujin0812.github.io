@@ -1,0 +1,528 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title></title>
+<!-- STYLE CSS -->
+<link href="css/reset.css" rel="stylesheet" type="text/css">
+<link href="css/application.css" rel="stylesheet" type="text/css">
+<link href="css/main.css" rel="stylesheet" type="text/css">
+<!--<link href="css/style.css" rel="stylesheet" type="text/css">-->
+<!-- SCRIPT -->
+<script src="scripts/jquery-3.4.1.min.js"></script>
+<script src="scripts/jquery.nice-select.min.js"></script>
+<script src="scripts/main.js"></script>
+</head>
+<body>
+<!-- wrap -->
+<div id="wrap">
+    <!-- header -->
+    <header id="header">
+        <div class="section clearfix">
+            <!-- logo -->
+            <a class="logo" href="index.html"><img src="http://www.legalinsight.kr/_img/comn/logo_marshmallow.png" alt="마시멜로로고"></a>
+            <div class="header_menu">
+                <!-- gnb -->
+                <ul class="gnb">
+                    <li class="active"><a href="index.html">marshmallaw</a></li>
+                    <li><a href="how.html">HOW</a></li>
+                    <li><a href="notice.html">NOTICE</a></li>
+                    <li><a href="news.html">NEWS</a></li>
+                    <li><a href="qna.html">Q&amp;A</a></li>
+                    <!-- login -->
+                    <li><a href="mypage.html">MYPAGE</a></li>
+                </ul>
+                <!-- login display: none -->
+                <a class="btn__hd_menu">Login</a>
+            </div>
+            <div class="ham"><div class="ham_line"></div></div>
+        </div>
+    </header>
+    <!-- //header -->
+    
+    <!-- content -->
+    <div class="content">
+        <section class="section section1">
+            <h1 class="h1">고소장 작성</h1>
+            <h2 class="h2">동의하기</h2>
+            <div class="content_area">
+                <div class="tab_wrap step_wrap">
+                    <ul class="tabs step_hd">
+                        <li class="tab active">
+                            <p class="txt01 b">STEP 01</p>
+                            <p class="txt01">범죄유형 선택</p>
+                        </li>
+                        <li class="tab">
+                            <p class="txt01 b">STEP 02</p>
+                            <p class="txt01">인정정보 입력</p>
+                        </li>
+                        <li class="tab">
+                            <p class="txt01 b">STEP 03</p>
+                            <p class="txt01">세부 피해사실 입력</p>
+                        </li>
+                        <li class="tab">
+                            <p class="txt01 b">STEP 04</p>
+                            <p class="txt01">신청내용 확인</p>
+                        </li>
+                        <li class="tab">
+                            <p class="txt01 b">STEP 05</p>
+                            <p class="txt01">프리뷰</p>
+                        </li>
+                    </ul>
+                    <ul class="tviews step_content">
+                        <!-- tview1 -->
+                        <li class="tview active">
+                            <!-- 1 -->
+                            <div>
+                                <div class="cont_box">
+                                    <p class="txt_s tc">
+                                        타인으로 하여금 형사 처분 또는 징계처분을 받게 할 목적으로 허위의 사실을 입력할 경우, 형법 제 156조의 무고죄로 10년 이하의 징역 또는 <br>
+                                        1천500만원 이하의 벌금형으로 처발받을 수 있습니다.
+                                        <br><br>
+                                        허위의 사실을 입력할 경우, 리걸인사이트는 그에 대한 법적 책임이 없음을 알려드립니다.
+                                    </p>
+                                </div>
+                                <div class="tr mar_top20">
+                                    <input type="checkbox" id="checkbox">
+                                    <label for="checkbox">위 내용을 모두 확인하였으며 이에 동의합니다.</label>
+                                </div>
+                                <div class="btn_wrap tr mar_top40">
+                                    <div class="btn__cancel">이전</div>
+                                    <div class="btn__active">다음</div>
+                                </div>
+                            </div>
+
+                            <!-- 2 -->
+                            <div>
+                                <div class="cont_box">
+                                    <ul class="clearfix_itm mar_r_last">
+                                        <li class="circle_num_itm active">1</li>
+                                        <li class="circle_num_itm">2</li>
+                                    </ul>
+                                    <p class="txt01 mar_ver1 icon_check_p">어떤 계약서를 작성하시려 하나요?</p>
+                                    <div class="">
+
+                                    </div>
+                                    <!-- active_ul: 클릭 시 active 효과 -->
+                                    <ul class="list_box dvs3_mar10_wrap active_ul">
+                                        <li>상해,폭력</li>
+                                        <li>명예훼손,모욕</li>
+                                        <li>사기</li>
+                                        <li>강간,강제추행 등</li>
+                                        <li>절도</li>
+                                        <li>공갈</li>
+                                        <li>손괴</li>
+                                        <li>저작권법 위반</li>
+                                        <li>협박</li>
+                                        <li>횡령,배임</li>
+                                    </ul>
+                                </div>
+                                <div class="btn_wrap tr mar_top40">
+                                    <div class="btn__cancel">이전</div>
+                                </div>
+                            </div>
+
+                            <!-- 3 -->
+                            <div>
+                                <div class="cont_box">
+                                    <ul class="clearfix_itm mar_r_last">
+                                        <li class="circle_num_itm">1</li>
+                                        <li class="circle_num_itm active">2</li>
+                                    </ul>
+                                    <div class="mar_btm30">
+                                        <p class="txt01 mar_ver1 b">상해,폭행</p>
+                                        <p>
+                                            피고소인으로부터 피해자가 폭행을 당하였거나, 피고소인의 행위로 인하여 피해자가 상해를 입었습니다.<br>
+                                            (폭행이나 상해로 인하여 피해자가 사망한 경우도 포함되지만, 성범죄는 제외됩니다.)
+                                        </p>
+                                    </div>
+                                    <!-- active_ul: 클릭 시 active 효과 -->
+                                    <ul class="list_box clearfix_ul active_ul">
+                                        <li>피고소인이 주먹이나 발 등으로 피해자를 폭행하였으나, 피해자가 크게 다치거나 상처를 입지는 않았습니다.</li>
+                                        <li>피고소인이 ①위험한 물건(예를 들어 칼,가위,빈 유리병,깨진 유리병, 드라이버, 벽돌, 당구큐대 등)을 이용하거나, ②특정 단체나 집단
+                                            의 위세 등을 이용하여 피해자를 폭행하였습니다.</li>
+                                        <li>피고소인이 피해자를 폭행하였고, 그로 인하여 피해자가 다쳤습니다.</li>
+                                        <li>피고소인이 피해자를 폭행하였고, 그로 인하여 피해자가 사망하였습니다.</li>
+                                        <li>피고소인이 피해자에게 상해를 가하였습니다. </li>
+                                        <li>피고소인이 피해자에게 상해를 가하여 ①피해자의 생명에 위험이 발생하거나, ②피해자가 불구가 되거나, <br>③피해자가 불치 또는 난치의 질병을 얻게 되었습니다.</li>
+                                        <li>피고소인이 ①위험한 물건 (예를 들어, 칼,가위,빈 유리병,깨진 유리병, 드라이버, 벽돌,당구큐대 등)을 이용하거나, ②특정 단체나 집단의
+                                            위세 등을 이용하여 피해자에게 상해를 가하였고, 그 상해로 인하여 ①피해자의 생명에 위험이 발생하거나, ②피해자가 불구가 되거나,
+                                            ③피해자가 불치 또는 난치의 질병을 얻게 되었습니다.</li>
+                                        <li>피고소인이 피해자에게 상해를 가하였고, 그 상해로 인하여 피해자가 사망하였습니다.</li>
+                                    </ul>
+                                </div>
+                                <div class="btn_wrap mar_top40">
+                                    <div class="fl">
+                                        <div class="btn__f itm01">임시저장</div>
+                                        <div class="btn__f itm02">미리보기</div>
+                                    </div>
+                                    <div class="fr">
+                                        <div class="btn__cancel">이전</div>
+                                        <div class="btn__active">행정심판</div>
+                                        <div class="btn__active">행정소송</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        
+                        <!-- tview2 -->
+                        <li class="tview">
+                            <div>
+                                <!-- cont_box -->
+                                <!-- 주석 class 추가: dvs_tb_1 -->
+                                <div class="cont_box clearfix_15 dvs_tb_1">
+                                    <!-- dvs__2 -->
+                                    <div class="dvs__2">
+                                        <label class="b mar_btm15">청구인 정보입력</label>
+                                        <ul class="form_ul clearfix_ul">
+                                            <li>
+                                                <div class="li_hd">이름</div>
+                                                <div class="li_cont txt04 lh36">전현우</div>
+                                            </li>
+                                            <li>
+                                                <div class="li_hd">생년월일</div>
+                                                <div class="li_cont input_date">
+                                                    <input type="text" class="input_s">
+                                                    <span class="btn_input_date"></span>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="li_hd">주소</div>
+                                                <div class="li_cont">
+                                                    <!-- 주석 form_wrap에 class 추가: form_adr -->
+                                                    <div class="form_wrap form_adr">
+                                                        <input type="text" class="input_s form_itm w03" disabled>
+                                                        <div class="btn__f xs">우편번호 검색</div>
+                                                    </div>
+                                                    <input type="text" class="form_wrap input_s" placeholder="기본주소" disabled>
+                                                    <input type="text" class="form_wrap input_s" placeholder="상세주소" disabled>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="li_hd">연락처</div>
+                                                <div class="li_cont form_tilde_wrap">
+                                                    <input type="text" class="dvs__3 input_s">
+                                                    <div class="tilde_itm">-</div>
+                                                    <input type="text" class="dvs__3 input_s">
+                                                    <div class="tilde_itm">-</div>
+                                                    <input type="text" class="dvs__3 input_s">
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="li_hd">이메일</div>
+                                                <div class="li_cont form_tilde_wrap">
+                                                    <input type="text" class="dvs__2 input_s">
+                                                    <div class="tilde_itm">@</div>
+                                                    <input type="text" class="dvs__2 input_s">
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="li_hd">직장</div>
+                                                <div class="li_cont">
+                                                    <input type="text" class="input_s">
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="li_hd">직업*</div>
+                                                <div class="li_cont">
+                                                    <input type="text" class="input_s">
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <!-- //dvs__2 -->
+
+                                    <!-- dvs__2 -->
+                                    <div class="dvs__2">
+                                        <label class="b mar_btm15">처분청 정보입력</label>
+                                        <ul class="form_ul clearfix_ul">
+                                            <li>
+                                                <div class="li_hd">이름</div>
+                                                <div class="li_cont">
+                                                    <input type="text" class="input_s">
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="li_hd">주소</div>
+                                                <div class="li_cont">
+                                                    <!-- 주석 form_wrap에 class 추가: form_adr -->
+                                                    <div class="form_wrap form_adr">
+                                                        <input type="text" class="input_s form_itm w03" disabled>
+                                                        <div class="btn__f xs">우편번호 검색</div>
+                                                    </div>
+                                                    <input type="text" class="form_wrap input_s" placeholder="기본주소" disabled>
+                                                    <input type="text" class="form_wrap input_s" placeholder="상세주소" disabled>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="li_hd">담당자</div>
+                                                <div class="li_cont">
+                                                    <input type="text" class="input_s">
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="li_hd">전화번호</div>
+                                                <div class="li_cont form_tilde_wrap">
+                                                    <input type="text" class="dvs__3 input_s">
+                                                    <div class="tilde_itm">-</div>
+                                                    <input type="text" class="dvs__3 input_s">
+                                                    <div class="tilde_itm">-</div>
+                                                    <input type="text" class="dvs__3 input_s">
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <!-- //dvs__2 -->
+                                </div>
+                                <!-- //cont_box -->
+                                <div class="btn_wrap mar_top40">
+                                    <div class="fr">
+                                        <div class="btn__cancel">이전</div>
+                                        <div class="btn__active">다음</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        
+                        <!-- tview3 -->
+                        <li class="tview">
+                            <!-- 세부 피해사실 입력 -->
+                            <!-- cont_box -->
+                            <div class="cont_box">
+                                <label class="b mar_btm15">폭행</label>
+                                <ul class="form_ul clearfix_ul txt_s lh_form_s">
+                                    <li>
+                                        <label class="mar_btm_s">1. 피해자가 피고소인으로부터 폭행을 당한 일시는 언제인가요?</label>
+                                        <div class="form_wrap">
+                                            <div class="dis_inb input_s w01 mar_r10">
+                                                <select>
+                                                    <option>2020 년</option>
+                                                </select>
+                                            </div>
+                                            <div class="dis_inb input_s w01 mar_r10">
+                                                <select>
+                                                    <option>10 월</option>
+                                                </select>
+                                            </div>
+                                            <div class="dis_inb input_s w01 mar_r10">
+                                                <select>
+                                                    <option>28 일</option>
+                                                </select>
+                                            </div>
+                                            <div class="dis_inb input_s w01">
+                                                <select>
+                                                    <option>08 시</option>
+                                                    <option>09 시</option>
+                                                </select>
+                                            </div>
+                                            <span class="mar_6">경</span>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <label class="mar_btm_s">2. 피해자가 피고소인으로부터 폭행을 당한 장소는 어디인가요?</label>
+                                        <div class="form_wrap">
+                                            <div class="btn__f xs mar_r10">주소 찾기</div>
+                                            <input type="text" class="input_s w04">
+                                            <span class="mar_6">인근</span>
+                                            <input type="text" class="input_s w04">
+                                            <span class="mar_6">에서</span>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <label class="mar_btm_s">3. 피해자가 피고소인으로부터 폭행을 당하던 당시 피해자는 무엇을 하고 있었고, 어떤 상태였나요?</label>
+                                        <div class="form_wrap">
+                                            사건 당시 피해자는<input type="text" class="input_s w04 mar_10">하고 있었고,<input type="text" class="input_s w04 mar_10">상태였습니다.
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <label class="mar_btm_s">4. 피고소인이 피해자를 폭행한 이유는 무엇인가요?</label>
+                                        <div class="form_wrap">
+                                            <div class="dis_inb">
+                                                <input type="radio" id="">
+                                                <label for=""></label>
+                                            </div>
+                                            피고소인은 피해자가
+                                            <input type="text" class="input_s w04 mar_10">
+                                            다는 이유로 폭행하였습니다.
+                                        </div>
+                                        <div class="form_wrap">
+                                            <input type="radio" id="">
+                                            <label for=""></label>
+                                            피고소인(들)은 피해자를 아무런 이유 없이 폭행하였습니다.
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <label class="mar_btm_s">5. 피고소인이 피해자를 폭행할 당시 피해자에게 무엇이라고 말을 하면서 어떻게 행동하였나요?</label>
+                                        <div class="form_wrap">
+                                            피고소인은 폭행 당시 피해자에게<input type="text" class="input_s w04 mar_10">라고 말을 하면서<input type="text" class="input_s w04 mar_10">습니다.
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <label class="mar_btm_s">6. 피고소인의 위 5.항의 행동에 대하여 피해자는 어떻게 대응하였나요?</label>
+                                        <div class="form_wrap">
+                                            <span class="dis_inb mar_r10">피해자는 피고소인의 행동에 대하여</span>
+                                            <input type="text" class="input_s w06" placeholder="어떻게 대응하였습니다.">
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <label class="mar_btm_s">7. 피고소인은 어떠한 방식으로 피해자를 폭행하였나요?</label>
+                                        <div class="form_wrap">
+                                            <div class="dis_inb">
+                                                <input type="radio" id="">
+                                                <label for=""></label>
+                                            </div>
+                                            피고소인은<input type="text" class="input_s w100 mar_10">(으)로 피해자의<input type="text" class="input_s w100 mar_10">를
+                                            <input type="text" class="input_s w100 mar_10">회 때렸습니다.
+                                        </div>
+                                        <div class="form_wrap mt3">
+                                            <div class="dis_inb">
+                                                <input type="radio" id="">
+                                                <label for=""></label>
+                                            </div>
+                                            피고소인은 피해자에게<input type="text" class="input_s w100 mar_10">하였습니다.
+                                        </div>
+                                    </li>
+                                </ul>
+                                <ul class="form_ul mar_top20">
+                                    <li>
+                                        <label class="mar_btm_s txt_s">기타 첨부파일(최대 5개)</label>
+                                        <div class="form_wrap">
+                                            <div class="btn__f xs mar_btm">파일선택</div>
+                                            <ul class="attach_list s">
+                                                <li>근로계약서_김응보.pdf</li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <ul class="form_ul mar_top20">
+                                    <li>
+                                        <label class="mar_btm_s txt_s">기타 하실말씀</label>
+                                        <textarea class="txtr_s"></textarea>
+                                    </li>
+                                </ul>
+                                <ul class="form_ul mar_top20">
+                                    <li>
+                                        <label class="mar_btm_s txt_s">관할 검찰청 선택</label>
+                                        <div class="form_wrap">
+                                            <div class="dis_inb">
+                                                <input type="radio" id="">
+                                                <label for="" class="txt_s">1. 범죄장소 - 관할검찰청</label>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- //cont_box -->
+                            <div class="btn_wrap mar_top40">
+                                <div class="fl">
+                                    <div class="btn__f itm01">임시저장</div>
+                                </div>
+                                <div class="fr">
+                                    <div class="btn__cancel">이전</div>
+                                    <div class="btn__active">다음</div>
+                                </div>
+                            </div>
+                        </li>
+                        
+                        <!-- tview4 -->
+                        <li class="tview">
+                            <div class="cont_box">
+                                <label class="b mar_btm">신청내용 확인</label>
+                                <!-- 주석 요소 추가: table_wrap_m -->
+                                <div class="table_wrap_m">
+                                    <table class="table txt_s">
+                                        <colgroup>
+                                            <!-- 주석 col width 수정됨-->
+                                            <col width="15%">
+                                            <col width="13%">
+                                            <col width="31%">
+                                            <col width="16%">
+                                            <col width="8%">
+                                            <col width="17%">
+                                        </colgroup>
+                                        <tr>
+                                            <th>신청일</th>
+                                            <th>고소인</th>
+                                            <th>죄명</th>
+                                            <th>피고소인(범죄자)</th>
+                                            <th>부수</th>
+                                            <th>고소인 연락처</th>
+                                        </tr>
+                                        <tr>
+                                            <td>2020.09.23</td>
+                                            <td>전현우</td>
+                                            <td>폭행</td>
+                                            <td>성명불상</td>
+                                            <td>1</td>
+                                            <td>01099382281</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                                <div class="mar_top30">
+                                    <div class="mar_btm">
+                                        <input type="checkbox" id="checkbox">
+                                        <label for="checkbox" class="txt_s">리걸인사이트는 고소장 제출을 대행하여 드리지 않습니다. 완성된 고소장은 사용자께서 직접 제출하셔야 하오니, 이 점 유의하시기 바랍니다.</label> 
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" id="checkbox">
+                                        <label for="checkbox" class="txt_s">타인으로 하여금 형사처벌 또는 징계처분을 받게 할 목적으로 허위의 사실을 입력한 경우 무고죄로 처벌받을 수 있고, <br>이 경우 리걸인사이트는 어떠한 책임도 부담하지 않음을 유의하시기 바랍니다.</label> 
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="btn_wrap mar_top40 tr">
+                                <div class="btn__cancel">이전</div>
+                                <div class="btn__active">다음</div>
+                            </div>
+                        </li>
+                        
+                        <!-- tview5 -->
+                        <li class="tview">
+                            <div class="content_view_box">
+                                <p class="ab_center" style="font-size: 23px;">고소장 내용 text</p>
+                            </div>
+                            <div class="btn_wrap mar_top40">
+                                <div class="fr">
+                                    <div class="btn__f lg">다운로드</div>
+                                    <div class="btn__active">이메일발송</div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </div>
+    <!-- //content -->
+
+    <!-- footer -->
+    <footer id="footer">
+        <div class="section">
+            <div class="footer_top">
+                <a href="#" class="foot_logo"><img src="http://www.legalinsight.kr/_img/comn/logo_marshmallow.png" alt="마시멜로로고"></a>
+                <div class="flex_box txt_g">
+                    <div class="box">
+                        <p>
+                            리걸인사이트 | 사업자등록번호: 530-81-00892 <span class="m_none">| </span><br class="m_block">이메일: support@legalinsight.kr<br>
+                            주소: 서울시 강남구 봉은사로 417(삼성동 구구빌딩) 4층 <span class="m_none">| </span><br class="m_block">Tel: 02-3445-6600 | Fax: 02-3445-6601
+                        </p>
+                    </div>
+                    <div class="box">© 2017 LEGAL INSIGHT. All Rights Reserved.</div>
+                </div>
+            </div>
+        </div>
+        <div class="footer_bottom bg_gray">
+            <div class="section">
+                <a href="#">리걸인사이트 소개</a>
+                <a href="#">면책공고</a>
+                <a href="#">이용약관</a>
+                <a href="#">개인정보취급방침</a>
+                <a href="#">오시는길</a>
+            </div>
+        </div>
+    </footer>
+    <!-- //footer -->
+</div>
+<!-- //wrap -->
+</body>
+</html>

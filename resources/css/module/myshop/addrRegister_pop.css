@@ -1,0 +1,27 @@
+#popup { width:800px; }
+.header h1 { height:45px; padding:0 0 0 20px; color:#fff; font-size:14px; line-height:45px; background:#495164; }
+.content { padding:20px 20px 60px; }
+.btnArea { position:fixed; bottom:0; left:0; width:100%; padding:10px 0; border-top:1px solid #d7d5d5; text-align:center; background:#fbfafa; }
+
+.xans-myshop-addrregister .info { margin:0 0 20px; padding:12px 15px; border:5px solid #e8e8e8; }
+.xans-myshop-addrregister .info h2 { margin:0 0 6px; padding:0 0 8px; border-bottom:1px solid #e8e8e8; color:#353535; font-size:12px; }
+.xans-myshop-addrregister .info li { padding:0 0 0 9px; color:#757575; line-height:1.5; background:url("http://img.echosting.cafe24.com/skin/base_ko_KR/order/ico_grid.gif") no-repeat 0 7px; }
+
+.xans-myshop-addrregister .boardWrite { border:1px solid #d7d5d5; }
+.xans-myshop-addrregister .boardWrite table { table-layout:fixed; color:#353535; line-height:1.5; }
+.xans-myshop-addrregister .boardWrite th { width:120px; padding:11px 0 9px 19px; border-top:1px solid #e9e9e9; border-right:1px solid #e9e9e9; font-weight:normal; text-align:left; background:#fbfafa; }
+.xans-myshop-addrregister .boardWrite td { width:auto; padding:8px 0 7px 10px; border-top:1px solid #e9e9e9; color:#757575; vertical-align:middle; }
+.xans-myshop-addrregister .boardWrite tbody tr:first-child th,
+.xans-myshop-addrregister .boardWrite tbody tr:first-child td { border-top:0; }
+.xans-myshop-addrregister .boardWrite img { vertical-align:middle; }
+.xans-myshop-addrregister .boardWrite a { text-decoration:none; }
+.xans-myshop-addrregister .boardWrite input { height:22px; padding:0 0 0 9px; border:1px solid #d5d5d5; line-height:22px; }
+.xans-myshop-addrregister .boardWrite input[type=radio],
+.xans-myshop-addrregister .boardWrite input[type=checkbox] { width:13px; height:13px; margin:0 5px 0 0; padding:0; border:0; }
+.xans-myshop-addrregister .boardWrite select { margin:0 4px 0 0; }
+.xans-myshop-addrregister #ma_rcv_title, .xans-myshop-addrregister #ma_rcv_name { width:180px; }
+.xans-myshop-addrregister #address_zip1, .xans-myshop-addrregister #address_zip2 { width:60px; padding:0; text-align:center; }
+.xans-myshop-addrregister #address_addr1, .xans-myshop-addrregister #address_addr2 { width:420px; margin:5px 0 0; }
+.xans-myshop-addrregister #ma_rcv_phone1, .xans-myshop-addrregister #ma_rcv_mobile_no1 { width:60px; }
+.xans-myshop-addrregister #ma_rcv_phone2, .xans-myshop-addrregister #ma_rcv_phone3,
+.xans-myshop-addrregister #ma_rcv_mobile_no2, .xans-myshop-addrregister #ma_rcv_mobile_no3 { width:60px; margin:0 4px; }

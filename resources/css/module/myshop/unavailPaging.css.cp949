@@ -1,0 +1,12 @@
+.xans-myshop-unavailpaging { margin:30px 0 0; text-align:center; }
+.xans-myshop-unavailpaging p { display:inline-block; vertical-align:top; *display:inline; *zoom:1; }
+.xans-myshop-unavailpaging p.first { margin:0 -4px 0 0; }
+.xans-myshop-unavailpaging p.last { margin:0 0 0 -4px; }
+.xans-myshop-unavailpaging ol { display:inline-block; margin:0 -4px; font-size:0; line-height:0; vertical-align:top; *display:inline; *zoom:1; *margin:0; }
+.xans-myshop-unavailpaging li { display:inline-block; margin:0 0 0 -1px; border:1px solid #d7d5d5; font-size:12px; color:#757575; vertical-align:top; *display:inline; *zoom:1; }
+.xans-myshop-unavailpaging li:first-child { margin-left:0; }
+.xans-myshop-unavailpaging img { vertical-align:top; }
+.xans-myshop-unavailpaging li a { display:block; width:33px; padding:9px 0; font-weight:bold; color:#939393; line-height:14px; background:#fff; }
+.xans-myshop-unavailpaging li a:hover { text-decoration:none; background:#f0f2f2; }
+.xans-myshop-unavailpaging li a.this { padding-bottom:6px; border-bottom:3px solid #495164; color:#495164; }
+.xans-myshop-unavailpaging a.nolink { cursor:default; }

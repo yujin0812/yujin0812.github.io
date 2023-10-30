@@ -1,0 +1,39 @@
+#popup { width:800px; }
+.header { padding:0 0 0 19px; height:45px; background:#495164; }
+.header h1 { font-size:14px; color:#fff; line-height:45px; }
+.content { padding:20px; background:#fff; }
+.btnArea { padding:9px 0 10px; border-top:1px solid #d7d5d5; text-align:center; background:#fbfafa; }
+
+.xans-myshop-depositrefundlist .help { margin:0 0 20px; padding:12px 15px; border:5px solid #e8e8e8; }
+.xans-myshop-depositrefundlist .help li { padding:0 0 0 9px; color:#757575; line-height:1.5; background:url("http://img.echosting.cafe24.com/skin/base_ko_KR/order/ico_grid.gif") no-repeat 0 7px; }
+
+.xans-myshop-depositrefundlist .tab li.selected:first-child { margin-left:0; }
+.xans-myshop-depositrefundlist .tab { height:38px; margin:0 0 11px; border:1px solid #cbcdce; border-bottom-color:#292929; border-left:0; line-height:1.5; background:#f0f2f2; *zoom:1; }
+.xans-myshop-depositrefundlist .tab:after { content:""; display:block; clear:both; }
+.xans-myshop-depositrefundlist .tab li { float:left; margin:0 0 0 -1px; }
+.xans-myshop-depositrefundlist .tab li a { display:block; min-width:168px; height:38px; padding:0 15px; border-right:1px solid #cbcdce; border-left:1px solid #cbcdce; color:#757575; line-height:38px; text-decoration:none; text-align:center; background:#f0f2f2; }
+.xans-myshop-depositrefundlist .tab li.selected a { position:relative; top:-1px; margin:0 0 -1px; border:1px solid #292929; color:#fff; font-weight:bold; background:#4a5164; }
+.xans-myshop-depositrefundlist .tab li:first-child,
+.xans-myshop-depositrefundlist .tab li.selected:first-child { margin-left:0; }
+
+.xans-myshop-depositrefundlist table { border-collapse:separate; border:1px solid #d7d5d5; color:#353535; line-height:1.5; }
+.xans-myshop-depositrefundlist table th { padding:11px 0 9px; border-left:1px solid #e9e9e9; font-weight:normal; vertical-align:middle; background:#fbfafa; }
+.xans-myshop-depositrefundlist table th:first-child { border-left:0; }
+.xans-myshop-depositrefundlist table td { padding:8px 0 5px; border-top:1px solid #e9e9e9; text-align:center; vertical-align:middle; }
+.xans-myshop-depositrefundlist table td a { color:#353535; }
+.xans-myshop-depositrefundlist table td.left { padding-left:10px; text-align:left; }
+.xans-myshop-depositrefundlist table td.right { padding-right:10px; text-align:right; }
+.xans-myshop-depositrefundlist table td.noData { padding:50px 0; text-align:center; font-weight:bold; color:#757575; }
+
+.xans-myshop-depositrefundpaging { margin:30px 0 0; text-align:center; }
+.xans-myshop-depositrefundpaging p { display:inline-block; vertical-align:top; *display:inline; *zoom:1; }
+.xans-myshop-depositrefundpaging p.first { margin:0 -4px 0 0; }
+.xans-myshop-depositrefundpaging p.last { margin:0 0 0 -4px; }
+.xans-myshop-depositrefundpaging ol { display:inline-block; margin:0 -4px; font-size:0; line-height:0; vertical-align:top; *display:inline; *zoom:1; *margin:0; }
+.xans-myshop-depositrefundpaging li { display:inline-block; margin:0 0 0 -1px; border:1px solid #d7d5d5; font-size:12px; color:#757575; vertical-align:top; *display:inline; *zoom:1; }
+.xans-myshop-depositrefundpaging li:first-child { margin-left:0; }
+.xans-myshop-depositrefundpaging img { vertical-align:top; }
+.xans-myshop-depositrefundpaging li a { display:block; width:33px; padding:9px 0; font-weight:bold; color:#939393; line-height:14px; background:#fff; }
+.xans-myshop-depositrefundpaging li a:hover { text-decoration:none; background:#f0f2f2; }
+.xans-myshop-depositrefundpaging li a.this { padding-bottom:6px; border-bottom:3px solid #495164; color:#495164; }
+.xans-myshop-depositrefundpaging a.nolink { cursor:default; }

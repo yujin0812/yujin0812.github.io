@@ -1,0 +1,175 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8" />
+<title></title>
+<!-- STYLE CSS -->
+<link href="css/application.css" rel="stylesheet" type="text/css">
+<link href="css/style.css" rel="stylesheet" type="text/css">
+<link href="css/reset.css" rel="stylesheet" type="text/css">
+<!-- SCRIPT -->
+<script src="scripts/jquery-3.4.1.min.js"></script>
+<script src="scripts/jquery.nice-select.min.js"></script>
+<script src="scripts/main.js"></script>
+<script>
+$(document).ready(function(){
+    // #modalOnCreateLegalLayout 열기: 법률자문 > 자문 생성
+    $(document).on("click", "#modalOnLitigtionCreate", function(){
+        fixedLayoutOn();
+    });
+    // accordion Toggle
+    $(document).on("click", ".accordion_head", function(){
+        $(this).next(".accordion_section").slideToggle("fast");
+        if( $(this).hasClass("active") ){
+            $(this).removeClass("active");
+        } else {
+            $(this).addClass("active");
+        }
+    });
+});
+</script>
+<style>
+    .btn__f {
+        display: block;
+        width: 120px;
+        margin: auto;
+        margin-bottom: 10px;
+    }
+    .pad30 {
+        padding: 30px;
+    }
+</style>
+</head>
+<body>
+<!-- ================================= header ================================= -->
+<!-- wrap -->
+<div id="wrap">
+    <!-- header -->
+    <header id="header">
+        <div class="in">
+            <!-- logo -->
+            <div class="logo"><a href="ui_guide.html"><img src='https://image.gsshop.com/ui/gsshop/pc/common/images/logo.png'></a></div>
+            <!-- gnb -->
+            <ul class="gnb">
+                <li class="active">
+                    <a href="index.html">계약관리</a>
+                    <!-- lnb -->
+                    <div class="lnb">
+                        <ul>
+                            <li class="active"><a href="index.html">전체 계약</a></li>
+                            <li><a href="index_my.html">나의 계약</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <a href="legal_advice_list.html">법률자문</a>
+                </li>
+                <li>
+                    <a href="official_note_list.html">공문 발송</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="header_notice">
+            <div class="header_notice__dynamic">
+                <div class="vertical-slider">
+                    <h2 class="vertical-slider__item">김영란법 개정으로 인해 외식 시 필독!김영란법 개정으로 인해 외식 시 필독!김영란법 개정으로 인해 외식 시 필독!김영란법 개정으로 인해 외식 시 필독!</h2>
+                    <h2 class="vertical-slider__item">법률자문 올리기 전 확인하세요.</h2>
+                    <h2 class="vertical-slider__item">가맹계약서 양식입니다.</h2>
+                </div>
+            </div>
+        </div>
+
+        <div class="in in_admin">
+            <div class="in_admin_inner">
+                <div class="number_approval">
+                    <a class="approval_on">결재건수</a>
+                    <p class="badge">7</p>
+                    <ul class="number_approval_view clearfix_ul">
+                        <li>
+                            <p class="xs_p58 elipsis">1.4분기 계약관리 시스템 교체 스템 교체 계약교체 스템 교체 계약</p>
+                            <a class="btn__f btn_xs">바로가기</a>
+                        </li>
+                        <li>
+                            <p class="xs_p58 elipsis">1.4분기 계약관리 시스템 교체 계약</p>
+                            <a class="btn__f btn_xs">바로가기</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="home">
+                    <a href="dashboard.html"></a>
+                </div>
+                <div class="hd_user_wrap">
+                    <div class="hd_user">
+                        <p class="hd_user_name">이유진님</p>
+                        <ul class="hd_user_ul">
+                            <li><a href="mypage_user_info.html">내 정보 보기</a></li>
+                            <li><a href="login.html">로그아웃</a></li>
+                        </ul>
+                    </div>
+                    <div class="hd_user_img"><img src="https://img1.daumcdn.net/thumb/R720x0.q80/?scode=mtistory&fname=http%3A%2F%2Fcfile10.uf.tistory.com%2Fimage%2F99530A3B5BE7C1803380DF"></div>
+                </div>
+            </div>
+            <!-- header_sub -->
+            <div class="header_sub">
+                <ul class="gnb_admin">
+                    <li><a href="notice.html">공지사항</a></li>
+                    <li><a href="group_list.html">그룹 관리자</a></li>
+                    <li>
+                        <a href="admin_workflow_list.html">관리자</a>
+                        <!-- lnb -->
+                        <div class="lnb">
+                            <ul class="lnb_admin">
+                                <li class="active"><a href="admin_workflow_list.html">워크플로우</a></li>
+                                <li><a href="admin_template_list.html">템플릿 관리</a></li>
+                                <li><a href="admin_user.html">유저 관리</a></li>
+                                <li><a href="admin_notify.html">공지사항 관리</a></li>
+                                <li><a href="admin_contract_counterpart.html">외부업체관리</a></li>
+                                <li><a href="admin_group.html">그룹</a></li>
+                                <li><a href="admin_tag.html">TAG</a></li>
+                                <li><a href="admin_company_info.html">회사 정보</a></li>
+                                <li><a href="admin_digital_seal.html">디지털 직인 관리</a></li>
+                                <li><a href="admin_legal_setting.html">법률 자문</a></li>
+                                <li><a href="admin_official_note.html">공문 발송</a></li>
+                                <li><a href="admin_label.html">라벨</a></li>
+                                <li><a href="admin_empowerment.html">권한 위임</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <!-- //header_sub -->
+        </div>
+    </header>
+    <!-- //header -->
+    <!-- ================================= //header ================================= -->
+
+    <!-- ================================= content ================================= -->
+    <!-- content -->
+    <div class="content">
+        <!-- section__litigation -->
+        <section class="section__litigation pad30">
+                <p class="sm_p58 tc" style="margin-bottom: 5px;">최신 정보_20200617</p>
+            <a href="index.html" class="btn__f">home</a>
+            <a href="contract_memo.html" class="btn__f">계약 상세 화면</a>
+            <a href="login.html" class="btn__f">로그인</a>
+            <a href="pdf_contract_save.html" class="btn__f">인쇄_계약서</a>
+            <div style="margin-top: 20px;">
+                <p class="sm_p58 tc" style="margin-bottom: 5px;">최신 정보_20200520</p>
+                <a href="modal.html" class="btn__f" style="margin-bottom: 10px;">모달</a>
+            </div>
+            <a href="ui_guide.html" class="btn__f">UI GUIDE</a>
+        </section>
+        <!-- //section__litigation -->
+    </div>
+    <!-- //content -->
+    <!-- ================================= //content ================================= -->
+    
+</div>
+<!-- //wrap -->
+<!-- footer -->
+<footer id="footer"></footer>
+<!-- //footer -->
+</body>
+</html>
+ 

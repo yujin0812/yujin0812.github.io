@@ -1,0 +1,234 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8" />
+<title></title>
+<!-- STYLE CSS -->
+<link href="css/application.css" rel="stylesheet" type="text/css">
+<link href="css/style.css" rel="stylesheet" type="text/css">
+<link href="css/reset.css" rel="stylesheet" type="text/css">
+<!-- SCRIPT -->
+<script src="scripts/jquery-3.4.1.min.js"></script>
+<script src="scripts/jquery.nice-select.min.js"></script>
+<script src="scripts/main.js"></script>
+</head>
+<body>
+<!-- wrap -->
+<div id="wrap">
+    <!-- header -->
+    <header id="header">
+        <!-- header_inner -->
+        <div class="header_inner">
+            <!-- logo -->
+            <div class="logo"><a href="ui_guide.html"><img src='http://www.stickpng.com/assets/images/580b57fcd9996e24bc43c513.png'></a></div>
+            <!-- //logo -->
+            <!-- hd_user_wrap -->
+            <div class="hd_user_wrap">
+                <!-- hd_user -->
+                <div class="hd_user">
+                    <p class="hd_user_name">이유진님</p>
+                    <!-- hd_user_ul -->
+                    <ul class="hd_user_ul">
+                        <li><a href="mypage_user_info.html">내 정보 보기</a></li>
+                        <li><a href="login.html">로그아웃</a></li>
+                    </ul>
+                    <!-- //hd_user_ul -->
+                </div>
+                <!-- //hd_user -->
+                <div class="hd_user_img"><img src="https://img1.daumcdn.net/thumb/R720x0.q80/?scode=mtistory&fname=http%3A%2F%2Fcfile10.uf.tistory.com%2Fimage%2F99530A3B5BE7C1803380DF"></div>
+            </div>
+            <!-- //hd_user_wrap -->
+            <!-- gnb_wrap -->
+            <div class="gnb_wrap">
+                <!-- gnb -->
+                <ul class="gnb">
+                    <li>
+                        <a href="index.html">계약관리</a>
+                    </li>
+                    <li class="active">
+                        <a href="legal_advice_list.html">법률자문</a>
+                    </li>
+                    <li>
+                        <a href="official_note_list.html">공문 발송</a>
+                    </li>
+                </ul>
+                <!-- //gnb -->
+                <!-- gnb_admin -->
+                <ul class="gnb_admin">
+                    <li><a href="notice.html">공지사항</a></li>
+                    <li><a href="group_list.html">그룹 관리자</a></li>
+                    <li>
+                        <a href="admin_workflow_list.html">관리자</a>
+                        <!-- //gnb_lower -->
+                    </li>
+                </ul>
+                <!-- //gnb_admin -->
+            </div>
+            <!-- //gnb_wrap -->
+        </div>
+        <!-- //header_inner -->
+    </header>
+    <!-- //header -->
+
+    <!-- ================================= content ================================= -->
+    
+    <!-- snb -->
+    <nav class="snb legal_create_wrap">
+        <a href="legal_advice_writing.html" class="btn__active">신규 자문 생성</a>
+    </nav>
+    <!-- //snb -->
+
+    <!-- content -->
+    <div class="content">
+        <!-- section_legal -->
+        <section class="section_legal">
+            <!-- section__filter_search -->
+            <section class="section__filter_search section__legal_filter">
+                <!-- input_search -->
+                <div class="dis_table">
+                    <!-- table_cell -->
+                    <div class="table_cell">
+                        <div class="fl">
+                            <h1 class="section_h1">법률자문</h1>
+                        </div>
+                        <!-- search_wrap -->
+                        <div class="fr search_wrap">
+                            <!-- search_select -->
+                            <div class="fl search_select">
+                                <select>
+                                    <option data-display="Select">Nothing</option>
+                                    <option value="1">Some option</option>
+                                    <option value="2">Another option</option>
+                                    <option value="3">Potato</option>
+                                </select>
+                            </div>
+                            <!-- //search_select -->
+                            <!-- input_search -->
+                            <div class="fl input_search">
+                                <div class="icon_search"></div>
+                                <input type="text" class="input">
+                            </div>
+                            <!-- //input_search -->
+                            <div class="fl btn_search_filter">상세필터</div>
+                        </div>
+                        <!-- //search_wrap -->
+                    </div>
+                    <!-- //table_cell -->
+                </div>
+                <!-- //dis_table input_search -->
+                <!-- search_filter_wrap -->
+                <div class="search_filter_wrap">
+                    <!-- clearfix_r15 -->
+                    <div class="clearfix_r15">
+                        <div class="divide__2 form_group">
+                            <label class="label">자문 제목</label>
+                            <input type="text" class="input">
+                        </div>
+                        <div class="divide__2 form_group">
+                            <label class="label">자문 내용</label>
+                            <input type="text" class="input">
+                        </div>
+                    </div>
+                    <!-- //clearfix_r15 -->
+                    <!-- clearfix_r15 -->
+                    <div class="clearfix_r15">
+                        <div class="divide__3 form_group">
+                            <label class="label">검토자</label>
+                            <input type="text" class="input">
+                        </div>
+                        <div class="divide__3 form_group">
+                            <label class="label">자문 기안자</label>
+                            <input type="text" class="input">
+                        </div>
+                        <div class="divide__3 form_group">
+                            <label class="label">자문 ID</label>
+                            <input type="text" class="input">
+                        </div>
+                    </div>
+                    <!-- //clearfix_r15 -->
+                    <div class="btn_wrap__tr">
+                        <a class="btn__b">검색</a>
+                    </div>
+                </div>
+                <!-- //search_filter_wrap -->
+            </section>
+            <!-- //section__filter_search -->
+
+
+            <!-- 전체 계약 보기 기본 -->
+            <!-- section__contract -->
+            <section class="section__legal_list">
+                <div class="tab_contract_wrap">
+                    <ul class="tab_contract clearfix">
+                    <li class="active">전체보기</li>
+                    <li>부서장 확인</li>
+                    <li>유관부서회람</li>
+                    <li>법무팀 검토</li>
+                    <li>법무팀 최종 승인</li>
+                    <li>완료</li>
+                    </ul>
+                </div>
+                <!-- contract_list_wrap -->
+                <div class="contract_list_wrap">
+                    <!-- contract_list -->
+                    <ul class="contract_list">
+                    <!-- contract_list li -->
+                    <li>
+                        <div class="clearfix">
+                            <div class="fl"><p class="sm_pb4">20190207-00001004</p></div>
+                            <div class="fr"><p class="sm_pb4">2019.02.01. 09:30:19</p></div>
+                        </div>
+                        <div class="clearfix">
+                            <div class="contract_li_info">
+                                <p class="cont_li_sub"><a href="legal_advice_view.html">계약 제목 영역입니다 계약 제목 영역입니다 계약 제목 영역입니다 계약 제목 영역입니다</a></p>
+                                <!-- 기안자 / 계약상대 / 검토자 -->
+                                <p class="sm_p58"><span>기안자 : 이유진</span></p>
+                                <!-- tag -->
+                                <div class="clearfix">
+                                    <div class="tag"><p class="sm_p58">#강남지점</p></div>
+                                    <div class="tag"><p class="sm_p58">#강남구옥천동</p></div>
+                                    <div class="tag"><p class="sm_p58">#강남지점</p></div>
+                                </div>
+                                <!-- contract_li_state -->
+                                <div class="contract_li_state">
+                                    <div class="dis_table">
+                                        <div class="table_cell">
+                                            <div class="state__legal">법무팀 검토</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- //contract_li_state -->
+                            </div>
+                        </div>
+                    </li>
+                    <!-- //contract_list li -->
+                    </ul>
+                    <!-- //contract_list -->
+                    <div class="clearfix">
+                        <ul class="pagination fr">
+                        <li class="prev">prev</li>
+                        <li>1</li>
+                        <li>2</li>
+                        <li class="active">3</li>
+                        <li>4</li>
+                        <li>5</li>
+                        <li class="next">next</li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- //contract_list_wrap -->
+            </section>
+            <!-- //section__contract -->
+        </section>
+        <!-- //section_legal -->
+    </div>
+    <!-- //content -->
+    <!-- ================================= //content ================================= -->
+</div>
+<!-- //wrap -->
+<!-- footer -->
+<footer id="footer"></footer>
+<!-- //footer -->
+</body>
+</html>
+ 

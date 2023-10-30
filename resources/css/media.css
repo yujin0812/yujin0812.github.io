@@ -1,0 +1,147 @@
+@charset "utf-8";
+/* CSS Document */
+
+@media (max-width: 1620px) {
+    #wrap {
+        padding: 0 70px;
+        background: none;
+    }
+}
+@media (max-width: 1170px) {
+    .main_section {
+        display: block;
+        width: 100%;
+        height: auto;
+        min-height: 100vh;
+        margin-bottom: 70px;
+    }
+    .main_text, .main_box {
+        float: none;
+        width: 100%;
+    }
+    .main_text {
+        margin-top: 160px;
+        text-align: right;
+    }
+    .main_blog_a {
+	    float: right;
+    }
+    .main_box {
+        max-width: 600px;
+    }
+    .portfolio_box {
+        width: 50%;
+    }
+    .list_modal {
+        width: 76%;
+    }
+    .list_prev {
+        left: 2%;
+        width: 7%;
+        height: auto;
+        padding-top: 7%;
+        background-size: 30%;
+    }
+    .list_next {
+        right: 2%;
+        width: 7%;
+        height: auto;
+        padding-top: 7%;
+        background-size: 30%;
+    }
+}
+@media (max-width: 960px) and (min-width: 641px) {
+    .resume_box_wrap {
+        width: 100%;
+        display: flex;
+    }
+    .resume_box_wrap .resume_box {
+        width: 33.3333%;
+    }
+    .about_introduction {
+        width: 100%;
+    }
+    .introduction_text_box .txt_itm + .txt_itm { margin-top: 35px; }
+}
+@media (max-width: 640px) {
+    #wrap {
+        padding: 0 20px;
+        background: none;
+    }
+    .header_ul li {
+        font-size: 14px;
+    }
+    .main_text {
+        margin-top: 110px;
+        margin-bottom: 20px;
+    }
+    h1.main_h1 {
+        font-size: 90px;
+        line-height: 1;
+    }
+    .main_h1 span {
+        display: block;
+    }
+    .main_p, .main_text_box p.main_text_p {
+        display: none;
+    }
+    .main_blog_a {
+	    float: right;
+	    width: auto;
+	    height: 20px;
+	    line-height: 20px;
+	    color: #333;
+	    font-weight: 600;
+	    background-color: transparent;
+	    text-align: right;
+    }
+    .main_blog_a:hover { color: #000; }
+    .main_text_box p.main_m_p {
+        display: table-cell;
+    }
+    section {
+        margin-bottom: 70px;
+    }
+    section.portfolio_section {
+        margin-bottom: 30px;
+    }
+    .portfolio_title {
+        margin-top: 15px;
+        font-size: 16px;
+    }
+    .portfolio_sub_title {
+        margin-bottom: 15px;
+    }
+    .portfolio_action {
+        margin-top: 15px;
+    }
+    .about_box {
+        width: 50%;
+        margin-bottom: 30px;
+    }
+    .portfolio_box {
+        width: 100%;
+        padding-right: 0px;
+        margin-bottom: 40px;
+    }
+    .portfolio_span_wrap .portfolio_box {
+        width: 50%;
+        padding-right: 10px;
+    }
+    .portfolio_text_box {
+        font-size: 14px;
+    }
+    .resume_box_wrap {
+        width: 100%;
+    }
+    .about_introduction {
+        width: 100%;
+    }
+    .toTop {
+        right: 12px;
+        bottom: 12px;
+        width: 30px;
+        height: 30px;
+        background-size: 16px;
+    }
+}

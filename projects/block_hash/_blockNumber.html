@@ -1,0 +1,53 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf_8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>blockNumber</title>
+<!-- GOOGLE FONTS -->
+<link href="http://fonts.googleapis.com/earlyaccess/notosanskr.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Maven+Pro:400,500,700" rel="stylesheet">
+<!-- STYLE CSS -->
+<link href="css/index.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <div class="section_wrap">
+        <header>
+            <nav class="header_inner">
+                <ul>
+                    <li><a>HOME</a></li>
+                    <li><a>TxHash</a></li>
+                </ul>
+            </nav>
+        </header>
+        <section class="section_inner">
+            <div class="template">
+                <div>
+                    <h1>{{blockNumber}}</h1>
+                    <p>number: {{block['number']}}</p>
+                    <p>hash: {{block['hash']}}</p>
+                    <p>parentHash: {{block['parentHash']}}</p>
+                    <p>nonce: {{block['nonce']}}</p>
+                    <p>sha3Uncles: {{block['sha3Uncles']}}</p>
+                    <p>logsBloom: {{block['logsBloom']}}</p>
+                    <p>transactionsRoot: {{block['transactionsRoot']}}</p>
+                    <p>stateRoot: {{block['stateRoot']}}</p>
+                    <p>receiptsRoot: {{block['receiptsRoot']}}</p>
+                    <p>miner: {{block['miner']}}</p>
+                    <p>difficulty: {{block['difficulty']}}</p>
+                    <p>totalDifficulty: {{block['totalDifficulty']}}</p>
+                    <p>extraData: {{block['extraData']}}</p>
+                    <p>size: {{block['size']}}</p>
+                    <p>gasLimit: {{block['gasLimit']}}</p>
+                    <p>gasUsed: {{block['gasUsed']}}</p>
+                    <p>timestamp: {{block['timestamp']}}</p>
+                    <p>transactions: {{block['transactions']}}</p>
+                    <p>uncles: {{block['uncles']}}</p>
+                </div>
+            </div><!-- template end -->
+        </section>
+    </div><!-- section_wrap end -->
+</body>
+</html>
+ 

@@ -1,0 +1,9 @@
+#popup { width:600px; }
+.header h1 { height:45px; padding:0 0 0 20px; color:#fff; font-size:14px; line-height:45px; background:#495164; }
+.content { padding:20px 20px 60px; }
+.btnArea { position:fixed; bottom:0; left:0; width:100%; padding:10px 0; border-top:1px solid #d7d5d5; text-align:center; background:#fbfafa; }
+
+.xans-myshop-orderhistoryescrow { font-size:11px; }
+.xans-myshop-orderhistoryescrow fieldset { display:block; padding:0 0 20px; color:#353535; vertical-align:middle; }
+.xans-myshop-orderhistoryescrow fieldset input { height:22px; margin:0 4px; padding:0 0 0 9px; border:1px solid #d5d5d5; line-height:22px; }
+.xans-myshop-orderhistoryescrow fieldset p { padding:0 0 20px; color:#008bcc; line-height:17px; }

@@ -1,0 +1,294 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title></title>
+<!-- STYLE CSS -->
+<link href="css/reset.css" rel="stylesheet" type="text/css">
+<link href="css/application.css" rel="stylesheet" type="text/css">
+<link href="css/main.css" rel="stylesheet" type="text/css">
+<!--<link href="css/style.css" rel="stylesheet" type="text/css">-->
+<!-- SCRIPT -->
+<script src="scripts/jquery-3.4.1.min.js"></script>
+<script src="scripts/jquery.nice-select.min.js"></script>
+<script src="scripts/main.js"></script>
+<script src="scripts/dropzone.js"></script>
+</head>
+<body>
+<!-- wrap -->
+<div id="wrap">
+    <!-- header -->
+    <header id="header">
+        <div class="section clearfix">
+            <!-- logo -->
+            <a class="logo" href="index.html"><img src="http://www.legalinsight.kr/_img/comn/logo_marshmallow.png" alt="마시멜로로고"></a>
+            <div class="header_menu">
+                <!-- gnb -->
+                <ul class="gnb">
+                    <li class="active"><a href="index.html">marshmallaw</a></li>
+                    <li><a href="how.html">HOW</a></li>
+                    <li><a href="notice.html">NOTICE</a></li>
+                    <li><a href="news.html">NEWS</a></li>
+                    <li><a href="qna.html">Q&amp;A</a></li>
+                    <!-- login -->
+                    <li><a href="mypage.html">MYPAGE</a></li>
+                </ul>
+                <!-- login display: none -->
+                <a class="btn__hd_menu">Login</a>
+            </div>
+            <div class="ham"><div class="ham_line"></div></div>
+        </div>
+    </header>
+    <!-- //header -->
+    
+    <!-- content -->
+    <div class="content">
+        <section class="section section1">
+            <h1 class="h1">계약서 분석</h1>
+            <h2 class="h2">계약서 선택</h2>
+            <div class="content_area">
+                <div class="tab_wrap step_wrap step_itm4">
+                    <ul class="tabs step_hd">
+                        <li class="tab active">
+                            <p class="tit01">STEP 01</p>
+                            <p class="h2">주의사항</p>
+                        </li>
+                        <li class="tab">
+                            <p class="tit01">STEP 02</p>
+                            <!-- 주석 br 태그 추가: min_br -->
+                            <p class="h2">계약서 <br class="min_br">업로드</p>
+                        </li>
+                        <li class="tab">
+                            <p class="tit01">STEP 03</p>
+                            <!-- 주석 br 태그 추가: min_br -->
+                            <p class="h2">계약서 <br class="min_br">선택</p>
+                        </li>
+                        <li class="tab">
+                            <p class="tit01">STEP 04</p>
+                            <!-- 주석 br 태그 추가: min_br -->
+                            <p class="h2">계약서 <br class="min_br">분석/수정</p>
+                        </li>
+                    </ul>
+                    <ul class="tviews step_content">
+                        <!-- tview -->
+                        <li class="tview active">
+                            <div class="cont_box">
+                                <p class="txt_l tc">리걸인사이트는 이용약관에 따라 어떠한 이유에서든 <br>이용자가 작성하는 계약서의 형식과 내용에 대한 책임이 없음을 알려드립니다.</p>
+                            </div>
+                            <div class="tr mar_top20">
+                                <input type="checkbox" id="checkbox">
+                                <label for="checkbox">위 내용을 모두 확인하였으며 이에 동의합니다.</label>
+                            </div>
+                            <div class="btn_wrap tr mar_top40">
+                                <div class="btn__cancel">이전</div>
+                                <div class="btn__active">다음</div>
+                            </div>
+                        </li>
+                        <!-- //tview -->
+                        
+                        <!-- tview -->
+                        <li class="tview">
+                            <!-- 계약서 선택1 -->
+                            <div class="cont_box">
+                                <ul>
+                                    <li class="mar_btm40">
+                                        <p class="txt01 icon_check_p mar_btm20">계약서 검토를 위해 문서 제목을 입력해주세요.</p>
+                                        <div class="form_wrap">
+                                            <label class="label b">문서 제목명</label>
+                                            <input type="text" class="input">
+                                        </div>
+                                    </li>
+                                    <li class="mar_btm40">
+                                        <p class="txt01 icon_check_p mar_btm20">계약서 종류, 당사자 선택 후 파일을 업로드 해주세요.</p>
+                                        <div class="form_wrap">
+                                            <label class="label b">의뢰 당사자</label>
+                                            <div class="form_itm" style="margin-right: 50px;">
+                                                <input type="radio" id="radio1">
+                                                <label for="radio1">갑</label>
+                                            </div>
+                                            <div class="form_itm">
+                                                <input type="radio" id="radio2">
+                                                <label for="radio2">을</label>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <div class="form_wrap">
+                                    <label class="label b">파일첨부</label>
+                                    <!-- dropzone -->
+                                    <div id="dropzone1">
+                                        <form class="dropzone needsclick" id="demo-upload" action="/upload">
+                                            <p class="drop_p dz-message tc">마우스로 파일을 끌어오세요.<br>업로드 가능 확장자 파일 hwp, docx, doc, pdf</p>
+                                        </form>
+                                    </div>
+                                    <!-- //dropzone -->
+                                   <ul class="attach_list">
+                                       <li>근로계약서_김응보.pdf</li>
+                                   </ul>
+                                </div>
+                            </div>
+                            <div class="btn_wrap tr mar_top40">
+                                <div class="btn__cancel">이전</div>
+                                <div class="btn__active">다음</div>
+                            </div>
+                        </li>
+                        <!-- //tview -->
+                        
+                        <!-- tview -->
+                        <li class="tview">
+                            <div class="cont_box cont_type_m">
+                                <p class="txt01">계약서 종류를 선택해주세요.</p>
+                                <p class="txt_g">추천하는 계약서는 다음과 같습니다.</p>
+
+                                <!-- 주석: 변경됨 -->
+                                <!-- list_box_toggle -->
+                                <ul class="list_box_toggle mar_top20">
+                                    <li>
+                                        <!-- list_toggle_hd -->
+                                        <div class="list_toggle_hd clearfix">
+                                            <p class="fl">기한의 이익상실</p>
+                                            <p class="fr btn__f xs btn_toggle">계약서 설명</p>
+                                        </div>
+                                        <!-- list_toggle_cont -->
+                                        <div class="list_toggle_cont">
+                                            <div class="form_wrap">
+                                                <input type="checkbox" id="">
+                                                <label for="">업소 안에서 도박이나 그 밖의 사행행위 또는 풍기문란행위를 조장하거나 묵인한 때</label>
+                                            </div>
+                                        </div>
+                                        <!-- //list_toggle_cont -->
+                                    </li>
+                                    <li>
+                                        <!-- list_toggle_hd -->
+                                        <div class="list_toggle_hd clearfix">
+                                            <p class="fl">기타 당사자가 추가하고자 하는 특약사항</p>
+                                            <p class="fr btn__f xs btn_toggle">계약서 설명</p>
+                                        </div>
+                                        <!-- list_toggle_cont -->
+                                        <div class="list_toggle_cont">
+                                            <div class="form_wrap">
+                                                <input type="checkbox" id="">
+                                                <label for="">업소 안에서 도박이나 그 밖의 사행행위 또는 풍기문란행위를 조장하거나 묵인한 때</label>
+                                            </div>
+                                        </div>
+                                        <!-- //list_toggle_cont -->
+                                    </li>
+                                </ul>
+                                <!-- //list_box_toggle -->
+                                
+                                <div class="tc">
+                                    <p class="txt01 mar_ver3">찾으시는 계약서가 없으신가요?</p>
+                                    <div class="btn__f btn_lg btn_more" data-active="activeThis1"></div>
+                                </div>
+                                
+                                <div class="dis_none mar_top30" id="activeThis1">
+                                    <div class="input_search_wrap">
+                                        <input type="text" class="input_search">
+                                        <button class="btn__p">검색</button>
+                                    </div>
+                                    
+                                    <!-- 주석: 변경됨 -->
+                                    <!-- list_box_toggle list_line_toggle -->
+                                    <ul class="list_box_toggle list_line_toggle mar_top20">
+                                        <li>
+                                            <!-- list_toggle_hd -->
+                                            <div class="list_toggle_hd clearfix">
+                                                <div class="fl">
+                                                    <input type="checkbox" id="checkItm02">
+                                                    <label class="label" for="checkItm02">금전소비 계약서 _02</label>
+                                                </div>
+                                                <p class="fr btn__f xs btn_toggle">계약서 설명</p>
+                                            </div>
+                                            <!-- list_toggle_cont -->
+                                            <div class="list_toggle_cont">
+                                                <div class="form_wrap">
+                                                    <input type="checkbox" id="">
+                                                    <label for="">업소 안에서 도박이나 그 밖의 사행행위 또는 풍기문란행위를 조장하거나 묵인한 때</label>
+                                                </div>
+                                            </div>
+                                            <!-- //list_toggle_cont -->
+                                        </li>
+                                        <li>
+                                            <!-- list_toggle_hd -->
+                                            <div class="list_toggle_hd clearfix">
+                                                <div class="fl">
+                                                    <input type="checkbox" id="checkItm02">
+                                                    <label class="label" for="checkItm02">금전소비 계약서 _01</label>
+                                                </div>
+                                                <p class="fr btn__f xs btn_toggle">계약서 설명</p>
+                                            </div>
+                                            <!-- list_toggle_cont -->
+                                            <div class="list_toggle_cont">
+                                                <div class="form_wrap">
+                                                    <input type="checkbox" id="">
+                                                    <label for="">업소 안에서 도박이나 그 밖의 사행행위 또는 풍기문란행위를 조장하거나 묵인한 때</label>
+                                                </div>
+                                            </div>
+                                            <!-- //list_toggle_cont -->
+                                        </li>
+                                    </ul>
+                                    <!-- //list_box_toggle list_line_toggle -->
+                                    
+                                    <ul class="pagination tc">
+                                        <li>1</li>
+                                        <li>2</li>
+                                        <li class="active">3</li>
+                                        <li>4</li>
+                                        <li>5</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="btn_wrap mar_top40">
+                                <div class="fr">
+                                    <div class="btn__cancel">이전</div>
+                                    <div class="btn__active">다음</div>
+                                </div>
+                            </div>
+                        </li>
+                        <!-- //tview -->
+                        
+                        <!-- tview -->
+                        <li class="tview">
+                            step04
+                        </li>
+                        <!-- //tview -->
+                        
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </div>
+    <!-- //content -->
+
+    <!-- footer -->
+    <footer id="footer">
+        <div class="section">
+            <div class="footer_top">
+                <a href="#" class="foot_logo"><img src="http://www.legalinsight.kr/_img/comn/logo_marshmallow.png" alt="마시멜로로고"></a>
+                <div class="flex_box txt_g">
+                    <div class="box">
+                        <p>
+                            리걸인사이트 | 사업자등록번호: 530-81-00892 <span class="m_none">| </span><br class="m_block">이메일: support@legalinsight.kr<br>
+                            주소: 서울시 강남구 봉은사로 417(삼성동 구구빌딩) 4층 <span class="m_none">| </span><br class="m_block">Tel: 02-3445-6600 | Fax: 02-3445-6601
+                        </p>
+                    </div>
+                    <div class="box">© 2017 LEGAL INSIGHT. All Rights Reserved.</div>
+                </div>
+            </div>
+        </div>
+        <div class="footer_bottom bg_gray">
+            <div class="section">
+                <a href="#">리걸인사이트 소개</a>
+                <a href="#">면책공고</a>
+                <a href="#">이용약관</a>
+                <a href="#">개인정보취급방침</a>
+                <a href="#">오시는길</a>
+            </div>
+        </div>
+    </footer>
+    <!-- //footer -->
+</div>
+<!-- //wrap -->
+</body>
+</html>
