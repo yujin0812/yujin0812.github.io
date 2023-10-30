@@ -1,0 +1,1076 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title></title>
+<!-- GOOGLE FONTS -->
+<link href="http://fonts.googleapis.com/earlyaccess/notosanskr.css" rel="stylesheet">
+<!-- STYLE CSS -->
+<link href="./resources/css/index.css" rel="stylesheet" type="text/css">
+<link href="./resources/css/media.css" rel="stylesheet" type="text/css">
+<link href="./resources/css/reset.css" rel="stylesheet" type="text/css">
+<!-- SCRIPT -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="./resources/scripts/main.js"></script>
+<!-- WOW ANI -->
+<script src="./resources/scripts/wow.min.js"></script>
+<link href="./resources/css/animate.min.css" rel="stylesheet" />
+<script>
+	new WOW().init();
+</script>
+<style>
+    .portfolio_img_box a:before {
+        content: '사이트로 이동';
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0,0,0,.6);
+        color: #fff;
+        font-size: 16px;
+        transition: all .35s;
+        cursor: pointer;
+        opacity: 0;
+        z-index: 9;
+    }
+    .portfolio_img_box a.off:before {
+        content: '사이트 없음';
+        background: rgba(0,0,0,.4);
+        cursor: default;
+        opacity: 1;
+    }
+    .portfolio_img_box a:hover:before {
+        opacity: 1;
+    }
+    .portfolio_img_box img {
+        transition: all .4s;
+    }
+    .portfolio_img_box a:not(.off):hover img {
+        transform: scale(1.1);
+    }
+    .list_wrap .list_tab_wrap {
+        display: flex;
+        align-items: flex-start;
+    }
+    .contact_section .contact_text {
+        margin-top: 0;
+    }
+    .portfolio_title {
+        margin: 25px 0 8px;
+    }
+    .portfolio_sub_title {
+        margin-bottom: 20px;
+        color: #787878;
+    }
+    .portfolio_action {
+        margin-top: 20px;
+    }
+    .portfolio_text {
+        font-size: 15px;
+    }
+    .portfolio_section {
+        margin-bottom: 65px;
+    }
+    .design_section {
+        margin-bottom: 70px;
+    }
+    .contact_section {
+        margin-bottom: 25px;
+        text-align: right;
+    }
+    .list_tab_wrap {
+        min-height: 400px;
+    }
+    .list_tab {
+        padding: 10px;
+    }
+    .list_tab img {
+        cursor: pointer;
+        transition: all .3s;
+    }
+    .list_tab img:hover {
+        transform: translateY(-5px);
+    }
+    .toTop {
+        border: none;
+        transition: all .3s;
+    }
+    .toTop:hover {
+        background-position-y: calc(50% - 3px);
+    }
+    @media (max-width: 640px) {
+        h1.main_h1 {
+            font-size: 13vw;
+        }
+        .header_ul {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .header_ul li {
+            float: none;
+            width: auto;
+            text-align: center;
+        }
+    }
+</style>
+
+</head>
+<body>
+<div id="wrap">
+    <div id="content">
+        <header id="header">
+            <ul class="header_ul">
+                <li><a href="#main">publisher</a></li>
+                <li><a href="#about">about</a></li>
+                <li><a href="#portfolio">portfolio</a></li>
+                <li><a href="#design">design</a></li>
+            </ul>
+        </header>
+        <section id="main" class="main_section">
+            <div class="main_text">
+                <h1 class="main_h1 wow fadeInUp"><span>web </span><span>publisher</span></h1>
+                <p class="main_p wow fadeInUp" data-wow-delay="0.5s">
+                    HTML5 css3 JavaScript JQuery<br>
+                    Responsive Web. Cross Browsing.<br>
+                    Web Standards. Accessibility.
+                </p>
+                <!-- <a target="_blank" href="https://blog.naver.com/nayayu92/" target="_blank" class="main_blog_a wow fadeInUp" data-wow-delay="0.65s">BLOG</a> -->
+            </div>
+            <div class="main_box">
+                <div class="main_box_wrap">
+                <div class="abwrap">
+                    <div class="main_text_box">
+                        <p class="main_text_p">
+                            <span class="wow fadeInUp" data-wow-delay="0.5s">디자이너와 엔지니어 간의 시각적 언어 확립.</span>
+                            <span class="wow fadeInUp" data-wow-delay="1.5s">웹 애플리케이션의 범위를 기기, 브라우저, 화면, 애니메이션의 측면에서 정의.</span>
+                            <span class="wow fadeInUp" data-wow-delay="2.3s">적절한 간격, 타이포그래피, 헤딩, 글꼴, 아이콘, 여백, 그리드 등을 사용해 웹 애플리케이션 꾸미기.</span>
+                            <span class="wow fadeInUp" data-wow-delay="2.6s">디자인 가이드라인을 따르며 다양한 해상도에 대응하는 이미지, 디바이스별 목업 등을 사용해 웹 애플리케이션 꾸미기.</span>
+                            <span class="wow fadeInUp" data-wow-delay="2.8s">시맨틱, 접근성, 검색엔진 최적화, 스키마, 마이크로포맷 등을 고려하여 웹 애플리케이션 마크업하기.</span>
+                            <span class="wow fadeInUp" data-wow-delay="2.9s">부드러운 애니메이션, 트랜지션, 인터랙션, 애플리케이션 워크플로우를 수행하는 클라이언트 사이드 코드 개발.</span>
+                            <span class="wow fadeInUp" data-wow-delay="3s">하위 표준 호환성까지 고려.</span>
+                        </p>
+                        <p class="main_m_p wow fadeInDown" data-wow-delay="0.8s">
+                            HTML5 css3 JavaScript JQuery<br>
+                            Responsive Web. Cross Browsing.<br>
+                            Web Standards. Accessibility.
+                        </p>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </section>
+        <section id="about" class="about_section">
+            <div class="about_inner">
+                <div class="section_head">
+                    <h1 class="section_h1">about</h1>
+                </div>
+                <div class="about_wrap">
+                    <div class="about_box wow fadeInUp" data-wow-delay="0.4s">
+                        <div class="about_img_box"><div class="abwrap">
+
+                        </div></div>
+                        <div class="about_text_box">
+                            <p class="about_p1">출생</p>
+                            <p class="about_p2">1992.08.12</p>
+                        </div>
+                    </div>
+                    <div class="about_box wow fadeInUp" data-wow-delay="0.6s">
+                        <div class="about_img_box"><div class="abwrap">
+                        </div></div>
+                        <div class="about_text_box">
+                            <p class="about_p1">영신여자실업고등학교</p>
+                            <p class="about_p2">디자인과</p>
+                        </div>
+                    </div>
+                    <div class="about_box wow fadeInUp" data-wow-delay="0.8s">
+                        <div class="about_img_box"><div class="abwrap">
+
+                        </div></div>
+                        <div class="about_text_box">
+                            <p class="about_p1">대진대학교</p>
+                            <p class="about_p2">문예창작학과</p>
+                        </div>
+                    </div>
+                    <div class="about_box wow fadeInUp" data-wow-delay="1s">
+                        <div class="about_img_box"><div class="abwrap">
+
+                        </div></div>
+                        <div class="about_text_box">
+                            <p class="about_p1">[NCS]반응형 모바일 웹 UI/UX</p>
+                            <p class="about_p2">2015.11-2016.03</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="resume_section">
+            <div class="section_head">
+                <h1 class="section_h1">resume</h1>
+            </div>
+            <div class="about_wrap">
+                <div class="resume_box_wrap">
+                    <div class="resume_box">
+                        <p class="about_p1 wow fadeInUp">에스제이테크시스템</p>
+                        <div class="wow fadeInUp" data-wow-delay="0.3s">
+                        <p class="about_p2">2016.03 - 2017.05</p>
+                        <p class="about_p2">1년 3개월</p>
+                        </div>
+                    </div>
+                    <div class="resume_box">
+                        <p class="about_p1 wow fadeInUp" data-wow-delay="0.4s">글로스퍼</p>
+                        <div class="wow fadeInUp" data-wow-delay="0.6s">
+                        <p class="about_p2">2017.09 - 2018.10</p>
+                        <p class="about_p2">1년 2개월</p>
+                        </div>
+                    </div>
+                    <div class="resume_box">
+                        <p class="about_p1 wow fadeInUp" data-wow-delay="0.4s">법틀</p>
+                        <div class="wow fadeInUp" data-wow-delay="0.6s">
+                        <p class="about_p2">2018.10 - 2019.12.31</p>
+                        <p class="about_p2">1년 3개월</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="about_introduction">
+                    <div class="introduction_text_box">
+                        <p>
+                            <span class="wow slideInLeft txt_itm" data-wow-delay="0.2s">
+                                실업계 고등학교 디자인과를 졸업 후 대학교에서 문예창작을 전공했습니다. 
+                                퍼블리셔의 역할은 '디자이너와 개발자 사이의 시각적 언어 확립' 이라고 합니다. HTML의 구조는 포토샵의 레이어와 비슷하면서 언어이기도 합니다. 
+                                고등학생 때 디자인을 배운 것으로 해당 분야를 자연스럽게 이해할 수 있었고, 경력이 쌓일수록 대학생 때 글을 썼던 것이 도움이 된다고 생각됩니다. 
+                                분산된 과거라고 생각했던 지나온 자취들이 모여 결과를 내고 있으니, 우연한 기회로 접하게 되었지만 이것은 인연이라고 여겨집니다.
+                            </span>
+
+                            <span class="wow slideInRight txt_itm" data-wow-delay="0.4s">
+                                - 퍼블리셔 신입으로 입사한 곳은 작은 회사였기 때문에 웹 기획, 웹 디자인, 콘텐츠 제작 등 다방면으로 적극 참여하며 자신의 할 일을 찾아서 했습니다. 
+                                첫 회사였기 때문에 부족한 자신을 느끼며 웹 디자인을 비롯해 웹 트렌드와 레이아웃, 해상도, 반응형 처리 방식 등에 대한 고민을 가장 많이 한 시기입니다. 
+                                웹 디자인과 웹 구조에 대해 더욱 깊이 생각하며 디자인 안목을 높였습니다. 
+                                또, 새로운 사이트를 만들 때는 서버 셋팅 해주시면 JSP 파일에서 새로운 마크업으로 직접 적용했는데, 이 경험이 개발자의 작업을 이해하는데 도움이 되었습니다.
+
+                                <br><br>- 블록체인 회사로 이직 후 스타트업의 활기찬 분위기에서 근무했습니다. 
+                                폐쇄적인 환경에서 탈피해 호기심 많은 개발자들과 교류하며 새로운 개발 트렌드에 대한 견문을 넓힐 수 있었습니다. 
+                                스타트업 특성 상 체계적인 기획 없이 빠듯하게 오픈하는 프로젝트가 대부분으로, 개발 과정에서 추가되는 상태 표현, 새로운 Form 레이아웃에 대해 시안 없이 빠르게 적용해야 했습니다. 
+                                개발자와의 커뮤니케이션으로 타 사이트를 벤치마킹하여 서브 기획, 서브 디자인 등 협조적으로 업무 지원했습니다. 
+                                기존에는 웹 디자인 관점에서만 퍼블리싱을 생각했는데, 개발 프로세스에 대해 인식하게 되었고, 웹 업무 환경의 발전과 협업의 개념에 대해서 더 깊이 생각하게 되었습니다.
+
+                                <br><br>- 점점 UX에 대한 관심도가 높아지며 ‘기획’ 이라는 단어가 포함된 업무를 경험하고 싶었습니다. 
+                                면접에서 다양한 주제로 이야기 나누며 저의 ‘비판적인’ 모습을 좋게 봐준 회사로 이직을 하게 되었습니다. 
+                                그 성향으로 프로그램 개선안을 내며 리뉴얼을 추진하게 되었습니다. 미숙했지만 프리랜서 디자이너를 구인하고 커뮤니케이션 했습니다. 
+                                계약 관리이기 때문에 인쇄 모드 최적화에 대해서도 고민했고, 레이아웃과 해상도에 대해 본격적으로 책임지게 되었습니다. 
+                                운영관리를 하며 기능 추가 시 변형되는 타입이 끊임없이 발생했습니다. 
+                                재사용 가능한 컴포넌트의 단위, 변화되는 데이터에 대한 처리, 컴포넌트의 타입, 버전 관리 등 소스 관리와 최적화를 위한 체계를 계속 정리하고 있고, 이것은 제 경력과 함께 꾸준히 보완될 부분입니다.
+                            </span>
+                            <span class="wow slideInLeft txt_itm" data-wow-delay="0.8s">
+                                체계적인 분업은 전문성을 존중하며, 자신의 분야에서 발전할 기회를 줍니다. 
+                                하지만 유기적으로 흘러가는 업무 프로세스에서 한 역할의 완전한 독립은 없다고 생각합니다. 
+                                각자의 포지션에서 서로에 대한 이해와 수용을 기반으로 커뮤니케이션하며 더 나은 결과물을 만들면 좋겠습니다. 
+                                지금은 프리랜서로 웹 에이전시, SI, E-book, 웹 접근성, 금융권 프로젝트 등 궁금했던 분야의 프로젝트를 하나씩 경험해보고 있습니다. 
+                                저에겐 아직 나아가야 할 길이 많이 남았고, 계속 성장하고 싶습니다.
+                            </span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="portfolio" class="portfolio_section">
+            <h1 class="section_h1">portfolio</h1>
+
+            <!-- portfolio_wrap -->
+            <div class="portfolio_wrap">
+                <h2 class="section_h2">Buptle</h2>
+
+                <!-- portfolio Buptle Adele -->
+                <div class="portfolio_box">
+                    <div class="portfolio_img_box"><div class="abwrap">
+                        <a target="_blank" href="./projects/adele/adele_list.html"><img src="./resources/images/portfolio_buptle_adele.png" /></a>
+                    </div></div>
+                    <div class="portfolio_text_box">
+                        <p class="portfolio_title">Buptle Adele</p>
+                        <div class="portfolio_text">
+                            <p class="portfolio_sub_title">
+                                퍼블리싱 100%<br>
+                                반응형 웹<br>
+                                리뉴얼 기획
+                            </p>
+                            <p class="portfolio_p">
+                                                        - 계약 관리: 전체 계약, 나의 계약, 계약 중간 화면, 계약 상세 화면<br>
+                                                        - 법률 자문: 전체 자문, 공개 자문, 나의 자문, 자문 상세 화면, 자문 생성, 수정, 답변<br>
+                                                        - 공문 발송: 공문 리스트, 공문 생성, 공문 상세 화면<br>
+                                                        - 소송 관리: 홈, 주요일정, 폴더뷰, 노트, edit, 연락처<br>
+                                                        - 공지사항 리스트, 상세, 쓰기, 수정<br>
+                                                        - 관리자: 워크플로우 관리, 템플릿 관리, 유저 관리, 공지사항 관리, 외부 업체 관리, 그룹 관리, TAG, 회사 정보, 디지털 직인 관리, 법률 자문 설정, 공문 발송 설정, 라벨, 권한 위임, 계약 이관<br>
+                                                        - 로그인, 대시보드, 마이페이지, 그룹 관리자<br>
+                                                        - 계약서(인쇄용 코딩)<br>
+                                                        - 이메일 발송 화면
+                            </p>
+                            <p class="portfolio_action">
+                                                            - nice-select<br>
+                                                            - dropzone<br>
+                                                            - 탭메뉴<br>
+                                                            - 모달 On/Off<br>
+                                                            - 우클릭 메뉴 이벤트<br>
+                                                            - 드롭다운 메뉴<br>
+                                                            - align slider
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- portfolio Buptle Adele -->
+                <div class="portfolio_box">
+                    <div class="portfolio_img_box"><div class="abwrap">
+                        <a target="_blank" href="https://buptle.com/"><img src="./resources/images/portfolio_buptle.png" /></a>
+                    </div></div>
+                    <div class="portfolio_text_box">
+                        <p class="portfolio_title">Buptle</p>
+                        <div class="portfolio_text">
+                            <p class="portfolio_sub_title">
+                                퍼블리싱 100%<br>
+                                반응형 웹<br>
+                                콘텐츠 기획
+                            </p>
+                            <p class="portfolio_p">
+                                                            - 메인<br>
+                                                            - 회사 소개<br>
+                                                            - 고객사례, 고객사례 상세
+                            </p>
+                            <p class="portfolio_action">
+                                                            - 애니메이션 효과(wow.js)<br>
+                                                            - 탭메뉴<br>
+                                                            - scroll position
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- portfolio Buptle Adele -->
+                <div class="portfolio_box">
+                    <div class="portfolio_img_box"><div class="abwrap">
+                        <a target="_blank" href="./projects/marshmallow/00_list.html"><img src="./resources/images/portfolio_marshmallaw.png" /></a>
+                    </div></div>
+                    <div class="portfolio_text_box">
+                        <p class="portfolio_title">marshmallow</p>
+                        <div class="portfolio_text">
+                            <p class="portfolio_sub_title">
+                                퍼블리싱 100%<br>반응형 웹
+                            </p>
+                            <p class="portfolio_p">
+                                - 메인<br>
+                                - 중국인을 위한 계약서<br>
+                                - 계약서 분석<br>
+                                - 계약서 분석_계약서 뷰<br>
+                                - 마이페이지<br>
+                                - 행정심판소송<br>
+                                - 고소장 작성<br>
+                                - 계약서 작성<br>
+                                - NEWS<br>
+                                - notice<br>
+                                - 회사소개<br>
+                                - 오시는길<br>
+                                - 이용약관<br>
+                                - 개인정보취급방침<br>
+                                - 면책공고<br>
+                                <br>모달: 이메일 발송, 계약서 분석 리포트, 계약 당사자, 회원가입, 로그인, 아이디 찾기, 비밀번호 찾기, 회원가입 완료, 이메일 인증, 이용약관, 회사 소개, 고객사례, 고객사례 상세
+                            </p>
+                            <p class="portfolio_action">
+                                - 애니메이션 효과(wow.js)<br>
+                                - 탭메뉴<br>
+                                - scroll position
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+            <!-- //portfolio_wrap -->
+
+            <!-- portfolio_wrap -->
+            <div class="portfolio_wrap">
+                <h2 class="section_h2">Glosfer</h2>
+
+                <!-- portfolio nowon -->
+                <div class="portfolio_box">
+                    <div class="portfolio_img_box"><div class="abwrap">
+                        <a target="_blank" href="./projects/nowon/index.html" class="off"><img src="./resources/images/portfolio_nowon.png" /></a>
+                    </div></div>
+                    <div class="portfolio_text_box">
+                        <p class="portfolio_title">지역화폐 노원</p>
+                        <div class="portfolio_text">
+                            <p class="portfolio_sub_title">
+                            퍼블리싱 100%
+                            </p>
+                            <p class="portfolio_p">
+                            - 메인 페이지<br>
+                            - 지역화폐소개, 이용가이드, 지역화폐 Transaction<br>
+                            - 가맹점 리스트, 상세, 등록<br>
+                            - 내지갑: 결제내역, 적립내역, 선물내역<br>
+                            - GLO포인트: 선물하기, 내계좌로입금, 이용내역<br>
+                            - GLO충전: 신용카드, 계좌이체, 무통장입금, 휴대폰<br>
+                            - 매출정산: 매출내역, 매출취소내역<br>
+                            - 나눔장터 리스트, 상세, 등록<br>
+                            - 공지사항 리스트, 읽기<br>
+                            - 자주묻는질문<br>
+                            - 1:1 문의 리스트, 읽기, 쓰기<br>
+                            - 보안센터: 내정보수정, 결제비밀번호, 로그인내역, 인증센터<br>
+                            - 로그인, 아이디찾기, 비밀번호찾기<br>
+                            - 회원가입 선택, 회원가입, 가맹점 회원가입<br>
+                            - 모달창
+                            </p>
+                            <p class="portfolio_action">
+                            - 메인 슬라이더 적용(bxsSlider)<br>
+                            - 메인 플로우 슬라이더 적용(bxsSlider)<br>
+                            - header dropdown menu<br>
+                            - 탭메뉴, 티뷰<br>
+                            - 모달 on/off<br>
+                            - FAQ 슬라이드 토글<br>&nbsp;&nbsp;(1개씩만 열리도록 적용)
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- portfolio exchange -->
+                <div class="portfolio_box">
+                    <div class="portfolio_img_box"><div class="abwrap">
+                       <a target="_blank" href="./projects/exchange_coin/index.html" class="off"><img src="./resources/images/portfolio_exchange.png" /></a>
+                    </div></div>
+                    <div class="portfolio_text_box">
+                        <p class="portfolio_title">거래소</p>
+                        <div class="portfolio_text">
+                            <p class="portfolio_sub_title">
+                            퍼블리싱 100%
+                            </p>
+                            <p class="portfolio_p">
+                            -  메인 페이지<br>
+                            - 거래소: 시세차트, 호가창, 코인정보, 매수, 매도, 거래내역, 체결<br>
+                            - 입출금: 보유자산, 충전, 출금신청, 입출금내역<br>
+                            - 투자내역: 보유코인, 거래내역, 미체결, 입출금대기<br>
+                            - 코인동향<br>
+                            - 공지사항 리스트, 읽기, 글쓰기<br>
+                            - 자주 하는 질문<br>
+                            - 1:1 문의하기<br>
+                            - 1:1 문의 읽기, 1:1 문의내역<br>
+                            - 마이페이지: 회원정보, 보안인증, 접속관리<br>
+                            - 로그인, 회원가입, 비밀번호 찾기<br><br>
+                            - Email 전송용 페이지 서브디자인 및 퍼블리싱<br>
+                            - 모달창 서브디자인 및 퍼블리싱<br>
+                            - 개발 진행에 따른 추가 페이지<br>
+                            &nbsp;&nbsp;(서브디자인 및 퍼블리싱)
+                            </p>
+                            <p class="portfolio_action">
+                            - 메인 슬라이더 적용(Bee3D Slider.js)<br>
+                            - 탭메뉴, 티뷰<br>
+                            - FAQ 슬라이드 토글<br>&nbsp;&nbsp;(1개씩만 열리도록 적용)<br>
+                            - 스크롤에 따라 버튼 fade in/out<br>
+                            - 앵커태그 클릭 시 부드러운 이동 효과<br>
+                            - 탑버튼(scrollTop)<br>
+                            - 모달 on/off<br>
+                            - 모바일 ham, drawer 동작
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- portfolio bluepan -->
+                <div class="portfolio_box">
+                    <div class="portfolio_img_box"><div class="abwrap">
+                       <a target="_blank" href="./projects/bluepan/index.html"><img src="./resources/images/portfolio_bluepan.jpg" /></a>
+                    </div></div>
+                    <div class="portfolio_text_box">
+                        <p class="portfolio_title">bluepan</p>
+                        <div class="portfolio_text">
+                            <p class="portfolio_sub_title">
+                                퍼블리싱 100%<br>
+                                반응형 웹
+                            </p>
+                            <p class="portfolio_p">
+                            - 원페이지<br>
+                            - 반응형 웹
+                            </p>
+                            <p class="portfolio_action">
+                            - 애니메이션 효과(wow.js)<br>
+                            - 섹션에 따라 스크롤 이벤트<br>
+                            - 앵커태그 클릭 시 부드러운 이동 효과<br>
+                            - 탑버튼(scrollTop)<br>
+                            - 모바일 ham, drawer 동작
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- portfolio hycon -->
+                <div class="portfolio_box">
+                    <div class="portfolio_img_box"><div class="abwrap">
+                       <a target="_blank" href="./projects/hycon_onepage/index.html"><img src="./resources/images/portfolio00.jpg" /></a>
+                    </div></div>
+                    <div class="portfolio_text_box">
+                        <p class="portfolio_title">COIN</p>
+                        <div class="portfolio_text">
+                            <p class="portfolio_sub_title">
+                            퍼블리싱 100%<br>
+                            반응형 웹
+                            </p>
+                            <p class="portfolio_p upper_p">
+                            - main, about, INFINITY PROJECT, 사업 추진 전략, 실증 중심 화폐, INFINITY BLOCKCHAIN PLATFORM 의 기술적 차별성, COMPARISON OF BLOCKCHAINS, HYCON 발행 계획, 예산 운영 계획, ABOUT US, TEAM, FAQ, CONTACT US, CRYPTOCURRENCY, BLOCKCHAIN TECHNOLOGY, MINING SCHEDULE, login, join, mobile menu(drawer)
+                            </p>
+                            <p class="portfolio_action">
+                            - 애니메이션 효과(wow.js)<br>
+                            - 스크롤에 따라 header 포지션 변경<br>
+                            - 스크롤에 따라 버튼 fade in/out<br>
+                            - 탭메뉴, 티뷰<br>
+                            - FAQ 슬라이드 토글<br>
+                            - 앵커태그 클릭 시 부드러운 이동 효과<br>
+                            - 모바일 ham, drawer 동작<br>
+                            - 모달 on/off<br>
+                            - 탑버튼(scrollTop)
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- portfolio thebiton -->
+                <div class="portfolio_box">
+                    <div class="portfolio_img_box"><div class="abwrap">
+                       <a target="_blank" href="./projects/thebiton/index.html" class="off"><img src="./resources/images/portfolio_thebiton.jpg" /></a>
+                    </div></div>
+                    <div class="portfolio_text_box">
+                        <p class="portfolio_title">The BitOn</p>
+                        <div class="portfolio_text">
+                            <p class="portfolio_sub_title">
+                            퍼블리싱 100%<br>
+                            반응형 웹
+                            </p>
+                            <p class="portfolio_p">
+                            - 메인 페이지<br>
+                            - 사전예약 페이지<br>
+                            - 모달창
+
+                            </p>
+                            <p class="portfolio_action">
+                            - 모달창 on/off<br>
+                            - 모달창 24시간동안 열지 않기(cookie)
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- portfolio exchange_m -->
+                <div class="portfolio_box">
+                    <div class="portfolio_img_box"><div class="abwrap">
+                       <a target="_blank" href="./projects/m_coin/m_index.html"><img src="./resources/images/portfolio0001.jpg" /></a>
+                    </div></div>
+                    <div class="portfolio_text_box">
+                        <p class="portfolio_title">모바일 거래소</p>
+                        <div class="portfolio_text">
+                            <p class="portfolio_sub_title">
+                            퍼블리싱 100%<br>
+                            하이브리드 앱
+                            </p>
+                            <p class="portfolio_p upper_p">
+                            - 로그인<br>
+                            - 거래 차트<br>
+                            - 구매, 판매 페이지<br>
+                            - 지갑, 인출 페이지<br>
+                            - 전송 확인 페이지<br>
+                            - 마이페이지
+                            </p>
+                            <p class="portfolio_action">
+                            - 탭메뉴, 티뷰<br>
+                            - 클릭 시 Toggle 이벤트<br>
+                            - 모달 on/off<br>
+                            - Angular 그래프 css 적용
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- portfolio exchange2 -->
+                <div class="portfolio_box">
+                    <div class="portfolio_img_box"><div class="abwrap">
+                       <a target="_blank" href="./projects/coin/index.html"><img src="./resources/images/portfolio_coin.png" /></a>
+                    </div></div>
+                    <div class="portfolio_text_box">
+                        <p class="portfolio_title">거래소</p>
+                        <div class="portfolio_text">
+                            <p class="portfolio_sub_title">
+                            퍼블리싱 100%
+                            </p>
+                            <p class="portfolio_p upper_p">
+                            - 메인 페이지<br>
+                            - 거래소: 시세 차트<br>
+                            - 거래내역, 호가창, 구매, 판매 페이지<br>
+                            - 지갑 입출금내역, 입금하기, 출금하기 페이지<br>
+                            - 공지사항, 1:1문의, FAQ<br>
+                            - 이용안내 페이지 하드코딩<br>
+                            - 본인인증<br>
+                            - 로그인, 회원가입, 비밀번호 찾기<br>
+                            - 모달창<br><br>
+                            - 개발 진행에 따른 추가 페이지<br>
+                            &nbsp;&nbsp;(서브디자인 및 퍼블리싱)
+                            </p>
+                            <p class="portfolio_action">
+                            - 탭메뉴, 티뷰<br>
+                            - 모달 on/off<br>
+                            - FAQ 슬라이드 토글
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- portfolio nextico -->
+                <div class="portfolio_box">
+                    <div class="portfolio_img_box"><div class="abwrap">
+                        <a target="_blank" href="#" class="off"><img src="./resources/images/portfolio_nextico.jpg" /></a>
+                    </div></div>
+                    <div class="portfolio_text_box">
+                        <p class="portfolio_title">nextico</p>
+                        <div class="portfolio_text">
+                            <p class="portfolio_sub_title">
+                            퍼블리싱 100%<br>
+                            부트스트랩 리뉴얼
+                            </p>
+                            <p class="portfolio_p">
+                            - 메인 페이지<br>
+                            - ICO리스트, ICO상세보기 페이지<br>
+                            - 계정정보, 입금, 출금, 거래내역, ICO참여내역, 프로모션 코드 페이지<br>
+                            - KYC인증, 인증내역 페이지<br>
+                            - 이용안내, 거래소 소개 페이지<br>
+                            - 공지사항, 자주하는 질문, 1:1문의 리스트<br>
+                            - 공지사항, 1:1문의 읽기 페이지<br>
+                            - 1:1문의 글쓰기 페이지<br>
+                            - 로그인, 회원가입 선택, 회원가입, 비밀번호 찾기<br>
+                            - 모바일 메뉴(drawer)<br>
+                            - 모달창<br><br>
+                            - Email 전송용 페이지 디자인 및 퍼블리싱<br>
+                            - 탑버튼, 오픈채팅방 버튼 디자인<br>
+                            - 랭귀지 작업
+                            </p>
+                            <p class="portfolio_action">
+                            - 메인 슬라이더 적용(Bee3D Slider.js)<br>
+                            - 탭메뉴, 티뷰<br>
+                            - FAQ 슬라이드 토글<br>&nbsp;&nbsp;(1개씩만 열리도록 적용)<br>
+                            - 스크롤에 따라 버튼 fade in/out<br>
+                            - 앵커태그 클릭 시 부드러운 이동 효과<br>
+                            - 탑버튼(scrollTop)<br>
+                            - 모달 on/off<br>
+                            - 모바일 ham, drawer 동작
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- portfolio email_form -->
+                <div class="portfolio_box">
+                    <div class="portfolio_img_box"><div class="abwrap">
+                       <a target="_blank" href="./projects/email_form.html" class="off"><img src="./resources/images/email_form.jpg" /></a>
+                    </div></div>
+                    <div class="portfolio_text_box">
+                        <p class="portfolio_title">email form</p>
+                        <div class="portfolio_text">
+                            <p class="portfolio_sub_title">
+                            디자인 및 퍼블리싱
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- portfolio wallet -->
+                <div class="portfolio_box">
+                    <div class="portfolio_img_box"><div class="abwrap">
+                       <a target="_blank" href="./projects/wallet_tx/index.html"><img src="./resources/images/portfolio_tx.jpg" /></a>
+                    </div></div>
+                    <div class="portfolio_text_box">
+                        <p class="portfolio_title">지갑 페이지</p>
+                        <div class="portfolio_text">
+                            <p class="portfolio_sub_title">
+                            디자인 및 퍼블리싱
+                            </p>
+                            <p class="portfolio_p">
+                            - 지갑 페이지 디자인, 퍼블리싱<br>
+                            - 송금 페이지 디자인, 퍼블리싱<br>
+                            - 컨트랙트 페이지 준비중
+                            </p>
+                            <p class="portfolio_action">
+                            - Draw
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- portfolio block_hash -->
+                <div class="portfolio_box">
+                    <div class="portfolio_img_box"><div class="abwrap">
+                       <a target="_blank" href="./projects/block_hash/index.html"><img src="./resources/images/block_hash.jpg" /></a>
+                    </div></div>
+                    <div class="portfolio_text_box">
+                        <p class="portfolio_title">block hash</p>
+                        <div class="portfolio_text">
+                            <p class="portfolio_sub_title">
+                            디자인 및 퍼블리싱
+                            </p>
+                            <p class="portfolio_p">
+                            - 개발 페이지 디자인, 퍼블리싱<br>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- portfolio nowon_m -->
+                <div class="portfolio_box">
+                    <div class="portfolio_img_box"><div class="abwrap">
+                       <a target="_blank" href="#" class="off"><img src="./resources/images/portfolio_m_nowon.jpg" /></a>
+                    </div></div>
+                    <div class="portfolio_text_box">
+                        <p class="portfolio_title">노원 지역화폐 앱</p>
+                        <div class="portfolio_text">
+                            <p class="portfolio_sub_title">
+                            퍼블리싱 100%<br>
+                            하이브리드 앱
+                            </p>
+                            <p class="portfolio_p">
+                            - 메인 페이지<br>
+                            - QR CODE<br>
+                            - 스캔하기<br>
+                            - 선물하기<br>
+                            - 이용내역<br>
+                            - 가맹점 리스트, 가맹점 상세, 가맹점 등록<br>
+                            - 품물품 리스트, 품물품 상세, 품물품 등록<br>
+                            - 공지사항 리스트, 읽기, 쓰기<br>
+                            - 문의하기 리스트, 읽기, 쓰기<br>
+                            - 자주 묻는 질문<br>
+                            - 모달창<br>
+                            - 로그인, 회원가입, 가맹점 가입, 회원정보 수정, 비밀번호 찾기
+                            </p>
+                            <p class="portfolio_action">
+                            - FAQ 슬라이드 토글<br>&nbsp;&nbsp;(1개씩만 열리도록 적용)<br>
+                            - 모바일 ham, drawer 동작<br>
+                            - jquery-timepicker<br>
+                            - 모달 on/off
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- //portfolio_wrap -->
+
+            <!-- portfolio_wrap -->
+              <div class="portfolio_wrap">
+								<h2 class="section_h2">sjtechsystem</h2>
+                <!-- portfolio sjcmc -->
+                <div class="portfolio_box">
+                    <div class="portfolio_img_box"><div class="abwrap">
+                       <a target="_blank" href="./projects/sjcmc_new/index.html"><img src="./resources/images/portfolio02.jpg" /></a>
+                    </div></div>
+                    <div class="portfolio_text_box">
+                        <p class="portfolio_title">슈프림코트</p>
+                        <div class="portfolio_text">
+                            <p class="portfolio_sub_title">
+                                퍼블리싱 100%<br>
+                                반응형 웹<br>
+                                콘텐츠 기획 / 사이트 기획<br>
+                                디자인
+                            </p>
+                            <p class="portfolio_p">
+                            - MAIN<br>
+                            - BRAND<br>
+                            - PRODUCT<br>
+                            - PROCESS<br>
+                            - SHOP<br>
+                            - NOTICE<br>
+                            - FAQ, 게시판 리스트, 읽기, 쓰기<br>
+                            - 로그인, 회원가입, 아이디/비밀번호 찾기
+                            </p>
+                            <p class="portfolio_action">
+                            - 탭메뉴, 티뷰<br>
+                            - FAQ 슬라이드 토글<br>
+                            - 탑버튼(scrollTop)<br>
+                            - 모바일 ham, drawer 동작
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- portfolio onejeju -->
+                <div class="portfolio_box">
+                    <div class="portfolio_img_box"><div class="abwrap">
+                       <a target="_blank" href="./projects/onejeju/index.html"><img src="./resources/images/portfolio04.jpg" /></a>
+                    </div></div>
+                    <div class="portfolio_text_box">
+                        <p class="portfolio_title">원제주이야기</p>
+                        <div class="portfolio_text">
+                            <p class="portfolio_sub_title">
+                                퍼블리싱 100%<br>
+                                반응형 웹<br>
+                                콘텐츠 기획 / 사이트 기획<br>
+                                디자인
+                            </p>
+                            <p class="portfolio_p">
+                            - 메인<br>
+                            - 원제주소개<br>
+                            - 오름이야기<br>
+                            - 드론영상<br>
+                            - 학교이야기<br>
+                            - 관광지<br>
+                            - 정착이야기<br>
+                            - 게시판 리스트, 읽기, 쓰기<br>
+                            - 로그인, 회원가입, 아이디/비밀번호 찾기
+                            </p>
+                            <p class="portfolio_action">
+                            - 탭메뉴, 티뷰<br>
+                            - 클릭 배너<br>
+                            - 랜덤 이미지<br>
+                            - 탑버튼(scrollTop)<br>
+                            - 모바일 ham, drawer 동작
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- portfolio papatree -->
+                <div class="portfolio_box">
+                    <div class="portfolio_img_box"><div class="abwrap">
+                       <a target="_blank" href="./projects/papatree/index.html"><img src="./resources/images/portfolio03.jpg" /></a>
+                    </div></div>
+                    <div class="portfolio_text_box">
+                        <p class="portfolio_title">파파트리</p>
+                        <div class="portfolio_text">
+                            <p class="portfolio_sub_title">
+                                퍼블리싱 100%<br>
+                                반응형 웹<br>
+                                콘텐츠 기획 / 사이트 기획<br>
+                                디자인
+                            </p>
+                            <p class="portfolio_p">
+                            - MAIN<br>
+                            - PAPATREE STORY<br>
+                            - PRODUCT<br>
+                            - REVIEW<br>
+                            - NOTICE<br>
+                            - 게시판 리스트, 읽기, 쓰기<br>
+                            - 로그인, 회원가입, 아이디/비밀번호 찾기
+                            </p>
+                            <p class="portfolio_action">
+                            - 모바일 ham, drawer 동작<br>
+                            - 앵커태그 클릭 시 부드러운 이동 효과<br>
+                            - FAQ 슬라이드 토글<br>
+                            - 탑버튼(scrollTop)
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- portfolio contract_list -->
+                <div class="portfolio_box">
+                    <div class="portfolio_img_box"><div class="abwrap">
+                       <a target="_blank" href="http://nayayu.cafe24.com/contract_list/main1_login.html"><img src="./resources/images/portfolio01.jpg" /></a>
+                    </div></div>
+                    <div class="portfolio_text_box">
+                        <p class="portfolio_title">계약관리 프로그램</p>
+                        <div class="portfolio_text">
+                            <p class="portfolio_sub_title">
+                                퍼블리싱 100%<br>
+                                디자인
+                            </p>
+                            <p class="portfolio_p">
+                            - 메인<br>
+                            - 계약서 리스트<br>
+                            - 첨부파일 리스트<br>
+                            - 첨부파일 추가 페이지<br>
+                            - 검색 페이지<br>
+                            - 계약현황<br>
+                            - 로그인, 회원가입<br>
+                            - 아이디 찾기, 비밀번호 찾기
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio_span_wrap">
+                    <div class="section_head">
+                        <h2 class="section_h2">학원실습: 하이미디어노원</h2>
+                    </div>
+                    <div class="portfolio_box">
+                        <div class="portfolio_img_box"><div class="abwrap">
+                            <a target="_blank" href="./projects/witch/index.html"><img src="./resources/images/portfolio05.jpg" /></a>
+                        </div></div>
+                        <div class="portfolio_text_box">
+                            <p class="portfolio_title">포트폴리오 사이트</p>
+                            <div class="portfolio_text">
+                                <p class="portfolio_sub_title">
+                                퍼블리싱 / 디자인 / 기획
+                                </p>
+                                <p class="portfolio_p">
+                                - 포트폴리오 사이트 기획<br>
+                                - 사이트 디자인<br>
+                                - 이미지 수집 및 일러스트<br>
+                                - 퍼블리싱
+                                </p>
+                                <p class="portfolio_action">
+                                - Parallax Scrolling<br>
+                                - 앵커태그 클릭 시 부드러운 이동 효과<br>
+                                - 다양한 애니메이션 효과
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="portfolio_box">
+                        <div class="portfolio_img_box"><div class="abwrap">
+                            <a target="_blank" href="./projects/GALAXY/galaxy.html"><img src="./resources/images/portfolio06.jpg" /></a>
+                        </div></div>
+                        <div class="portfolio_text_box">
+                            <p class="portfolio_title">GALAXYJEJU</p>
+                            <div class="portfolio_text">
+                                <p class="portfolio_sub_title">
+                                퍼블리싱<br>반응형 웹
+                                </p>
+                                <p class="portfolio_p">
+                                - 메인<br>
+                                - 갤럭시 서비스<br>
+                                - 대여가이드<br>
+                                - 이벤트<br>
+                                - 비회원예약확인<br>
+                                - 로그인<br>
+                                - 회원가입
+                                </p>
+                                <p class="portfolio_action">
+                                - mouseOn Event<br>
+                                - Scroll Event<br>
+                                - 탭메뉴, 티뷰
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="portfolio_box">
+                        <div class="portfolio_img_box"><div class="abwrap">
+                            <a target="_blank" href="http://base.ecudemo31383.cafe24.com/"><img src="./resources/images/portfolio08.jpg" /></a>
+                        </div></div>
+                        <div class="portfolio_text_box">
+                            <p class="portfolio_title">CAFE24 스킨1</p>
+                            <div class="portfolio_text">
+                                <p class="portfolio_sub_title">
+                                퍼블리싱 / 디자인 / 기획<br>
+                                카페24 스킨
+                                </p>
+                                <p class="portfolio_p">
+                                - 메인<br>
+                                - 상세페이지<br>
+                                - 게시판
+                                </p>
+                                <p class="portfolio_action">
+                                - 메인 슬라이더
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="portfolio_box">
+                        <div class="portfolio_img_box"><div class="abwrap">
+                            <a target="_blank" href="http://ecudemo31702.cafe24.com/"><img src="./resources/images/portfolio09.jpg" /></a>
+                        </div></div>
+                        <div class="portfolio_text_box">
+                            <p class="portfolio_title">CAFE24 스킨2</p>
+                            <div class="portfolio_text">
+                                <p class="portfolio_sub_title">
+                                    퍼블리싱 / 디자인 / 기획<br>
+                                    카페24 스킨
+                                </p>
+                                <p class="portfolio_p">
+                                - 메인<br>
+                                - 상세페이지<br>
+                                - 게시판
+                                </p>
+                                <p class="portfolio_action">
+                                - 메인 슬라이더<br>
+                                - 플로우 슬라이더
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+						<!-- //portfolio_wrap -->
+        </section>
+
+        <section class="design_section" id="design">
+            <div class="section_head">
+                <h1 class="section_h1">design</h1>
+            </div>
+            <div class="list_wrap">
+                <div class="list_tab_wrap">
+                    <div class="list_tab"><img style="max-width: 600px;" src="./resources/images/tab_zara.jpg"></div>
+                    <div class="list_tab"><img style="max-width: 600px;" src="./resources/images/tab_buptle_leaflet.jpg"></div>
+                    <div class="list_tab"><img style="max-width: 600px;" src="./resources/images/tab_shrimp.jpg"></div>
+                    <div class="list_tab"><img style="max-width: 600px;" src="./resources/images/tab_fnwork.jpg"></div>
+                </div>
+                <div class="list_modal">
+                    <!-- 포트폴리오 modal -->
+                    <div class="list_tview"><img src="./resources/images/tview_zara.jpg"></div>
+                    <div class="list_tview"><img src="./resources/images/tview_buptle_leaflet.jpg"></div>
+                    <div class="list_tview"><img style="max-width: 800px;" src="./resources/images/tview_shrimp.jpg"></div>
+                    <div class="list_tview"><img src="./resources/images/tview_fnwork.jpg"></div>
+                </div>
+                <!-- 버튼, modal back -->
+                <div class="list_btn_wrap">
+                    <div class="list_prev"><div class="abwrap"></div></div>
+                    <div class="list_next"><div class="abwrap"></div></div>
+                    <div class="tview_close"><p>배경을 클릭하면 닫힙니다.</p></div>
+                </div>
+                <div class="modal_back"></div>
+            </div>
+        </section>
+
+        <section class="contact_section" id="map">
+            <div class="section_head">
+                <!-- <h1 class="section_h1">Thank You !</h1> -->
+            </div>
+            <div class="contact_wrap">
+                <!-- <div class="map">
+                    <div class="abwrap">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3160.0387714917897!2d127.07084479060829!3d37.624775782472454!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357cbbd07001ca8b%3A0x69d199bdd77c8a57!2z6rO166aJ7Jet!5e0!3m2!1sko!2skr!4v1489656596631" width="100%" height="100%" frameborder="0" style="border:0" allowfullscreen></iframe>
+                    </div>
+                </div> -->
+                <div class="contact_text">
+                    <div class="resume_box">
+                        <!-- <p class="about_p1">이유진</p> -->
+                        <p class="about_p2">Thank You !</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div><!-- //content -->
+    <div class="toTop"></div>
+</div><!-- //wrap -->
+<script src="scripts/pinterestgrid.js"></script>
+<script type="text/javascript">
+// $(document).ready(function(){
+//     (function() {
+//         'use strict';
+
+//         var grid = new PinterestGrid({
+//             container: '.list_tab_wrap',
+//             item: '.list_tab',
+//             gutter: 0,
+//             delay: 200
+//         });
+
+//         window.addEventListener('resize', function() {
+//             grid.init();
+//         });
+
+//         Array.from(document.querySelectorAll('.card img')).forEach(function(item) {
+//             item.addEventListener('load', function() {
+//                 grid.init();
+//                 item.removeEventListener('load');
+//             }, false);
+//         });
+//     }());
+// });
+</script>
+</body>
+</html>
