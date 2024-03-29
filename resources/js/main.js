@@ -1,7 +1,6 @@
 // JavaScript Document
 
 $(document).ready(function(){
-    
     $('a[href^="#"]').click(function (e) {
 		e.preventDefault();
 		var target = this.hash,
@@ -12,20 +11,41 @@ $(document).ready(function(){
 			window.location.hash = target;
 		});
 	});
+
+    // toTop
+    $(document).on("click", ".toTop", function(){
+        $("html, body").animate({ scrollTop: 0 }, 600);
+    });
+    // toTop active
+    $(window).on("scroll", function() {
+        // var scrollHeight = $(document).height();
+        // var scrollPosition = $(window).height() + $(window).scrollTop();
+        // if ((scrollHeight - scrollPosition) / scrollHeight === 0) {
+        //    $('.toTop').addClass('active'); 
+        // } else {
+        //     $('.toTop').removeClass('active'); 
+        // }
+        if ($(this).scrollTop() > 200) {
+            $('.toTop').fadeIn('200');
+        } else { 
+            $('.toTop').fadeOut('200');
+        }
+    });
+
     // tab tview 
     $(".list_tab").click(function(){
-		$(".modal_on").removeClass("modal_on");
-		$(".list_tview").eq($(this).index()).addClass("modal_on");
+        $(".modal_on").removeClass("modal_on");
+        $(".list_tview").eq($(this).index()).addClass("modal_on");
         buttonOn()
-	});
+    })
     
     // modal prev next
-    let totalCount = $('.list_tview').length;
+    var totalCount = $('.list_tview').length;
     
     $('.list_prev').click(function() {
-        let clicked = $('.list_tview.modal_on')
-        let currentFocus = getcurrentFocus(clicked)
-        let nextFocus = currentFocus - 1;
+        var clicked = $('.list_tview.modal_on')
+        var currentFocus = getcurrentFocus(clicked)
+        var nextFocus = currentFocus - 1;
 
         if (nextFocus < 0){
             nextFocus = totalCount - 1;
@@ -33,9 +53,9 @@ $(document).ready(function(){
         nextClassToggle(nextFocus)
     })
     $('.list_next').click(function() {
-        let clicked = $('.list_tview.modal_on')
-        let currentFocus = getcurrentFocus(clicked)
-        let nextFocus = currentFocus + 1;
+        var clicked = $('.list_tview.modal_on')
+        var currentFocus = getcurrentFocus(clicked)
+        var nextFocus = currentFocus + 1;
 
         if (nextFocus >= totalCount){
             nextFocus = 0;
@@ -64,7 +84,6 @@ $(document).ready(function(){
         $(".modal_back").addClass("back_on");
         $("body").addClass("body_lock");
     }
-    buttonToggle()
     function buttonClose(){
         $(".list_btn_wrap").eq(0).css("display", "none");
         $(".list_modal").removeClass("back_on");
